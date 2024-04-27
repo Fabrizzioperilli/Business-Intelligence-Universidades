@@ -1,0 +1,88 @@
+:root {
+  --primary-color: #5C068C;
+  --secondary-color: #CED4DA;
+  --text-color: #f6f6f8;
+  --border-radius: 10px;
+  --font-family: 'Arial', sans-serif;
+}
+
+body {
+  padding-top: 150px; 
+}
+
+
+.header {
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family);
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; 
+  z-index: 1000;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.dropdown_role {
+  font-size: 20px;
+  height: 40px;
+  width: 130px;
+  display: inline-block;
+  border-radius: var(--border-radius);
+  color: var(--primary-color);
+  margin-left: 20px;
+}
+
+.title {
+  font-size: 40px;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.footer {
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-size: 15px;
+  font-family: var(--font-family);
+  padding: 10px;
+  text-align: left;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+.page-content {
+  margin-top: 200px; 
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  z-index: 1; 
+}
+
+
+.dashboard-title {
+  margin: 0;
+  font-size: 24px;
+  font-family: var(--font-family);
+  position: center;
+}
+
+.page-content {
+  margin-top: 170px; 
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  z-index: 1; 
+}
