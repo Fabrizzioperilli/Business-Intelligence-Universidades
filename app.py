@@ -6,7 +6,7 @@ from layouts.alumno_layout import alumno_layout
 from layouts.docente_layout import docente_layout
 from layouts.gestor_layout import gestor_layout
 
-app = dash.Dash(__name__, external_stylesheets=['assets/css/styles.css'], suppress_callback_exceptions=True)
+app = dash.Dash(__name__, external_stylesheets=['assets/css/styles.css', 'https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-rounded/css/uicons-thin-rounded.css'], suppress_callback_exceptions=True)
 app.title = 'Dashboard ULL'
 app._favicon = 'assets/images/favicon.ico'
 server = app.server
