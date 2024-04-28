@@ -2,7 +2,6 @@
   --primary-color: #5C068C;
   --secondary-color: #CED4DA;
   --text-color: #f6f6f8;
-  --border-radius: 10px;
   --font-family: 'Arial', sans-serif;
 }
 
@@ -37,7 +36,6 @@ body {
   height: 40px;
   width: 130px;
   display: inline-block;
-  border-radius: var(--border-radius);
   color: var(--primary-color);
   margin-left: 20px;
 }
@@ -85,4 +83,9 @@ body {
   justify-content: center; 
   align-items: flex-start; 
   z-index: 1; 
+}
+
+.tabs {
+  font-family: var(--font-family);
+  font-size: 17px;
 }

@@ -2,9 +2,13 @@ import dash
 from dash import dcc, html, Input, Output
 import components.common.header as header
 import components.common.footer as footer
-from layouts.role_layouts import alumno_layout, docente_layout, gestor_layout
+from layouts.alumno_layout import alumno_layout
+from layouts.docente_layout import docente_layout
+from layouts.gestor_layout import gestor_layout
 
-app = dash.Dash(__name__, external_stylesheets=['assets/css/styles.css'])
+app = dash.Dash(__name__, external_stylesheets=['assets/css/styles.css'], suppress_callback_exceptions=True)
+app.title = 'Dashboard ULL'
+app._favicon = 'assets/images/favicon.ico'
 server = app.server
 
 # Define the layout for the Dash application, which includes the header, main content, and footer.
