@@ -3,18 +3,22 @@
   --secondary-color: #CED4DA;
   --text-color: #f6f6f8;
   --font-family: 'Arial', sans-serif;
+  --grid-gap: 10px;
+  --sidebar-width: 250px; /* Ancho inicial del sidebar */
+
 }
 
 body {
   font-family: var(--font-family);
   padding-top: 150px;
-  padding-bottom: 100px; /* Ensure this is at least the height of the footer */
-  min-height: 100vh; /* Ensure full page height */
-  position: relative; /* For absolute positioning within */
-  margin: 0; /* Reset default margin */
+  padding-bottom: 100px;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
 }
 
 .header {
+  grid-area: header;
   background: var(--primary-color);
   color: var(--text-color);
   padding: 30px;
@@ -56,26 +60,29 @@ body {
   font-size: 15px;
   padding: 10px;
   text-align: left;
-  position: absolute; /* Mantiene el footer en la parte inferior siempre */
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 1030;
-  /* position: fixed;  Descomenta esta línea si prefieres un footer fijo */
+
 }
 
 .page-content {
-  padding-top: 180px; /* Ajusta para evitar superposición con el header */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  z-index: 1;
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr; /* Sidebar width and remaining space */
+  grid-template-rows: auto 1fr; /* Header height and remaining space */
+  grid-template-areas: 
+    "sidebar header"
+    "sidebar graphs"; /* Assigns sidebar to the first column, header and graphs to the second */
+  align-items: start;
+  padding-top: 0; /* Remove padding-top */
 }
 
 .dashboard-title {
   margin: 0;
   font-size: 24px;
-  text-align: center; /* Alinea el título al centro correctamente */
+  text-align: center;
 }
 
 .tabs {
@@ -86,17 +93,19 @@ body {
 }
 
 .sidebar {
-  width: 250px; /* Ancho del sidebar */
-  height: calc(100vh - 150px - 100px);  /* Altura completa menos el header */
-  flex-shrink: 0; /* Ajuste de altura para no superponerse con el header y footer */
+  grid-area: sidebar; 
+  width: 250px;
+  height: calc(100vh - 150px - 100px); 
+  flex-shrink: 0;
   padding: 20px;
-  position:relative; /* Corregido para que el sidebar se mantenga fijo */
+  position:relative;
   left: 0;
-  top: 35px; /* Comienza justo después del header */
+  top: 35px;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
-  box-shadow: 1px 0 10px rgba(0,0,0,0.1);
-  z-index: 2000; /* Eleva el sidebar sobre el contenido principal */
+  box-shadow: 0 0 5px var(--primary-color);
+  z-index: 2000;
+  border-radius: 10px;
 }
 
 .collapse.show .sidebar {
@@ -118,3 +127,39 @@ body {
   transform: scale(1.1);
 }
 
+
+#example-graph, #example-graph-2, #example-graph-3, #example-graph-4 {
+  width: 100%;
+  height: auto;
+  margin: 20px;
+  background: var(--secondary-color);
+  box-shadow: 0 0 5px var(--secondary-color);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.graphs-container {
+  grid-area: graphs; /* Assigns graphs-container to its designated grid area */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for the graphs */
+  grid-gap: var(--grid-gap);
+  align-items: start;
+  justify-content: center;
+  padding: var(--grid-gap);
+}
+
+.graph-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--grid-gap); /* adds spacing around the graph */
+}
+
+@media screen and (max-width: 768px) {
+  .graphs-container {
+    grid-template-columns: 1fr;
+  }
+}
