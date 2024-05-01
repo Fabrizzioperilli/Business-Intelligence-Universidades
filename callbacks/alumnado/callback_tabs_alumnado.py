@@ -3,17 +3,18 @@ from components.alumnado.sidebar_alumnado import toggle_button, sidebar_collapse
 from components.alumnado.graphs_alumnado import graphs_alumnado
 
 
-@callback(Output('tabs-alumnado-content', 'children'),
-            [Input('tabs-alumnado', 'value')])
+@callback(
+    Output('tabs-alumnado-content', 'children'),
+    [Input('tabs-alumnado', 'value')]
+)
 def render_content(tab):
     if tab == 'expediente-personal-tab':
         return html.Div([
             toggle_button,
             sidebar_collapse_alumnado,
             html.Div(id='content', children=[
-            html.H2("Dashboard Alumno", style={'textAlign': 'center'}),
                 graphs_alumnado()
-            ])
+            ], style={'flex': 3})
         ], style={'display': 'flex', 'flexDirection': 'row'})
     elif tab == 'rendimiento-academico-tab':
         return html.Div([
@@ -30,10 +31,7 @@ def render_content(tab):
     [State('collapse', 'is_open')]
 )
 def toggle_graphs_layout(n, is_open):
-    if not is_open:
-        return {'width': '100%', 'transition': 'width 0.3s ease'}
+    if is_open:
+        return {'width': '75%', 'transition': 'width 0.5s ease'}
     else:
-        return {'width': '65%', 'transition': 'width 0.3s ease'}
-        
-        
-    
+        return {'width': '100%', 'transition': 'width 0.5s ease'}
