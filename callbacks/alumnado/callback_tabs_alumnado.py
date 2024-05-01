@@ -32,6 +32,6 @@ def render_content(tab):
 )
 def toggle_graphs_layout(n, is_open):
     if is_open:
-        return {'width': '75%', 'transition': 'width 0.5s ease'}
+        return {'width': '65%', 'transition': 'width 0.5s ease'}
     else:
         return {'width': '100%', 'transition': 'width 0.5s ease'}

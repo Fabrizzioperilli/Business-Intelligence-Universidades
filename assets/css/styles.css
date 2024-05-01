@@ -127,3 +127,42 @@ body {
   transform: scale(1.1);
 }
 
+
+#example-graph, #example-graph-2, #example-graph-3, 
+#example-graph-4, #example-graph-5{
+  width: 100%;
+  height: auto;
+  margin: 20px;
+  background: var(--secondary-color);
+  box-shadow: 0 0 7px var(--secondary-color);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.graphs-container {
+  grid-area: graphs; /* Assigns graphs-container to its designated grid area */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for the graphs */
+  grid-gap: var(--grid-gap);
+  align-items: start;
+  justify-content: center;
+  padding: var(--grid-gap);
+  margin-bottom: 20px;
+
+}
+
+.graph-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--grid-gap); /* adds spacing around the graph */
+}
+
+@media screen and (max-width: 768px) {
+  .graphs-container {
+      grid-template-columns: 1fr;
+  }
+}
