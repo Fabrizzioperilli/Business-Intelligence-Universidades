@@ -1,0 +1,21 @@
+indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,universidad,cod_universidad
+1,Economía Mundial,9.98,Sobresaliente,5SWXN3,Y9GZC,Extraordinaria,2021/2023,CASMGA5T,Plan 2020,Universidad Nacional,UC011
+2,Economía Mundial,2.67,Suspenso,TOVCXQ,MIUAT,Extraordinaria,2022/2019,1SI0Y8K3,Plan 2020,Escuela Politécnica,UT002
+3,Física Cuántica,9.77,Sobresaliente,3D9OET,MJWVU,Ordinaria,2021/2023,CASMGA5T,Plan 2020,Universidad Nacional,II008
+4,Economía Mundial,4.11,Suspenso,30SO7S,Y9GZC,Extraordinaria,2021/2023,CASMGA5T,Plan 2021,Instituto Tecnológico,INT013
+5,Economía Mundial,0.33,Suspenso,30SO7S,Y9GZC,Extraordinaria,2021/2023,1SI0Y8K3,Plan 2021,Escuela Politécnica,UC011
+6,Historia Contemporánea,3.45,Suspenso,J5NST1,MIUAT,Extraordinaria,2021/2023,1SI0Y8K3,Plan 2020,Universidad del Conocimiento,UT002
+7,Física Cuántica,6.34,Aprobado,J5NST1,Y9GZC,Extraordinaria,2021/2023,1SI0Y8K3,Plan 2021,Instituto de Investigaciones,II008
+8,Física Cuántica,6.81,Aprobado,5SWXN3,Y9GZC,Extraordinaria,2021/2021,1SI0Y8K3,Plan Propio 2022,Universidad Nacional,UT002
+9,Física Cuántica,5.31,Aprobado,3D9OET,MIUAT,Extraordinaria,2022/2020,6G5E65BZ,Plan 2021,Instituto de Investigaciones,II008
+10,Economía Mundial,4.48,Suspenso,3D9OET,MIUAT,Extraordinaria,2021/2023,98XEYTTQ,Plan 2020,Instituto de Investigaciones,II008
+11,Economía Mundial,5.53,Aprobado,J5NST1,SAVPD,Extraordinaria,2021/2023,98XEYTTQ,Plan 2020,Escuela Politécnica,INT013
+12,Física Cuántica,5.93,Aprobado,3D9OET,MJWVU,Extraordinaria,2021/2023,1SI0Y8K3,Plan 2020,Instituto de Investigaciones,II008
+13,Economía Mundial,0.81,Suspenso,3D9OET,MJWVU,Extraordinaria,2021/2023,98XEYTTQ,Plan 2020,Universidad del Conocimiento,UT002
+14,Historia Contemporánea,3.7,Suspenso,30SO7S,Y9GZC,Extraordinaria,2021/2023,98XEYTTQ,Plan Propio 2022,Instituto de Investigaciones,II008
+15,Economía Mundial,2.42,Suspenso,J5NST1,MJWVU,Extraordinaria,2021/2021,1SI0Y8K3,Plan 2019,Escuela Politécnica,INT013
+16,Historia Contemporánea,8.03,Notable,TOVCXQ,Y9GZC,Extraordinaria,2021/2023,98XEYTTQ,Plan 2020,Universidad del Conocimiento,INT013
+17,Economía Mundial,4.7,Suspenso,J5NST1,SAVPD,Extraordinaria,2021/2023,CASMGA5T,Plan 2020,Instituto Tecnológico,UT002
+18,Economía Mundial,9.83,Sobresaliente,TOVCXQ,MIUAT,Extraordinaria,2022/2019,UJPXGXRE,Plan 2021,Instituto de Investigaciones,UC011
+19,Derecho Penal,3.99,Suspenso,30SO7S,MIUAT,Ordinaria,2021/2023,UJPXGXRE,Plan 2020,Escuela Politécnica,UC011
+20,Economía Mundial,8.16,Notable,5SWXN3,MIUAT,Extraordinaria,2021/2021,1SI0Y8K3,Plan 2021,Instituto Tecnológico,II008

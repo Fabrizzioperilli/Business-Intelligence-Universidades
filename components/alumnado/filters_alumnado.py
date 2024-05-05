@@ -1,4 +1,5 @@
 from dash import html, dcc
+from callbacks.alumnado.callback_update_filters_alumnado import update_filters_alumnado
 
 def filters_alumnado():
     return html.Div([
@@ -6,11 +7,9 @@ def filters_alumnado():
         html.Label("Curso Académico"),
         dcc.Dropdown(
             id='curso-academico',
-            options=[
-                {'label': '2018-2019', 'value': '2018-2019'},
-                {'label': '2019-2020', 'value': '2019-2020'},
-                {'label': '2020-2021', 'value': '2020-2021'},
-            ],
-            value='2019-2020'
+            searchable=False,
+            clearable=False,
+            options=[],
+            value=None
         )
     ], className='filters')

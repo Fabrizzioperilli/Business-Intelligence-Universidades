@@ -1,0 +1,21 @@
+indice,conv,curso_aca,especialidad,id,nota_bach,nota_def,nota_prue,universidad,cod_universidad
+1,Extraordinaria,2018/2021,Medicina,1SI0Y8K3,3.72,7.6,7.51,Centro de Estudios Avanzados,IT004
+2,Extraordinaria,2018/2020,Gestión Empresarial,UJPXGXRE,9.27,5.99,9.13,Universidad Internacional,UV015
+3,Extraordinaria,2019/2025,Gestión Empresarial,98XEYTTQ,1.1,5.6,3.44,Escuela Politécnica,UC006
+4,Extraordinaria,2024/2023,Gestión Empresarial,6G5E65BZ,2.53,5.41,9.56,Colegio de Educación Superior,II008
+5,Ordinaria,2024/2023,Arquitectura Urbana,CASMGA5T,2.6,6.72,8.28,Universidad Internacional,EP005
+6,Extraordinaria,2019/2025,Medicina,KL59SJQV,4.95,1.73,3.82,Universidad del Conocimiento,UC011
+7,Ordinaria,2024/2019,Inteligencia Artificial,2LLTM60E,4.75,5.95,6.79,Instituto de Investigaciones,UN001
+8,Ordinaria,2021/2021,Gestión Empresarial,M7YALPAX,9.65,0.0,8.07,Universidad de Tecnologías,II008
+9,Extraordinaria,2022/2020,Arquitectura Urbana,0O74FERN,7.39,7.93,3.3,Universidad de Ciencias,CEP014
+10,Ordinaria,2023/2019,Inteligencia Artificial,HK9TPFU1,6.84,3.01,4.16,Universidad de la Innovación,UI007
+11,Ordinaria,2022/2025,Gestión Empresarial,P96KUYW9,4.02,5.18,5.07,Universidad Internacional,CEP014
+12,Ordinaria,2022/2022,Arquitectura Urbana,6BVAWPGV,0.37,9.72,3.5,Universidad de Ciencias,II008
+13,Ordinaria,2018/2020,Medicina,S0EXUNNQ,6.55,7.08,8.72,Universidad Virtual,UI012
+14,Extraordinaria,2018/2019,Gestión Empresarial,K9GM1R92,8.82,4.91,9.18,Universidad Internacional,UI012
+15,Extraordinaria,2023/2020,Gestión Empresarial,XVA8C6V3,2.66,4.44,0.83,Colegio de Estudios Profesionales,CEA010
+16,Ordinaria,2019/2024,Derecho Penal,Q7J0UZWK,4.25,4.92,7.04,Centro de Estudios Avanzados,UN001
+17,Extraordinaria,2022/2024,Medicina,DG1J1RT3,6.81,8.44,5.41,Universidad de Tecnologías,II008
+18,Extraordinaria,2024/2023,Inteligencia Artificial,OSVQNZUD,1.71,8.21,9.51,Colegio de Educación Superior,UN001
+19,Extraordinaria,2020/2022,Derecho Penal,W0SHSWGS,4.58,8.33,0.97,Instituto Tecnológico,CEA010
+20,Extraordinaria,2024/2024,Arquitectura Urbana,X7O6ZEU9,6.97,5.99,9.8,Centro de Estudios Avanzados,INT013

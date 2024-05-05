@@ -1,0 +1,21 @@
+indice,cod_plan,cod_mec,cupo,curso_aca,especialidad,id,ambito_isced,modalidad,nota,nota_adm,nota_esp,preferencia,rama,titulacion,nombre_plan_propio,universidad,cod_universidad
+1,GNEHD,DRA339,Espera,2023/2025,Medicina,1SI0Y8K3,Artes,Tiempo Parcial,8.57,7.11,5.64,4,Artes,Grado en Medicina,Grado en Arquitectura - Plan Propio,Universidad Internacional,INT013
+2,1WSO1,H5I464,Espera,2018/2019,Medicina,UJPXGXRE,Ciencias Naturales,Tiempo Completo,6.48,4.61,3.58,1,Ciencias Sociales,Grado en Arquitectura,Grado en Medicina - Plan Propio,Instituto de Investigaciones,EP005
+3,YRI29,3HA8E6,Asegurado,2021/2019,Gestión Empresarial,98XEYTTQ,Ciencias Sociales,Tiempo Completo,4.75,8.31,8.77,3,Ciencias Naturales,Grado en Derecho,Grado en Derecho - Plan Propio,Universidad de la Innovación,UN001
+4,6RXCB,LSFXYV,Asegurado,2018/2022,Inteligencia Artificial,6G5E65BZ,Ingeniería,Tiempo Parcial,0.33,7.53,8.18,3,Artes,Grado en Administración,Grado en Informática - Plan Propio,Universidad de Tecnologías,UI012
+5,KTCPE,VNYRWW,Asegurado,2019/2024,Medicina,CASMGA5T,Ciencias Naturales,Tiempo Parcial,6.24,0.02,7.18,4,Ciencias Sociales,Grado en Arquitectura,Grado en Informática - Plan Propio,Escuela Politécnica,UI007
+6,52HIF,TP3VYR,Espera,2024/2019,Medicina,KL59SJQV,Salud,Tiempo Parcial,0.57,8.96,7.92,4,Ciencias Naturales,Grado en Informática,Grado en Arquitectura - Plan Propio,Universidad de la Innovación,UC011
+7,KKYI0,SRN2RB,Espera,2024/2023,Arquitectura Urbana,2LLTM60E,Salud,Tiempo Completo,5.46,2.45,8.83,5,Artes,Grado en Arquitectura,Grado en Medicina - Plan Propio,Universidad de las Artes,UC011
+8,ULOK5,L6WW7O,Asegurado,2024/2025,Medicina,M7YALPAX,Artes,Tiempo Parcial,1.84,6.09,4.11,3,Ingeniería,Grado en Arquitectura,Grado en Administración - Plan Propio,Universidad Virtual,INT013
+9,5KXEF,BA64C6,Espera,2023/2022,Derecho Penal,0O74FERN,Artes,Tiempo Completo,1.87,4.75,6.58,4,Ingeniería,Grado en Arquitectura,Grado en Medicina - Plan Propio,Universidad del Conocimiento,UN001
+10,2MS11,4PDTL0,Espera,2023/2025,Arquitectura Urbana,HK9TPFU1,Artes,Tiempo Completo,3.36,4.53,3.86,4,Ciencias de la Salud,Grado en Arquitectura,Grado en Administración - Plan Propio,Universidad de Ciencias,CES009
+11,IZKIH,VGOSHL,Espera,2022/2020,Medicina,P96KUYW9,Ciencias Sociales,Tiempo Parcial,3.84,3.39,4.21,2,Ciencias de la Salud,Grado en Medicina,Grado en Medicina - Plan Propio,Colegio de Educación Superior,CES009
+12,J9ZCT,O745IN,Asegurado,2020/2019,Derecho Penal,6BVAWPGV,Artes,Tiempo Completo,5.55,6.65,3.88,4,Ciencias de la Salud,Grado en Derecho,Grado en Medicina - Plan Propio,Instituto de Nuevas Tecnologías,UV015
+13,N0W5A,63LZ8M,Asegurado,2018/2024,Medicina,S0EXUNNQ,Ciencias Naturales,Tiempo Parcial,9.09,7.44,3.02,3,Ingeniería,Grado en Arquitectura,Grado en Derecho - Plan Propio,Universidad de Ciencias,UI007
+14,K6H6C,RBAX9K,Espera,2022/2022,Arquitectura Urbana,K9GM1R92,Ingeniería,Tiempo Completo,0.42,4.48,1.39,3,Ciencias Naturales,Grado en Arquitectura,Grado en Informática - Plan Propio,Instituto de Nuevas Tecnologías,UI012
+15,RM25Z,W2E1EE,Espera,2022/2019,Inteligencia Artificial,XVA8C6V3,Ciencias Sociales,Tiempo Completo,5.4,2.25,7.44,2,Ingeniería,Grado en Arquitectura,Grado en Medicina - Plan Propio,Universidad de Ciencias,UC011
+16,XXP6D,DEA6SH,Espera,2020/2025,Derecho Penal,Q7J0UZWK,Salud,Tiempo Completo,9.56,9.86,5.73,3,Ingeniería,Grado en Medicina,Grado en Medicina - Plan Propio,Instituto de Investigaciones,EP005
+17,YELGE,BSP8CA,Asegurado,2023/2019,Medicina,DG1J1RT3,Salud,Tiempo Parcial,5.21,8.63,7.28,2,Artes,Grado en Medicina,Grado en Medicina - Plan Propio,Universidad Nacional,UT002
+18,4SOSO,TFNL8E,Espera,2022/2025,Gestión Empresarial,OSVQNZUD,Ciencias Naturales,Tiempo Completo,5.28,9.46,5.08,1,Ingeniería,Grado en Derecho,Grado en Medicina - Plan Propio,Instituto de Nuevas Tecnologías,UA003
+19,B8XT9,DE8HLT,Asegurado,2020/2022,Derecho Penal,W0SHSWGS,Salud,Tiempo Parcial,4.8,7.82,3.94,2,Artes,Grado en Arquitectura,Grado en Medicina - Plan Propio,Universidad de la Innovación,UI012
+20,AVK7E,YVN8AV,Asegurado,2022/2022,Gestión Empresarial,X7O6ZEU9,Salud,Tiempo Completo,7.35,2.86,2.69,4,Ciencias de la Salud,Grado en Informática,Grado en Medicina - Plan Propio,Instituto de Investigaciones,UC011

@@ -13,7 +13,7 @@ def Header(store_id):
                 {'label': 'Docente', 'value': 'Docente'},
                 {'label': 'Gestor', 'value': 'Gestor'}
             ],
-            value='Alumno',  # Default value
+            value='Alumno', 
             id='dropdown_role',
             className='dropdown_role',
             clearable=False,
