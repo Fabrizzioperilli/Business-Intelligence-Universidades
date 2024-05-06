@@ -1,6 +1,6 @@
 from dash import html, dcc
 from callbacks.alumnado.graphs.callback_graph_calif_cualitativa_alumnado import update_graph_alumnado
-from callbacks.alumnado.graphs.callback_graph_asig_superadas_alumnado import update_graph_alumnado
+from callbacks.alumnado.graphs.callback_graph_progreso_academico_alumnado import update_graph_alumnado
 from callbacks.alumnado.graphs.callback_graph_calif_numerica_alumnado import update_graph_alumnado
 from callbacks.alumnado.graphs.callback_graph_tasa_exito_alumnado import update_graph_alumnado
 

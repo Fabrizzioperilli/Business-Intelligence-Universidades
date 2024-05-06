@@ -18,7 +18,7 @@ def update_resumen_alumnado(alumno_id):
             html.Hr(),
         ])
 
-    query = "SELECT universidad, titulacion, id FROM matricula WHERE id = :id"
+    query = "SELECT DISTINCT universidad, titulacion, id FROM matricula WHERE id = :id"
     result = db.execute_query(query, {'id': alumno_id})
 
     if result:

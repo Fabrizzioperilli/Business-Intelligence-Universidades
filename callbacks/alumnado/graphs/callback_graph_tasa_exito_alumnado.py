@@ -7,6 +7,9 @@ from data.db_connector import db
     [Input('selected-alumnado-store', 'data'), Input('curso-academico', 'value')]
 )
 def update_graph_alumnado(alumno_id, curso_academico):
+    if not alumno_id or not curso_academico:
+        return go.Figure()
+    
     if isinstance(curso_academico, str):
         curso_academico = (curso_academico,)
     elif isinstance(curso_academico, list):
@@ -14,13 +17,14 @@ def update_graph_alumnado(alumno_id, curso_academico):
 
     # Query to calculate success rate per academic year
     query = """
-    SELECT curso_aca,
-           COUNT(*) as total_asignaturas,
-           SUM(CASE WHEN calif IN ('Aprobado', 'Notable', 'Sobresaliente') THEN 1 ELSE 0 END) as aprobadas
-    FROM lineas_actas
-    WHERE id = :alumno_id AND curso_aca IN :curso_academico
-    GROUP BY curso_aca
-    ORDER BY curso_aca;
+    SELECT m.curso_aca, COUNT(m.cod_asignatura) AS total_asignaturas,
+    SUM(CASE WHEN la.calif IN ('Aprobado', 'Notable', 'Sobresaliente') THEN 1 ELSE 0
+        END) AS aprobadas
+    FROM asignaturas_matriculadas m LEFT JOIN lineas_actas la
+    ON m.cod_asignatura = la.cod_asig AND m.curso_aca = la.curso_aca
+    WHERE m.id = :alumno_id AND m.curso_aca IN :curso_academico
+    GROUP BY m.curso_aca
+    ORDER BY m.curso_aca;
     """
 
     params = {'alumno_id': alumno_id, 'curso_academico': curso_academico}
@@ -35,7 +39,6 @@ def update_graph_alumnado(alumno_id, curso_academico):
         print("No data returned from the query.")
         return go.Figure()
 
-    # Calculate success rate for each academic year
     academic_years = [row[0] for row in data]
     success_rates = [(row[2] / row[1]) * 100 for row in data]
 
