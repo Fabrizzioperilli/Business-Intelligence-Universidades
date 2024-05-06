@@ -4,8 +4,7 @@
   --text-color: #f6f6f8;
   --font-family: 'Arial', sans-serif;
   --grid-gap: 10px;
-  --sidebar-width: 250px; /* Ancho inicial del sidebar */
-
+  --sidebar-width: 20%; /* Ancho del sidebar en porcentaje */
 }
 
 body {
@@ -29,7 +28,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0; 
+  right: 0;
   z-index: 1030;
 }
 
@@ -55,8 +54,8 @@ body {
 }
 
 .select-alumnado {
-  margin-left: auto; 
-  margin-right: 0; 
+  margin-left: auto;
+  margin-right: 0;
   margin-top: 15px;
   font-size: 17px;
   height: 40px;
@@ -75,18 +74,17 @@ body {
   left: 0;
   width: 100%;
   z-index: 1030;
-
 }
 
 .page-content {
   display: grid;
-  grid-template-columns: var(--sidebar-width) 1fr; /* Sidebar width and remaining space */
-  grid-template-rows: auto 1fr; /* Header height and remaining space */
+  grid-template-columns: var(--sidebar-width) 1fr; /* Sidebar en la primera columna */
+  grid-template-rows: auto 1fr; /* Header y contenido */
   grid-template-areas: 
     "sidebar header"
-    "sidebar graphs"; /* Assigns sidebar to the first column, header and graphs to the second */
+    "sidebar graphs"; /* Estructura del layout */
   align-items: start;
-  padding-top: 0; /* Remove padding-top */
+  padding-top: 0; /* Quita padding-top */
 }
 
 .dashboard-title {
@@ -104,13 +102,12 @@ body {
 }
 
 .sidebar {
-  grid-area: sidebar; 
-  width: 250px;
+  grid-area: sidebar;
+  width: 90%;
   height: auto;
   flex-shrink: 0;
   padding: 20px;
   position: relative;
-  left: 0;
   top: 45px;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
@@ -139,43 +136,39 @@ body {
   transform: scale(1.1);
 }
 
-
 #example-graph, #example-graph-2, #example-graph-3, 
-#example-graph-4, #example-graph-5{
-  width: 100%;
-  height: auto;
-  margin: 20px;
+#example-graph-4, #example-graph-5 {
+  width: 100%; /* Ajusta al contenedor */
+  aspect-ratio: 16 / 9; /* Relación de aspecto para gráficos */
   background: var(--secondary-color);
   box-shadow: 0 0 7px var(--secondary-color);
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .graphs-container {
-  grid-area: graphs; /* Assigns graphs-container to its designated grid area */
+  grid-area: main; /* Usa el área principal */
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns for the graphs */
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
   grid-gap: var(--grid-gap);
   align-items: start;
   justify-content: center;
   padding: var(--grid-gap);
   margin-bottom: 20px;
-
 }
 
 .graph-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: var(--grid-gap); /* adds spacing around the graph */
+  margin: var(--grid-gap);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .graphs-container {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Solo una columna para pantallas pequeñas */
   }
 }
 

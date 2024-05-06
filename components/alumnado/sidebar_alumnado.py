@@ -21,4 +21,3 @@ sidebar_collapse_alumnado = dbc.Collapse(
     id="collapse",
     is_open=True
 )
-  
