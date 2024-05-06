@@ -1,21 +1,2 @@
 indice,cod_plan,curso_aca,id,nota_media,plan,universidad,cod_universidad
-1,6T04E,2022/2019,1SI0Y8K3,5.26,Plan 2019,Universidad Internacional,UV015
-2,RUK5O,2024/2024,UJPXGXRE,9.25,Plan 2020,Universidad del Conocimiento,UC006
-3,6AZEV,2024/2024,98XEYTTQ,3.4,Plan 2019,Universidad Virtual,CEA010
-4,1PEXY,2022/2022,6G5E65BZ,8.78,Plan 2021,Instituto de Investigaciones,UC011
-5,PPIY0,2021/2020,CASMGA5T,8.83,Plan 2020,Universidad de Ciencias,CEA010
-6,RWT2E,2019/2024,KL59SJQV,1.55,Plan Propio 2022,Escuela Politécnica,UV015
-7,KO4PI,2024/2021,2LLTM60E,5.81,Plan 2021,Centro de Estudios Avanzados,CEA010
-8,PCOF4,2018/2019,M7YALPAX,0.98,Plan 2019,Universidad Internacional,UI012
-9,W9MOT,2019/2024,0O74FERN,2.89,Plan 2021,Colegio de Estudios Profesionales,IT004
-10,16B30,2020/2023,HK9TPFU1,7.17,Plan Propio 2022,Universidad de Ciencias,UA003
-11,K3C9S,2022/2023,P96KUYW9,3.79,Plan Propio 2022,Colegio de Estudios Profesionales,UN001
-12,D6MY6,2020/2025,6BVAWPGV,9.06,Plan 2020,Universidad Virtual,UI012
-13,300QC,2018/2022,S0EXUNNQ,4.86,Plan 2021,Universidad Nacional,II008
-14,33LIA,2024/2019,K9GM1R92,9.17,Plan 2019,Universidad Internacional,UA003
-15,L6YLH,2018/2020,XVA8C6V3,9.88,Plan Propio 2022,Universidad de la Innovación,UV015
-16,Z9WKA,2022/2025,Q7J0UZWK,0.13,Plan 2020,Instituto Tecnológico,EP005
-17,5PWZM,2024/2022,DG1J1RT3,9.54,Plan 2019,Universidad de la Innovación,IT004
-18,B13SP,2024/2022,OSVQNZUD,9.79,Plan Propio 2022,Centro de Estudios Avanzados,UT002
-19,1PUA0,2024/2024,W0SHSWGS,2.02,Plan 2019,Universidad Nacional,UI012
-20,288VT,2018/2023,X7O6ZEU9,1.74,Plan Propio 2022,Instituto de Investigaciones,CEA010
+1,BDCX8,2022/2023,FPM12345,8.53,Plan 2022,Universidad de la Laguna,ULL015

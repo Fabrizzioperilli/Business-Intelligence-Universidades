@@ -1,21 +1,7 @@
 id,anio_nac,universidad,cod_universidad,abandona
-1SI0Y8K3,1995,Universidad de Tecnologías,UV015,no
-UJPXGXRE,1996,Universidad de Tecnologías,CEA010,no
-98XEYTTQ,1997,Colegio de Estudios Profesionales,IT004,no
-6G5E65BZ,1999,Centro de Estudios Avanzados,II008,si
-CASMGA5T,2004,Instituto de Nuevas Tecnologías,CES009,si
-KL59SJQV,2001,Universidad Internacional,UV015,no
-2LLTM60E,2003,Centro de Estudios Avanzados,UI007,si
-M7YALPAX,2000,Instituto de Investigaciones,II008,no
-0O74FERN,1996,Universidad de Ciencias,CEA010,si
-HK9TPFU1,2003,Colegio de Educación Superior,UI012,no
-P96KUYW9,2004,Instituto Tecnológico,EP005,no
-6BVAWPGV,1998,Universidad de Tecnologías,CES009,si
-S0EXUNNQ,2001,Universidad Nacional,UA003,no
-K9GM1R92,1998,Universidad Internacional,UT002,si
-XVA8C6V3,2003,Universidad del Conocimiento,UT002,si
-Q7J0UZWK,2004,Instituto de Nuevas Tecnologías,UI007,si
-DG1J1RT3,2004,Universidad de la Innovación,UT002,si
-OSVQNZUD,1995,Universidad Internacional,INT013,no
-W0SHSWGS,1995,Instituto Tecnológico,CEP014,no
-X7O6ZEU9,2004,Colegio de Estudios Profesionales,UC006,si
+FPM12345,1995,Universidad de la Laguna,ULL015,no
+VMM14584,2003,Universidad de la Laguna,ULL015,si
+OPN78944,1999,Universidad de Zaragoza,UZG002,no
+JHG56789,1998,Universidad de Barcelona,UBC001,no
+KLM98765,2000,Universidad de Granada,UGR003,si
+QWE45678,1997,Universidad de Valencia,UVC004,no

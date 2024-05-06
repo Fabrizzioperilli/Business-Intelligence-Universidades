@@ -8,6 +8,7 @@ def filters_alumnado():
         dcc.Dropdown(
             id='curso-academico',
             searchable=False,
+            multi=True,
             clearable=False,
             options=[],
             value=None

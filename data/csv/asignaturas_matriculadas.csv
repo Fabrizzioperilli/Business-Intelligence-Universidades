@@ -1,21 +1,27 @@
 indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipologia,universidad,cod_universidad
-1,Derecho Penal,30SO7S,SAVPD,2021/2023,1SI0Y8K3,M7QB,Plan 2020,Básica,Escuela Politécnica,UC011
-2,Historia Contemporánea,5SWXN3,Y9GZC,2022/2020,UJPXGXRE,0P83,Plan 2021,Optativa,Instituto Tecnológico,UC011
-3,Física Cuántica,J5NST1,JHHO2,2021/2021,98XEYTTQ,M7QB,Plan 2019,Optativa,Instituto de Investigaciones,INT013
-4,Economía Mundial,3D9OET,MIUAT,2021/2023,6G5E65BZ,0P83,Plan 2020,Básica,Universidad Nacional,UT002
-5,Economía Mundial,TOVCXQ,MJWVU,2022/2019,CASMGA5T,M7QB,Plan Propio 2022,Básica,Universidad del Conocimiento,II008
-6,Matemáticas Aplicadas,SCA8BD,S7OW8,2021/2021,KL59SJQV,0P83,Plan Propio 2022,Obligatoria,Universidad de las Artes,UT002
-7,Derecho Penal,93CMDO,7IM10,2024/2020,2LLTM60E,0P83,Plan 2021,Básica,Centro de Estudios Avanzados,II008
-8,Física Cuántica,XY602E,BXAD3,2018/2020,M7YALPAX,EMK4,Plan 2020,Optativa,Instituto de Nuevas Tecnologías,INT013
-9,Derecho Penal,QNU4T8,CC5IB,2023/2025,0O74FERN,EMK4,Plan 2021,Optativa,Colegio de Educación Superior,EP005
-10,Derecho Penal,5BIDSY,XLFMQ,2018/2020,HK9TPFU1,0P83,Plan 2020,Obligatoria,Universidad de Tecnologías,CEA010
-11,Economía Mundial,PCFL2F,HD7S9,2019/2021,P96KUYW9,0P83,Plan 2019,Obligatoria,Universidad Nacional,UC011
-12,Historia Contemporánea,PJN701,8GE84,2023/2025,6BVAWPGV,M7QB,Plan 2020,Optativa,Universidad de Tecnologías,UN001
-13,Matemáticas Aplicadas,9LWT36,XK4FB,2022/2025,S0EXUNNQ,M7QB,Plan Propio 2022,Básica,Colegio de Estudios Profesionales,CEP014
-14,Derecho Penal,12GGTO,5LBWX,2024/2020,K9GM1R92,0P83,Plan 2021,Obligatoria,Colegio de Estudios Profesionales,EP005
-15,Ingeniería de Software,JNB2RM,WQPBD,2018/2021,XVA8C6V3,0P83,Plan 2020,Básica,Universidad de Ciencias,UC006
-16,Matemáticas Aplicadas,5AJ6OF,PIQE7,2024/2019,Q7J0UZWK,EMK4,Plan Propio 2022,Obligatoria,Universidad del Conocimiento,IT004
-17,Derecho Penal,KAFQE3,WPHD4,2020/2023,DG1J1RT3,0P83,Plan 2021,Obligatoria,Centro de Estudios Avanzados,EP005
-18,Matemáticas Aplicadas,KHBNN9,58IR6,2020/2022,OSVQNZUD,EMK4,Plan 2021,Obligatoria,Colegio de Educación Superior,UA003
-19,Derecho Penal,55OC4A,8QMTG,2019/2024,W0SHSWGS,M7QB,Plan 2021,Optativa,Escuela Politécnica,CEA010
-20,Historia Contemporánea,F4LVX4,KO4QW,2021/2020,X7O6ZEU9,EMK4,Plan Propio 2022,Optativa,Colegio de Estudios Profesionales,UI007
+1,Álgebra,3012315ALG,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+2,Cálculo,3012316CAL,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+3,Programación,3012317PRO,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+4,Bases de Datos,3012318BD,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+5,Redes de Computadoras,3012319RC,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+6,Estadística,6012319EST,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+7,Inteligencia Artificial,7012319IA,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+8,Programación Orientada a Objetos,8012319POO,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+9,Ingeniería de Software,9012319ISW,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+10,Análisis de Algoritmos,10012319AA,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+11,Sistemas Operativos,10012319SS,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+12,Análisis de Datos,10012320AD,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+13,Seguridad Informática,10012321SI,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+14,Desarrollo Web,10012322DW,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+15,Introducción a la Inteligencia Artificial,10012323IIA,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+16,Programación Avanzada,10012324PA,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+17,Anatomía Humana,10012325AH,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+18,Fisiología Humana,10012326FH,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+19,Patología,10012327PAT,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+20,Medicina Interna,10012328MI,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+21,Medicina Preventiva,10012329MP,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+22,Medicina Legal,10012330ML,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+23,Medicina Familiar,10012331MF,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+24,Medicina Comunitaria,10012332MC,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+25,Medicina Social,10012333MS,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+26,Bioquímca,10012334BQ,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015

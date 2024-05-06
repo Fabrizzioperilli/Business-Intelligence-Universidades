@@ -1,21 +1,25 @@
 indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,universidad,cod_universidad
-1,Economía Mundial,9.98,Sobresaliente,5SWXN3,Y9GZC,Extraordinaria,2021/2023,CASMGA5T,Plan 2020,Universidad Nacional,UC011
-2,Economía Mundial,2.67,Suspenso,TOVCXQ,MIUAT,Extraordinaria,2022/2019,1SI0Y8K3,Plan 2020,Escuela Politécnica,UT002
-3,Física Cuántica,9.77,Sobresaliente,3D9OET,MJWVU,Ordinaria,2021/2023,CASMGA5T,Plan 2020,Universidad Nacional,II008
-4,Economía Mundial,4.11,Suspenso,30SO7S,Y9GZC,Extraordinaria,2021/2023,CASMGA5T,Plan 2021,Instituto Tecnológico,INT013
-5,Economía Mundial,0.33,Suspenso,30SO7S,Y9GZC,Extraordinaria,2021/2023,1SI0Y8K3,Plan 2021,Escuela Politécnica,UC011
-6,Historia Contemporánea,3.45,Suspenso,J5NST1,MIUAT,Extraordinaria,2021/2023,1SI0Y8K3,Plan 2020,Universidad del Conocimiento,UT002
-7,Física Cuántica,6.34,Aprobado,J5NST1,Y9GZC,Extraordinaria,2021/2023,1SI0Y8K3,Plan 2021,Instituto de Investigaciones,II008
-8,Física Cuántica,6.81,Aprobado,5SWXN3,Y9GZC,Extraordinaria,2021/2021,1SI0Y8K3,Plan Propio 2022,Universidad Nacional,UT002
-9,Física Cuántica,5.31,Aprobado,3D9OET,MIUAT,Extraordinaria,2022/2020,6G5E65BZ,Plan 2021,Instituto de Investigaciones,II008
-10,Economía Mundial,4.48,Suspenso,3D9OET,MIUAT,Extraordinaria,2021/2023,98XEYTTQ,Plan 2020,Instituto de Investigaciones,II008
-11,Economía Mundial,5.53,Aprobado,J5NST1,SAVPD,Extraordinaria,2021/2023,98XEYTTQ,Plan 2020,Escuela Politécnica,INT013
-12,Física Cuántica,5.93,Aprobado,3D9OET,MJWVU,Extraordinaria,2021/2023,1SI0Y8K3,Plan 2020,Instituto de Investigaciones,II008
-13,Economía Mundial,0.81,Suspenso,3D9OET,MJWVU,Extraordinaria,2021/2023,98XEYTTQ,Plan 2020,Universidad del Conocimiento,UT002
-14,Historia Contemporánea,3.7,Suspenso,30SO7S,Y9GZC,Extraordinaria,2021/2023,98XEYTTQ,Plan Propio 2022,Instituto de Investigaciones,II008
-15,Economía Mundial,2.42,Suspenso,J5NST1,MJWVU,Extraordinaria,2021/2021,1SI0Y8K3,Plan 2019,Escuela Politécnica,INT013
-16,Historia Contemporánea,8.03,Notable,TOVCXQ,Y9GZC,Extraordinaria,2021/2023,98XEYTTQ,Plan 2020,Universidad del Conocimiento,INT013
-17,Economía Mundial,4.7,Suspenso,J5NST1,SAVPD,Extraordinaria,2021/2023,CASMGA5T,Plan 2020,Instituto Tecnológico,UT002
-18,Economía Mundial,9.83,Sobresaliente,TOVCXQ,MIUAT,Extraordinaria,2022/2019,UJPXGXRE,Plan 2021,Instituto de Investigaciones,UC011
-19,Derecho Penal,3.99,Suspenso,30SO7S,MIUAT,Ordinaria,2021/2023,UJPXGXRE,Plan 2020,Escuela Politécnica,UC011
-20,Economía Mundial,8.16,Notable,5SWXN3,MIUAT,Extraordinaria,2021/2021,1SI0Y8K3,Plan 2021,Instituto Tecnológico,II008
+1,Algebra,6.53,Aprobado,3012315ALG,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+2,Cálculo,4.23,Supenso,3012316CAL,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+3,Programación,9.5,Sobresaliente,3012317PRO,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+4,Bases de Datos,7.5,Notable,3012318BD,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+5,Redes de Computadoras,3.52,Suspenso,3012319RC,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+6,Estadística,8.75,Notable,6012319EST,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+7,Cálculo,7.71,Notable,3012316CAL,BDCX8,Ordinaria,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+8,Redes de Computadoras,8.65,Notable,3012319RC,BDCX8,Extraordinaria,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+9,Inteligencia Artificial,2.61,Suspenso,7012319IA,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+10,Programación Orientada a Objetos,8.73,Notable,8012319POO,BDCX8,Extraordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+11,Ingeniería de Software,5.52,Aprobado,9012319ISW,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+12,Análisis de Algoritmos,7.1,Notable,10012319AA,BDCX8,Extraordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+13,Sistemas Operativos,2.73,Suspenso,10012319SS,BDCX8,Extraordinaria,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+14,Análisis de Datos,4.03,Suspenso,10012320AD,BDCX8,Ordinaria,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+15,Seguridad Informática,4.43,Suspenso,10012321SI,BDCX8,Ordinaria,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+16,Desarrollo Web,3.67,Suspenso,10012322DW,BDCX8,Extraordinaria,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+17,Programación Avanzada,5.4,Aprobado,10012324PA,BDCX8,Extraordinaria,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+18,Anatomía Humana,8.5,Notable,10012325AH,BDCX8,Ordinaria,2020/2021,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
+19,Fisiología Humana,7.3,Notable,10012326FH,BDCX8,Ordinaria,2020/2021,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
+20,Medicina Interna,3.5,Suspenso,10012327MI,BDCX8,Ordinaria,2020/2021,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
+21,Medicina Preventiva,2.1,Suspenso,10012328MP,BDCX8,Ordinaria,2020/2021,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
+22,Medicina Legal,6.7,Aprobado,10012329ML,BDCX8,Ordinaria,2020/2021,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
+23,Medicina Familiar,2.5,Suspenso,10012330MF,BDCX8,Ordinaria,2020/2021,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
+24,Medicina Comunitaria,4.3,Suspenso,10012331MC,BDCX8,Ordinaria,2020/2021,VMM14584,Plan 2018,Universidad de la Laguna,ULL015

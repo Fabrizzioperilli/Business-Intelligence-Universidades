@@ -1,4 +1,5 @@
 from dash import html, dcc
+from callbacks.alumnado.callback_graphs_alumnado import update_graphs_alumnado
 
 def graphs_alumnado():
   return html.Div([
@@ -14,13 +15,8 @@ def graphs_alumnado():
     )], className='graph-item'),
     html.Div([
       dcc.Graph(
-          id='example-graph-2',
-          figure={
-            'data': [],
-            'layout': {
-              'title': 'Evolución de asignaturas matriculadas<br>por curso académico',
-            }
-          }
+          id='graph-bar-evolucion-asignaturas-matriculadas',
+          figure={}
     )], className='graph-item'),
     html.Div([
       dcc.Graph(
