@@ -1,6 +1,7 @@
 from dash import html, callback, Output, Input
 from data.db_connector import db
 from callbacks.alumnado.callback_select_alumnado import store_selected_alumnado
+from utils.utils import calculate_average_grade
 
 @callback(
     Output('resumen-alumnado', 'children'),
@@ -36,7 +37,6 @@ def update_resumen_alumnado(alumno_id):
         html.P("Alumno:", className="resumen-alumnado__label"),
         html.P(id),
         html.P("Nota Media:", className="resumen-alumnado__label"),
-        html.P("No disponible"),
+        html.P(calculate_average_grade(alumno_id)),
         html.Hr(),
     ])
-

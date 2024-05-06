@@ -2,17 +2,11 @@ from dash import Input, Output, callback
 from data.db_connector import db
 import plotly.graph_objs as go
 
-from dash import Input, Output
-import plotly.graph_objs as go
-
-from dash import Input, Output
-import plotly.graph_objs as go
-
 @callback(
     Output('graph-bar-evolucion-asignaturas-matriculadas', 'figure'),
     [Input('selected-alumnado-store', 'data'), Input('curso-academico', 'value')]
 )
-def update_graphs_alumnado(alumno_id, curso_academico):
+def update_graph_alumnado(alumno_id, curso_academico):
     # Ensure curso_academico is a tuple
     if isinstance(curso_academico, str):
         curso_academico = (curso_academico,)
@@ -75,7 +69,7 @@ def update_graphs_alumnado(alumno_id, curso_academico):
     # Create bar traces for each grade type
     trace_sobresaliente = go.Bar(x=all_courses, y=sobresalientes, name='Sobresaliente', marker_color='blue', opacity=0.8)
     trace_notable = go.Bar(x=all_courses, y=notables, name='Notable', marker_color='green', opacity=0.8)
-    trace_aprobado = go.Bar(x=all_courses, y=aprobados, name='Aprobado', marker_color='purple', opacity=0.8)
+    trace_aprobado = go.Bar(x=all_courses, y=aprobados, name='Aprobado', marker_color='pink', opacity=0.8)
     trace_suspenso = go.Bar(x=all_courses, y=suspensos, name='Suspenso', marker_color='red', opacity=0.8)
 
     layout = go.Layout(

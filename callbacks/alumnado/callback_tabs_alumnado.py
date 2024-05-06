@@ -28,13 +28,13 @@ def render_content(tab):
             html.H3("Expediente Académico Personal")
         ])
 
-# @callback(
-#     Output('content', 'style'),
-#     [Input('sidebar-toggle', 'n_clicks')],
-#     [State('collapse', 'is_open')]
-# )
-# def toggle_graphs_layout(n, is_open):
-#     if is_open:
-#         return {'width': '65%', 'transition': 'width 0.5s ease'}
-#     else:
-#         return {'width': '100%', 'transition': 'width 0.5s ease'}
+    # @callback(
+    #     Output('content', 'style'),
+    #     [Input('sidebar-toggle', 'n_clicks')],
+    #     [State('collapse', 'is_open')]
+    # )
+    # def toggle_graphs_layout(n, is_open):
+    #     if is_open:
+    #         return {'width': '65%', 'transition': 'width 0.5s ease'}
+    #     else:
+    #         return {'width': '100%', 'transition': 'width 0.5s ease'}

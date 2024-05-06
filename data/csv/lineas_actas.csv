@@ -23,3 +23,12 @@ indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,
 22,Medicina Legal,6.7,Aprobado,10012329ML,BDCX8,Ordinaria,2020/2021,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
 23,Medicina Familiar,2.5,Suspenso,10012330MF,BDCX8,Ordinaria,2020/2021,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
 24,Medicina Comunitaria,4.3,Suspenso,10012331MC,BDCX8,Ordinaria,2020/2021,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
+25,Inglés,8.3,Notable,10012332ING,BDCX8,Ordinaria,2020/2021,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+26,Paradigmas de Programación,7.3,Notable,10012333PP,BDCX8,Ordinaria,2020/2021,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+27,Programación Web,6.3,Aprobado,10012334PW,BDCX8,Ordinaria,2020/2021,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+28,Programación Móvil,5.3,Aprobado,10012335PM,BDCX8,Ordinaria,2020/2021,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+29,Programación de Videojuegos,4.3,Suspenso,10012336PV,BDCX8,Ordinaria,2020/2021,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+30,Programación de Sistemas,3.3,Suspenso,10012337PS,BDCX8,Ordinaria,2020/2021,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+31,Gestión de Proyectos,8.3,Notable,10012338GP,BDCX8,Ordinaria,2021/2022,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+32,Gestión de Calidad,7.3,Notable,10012339GC,BDCX8,Ordinaria,2021/2022,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+33,Gestión de Riesgos,6.3,Aprobado,10012340GR,BDCX8,Ordinaria,2021/2022,FPM12345,Plan 2018,Universidad de la Laguna,ULL015

@@ -1,17 +1,15 @@
 from dash import html, dcc
-from callbacks.alumnado.callback_graphs_alumnado import update_graphs_alumnado
+from callbacks.alumnado.graphs.callback_graph_calif_cualitativa_alumnado import update_graph_alumnado
+from callbacks.alumnado.graphs.callback_graph_asig_superadas_alumnado import update_graph_alumnado
+from callbacks.alumnado.graphs.callback_graph_calif_numerica_alumnado import update_graph_alumnado
+from callbacks.alumnado.graphs.callback_graph_tasa_exito_alumnado import update_graph_alumnado
 
 def graphs_alumnado():
   return html.Div([
     html.Div([
       dcc.Graph(
-          id='example-graph',
-          figure={
-            'data': [],
-            'layout': {
-              'title': 'Evolución del progreso académico del alumno',
-            }
-          }
+          id='graph-evolucion-progreso-academico',
+          figure={}
     )], className='graph-item'),
     html.Div([
       dcc.Graph(
@@ -20,23 +18,13 @@ def graphs_alumnado():
     )], className='graph-item'),
     html.Div([
       dcc.Graph(
-          id='example-graph-3',
-          figure={
-            'data': [],
-            'layout': {
-              'title': 'Calificaciones por asignatura y curso académico',
-            }
-          }
+          id='graph-bar-calificaciones-por-asignatura',
+          figure={}
     )], className='graph-item'),
     html.Div([
       dcc.Graph(
-          id='example-graph-4',
-          figure={
-            'data': [],
-            'layout': {
-              'title': 'Tasa de éxito por curso académico',
-            }
-          }
+          id='graph-bar-tasa-exito',
+          figure={}
     )], className='graph-item')
   ], className='graphs-container')            
   

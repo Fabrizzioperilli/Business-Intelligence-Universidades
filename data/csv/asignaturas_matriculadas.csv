@@ -13,7 +13,7 @@ indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipolo
 12,Análisis de Datos,10012320AD,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 13,Seguridad Informática,10012321SI,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 14,Desarrollo Web,10012322DW,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-15,Introducción a la Inteligencia Artificial,10012323IIA,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+15,Inteligencia Artificial Avanzada,10012323IIA,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 16,Programación Avanzada,10012324PA,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 17,Anatomía Humana,10012325AH,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 18,Fisiología Humana,10012326FH,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
@@ -25,3 +25,12 @@ indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipolo
 24,Medicina Comunitaria,10012332MC,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 25,Medicina Social,10012333MS,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 26,Bioquímca,10012334BQ,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+27,Inglés,10012335ING,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+28,Paradigmas de Programación,10012336PP,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+29,Programación Web,10012337PW,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+30,Programación Móvil,10012338PM,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+31,Programación de Videojuegos,10012339PV,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+32,Programación de Sistemas,10012340PS,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+33,Gestión de Proyectos,10012341GP,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+34,Gestión de Calidad,10012342GC,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+35,Gestión de Riesgos,10012343GR,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
