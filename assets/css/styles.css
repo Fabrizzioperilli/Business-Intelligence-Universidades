@@ -106,10 +106,10 @@ body {
 .sidebar {
   grid-area: sidebar; 
   width: 250px;
-  height: calc(100vh - 150px - 290px); 
+  height: auto;
   flex-shrink: 0;
   padding: 20px;
-  position:relative;
+  position: relative;
   left: 0;
   top: 45px;
   transform: translateX(-100%);

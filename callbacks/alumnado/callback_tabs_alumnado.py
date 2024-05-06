@@ -6,9 +6,10 @@ from components.alumnado.select_alumnado import select_alumnado
 
 @callback(
     Output('tabs-alumnado-content', 'children'),
-    [Input('tabs-alumnado', 'value')]
+    [Input('tabs-alumnado', 'value')],
+    State('selected-alumnado-store', 'data') 
 )
-def render_content(tab):
+def render_content(tab, selected_alumnado):
     if tab == 'expediente-personal-tab':
         return html.Div([
             select_alumnado(),
@@ -21,7 +22,15 @@ def render_content(tab):
         ])
     elif tab == 'rendimiento-academico-tab':
         return html.Div([
-            html.H3("Rendimiento Académico")
+            html.H2("Dashboard Alumnado", style={'textAlign': 'center'}),
+            html.Div([
+                toggle_button,
+                sidebar_collapse_alumnado,
+            ], className='content-layout-dashboard')
+        ])
+    elif tab == 'recomendador-tab':
+        return html.Div([
+            html.P("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec elit lacinia fermentum. ")
         ])
     else:
         return html.Div([
