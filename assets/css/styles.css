@@ -103,7 +103,7 @@ body {
 
 .sidebar {
   grid-area: sidebar;
-  width: 90%;
+  width: 180px;
   height: auto;
   flex-shrink: 0;
   padding: 20px;

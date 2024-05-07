@@ -1,13 +1,14 @@
 from dash import html, callback, Output, Input, State
-from components.alumnado.sidebar_alumnado import toggle_button, sidebar_collapse_alumnado
+from components.common.sidebar import sidebar
 from components.alumnado.graphs_alumnado import graphs_alumnado
 from components.alumnado.select_alumnado import select_alumnado
-
+from components.alumnado.resumen_alumnado import resumen_alumnado
+from components.alumnado.filters_alumnado import filters_alumnado
 
 @callback(
     Output('tabs-alumnado-content', 'children'),
     [Input('tabs-alumnado', 'value')],
-    State('selected-alumnado-store', 'data') 
+    State('selected-alumnado-store', 'data')
 )
 def render_content(tab, selected_alumnado):
     if tab == 'expediente-personal-tab':
@@ -15,22 +16,20 @@ def render_content(tab, selected_alumnado):
             select_alumnado(),
             html.H2("Dashboard Alumnado", style={'textAlign': 'center'}),
             html.Div([
-                toggle_button,
-                sidebar_collapse_alumnado,
-                graphs_alumnado(),
+                sidebar([resumen_alumnado(), filters_alumnado()]),
+                graphs_alumnado()
             ], className='content-layout-dashboard')
         ])
     elif tab == 'rendimiento-academico-tab':
         return html.Div([
             html.H2("Dashboard Alumnado", style={'textAlign': 'center'}),
             html.Div([
-                toggle_button,
-                sidebar_collapse_alumnado,
+                sidebar([filters_alumnado()])
             ], className='content-layout-dashboard')
         ])
     elif tab == 'recomendador-tab':
         return html.Div([
-            html.P("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec elit lacinia fermentum. ")
+            html.P("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec elit lacinia fermentum.")
         ])
     else:
         return html.Div([

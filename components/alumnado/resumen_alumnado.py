@@ -10,5 +10,5 @@ def resumen_alumnado():
         html.P(f"Alumno: "),
         html.P(f"Nota Media: "),
         html.Hr(),
-        ], id='resumen-alumnado')
+    ], id='resumen-alumnado')
     
