@@ -3,7 +3,10 @@ from components.common.sidebar import sidebar
 from components.alumnado.graphs_alumnado import graphs_alumnado
 from components.alumnado.select_alumnado import select_alumnado
 from components.alumnado.resumen_alumnado import resumen_alumnado
-from components.alumnado.filters_alumnado import filters_alumnado
+from components.common.filters import filters
+from components.alumnado.filter_curso_academico_alumnado import filter_curso_academico_alumnado
+from components.alumnado.filter_asignaturas_matri_alumnado import filter_asignaturas_matri_alumnado
+
 
 @callback(
     Output('tabs-alumnado-content', 'children'),
@@ -16,7 +19,12 @@ def render_content(tab, selected_alumnado):
             select_alumnado(),
             html.H2("Dashboard Alumnado", style={'textAlign': 'center'}),
             html.Div([
-                sidebar([resumen_alumnado(), filters_alumnado()]),
+                sidebar([
+                    resumen_alumnado(), 
+                    filters([
+                        filter_curso_academico_alumnado()
+                        ])
+                    ]),
                 graphs_alumnado()
             ], className='content-layout-dashboard')
         ])
@@ -24,7 +32,12 @@ def render_content(tab, selected_alumnado):
         return html.Div([
             html.H2("Dashboard Alumnado", style={'textAlign': 'center'}),
             html.Div([
-                sidebar([filters_alumnado()])
+                sidebar([
+                    filters([
+                        filter_curso_academico_alumnado(),
+                        filter_asignaturas_matri_alumnado()
+                        ])
+                    ]),
             ], className='content-layout-dashboard')
         ])
     elif tab == 'recomendador-tab':
