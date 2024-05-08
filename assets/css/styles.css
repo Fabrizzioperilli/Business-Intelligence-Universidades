@@ -160,16 +160,39 @@ body {
   .graphs-container {
     grid-template-columns: 1fr; /* Solo una columna para pantallas pequeñas */
   }
-  .collapse.show .sidebar {
-    transform: translateX(-100%);
-  }
   .dash-graph {
     width: 70%;
     height: auto;
     min-height: 200px;
     max-height: 400px;
   }
- 
+}
+
+@media screen and (max-width: 768px){
+  .sidebar {
+    top: 0;
+    transform: translateX(-100%);
+  }
+  .collapse.show .sidebar {
+    transform: translateX(-100%);
+  }
+  .page-content {
+    grid-template-columns: 1fr; /* Solo una columna para pantallas pequeñas */
+    grid-template-areas: 
+      "header"
+      "sidebar"
+      "graphs"; /* Estructura del layout */
+  }
+  .graphs-container {
+    grid-template-columns: 1fr; /* Solo una columna para pantallas pequeñas */
+  }
+  .dash-graph {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    max-height: 400px;
+  }
+  
 }
 
 .resumen-alumnado__label {
