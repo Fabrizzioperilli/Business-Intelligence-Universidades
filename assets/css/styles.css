@@ -4,7 +4,7 @@
   --text-color: #f6f6f8;
   --font-family: 'Arial', sans-serif;
   --grid-gap: 10px;
-  --sidebar-width: 20%; /* Ancho del sidebar en porcentaje */
+  --sidebar-width: 180px;
 }
 
 body {
@@ -67,11 +67,9 @@ body {
   background: var(--primary-color);
   color: var(--text-color);
   font-size: 15px;
-  padding: 10px;
   text-align: left;
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 100%;
   z-index: 1030;
 }
@@ -103,7 +101,7 @@ body {
 
 .sidebar {
   grid-area: sidebar;
-  width: 180px;
+  width: var(--sidebar-width);
   height: auto;
   flex-shrink: 0;
   padding: 20px;
@@ -136,21 +134,13 @@ body {
   transform: scale(1.1);
 }
 
-#example-graph, #example-graph-2, #example-graph-3, 
-#example-graph-4, #example-graph-5 {
-  width: 100%; /* Ajusta al contenedor */
-  aspect-ratio: 16 / 9; /* Relación de aspecto para gráficos */
-  background: var(--secondary-color);
-  box-shadow: 0 0 7px var(--secondary-color);
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .graphs-container {
   grid-area: main; /* Usa el área principal */
   display: grid;
+  width: 100%;
+  height: 100%;
   grid-template-columns: repeat(2, 1fr); /* Dos columnas */
   grid-gap: var(--grid-gap);
   align-items: start;
@@ -166,10 +156,20 @@ body {
   margin: var(--grid-gap);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px){
   .graphs-container {
     grid-template-columns: 1fr; /* Solo una columna para pantallas pequeñas */
   }
+  .collapse.show .sidebar {
+    transform: translateX(-100%);
+  }
+  .dash-graph {
+    width: 70%;
+    height: auto;
+    min-height: 200px;
+    max-height: 400px;
+  }
+ 
 }
 
 .resumen-alumnado__label {
@@ -178,4 +178,11 @@ body {
 
 .content-layout-dashboard {
   display: flex;
+}
+
+.dash-graph {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  max-height: 600px;
 }

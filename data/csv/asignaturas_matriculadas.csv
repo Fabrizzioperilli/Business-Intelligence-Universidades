@@ -34,3 +34,29 @@ indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipolo
 33,Gestión de Proyectos,10012338GP,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 34,Gestión de Calidad,10012339GC,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 35,Gestión de Riesgos,10012340GR,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+36,Álgebra,3012315ALG,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+37,Cálculo,3012316CAL,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+38,Programación,3012317PRO,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+39,Bases de Datos,3012318BD,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+40,Redes de Computadoras,3012319RC,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+41,Estadística,6012319EST,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+42,Inteligencia Artificial,7012319IA,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+43,Programación Orientada a Objetos,8012319POO,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+44,Ingeniería de Software,9012319ISW,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+45,Análisis de Algoritmos,10012319AA,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+46,Sistemas Operativos,10012319SS,BDCX8,2019/2020,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+47,Análisis de Datos,10012320AD,BDCX8,2019/2020,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+48,Seguridad Informática,10012321SI,BDCX8,2019/2020,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+49,Desarrollo Web,10012322DW,BDCX8,2019/2020,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+50,Inteligencia Artificial Avanzada,10012323IIA,BDCX8,2019/2020,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+51,Programación Avanzada,10012324PA,BDCX8,2019/2020,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+52,Inglés,10012332ING,BDCX8,2020/2021,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+53,Paradigmas de Programación,10012333PP,BDCX8,2020/2021,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+54,Programación Web,10012334PW,BDCX8,2020/2021,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+55,Programación Móvil,0012335PM,BDCX8,2020/2021,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+56,Programación de Videojuegos,10012336PV,BDCX8,2020/2021,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+57,Programación de Sistemas,10012337PS,BDCX8,2020/2021,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+58,Gestión de Proyectos,10012338GP,BDCX8,2021/2022,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+59,Gestión de Calidad,10012339GC,BDCX8,2021/2022,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+60,Gestión de Riesgos,10012340GR,BDCX8,2021/2022,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+61,Electrónica,10012340GR,BDCX8,2021/2022,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
