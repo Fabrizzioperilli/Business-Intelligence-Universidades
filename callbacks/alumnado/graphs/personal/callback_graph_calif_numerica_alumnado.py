@@ -39,7 +39,7 @@ def update_graph_alumnado(alumno_id, curso_academico):
     trace = go.Bar(x=subjects, y=grades, marker_color='blue', opacity=0.7)
 
     layout = go.Layout(
-        title='Calificaciones por asignatura',
+        title={'text':'Calificación cuantitativa de las asignaturas matriculadas', 'x':0.5},
         xaxis={'title': 'Asignatura'},
         yaxis={'title': 'Calificación'},
         showlegend=False,

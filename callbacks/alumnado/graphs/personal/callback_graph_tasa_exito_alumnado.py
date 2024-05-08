@@ -54,7 +54,7 @@ def update_graph_alumnado(alumno_id, curso_academico):
     )
 
     layout = go.Layout(
-        title='Tasa de éxito por curso académico',
+        title={'text': 'Tasa de éxito por curso académico', 'x': 0.5},
         xaxis={'title': 'Porcentaje de éxito'},
         yaxis={'title': 'Curso académico'},
         showlegend=False,

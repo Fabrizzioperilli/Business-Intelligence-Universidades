@@ -1,5 +1,5 @@
 indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,universidad,cod_universidad
-1,Algebra,6.53,Aprobado,3012315ALG,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+1,Álgebra,6.53,Aprobado,3012315ALG,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 2,Cálculo,4.23,Supenso,3012316CAL,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 3,Programación,9.5,Sobresaliente,3012317PRO,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 4,Bases de Datos,7.5,Notable,3012318BD,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
@@ -32,7 +32,7 @@ indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,
 31,Gestión de Proyectos,8.3,Notable,10012338GP,BDCX8,Ordinaria,2021/2022,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 32,Gestión de Calidad,7.3,Notable,10012339GC,BDCX8,Ordinaria,2021/2022,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 33,Gestión de Riesgos,6.3,Aprobado,10012340GR,BDCX8,Ordinaria,2021/2022,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-34,Algebra,5.62,Aprobado,3012315ALG,BDCX8,Ordinaria,2018/2019,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
+34,Álgebra,5.62,Aprobado,3012315ALG,BDCX8,Ordinaria,2018/2019,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
 35,Cálculo,9.66,Sobresaliente,3012316CAL,BDCX8,Ordinaria,2018/2019,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
 36,Programación,8.12,Notable,3012317PRO,BDCX8,Ordinaria,2018/2019,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
 37,Bases de Datos,7.19,Notable,3012318BD,BDCX8,Ordinaria,2018/2019,CVM56789,Plan 2018,Universidad de la Laguna,ULL015

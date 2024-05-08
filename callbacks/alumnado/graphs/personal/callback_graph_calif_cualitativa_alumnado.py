@@ -44,7 +44,7 @@ def update_graph_alumnado(alumno_id, curso_academico):
             grade_counts[calif][curso_aca] = grade_count
 
     traces = []
-    color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'pink', 'Suspenso': 'red'}
+    color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'orange', 'Suspenso': 'red'}
     for category in categories:
         traces.append(
             go.Bar(
@@ -57,11 +57,12 @@ def update_graph_alumnado(alumno_id, curso_academico):
         )
 
     layout = go.Layout(
-        title='Evolución de asignaturas matriculadas por curso académico',
+        title={'text': 'Calificación cualitativa de las asignaturas matriculadas', 'x': 0.5},
         barmode='stack',
         xaxis={'title': 'Curso académico'},
         yaxis={'title': 'Nº Asignaturas matriculadas'},
         showlegend=True,
+        legend={'title': 'Calificación'}
     )
 
     return go.Figure(data=traces, layout=layout)
