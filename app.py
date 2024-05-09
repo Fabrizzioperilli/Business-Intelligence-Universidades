@@ -18,20 +18,19 @@ app = dash.Dash(
     ], 
     suppress_callback_exceptions=True
 )
+
 app.title = 'Dashboard académico Ull'
 app._favicon = 'assets/images/favicon.ico'
 server = app.server
 
-# Definir el diseño de la aplicación
 app.layout = html.Div([
-    header.Header(store_id='store-role'),  # Asegúrate que este ID es el que se usa en los callbacks
-    html.Div(id='page-content'),          # Placeholder para el contenido principal de la página
-    footer.Footer(),                      # Componente Footer
+    header.Header(store_id='store-role'),
+    html.Div(id='page-content'),
+    footer.Footer(),
 ])
 
+#Cierre de la conexión a la base de datos
 atexit.register(db.close)
-
-# Definir los callbacks aquí (puedes mover tu callback a este archivo o importarlo desde `callbacks`)
 
 # Iniciar el servidor
 if __name__ == '__main__':

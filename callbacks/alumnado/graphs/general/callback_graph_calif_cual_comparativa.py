@@ -5,9 +5,10 @@ import plotly.graph_objs as go
 @callback(
     Output('nota-cualitativa-general-mi-nota', 'figure'),
     Input('curso-academico', 'value'),
-    Input('asignaturas-matriculadas', 'value')
+    Input('asignaturas-matriculadas', 'value'),
+    Input('selected-alumnado-store', 'data'),
 )
-def update_graph_alumnado(curso_academico, asignaturas_matriculadas):
+def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
 
     if not curso_academico or not asignaturas_matriculadas:
         return go.Figure()
@@ -53,17 +54,21 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas):
     traces = []
     color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'orange', 'Suspenso': 'red'}
 
-    for subject in all_subjects:
-        for category in categories:
-            traces.append(
-                go.Bar(
-                    x=[subject],
-                    y=[grade_counts[subject][category]],
-                    name=category,
-                    marker_color=color_mapping[category],
-                    opacity=0.8
-                )
+    for category in categories:
+        x = []
+        y = []
+        for subject in all_subjects:
+            x.append(subject)
+            y.append(grade_counts[subject][category])
+        traces.append(
+            go.Bar(
+                x=x,
+                y=y,
+                name=category,
+                marker_color=color_mapping[category],
+                opacity=0.8
             )
+        )
 
     layout = go.Layout(
         title={'text':'Alumnos matriculados por asignatura y calificación por curso académico', 'x': 0.5},

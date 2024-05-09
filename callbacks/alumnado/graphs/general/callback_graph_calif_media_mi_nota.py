@@ -1,4 +1,4 @@
-from dash import html, dcc, callback, Input, Output
+from dash import callback, Input, Output
 from data.db_connector import db
 import plotly.graph_objs as go
 
@@ -26,9 +26,9 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
     query = """
     SELECT l.asignatura, AVG(l.calif_numerica) AS media_calif, 
     MAX(CASE WHEN l.id = :alumno_id THEN l.calif_numerica ELSE NULL END) AS calif_alumno  
-	  FROM lineas_actas l 
+	FROM lineas_actas l 
     WHERE l.asignatura IN :asignaturas_matriculadas AND l.curso_aca IN :curso_academico
-	  GROUP BY l.asignatura;
+	GROUP BY l.asignatura;
     """
     params = {
         'asignaturas_matriculadas': asignaturas_matriculadas, 

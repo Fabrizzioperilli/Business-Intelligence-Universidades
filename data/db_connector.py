@@ -17,10 +17,6 @@ class DatabaseConnector:
             result = connection.execute(text(query), params or {})
             return result.fetchall()
 
-    def execute_command(self, command, params=None):
-        with self.engine.connect() as connection:
-            connection.execute(text(command), params or {})
-
     def close(self):
         self.engine.dispose()
         
