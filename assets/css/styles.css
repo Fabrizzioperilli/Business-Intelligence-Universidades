@@ -209,3 +209,19 @@ body {
   min-height: 300px;
   max-height: 600px;
 }
+
+.Select-multi-value-wrapper {
+  max-height: 200px;  /* Ajusta esta altura al tamaño deseado */
+  overflow-y: auto;
+}
+
+#select-all-button {
+  background-color: #007eff;
+  color: white;
+  font-family: var(--font-family);
+  font-size: 15px;
+  width: 100%;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
