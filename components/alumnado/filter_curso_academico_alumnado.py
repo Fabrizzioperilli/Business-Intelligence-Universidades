@@ -11,6 +11,9 @@ def filter_curso_academico_alumnado():
             clearable=False,
             options=[],
             value=None,
+            persistence=True,
+            persistence_type='local',
+            maxHeight=300,
         ),
         html.Hr(),
     ])

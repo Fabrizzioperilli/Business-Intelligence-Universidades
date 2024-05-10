@@ -4,7 +4,7 @@
   --text-color: #f6f6f8;
   --font-family: 'Arial', sans-serif;
   --grid-gap: 10px;
-  --sidebar-width: 200px;
+  --sidebar-width: 90%;
 }
 
 body {

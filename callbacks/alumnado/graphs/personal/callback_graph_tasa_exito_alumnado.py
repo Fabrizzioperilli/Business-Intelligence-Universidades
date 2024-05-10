@@ -15,7 +15,6 @@ def update_graph_alumnado(alumno_id, curso_academico):
     elif isinstance(curso_academico, list):
         curso_academico = tuple(curso_academico)
 
-    # Query to calculate success rate per academic year
     query = """
     SELECT m.curso_aca, COUNT(m.cod_asignatura) AS total_asignaturas,
     SUM(CASE WHEN la.calif IN ('Aprobado', 'Notable', 'Sobresaliente') THEN 1 ELSE 0
@@ -49,12 +48,12 @@ def update_graph_alumnado(alumno_id, curso_academico):
         orientation='h',
         marker_color='blue',
         opacity=0.7,
-        width=0.3
+        width=0.4
 
     )
 
     layout = go.Layout(
-        title={'text': 'Tasa de éxito por curso académico', 'x': 0.5},
+        title={'text': 'Tasa de éxito por curso académico del alumno', 'x': 0.5},
         xaxis={'title': 'Porcentaje de éxito'},
         yaxis={'title': 'Curso académico'},
         showlegend=False,

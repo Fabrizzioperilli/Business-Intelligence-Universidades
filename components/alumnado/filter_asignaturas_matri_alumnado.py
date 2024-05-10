@@ -6,11 +6,15 @@ def filter_asignaturas_matri_alumnado():
         html.Label("Asignaturas Matriculadas"),
         dcc.Dropdown(
             id="asignaturas-matriculadas",
-            searchable=False,
+            searchable=True,
             multi=True,
-            clearable=False,
-            options=[],
             value=None,
+            clearable=True,
+            options=[],
+            maxHeight=300,
+            optionHeight=50,
+            persistence=True,
+            persistence_type='local',
         ),
     ])
    

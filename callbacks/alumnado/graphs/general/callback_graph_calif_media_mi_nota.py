@@ -68,7 +68,7 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
 
     layout = go.Layout(
         title={'text':'Nota media general y mi nota por asignaturas y curso <br> académico', 'x':0.5},
-        xaxis={'title': 'Asignatura'},
+        xaxis={'title': 'Asignatura', 'tickangle': 45},
         yaxis={'title': 'Nota'},
         barmode='group',
         legend={'orientation': 'v'}

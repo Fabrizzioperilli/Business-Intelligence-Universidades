@@ -57,7 +57,7 @@ def update_graph_alumnado(alumno_id, curso_academico):
         )
 
     layout = go.Layout(
-        title={'text': 'Calificación cualitativa de las asignaturas matriculadas', 'x': 0.5},
+        title={'text': 'Calificación cualitativa de las asignaturas matriculadas del alumno', 'x': 0.5},
         barmode='stack',
         xaxis={'title': 'Curso académico'},
         yaxis={'title': 'Nº Asignaturas matriculadas'},

@@ -1,6 +1,6 @@
 indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,universidad,cod_universidad
 1,Álgebra,6.53,Aprobado,3012315ALG,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-2,Cálculo,4.23,Supenso,3012316CAL,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+2,Cálculo,4.23,Suspenso,3012316CAL,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 3,Programación,9.5,Sobresaliente,3012317PRO,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 4,Bases de Datos,7.5,Notable,3012318BD,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 5,Redes de Computadoras,3.52,Suspenso,3012319RC,BDCX8,Ordinaria,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
@@ -58,3 +58,133 @@ indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,
 57,Gestión de Proyectos,5.56,Aprobado,10012338GP,BDCX8,Ordinaria,2021/2022,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
 58,Gestión de Calidad,6.19,Aprobado,10012339GC,BDCX8,Ordinaria,2021/2022,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
 59,Gestión de Riesgos,8.5,Notable,10012340GR,BDCX8,Ordinaria,2021/2022,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
+60,Álgebra,8.76,Notable,3012315ALG,BDCX8,Ordinaria,2018/2019,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+61,Cálculo,7.67,Notable,3012316CAL,BDCX8,Ordinaria,2018/2019,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+62,Programación,9.34,Sobresaliente,3012317PRO,BDCX8,Ordinaria,2018/2019,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+63,Bases de Datos,5.02,Aprobado,3012318BD,BDCX8,Ordinaria,2018/2019,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+64,Redes de Computadoras,7.75,Notable,3012319RC,BDCX8,Ordinaria,2018/2019,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+65,Estadística,8.22,Notable,6012319EST,BDCX8,Ordinaria,2018/2019,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+66,Cálculo,9.77,Sobresaliente,3012316CAL,BDCX8,Ordinaria,2019/2020,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+67,Redes de Computadoras,7.68,Notable,3012319RC,BDCX8,Ordinaria,2019/2020,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+68,Inteligencia Artificial,7.79,Notable,7012319IA,BDCX8,Ordinaria,2018/2019,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+69,Programación Orientada a Objetos,4.07,Suspenso,8012319POO,BDCX8,Ordinaria,2018/2019,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+70,Ingeniería de Software,9.21,Sobresaliente,9012319ISW,BDCX8,Ordinaria,2018/2019,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+71,Análisis de Algoritmos,7.57,Notable,10012319AA,BDCX8,Ordinaria,2018/2019,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+72,Sistemas Operativos,7.4,Notable,10012319SS,BDCX8,Ordinaria,2019/2020,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+73,Análisis de Datos,8.0,Notable,10012320AD,BDCX8,Ordinaria,2019/2020,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+74,Seguridad Informática,7.48,Notable,10012321SI,BDCX8,Ordinaria,2019/2020,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+75,Desarrollo Web,5.6,Aprobado,10012322DW,BDCX8,Ordinaria,2019/2020,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+76,Programación Avanzada,8.19,Notable,10012324PA,BDCX8,Ordinaria,2019/2020,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+77,Inglés,8.86,Notable,10012332ING,BDCX8,Ordinaria,2020/2021,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+78,Paradigmas de Programación,5.97,Aprobado,10012333PP,BDCX8,Ordinaria,2020/2021,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+79,Programación Web,4.4,Suspenso,10012334PW,BDCX8,Ordinaria,2020/2021,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+80,Programación Móvil,7.48,Notable,10012335PM,BDCX8,Ordinaria,2020/2021,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+81,Programación de Videojuegos,5.39,Aprobado,10012336PV,BDCX8,Ordinaria,2020/2021,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+82,Programación de Sistemas,5.68,Aprobado,10012337PS,BDCX8,Ordinaria,2020/2021,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+83,Gestión de Proyectos,8.3,Notable,10012338GP,BDCX8,Ordinaria,2021/2022,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+84,Gestión de Calidad,4.25,Suspenso,10012339GC,BDCX8,Ordinaria,2021/2022,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+85,Gestión de Riesgos,9.63,Sobresaliente,10012340GR,BDCX8,Ordinaria,2021/2022,FPM12346,Plan 2018,Universidad de la Laguna,ULL015
+86,Álgebra,8.78,Notable,3012315ALG,BDCX8,Ordinaria,2018/2019,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+87,Cálculo,9.67,Sobresaliente,3012316CAL,BDCX8,Ordinaria,2018/2019,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+88,Programación,8.6,Notable,3012317PRO,BDCX8,Ordinaria,2018/2019,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+89,Bases de Datos,8.71,Notable,3012318BD,BDCX8,Ordinaria,2018/2019,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+90,Redes de Computadoras,5.67,Aprobado,3012319RC,BDCX8,Ordinaria,2018/2019,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+91,Estadística,7.5,Notable,6012319EST,BDCX8,Ordinaria,2018/2019,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+92,Cálculo,7.12,Notable,3012316CAL,BDCX8,Ordinaria,2019/2020,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+93,Redes de Computadoras,6.38,Aprobado,3012319RC,BDCX8,Ordinaria,2019/2020,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+94,Inteligencia Artificial,9.05,Sobresaliente,7012319IA,BDCX8,Ordinaria,2018/2019,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+95,Programación Orientada a Objetos,7.94,Notable,8012319POO,BDCX8,Ordinaria,2018/2019,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+96,Ingeniería de Software,5.18,Aprobado,9012319ISW,BDCX8,Ordinaria,2018/2019,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+97,Análisis de Algoritmos,5.19,Aprobado,10012319AA,BDCX8,Ordinaria,2018/2019,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+98,Sistemas Operativos,7.48,Notable,10012319SS,BDCX8,Ordinaria,2019/2020,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+99,Análisis de Datos,7.76,Notable,10012320AD,BDCX8,Ordinaria,2019/2020,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+100,Seguridad Informática,5.02,Aprobado,10012321SI,BDCX8,Ordinaria,2019/2020,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+101,Desarrollo Web,6.15,Aprobado,10012322DW,BDCX8,Ordinaria,2019/2020,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+102,Programación Avanzada,7.9,Notable,10012324PA,BDCX8,Ordinaria,2019/2020,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+103,Inglés,6.35,Aprobado,10012332ING,BDCX8,Ordinaria,2020/2021,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+104,Paradigmas de Programación,8.93,Notable,10012333PP,BDCX8,Ordinaria,2020/2021,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+105,Programación Web,9.01,Sobresaliente,10012334PW,BDCX8,Ordinaria,2020/2021,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+106,Programación Móvil,9.47,Sobresaliente,10012335PM,BDCX8,Ordinaria,2020/2021,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+107,Programación de Videojuegos,8.97,Notable,10012336PV,BDCX8,Ordinaria,2020/2021,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+108,Programación de Sistemas,7.21,Notable,10012337PS,BDCX8,Ordinaria,2020/2021,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+109,Gestión de Proyectos,5.51,Aprobado,10012338GP,BDCX8,Ordinaria,2021/2022,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+110,Gestión de Calidad,8.67,Notable,10012339GC,BDCX8,Ordinaria,2021/2022,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+111,Gestión de Riesgos,7.65,Notable,10012340GR,BDCX8,Ordinaria,2021/2022,FPM12347,Plan 2018,Universidad de la Laguna,ULL015
+112,Álgebra,4.97,Suspenso,3012315ALG,BDCX8,Ordinaria,2018/2019,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+113,Cálculo,5.74,Aprobado,3012316CAL,BDCX8,Ordinaria,2018/2019,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+114,Programación,9.5,Sobresaliente,3012317PRO,BDCX8,Ordinaria,2018/2019,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+115,Bases de Datos,8.99,Notable,3012318BD,BDCX8,Ordinaria,2018/2019,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+116,Redes de Computadoras,5.62,Aprobado,3012319RC,BDCX8,Ordinaria,2018/2019,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+117,Estadística,6.49,Aprobado,6012319EST,BDCX8,Ordinaria,2018/2019,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+118,Cálculo,4.37,Suspenso,3012316CAL,BDCX8,Ordinaria,2019/2020,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+119,Redes de Computadoras,9.69,Sobresaliente,3012319RC,BDCX8,Ordinaria,2019/2020,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+120,Inteligencia Artificial,8.72,Notable,7012319IA,BDCX8,Ordinaria,2018/2019,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+121,Programación Orientada a Objetos,8.17,Notable,8012319POO,BDCX8,Ordinaria,2018/2019,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+122,Ingeniería de Software,4.79,Suspenso,9012319ISW,BDCX8,Ordinaria,2018/2019,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+123,Análisis de Algoritmos,5.23,Aprobado,10012319AA,BDCX8,Ordinaria,2018/2019,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+124,Sistemas Operativos,4.32,Suspenso,10012319SS,BDCX8,Ordinaria,2019/2020,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+125,Análisis de Datos,6.6,Aprobado,10012320AD,BDCX8,Ordinaria,2019/2020,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+126,Seguridad Informática,7.31,Notable,10012321SI,BDCX8,Ordinaria,2019/2020,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+127,Desarrollo Web,4.37,Suspenso,10012322DW,BDCX8,Ordinaria,2019/2020,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+128,Programación Avanzada,8.76,Notable,10012324PA,BDCX8,Ordinaria,2019/2020,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+129,Inglés,7.22,Notable,10012332ING,BDCX8,Ordinaria,2020/2021,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+130,Paradigmas de Programación,6.54,Aprobado,10012333PP,BDCX8,Ordinaria,2020/2021,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+131,Programación Web,8.67,Notable,10012334PW,BDCX8,Ordinaria,2020/2021,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+132,Programación Móvil,5.48,Aprobado,10012335PM,BDCX8,Ordinaria,2020/2021,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+133,Programación de Videojuegos,7.1,Notable,10012336PV,BDCX8,Ordinaria,2020/2021,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+134,Programación de Sistemas,9.76,Sobresaliente,10012337PS,BDCX8,Ordinaria,2020/2021,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+135,Gestión de Proyectos,4.85,Suspenso,10012338GP,BDCX8,Ordinaria,2021/2022,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+136,Gestión de Calidad,5.79,Aprobado,10012339GC,BDCX8,Ordinaria,2021/2022,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+137,Gestión de Riesgos,5.38,Aprobado,10012340GR,BDCX8,Ordinaria,2021/2022,FPM12348,Plan 2018,Universidad de la Laguna,ULL015
+138,Álgebra,8.15,Notable,3012315ALG,BDCX8,Ordinaria,2018/2019,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+139,Cálculo,8.84,Notable,3012316CAL,BDCX8,Ordinaria,2018/2019,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+140,Programación,8.63,Notable,3012317PRO,BDCX8,Ordinaria,2018/2019,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+141,Bases de Datos,5.55,Aprobado,3012318BD,BDCX8,Ordinaria,2018/2019,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+142,Redes de Computadoras,9.32,Sobresaliente,3012319RC,BDCX8,Ordinaria,2018/2019,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+143,Estadística,4.51,Suspenso,6012319EST,BDCX8,Ordinaria,2018/2019,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+144,Cálculo,5.66,Aprobado,3012316CAL,BDCX8,Ordinaria,2019/2020,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+145,Redes de Computadoras,4.28,Suspenso,3012319RC,BDCX8,Ordinaria,2019/2020,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+146,Inteligencia Artificial,5.24,Aprobado,7012319IA,BDCX8,Ordinaria,2018/2019,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+147,Programación Orientada a Objetos,5.4,Aprobado,8012319POO,BDCX8,Ordinaria,2018/2019,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+148,Ingeniería de Software,9.87,Sobresaliente,9012319ISW,BDCX8,Ordinaria,2018/2019,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+149,Análisis de Algoritmos,6.13,Aprobado,10012319AA,BDCX8,Ordinaria,2018/2019,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+150,Sistemas Operativos,9.32,Sobresaliente,10012319SS,BDCX8,Ordinaria,2019/2020,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+151,Análisis de Datos,5.88,Aprobado,10012320AD,BDCX8,Ordinaria,2019/2020,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+152,Seguridad Informática,5.25,Aprobado,10012321SI,BDCX8,Ordinaria,2019/2020,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+153,Desarrollo Web,7.35,Notable,10012322DW,BDCX8,Ordinaria,2019/2020,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+154,Programación Avanzada,8.43,Notable,10012324PA,BDCX8,Ordinaria,2019/2020,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+155,Inglés,9.67,Sobresaliente,10012332ING,BDCX8,Ordinaria,2020/2021,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+156,Paradigmas de Programación,7.96,Notable,10012333PP,BDCX8,Ordinaria,2020/2021,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+157,Programación Web,5.77,Aprobado,10012334PW,BDCX8,Ordinaria,2020/2021,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+158,Programación Móvil,6.4,Aprobado,10012335PM,BDCX8,Ordinaria,2020/2021,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+159,Programación de Videojuegos,4.05,Suspenso,10012336PV,BDCX8,Ordinaria,2020/2021,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+160,Programación de Sistemas,6.06,Aprobado,10012337PS,BDCX8,Ordinaria,2020/2021,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+161,Gestión de Proyectos,5.39,Aprobado,10012338GP,BDCX8,Ordinaria,2021/2022,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+162,Gestión de Calidad,8.98,Notable,10012339GC,BDCX8,Ordinaria,2021/2022,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+163,Gestión de Riesgos,4.66,Suspenso,10012340GR,BDCX8,Ordinaria,2021/2022,FPM12349,Plan 2018,Universidad de la Laguna,ULL015
+164,Álgebra,7.36,Notable,3012315ALG,BDCX8,Ordinaria,2018/2019,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+165,Cálculo,5.55,Aprobado,3012316CAL,BDCX8,Ordinaria,2018/2019,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+166,Programación,6.65,Aprobado,3012317PRO,BDCX8,Ordinaria,2018/2019,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+167,Bases de Datos,7.17,Notable,3012318BD,BDCX8,Ordinaria,2018/2019,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+168,Redes de Computadoras,5.85,Aprobado,3012319RC,BDCX8,Ordinaria,2018/2019,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+169,Estadística,8.37,Notable,6012319EST,BDCX8,Ordinaria,2018/2019,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+170,Cálculo,6.1,Aprobado,3012316CAL,BDCX8,Ordinaria,2019/2020,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+171,Redes de Computadoras,6.34,Aprobado,3012319RC,BDCX8,Ordinaria,2019/2020,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+172,Inteligencia Artificial,5.19,Aprobado,7012319IA,BDCX8,Ordinaria,2018/2019,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+173,Programación Orientada a Objetos,7.87,Notable,8012319POO,BDCX8,Ordinaria,2018/2019,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+174,Ingeniería de Software,4.04,Suspenso,9012319ISW,BDCX8,Ordinaria,2018/2019,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+175,Análisis de Algoritmos,8.24,Notable,10012319AA,BDCX8,Ordinaria,2018/2019,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+176,Sistemas Operativos,4.25,Suspenso,10012319SS,BDCX8,Ordinaria,2019/2020,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+177,Análisis de Datos,6.84,Aprobado,10012320AD,BDCX8,Ordinaria,2019/2020,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+178,Seguridad Informática,9.28,Sobresaliente,10012321SI,BDCX8,Ordinaria,2019/2020,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+179,Desarrollo Web,5.02,Aprobado,10012322DW,BDCX8,Ordinaria,2019/2020,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+180,Programación Avanzada,5.89,Aprobado,10012324PA,BDCX8,Ordinaria,2019/2020,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+181,Inglés,8.05,Notable,10012332ING,BDCX8,Ordinaria,2020/2021,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+182,Paradigmas de Programación,7.24,Notable,10012333PP,BDCX8,Ordinaria,2020/2021,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+183,Programación Web,7.21,Notable,10012334PW,BDCX8,Ordinaria,2020/2021,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+184,Programación Móvil,7.7,Notable,10012335PM,BDCX8,Ordinaria,2020/2021,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+185,Programación de Videojuegos,9.65,Sobresaliente,10012336PV,BDCX8,Ordinaria,2020/2021,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+186,Programación de Sistemas,5.63,Aprobado,10012337PS,BDCX8,Ordinaria,2020/2021,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+187,Gestión de Proyectos,9.15,Sobresaliente,10012338GP,BDCX8,Ordinaria,2021/2022,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+188,Gestión de Calidad,4.87,Suspenso,10012339GC,BDCX8,Ordinaria,2021/2022,FPM12350,Plan 2018,Universidad de la Laguna,ULL015
+189,Gestión de Riesgos,4.22,Suspenso,10012340GR,BDCX8,Ordinaria,2021/2022,FPM12350,Plan 2018,Universidad de la Laguna,ULL015

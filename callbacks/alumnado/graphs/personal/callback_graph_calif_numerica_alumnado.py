@@ -15,11 +15,12 @@ def update_graph_alumnado(alumno_id, curso_academico):
     elif isinstance(curso_academico, list):
         curso_academico = tuple(curso_academico)
 
+    # Adjusted query to include sorting by the academic year in descending order
     query = """
     SELECT asignatura, calif_numerica
     FROM lineas_actas
     WHERE id = :alumno_id AND curso_aca IN :curso_academico
-    ORDER BY asignatura;
+    ORDER BY asignatura, curso_aca DESC;
     """
     params = {'alumno_id': alumno_id, 'curso_academico': curso_academico}
 
@@ -33,16 +34,24 @@ def update_graph_alumnado(alumno_id, curso_academico):
         print("No data returned from the query.")
         return go.Figure()
 
-    subjects = [row[0] for row in data]
-    grades = [row[1] for row in data]
+    
+    subjects = []
+    grades = []
+    last_subject = None
+    for row in data:
+        subject, grade = row
+        if subject != last_subject:
+            subjects.append(subject)
+            grades.append(grade)
+            last_subject = subject
 
     trace = go.Bar(x=subjects, y=grades, marker_color='blue', opacity=0.7)
 
+
     layout = go.Layout(
-        title={'text':'Calificación cuantitativa de las asignaturas matriculadas', 'x':0.5},
-        xaxis={'title': 'Asignatura'},
+        title={'text':'Calificación cuantitativa de las asignaturas matriculadas del alumno', 'x':0.5},
+        xaxis={'title': 'Asignatura', 'tickangle': 45},
         yaxis={'title': 'Calificación'},
-        showlegend=False,
     )
 
     figure = go.Figure(data=[trace], layout=layout)

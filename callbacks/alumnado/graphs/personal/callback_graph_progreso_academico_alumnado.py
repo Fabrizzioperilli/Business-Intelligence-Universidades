@@ -48,7 +48,7 @@ def update_graph_alumnado(alumno_id, curso_academico):
     trace = go.Bar(x=academic_years, y=cumulative_passed, marker_color='blue', opacity=0.7)
 
     layout = go.Layout(
-        title={'text':'Evolución del progreso académico', 'x':0.5},
+        title={'text':'Evolución del progreso académico del alumno', 'x':0.5},
         xaxis={'title': 'Curso académico'},
         yaxis={'title': 'Nº Asignaturas de superadas (Acumulativo)'},
         showlegend=False,

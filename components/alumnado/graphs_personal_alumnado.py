@@ -19,7 +19,7 @@ def graphs_personal_alumnado():
     html.Div([
       dcc.Graph(
           id='graph-bar-calificaciones-por-asignatura',
-          figure={}
+          figure={},
     )], className='graph-item'),
     html.Div([
       dcc.Graph(
