@@ -1,5 +1,6 @@
 from dash import Input, Output, State, callback, callback_context
 from data.db_connector import db
+from utils.utils import list_to_tuple
 
 @callback(
     Output('asignaturas-matriculadas', 'options'),
@@ -18,17 +19,16 @@ def update_filter_asignaturas_matri_alumnado(alumno_id, curso_academico, n_click
         button_id = ctx.triggered[0]['prop_id'].split('.')[0]
 
     if button_id == 'select-all-button' and n_clicks > 0:
-        # Botón para seleccionar todas las opciones fue presionado
         return existing_options, [option['value'] for option in existing_options]
 
     if not alumno_id or not curso_academico:
         return [], None
     
-    # Lógica para cargar las opciones basadas en el alumno y el curso
-    if isinstance(curso_academico, str):
-        curso_academico = (curso_academico,)
-    else:
-        curso_academico = tuple(curso_academico)
+    
+    try:
+        curso_academico = list_to_tuple(curso_academico)
+    except Exception as e:
+        return [], None
 
     query = """
     SELECT asignatura FROM asignaturas_matriculadas WHERE id = :id

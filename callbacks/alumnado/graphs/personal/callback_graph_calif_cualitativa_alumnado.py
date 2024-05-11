@@ -1,6 +1,7 @@
 from dash import Input, Output, callback
 from data.db_connector import db
 import plotly.graph_objs as go
+from utils.utils import list_to_tuple
 
 @callback(
     Output('graph-bar-evolucion-asignaturas-matriculadas', 'figure'),
@@ -11,10 +12,10 @@ def update_graph_alumnado(alumno_id, curso_academico):
     if not alumno_id or not curso_academico:
         return go.Figure()
 
-    if isinstance(curso_academico, str):
-        curso_academico = (curso_academico,)
-    else:
-        curso_academico = tuple(curso_academico)
+    try:
+        curso_academico = list_to_tuple(curso_academico)
+    except Exception as e:
+        return [], None
 
     query = """
     SELECT curso_aca, calif, COUNT(*) as grade_count

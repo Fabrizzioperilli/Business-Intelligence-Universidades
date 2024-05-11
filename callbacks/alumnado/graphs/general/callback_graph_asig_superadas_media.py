@@ -1,6 +1,7 @@
 from dash import callback, Input, Output
 import plotly.graph_objs as go
 from data.db_connector import db
+from utils.utils import list_to_tuple
 
 @callback(
     Output('asignaturas-superadas-general-mi-nota', 'figure'),
@@ -12,8 +13,11 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas):
     if not curso_academico or not alumno_id or not asignaturas_matriculadas:
         return go.Figure()
 
-    curso_academico = tuple([curso_academico]) if isinstance(curso_academico, str) else tuple(curso_academico)
-    asignaturas_matriculadas = tuple([asignaturas_matriculadas]) if isinstance(asignaturas_matriculadas, str) else tuple(asignaturas_matriculadas)
+    try:
+        curso_academico = list_to_tuple(curso_academico)
+        asignaturas_matriculadas = list_to_tuple(asignaturas_matriculadas)
+    except Exception as e:
+        return [], None
 
     query = """
     SELECT a.id, a.abandona, AVG(la.max_calif) AS NotaMedia, COUNT(*) AS AsignaturasSuperadas
