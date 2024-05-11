@@ -8,7 +8,7 @@ def filter_curso_academico_alumnado():
             id="curso-academico",
             searchable=False,
             multi=True,
-            clearable=False,
+            clearable=True,
             options=[],
             value=None,
             persistence=True,
