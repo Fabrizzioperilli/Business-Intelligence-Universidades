@@ -1,5 +1,3 @@
 indice,cod_plan,curso_aca,id,nota_media,plan,universidad,cod_universidad
-1,BDCX8,2022/2023,FPM12345,8.53,Plan 2022,Universidad de la Laguna,ULL015
+1,BDCX8,2022/2023,FPM12345,6.81,Plan 2022,Universidad de la Laguna,ULL015
 2,BDCX8,2022/2023,CVM56789,7.52,Plan 2022,Universidad de la Laguna,ULL015
-3,BDCX8,2022/2023,FPM12346,7.75,Plan 2022,Universidad de la Laguna,ULL015
-4,BDCX8,2022/2023,FPM12347,8.22,Plan 2022,Universidad de la Laguna,ULL015

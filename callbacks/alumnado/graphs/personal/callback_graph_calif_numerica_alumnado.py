@@ -14,14 +14,15 @@ def update_graph_alumnado(alumno_id, curso_academico):
     try:
         curso_academico = list_to_tuple(curso_academico)
     except Exception as e:
-        return [], None
+        return go.Figure()  # Cambiado para regresar una figura vacía correctamente
 
-    # Adjusted query to include sorting by the academic year in descending order
+    # Consulta ajustada para seleccionar la máxima calificación por asignatura en los cursos seleccionados
     query = """
-    SELECT asignatura, calif_numerica
+    SELECT asignatura, MAX(calif_numerica) as calif_numerica
     FROM lineas_actas
     WHERE id = :alumno_id AND curso_aca IN :curso_academico
-    ORDER BY asignatura, curso_aca DESC;
+    GROUP BY asignatura
+    ORDER BY asignatura;
     """
     params = {'alumno_id': alumno_id, 'curso_academico': curso_academico}
 
@@ -29,31 +30,27 @@ def update_graph_alumnado(alumno_id, curso_academico):
         data = db.execute_query(query, params)
     except Exception as e:
         print("Query execution failed:", e)
-        data = []
+        return go.Figure()  # Regresar figura vacía si hay error
 
     if not data:
         print("No data returned from the query.")
         return go.Figure()
 
-    
     subjects = []
     grades = []
-    last_subject = None
     for row in data:
         subject, grade = row
-        if subject != last_subject:
-            subjects.append(subject)
-            grades.append(grade)
-            last_subject = subject
+        subjects.append(subject)
+        grades.append(grade)
 
     trace = go.Bar(x=subjects, y=grades, marker_color='blue', opacity=0.7)
 
-
     layout = go.Layout(
-        title={'text':'Calificación cuantitativa de las asignaturas matriculadas del alumno', 'x':0.5},
+        title={'text': 'Calificación cuantitativa de las asignaturas matriculadas del alumno', 'x': 0.5},
         xaxis={'title': 'Asignatura', 'tickangle': 45},
         yaxis={'title': 'Calificación'},
     )
 
     figure = go.Figure(data=[trace], layout=layout)
     return figure
+

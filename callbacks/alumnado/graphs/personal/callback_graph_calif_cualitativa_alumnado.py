@@ -18,11 +18,28 @@ def update_graph_alumnado(alumno_id, curso_academico):
         return [], None
 
     query = """
-    SELECT curso_aca, calif, COUNT(*) as grade_count
+    WITH CalificacionesOrdenadas AS (
+    SELECT curso_aca, asignatura, MAX(calif) FILTER (WHERE calif IN ('Notable', 'Aprobado', 'Suspendido','Sobresaliente','No presentado')) AS max_calif
     FROM lineas_actas
     WHERE id = :alumno_id AND curso_aca IN :curso_academico
-    GROUP BY curso_aca, calif
-    ORDER BY curso_aca;
+    GROUP BY curso_aca, asignatura
+),
+ResultadosFinales AS (
+    SELECT curso_aca, 
+           CASE 
+               WHEN COUNT(*) FILTER (WHERE calif = 'No presentado') = COUNT(*) THEN 'No presentado'
+               ELSE max_calif
+           END AS calif_final
+    FROM lineas_actas
+    LEFT JOIN CalificacionesOrdenadas USING (curso_aca, asignatura)
+    WHERE id = :alumno_id AND curso_aca IN :curso_academico
+    GROUP BY curso_aca, asignatura, max_calif
+)
+SELECT curso_aca, calif_final AS calif, COUNT(*) AS grade_count
+FROM ResultadosFinales
+GROUP BY curso_aca, calif_final
+ORDER BY curso_aca;
+
     """
     params = {'alumno_id': alumno_id, 'curso_academico': curso_academico}
 
@@ -35,7 +52,7 @@ def update_graph_alumnado(alumno_id, curso_academico):
     if not data:
         return go.Figure()
 
-    categories = ['Suspenso', 'Aprobado', 'Notable', 'Sobresaliente']
+    categories = ['No presentado','Suspenso', 'Aprobado', 'Notable', 'Sobresaliente']
     all_courses = sorted(set(row[0] for row in data))
     grade_counts = {category: {course: 0 for course in all_courses} for category in categories}
     
@@ -45,7 +62,7 @@ def update_graph_alumnado(alumno_id, curso_academico):
             grade_counts[calif][curso_aca] = grade_count
 
     traces = []
-    color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'orange', 'Suspenso': 'red'}
+    color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'orange', 'Suspenso': 'red', 'No presentado': 'gray'}
     for category in categories:
         traces.append(
             go.Bar(
