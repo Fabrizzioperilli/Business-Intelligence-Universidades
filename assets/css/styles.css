@@ -215,7 +215,7 @@ body {
   overflow-y: auto;
 }
 
-#select-all-button {
+#select-all-button,#select-all-cursos-academicos {
   background-color: #007eff;
   color: white;
   font-family: var(--font-family);

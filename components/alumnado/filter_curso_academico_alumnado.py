@@ -3,17 +3,18 @@ from callbacks.alumnado.callback_filter_curso_cademico_alumnado import update_fi
 
 def filter_curso_academico_alumnado():
     return html.Div([
-        html.Label("Curso Académico"),
+        html.Label("Curso cadémico"),
         dcc.Dropdown(
             id="curso-academico",
             searchable=False,
             multi=True,
             clearable=True,
             options=[],
-            value=None,
-            persistence=True,
-            persistence_type='local',
+            value=None,    
             maxHeight=300,
+            persistence=True,
+            persistence_type='session',
         ),
+        html.Button('Seleccionar todo', id='select-all-cursos-academicos', n_clicks=0),
         html.Hr(),
     ])

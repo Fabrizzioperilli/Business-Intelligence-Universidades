@@ -24,7 +24,6 @@ def update_filter_asignaturas_matri_alumnado(alumno_id, curso_academico, n_click
     if not alumno_id or not curso_academico:
         return [], None
     
-    
     try:
         curso_academico = list_to_tuple(curso_academico)
     except Exception as e:
