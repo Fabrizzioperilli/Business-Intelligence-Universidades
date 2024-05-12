@@ -15,31 +15,27 @@ def update_graph_alumnado(alumno_id, curso_academico):
     try:
         curso_academico = list_to_tuple(curso_academico)
     except Exception as e:
-        return [], None
+        print("Error:", e)
+        return go.Figure()
 
+    # Modificando la consulta para obtener la máxima calificación por curso y por asignatura
     query = """
-    WITH CalificacionesOrdenadas AS (
-    SELECT curso_aca, asignatura, MAX(calif) FILTER (WHERE calif IN ('Notable', 'Aprobado', 'Suspendido','Sobresaliente','No presentado')) AS max_calif
-    FROM lineas_actas
-    WHERE id = :alumno_id AND curso_aca IN :curso_academico
-    GROUP BY curso_aca, asignatura
-),
-ResultadosFinales AS (
-    SELECT curso_aca, 
-           CASE 
-               WHEN COUNT(*) FILTER (WHERE calif = 'No presentado') = COUNT(*) THEN 'No presentado'
-               ELSE max_calif
-           END AS calif_final
-    FROM lineas_actas
-    LEFT JOIN CalificacionesOrdenadas USING (curso_aca, asignatura)
-    WHERE id = :alumno_id AND curso_aca IN :curso_academico
-    GROUP BY curso_aca, asignatura, max_calif
-)
-SELECT curso_aca, calif_final AS calif, COUNT(*) AS grade_count
-FROM ResultadosFinales
-GROUP BY curso_aca, calif_final
-ORDER BY curso_aca;
-
+    WITH RankedGrades AS (
+        SELECT curso_aca, calif, ROW_NUMBER() OVER (PARTITION BY curso_aca, asignatura ORDER BY CASE 
+            WHEN calif = 'Sobresaliente' THEN 5
+            WHEN calif = 'Notable' THEN 4
+            WHEN calif = 'Aprobado' THEN 3
+            WHEN calif = 'Suspenso' THEN 2
+            WHEN calif = 'No presentado' THEN 1
+            ELSE 0 END DESC) AS rk
+        FROM lineas_actas
+        WHERE id = :alumno_id AND curso_aca IN :curso_academico
+    )
+    SELECT curso_aca, calif, COUNT(*) as grade_count
+    FROM RankedGrades
+    WHERE rk = 1
+    GROUP BY curso_aca, calif
+    ORDER BY curso_aca;
     """
     params = {'alumno_id': alumno_id, 'curso_academico': curso_academico}
 
@@ -52,7 +48,7 @@ ORDER BY curso_aca;
     if not data:
         return go.Figure()
 
-    categories = ['No presentado','Suspenso', 'Aprobado', 'Notable', 'Sobresaliente']
+    categories = ['No presentado', 'Suspenso', 'Aprobado', 'Notable', 'Sobresaliente']
     all_courses = sorted(set(row[0] for row in data))
     grade_counts = {category: {course: 0 for course in all_courses} for category in categories}
     
