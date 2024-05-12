@@ -17,15 +17,20 @@ def update_graph_alumnado(alumno_id, curso_academico):
         return [], None
 
     query = """
-    SELECT m.curso_aca, COUNT(m.cod_asignatura) AS total_asignaturas,
-    SUM(CASE WHEN la.calif IN ('Aprobado', 'Notable', 'Sobresaliente') THEN 1 ELSE 0
-        END) AS aprobadas
-    FROM asignaturas_matriculadas m LEFT JOIN lineas_actas la
-    ON m.cod_asignatura = la.cod_asig AND m.curso_aca = la.curso_aca
-    WHERE m.id = :alumno_id AND m.curso_aca IN :curso_academico
-    GROUP BY m.curso_aca
-    ORDER BY m.curso_aca;
+    SELECT
+        AM.curso_aca AS "curso_academico",
+        COUNT(DISTINCT AM.asignatura) AS "Total asignaturas matriculadas",
+        COUNT(DISTINCT CASE WHEN LA.calif_numerica >= 5 THEN LA.asignatura ELSE NULL END) AS "Total asignaturas superadas"
+    FROM
+        asignaturas_matriculadas AM
+    LEFT JOIN
+        lineas_actas LA ON AM.cod_asignatura = LA.cod_asig AND LA.id = AM.id AND LA.curso_aca = AM.curso_aca
+    WHERE
+        AM.id = :alumno_id AND AM.curso_aca IN :curso_academico
+    GROUP BY
+        AM.curso_aca;
     """
+
 
     params = {'alumno_id': alumno_id, 'curso_academico': curso_academico}
 
@@ -49,7 +54,7 @@ def update_graph_alumnado(alumno_id, curso_academico):
         orientation='h',
         marker_color='blue',
         opacity=0.7,
-        width=0.4
+        width=0.7
 
     )
 
