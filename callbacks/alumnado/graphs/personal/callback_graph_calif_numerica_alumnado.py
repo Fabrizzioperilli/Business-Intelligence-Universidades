@@ -49,6 +49,7 @@ def update_graph_alumnado(alumno_id, curso_academico):
         title={'text': 'Calificación cuantitativa de las asignaturas matriculadas del alumno', 'x': 0.5},
         xaxis={'title': 'Asignatura', 'tickangle': 45},
         yaxis={'title': 'Calificación'},
+        height=600
     )
 
     figure = go.Figure(data=[trace], layout=layout)

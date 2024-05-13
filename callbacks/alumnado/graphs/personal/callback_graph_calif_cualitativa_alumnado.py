@@ -77,7 +77,8 @@ def update_graph_alumnado(alumno_id, curso_academico):
         xaxis={'title': 'Curso académico'},
         yaxis={'title': 'Nº Asignaturas matriculadas'},
         showlegend=True,
-        legend={'title': 'Calificación'}
+        legend={'title': 'Calificación'},
+        
     )
 
     return go.Figure(data=traces, layout=layout)

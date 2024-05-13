@@ -13,25 +13,64 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
     if not curso_academico or not asignaturas_matriculadas or not alumno_id:
         return go.Figure()
 
-    try:
-        curso_academico = list_to_tuple(curso_academico)
-        asignaturas_matriculadas = list_to_tuple(asignaturas_matriculadas)
-    except Exception as e:
-        return [], None
+    curso_academico = list_to_tuple(curso_academico)
+    asignaturas_matriculadas = list_to_tuple(asignaturas_matriculadas)
 
     general_query = """
-    SELECT asignatura, calif, COUNT(*) as grade_count
-    FROM lineas_actas
-    WHERE asignatura IN :asignaturas_matriculadas AND curso_aca IN :curso_academico
-    GROUP BY asignatura, calif
-    ORDER BY asignatura;
-    """
+        WITH CalificacionesMaximas AS (
+            SELECT
+                lineas_actas.id,
+                asignatura,
+                curso_aca,
+                calif,
+                ROW_NUMBER() OVER (PARTITION BY id, curso_aca, asignatura ORDER BY CASE 
+                    WHEN calif = 'Sobresaliente' THEN 5
+                    WHEN calif = 'Notable' THEN 4
+                    WHEN calif = 'Aprobado' THEN 3
+                    WHEN calif = 'Suspenso' THEN 2
+                    WHEN calif = 'No presentado' THEN 1
+                    ELSE 0 END DESC) AS rk
+            FROM lineas_actas
+            WHERE curso_aca IN :curso_academico AND asignatura IN :asignaturas_matriculadas
+            AND calif IN ('Sobresaliente', 'Notable', 'Aprobado', 'Suspenso', 'No presentado')
+        )
+
+        SELECT
+            c.asignatura,
+            c.calif,
+            COUNT(*) AS count_grades
+        FROM CalificacionesMaximas c
+        WHERE c.rk = 1
+        GROUP BY c.asignatura, c.calif;
+        """
 
     student_query = """
-    SELECT asignatura, calif
-    FROM lineas_actas
-    WHERE id = :alumno_id AND asignatura IN :asignaturas_matriculadas AND curso_aca IN :curso_academico;
-    """
+        WITH CalificacionesMaximas AS (
+            SELECT
+                lineas_actas.id,
+                asignatura,
+                curso_aca,
+                calif,
+                ROW_NUMBER() OVER (PARTITION BY id, curso_aca, asignatura ORDER BY CASE 
+                    WHEN calif = 'Sobresaliente' THEN 5
+                    WHEN calif = 'Notable' THEN 4
+                    WHEN calif = 'Aprobado' THEN 3
+                    WHEN calif = 'Suspenso' THEN 2
+                    WHEN calif = 'No presentado' THEN 1
+                    ELSE 0 END DESC) AS rk
+            FROM lineas_actas
+            WHERE curso_aca IN :curso_academico AND asignatura IN :asignaturas_matriculadas AND id = :alumno_id
+            AND calif IN ('Sobresaliente', 'Notable', 'Aprobado', 'Suspenso', 'No presentado')
+        )
+
+        SELECT
+            c.asignatura,
+            c.calif,
+            COUNT(*) AS count_grades
+        FROM CalificacionesMaximas c
+        WHERE c.rk = 1
+        GROUP BY c.asignatura, c.calif;
+        """
 
     params = {
         'asignaturas_matriculadas': asignaturas_matriculadas,
@@ -49,7 +88,7 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
     if not general_data:
         return go.Figure()
 
-    categories = ['No presentado','Suspenso', 'Aprobado', 'Notable', 'Sobresaliente']
+    categories = ['Suspenso', 'No presentado', 'Aprobado', 'Notable', 'Sobresaliente']
     student_grades = {row[0]: row[1] for row in student_data}
     all_subjects = sorted(set(row[0] for row in general_data))
     grade_counts = {subject: {category: 0 for category in categories} for subject in all_subjects}
@@ -60,9 +99,10 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
             grade_counts[subject][calif] += grade_count
 
     traces = []
-    color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'orange', 'Suspenso': 'red', 'No presentado': 'gray'}
+    color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'orange' , 'Suspenso': 'red', 'No presentado': 'gray'}
 
-    # Crear trazas normales
+
+    # Create normal traces
     for category in categories:
         x = []
         y = []
@@ -71,7 +111,7 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
             y.append(grade_counts[subject][category] - (1 if category == student_grades.get(subject) else 0))
         traces.append(go.Bar(x=x, y=y, name=category, marker=dict(color=color_mapping[category]), opacity=0.7))
 
-    # Crear trazas para resaltar las barras del alumno
+    # Create traces to highlight the student's grades
     for category in categories:
         x = []
         y = []
@@ -79,7 +119,7 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
             if category == student_grades.get(subject):
                 x.append(subject)
                 y.append(1)
-        if y:  # Solo agregar la traza si hay datos
+        if y:  # Only add the trace if there are data
             traces.append(go.Bar(x=x, y=y, name=category + " (Yo)", marker=dict(color=color_mapping[category], line=dict(color='black', width=2)), opacity=0.9))
 
     layout = go.Layout(
@@ -90,7 +130,6 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
         showlegend=True,
         legend={'title': 'Calificación'},
         height=600,
-        
     )
 
     return go.Figure(data=traces, layout=layout)
