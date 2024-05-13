@@ -67,6 +67,7 @@ def update_graph_alumnado(alumno_id, curso_academico):
                 name=category,
                 marker_color=color_mapping[category],
                 opacity=0.8
+
             )
         )
 

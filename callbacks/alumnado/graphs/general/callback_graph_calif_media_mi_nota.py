@@ -22,11 +22,29 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
 
 
     query = """
-    SELECT l.asignatura, AVG(l.calif_numerica) AS media_calif, 
-    MAX(CASE WHEN l.id = :alumno_id THEN l.calif_numerica ELSE NULL END) AS calif_alumno  
-	FROM lineas_actas l 
-    WHERE l.asignatura IN :asignaturas_matriculadas AND l.curso_aca IN :curso_academico
-	GROUP BY l.asignatura;
+    SELECT 
+        subquery.asignatura, 
+        AVG(subquery.max_calif_numerica) AS media_calif,
+        MAX(CASE WHEN subquery.id = :alumno_id THEN subquery.max_calif_numerica ELSE NULL END) AS calif_alumno
+    FROM (
+        SELECT 
+            l.asignatura, 
+            l.id,
+            l.curso_aca,
+            MAX(l.calif_numerica) AS max_calif_numerica
+        FROM 
+            lineas_actas l
+        WHERE 
+            l.asignatura IN :asignaturas_matriculadas AND 
+            l.curso_aca IN :curso_academico
+        GROUP BY 
+            l.asignatura, 
+            l.id,
+            l.curso_aca
+    ) subquery
+    GROUP BY 
+        subquery.asignatura
+    ORDER BY subquery.asignatura;
     """
     params = {
         'asignaturas_matriculadas': asignaturas_matriculadas, 
@@ -65,11 +83,12 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
     ]
 
     layout = go.Layout(
-        title={'text':'Nota media general y mi nota por asignaturas y curso <br> académico', 'x':0.5},
+        title={'text':'Nota media general y mi nota por asignaturas y curso académico', 'x':0.5},
         xaxis={'title': 'Asignatura', 'tickangle': 45},
         yaxis={'title': 'Nota'},
         barmode='group',
-        legend={'orientation': 'v'}
+        legend={'orientation': 'v'},
+        height=600,
     )
 
     return go.Figure(data=traces, layout=layout)

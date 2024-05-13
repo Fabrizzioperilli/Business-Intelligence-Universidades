@@ -149,6 +149,19 @@ body {
   margin-bottom: 20px;
 }
 
+.graphs-container-general-alumnado {
+  grid-area: main; /* Usa el área principal */
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(1, 1fr); /* Dos columnas */
+  grid-gap: var(--grid-gap);
+  align-items: start;
+  justify-content: center;
+  padding: var(--grid-gap);
+  margin-bottom: 20px;
+}
+
 .graph-item {
   display: flex;
   justify-content: center;

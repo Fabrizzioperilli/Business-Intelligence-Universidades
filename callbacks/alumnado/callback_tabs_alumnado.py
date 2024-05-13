@@ -34,6 +34,7 @@ def render_content(tab, selected_alumnado):
             html.H2("Dashboard Alumnado", style={'textAlign': 'center'}),
             html.Div([
                 sidebar([
+                    resumen_alumnado(),
                     filters([
                         filter_curso_academico_alumnado(),
                         filter_asignaturas_matri_alumnado()

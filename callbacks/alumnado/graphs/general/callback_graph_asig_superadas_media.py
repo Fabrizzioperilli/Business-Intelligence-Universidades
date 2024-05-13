@@ -20,23 +20,31 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas):
         return [], None
 
     query = """
-    SELECT a.id, a.abandona, AVG(la.max_calif) AS NotaMedia, COUNT(*) AS AsignaturasSuperadas
+    SELECT 
+        a.id, 
+        a.abandona, 
+        AVG(CASE WHEN la.max_calif >= 5 THEN la.max_calif ELSE NULL END) AS NotaMedia, 
+        COUNT(DISTINCT CASE WHEN la.max_calif >= 5 THEN la.asignatura ELSE NULL END) AS "Total asignaturas superadas"
     FROM 
-        (SELECT 
-          la.id, 
-          la.asignatura,
-          MAX(la.calif_numerica) AS max_calif
-        FROM 
-        lineas_actas la
-        WHERE 
-          la.curso_aca IN :curso_academico
-          AND la.asignatura IN :asignaturas_matriculadas
-        GROUP BY 
-          la.id, la.asignatura
-    ) la
-    JOIN alumnos a ON a.id = la.id 
-    GROUP BY a.id  
-    ORDER BY a.id;
+        (
+            SELECT 
+                la.id, 
+                la.asignatura,
+                MAX(la.calif_numerica) AS max_calif
+            FROM 
+                lineas_actas la
+            WHERE 
+                la.curso_aca IN :curso_academico
+                AND la.asignatura IN :asignaturas_matriculadas
+            GROUP BY 
+                la.id, la.asignatura
+        ) la
+    JOIN 
+        alumnos a ON a.id = la.id 
+    GROUP BY 
+        a.id  
+    ORDER BY 
+        a.id;
     """
 
     params = {
@@ -54,15 +62,20 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas):
         return go.Figure()
 
     traces = {
-        'Yo': {'x': [], 'y': [], 'name': 'Yo', 'color': 'yellow'},
-        'Abandono': {'x': [], 'y': [], 'name': 'Abandono', 'color': 'red'},
-        'No Abandono': {'x': [], 'y': [], 'name': 'No Abandono', 'color': 'blue'}
+    'Abandono (Yo)': {'x': [], 'y': [], 'name': 'Abandono (Yo)', 'color': 'yellow'},
+    'No Abandono (Yo)': {'x': [], 'y': [], 'name': 'No Abandono (Yo)', 'color': 'yellow'},
+    'Abandono': {'x': [], 'y': [], 'name': 'Abandono', 'color': 'red'},
+    'No Abandono': {'x': [], 'y': [], 'name': 'No Abandono', 'color': 'blue'}
     }
 
     for student in data:
-        status_key = 'Abandono' if student[1].lower() == 'si' else ('Yo' if student[0] == alumno_id else 'No Abandono')
-        traces[status_key]['x'].append(student[2])
-        traces[status_key]['y'].append(student[3])
+        abandona_key = 'Abandono' if student[1].strip().lower() == 'si' else 'No Abandono'
+        personal_key = ' (Yo)' if student[0] == alumno_id else ''
+        key = abandona_key + personal_key 
+
+        traces[key]['x'].append(student[2])
+        traces[key]['y'].append(student[3])
+
 
     fig = go.Figure()
 
@@ -83,7 +96,7 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas):
         )
 
     fig.update_layout(
-        title={'text':'Relación nota media y número de asignaturas superadas <br> por curso académico', 'x':0.5},
+        title={'text':'Relación nota media y número de asignaturas superadas por curso académico', 'x':0.5},
         xaxis_title='Nota Media',
         yaxis_title='Número de asignaturas superadas',
         legend_title='Estado del alumno',

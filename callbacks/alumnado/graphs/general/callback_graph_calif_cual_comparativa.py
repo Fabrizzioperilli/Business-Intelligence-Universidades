@@ -49,7 +49,7 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
     if not general_data:
         return go.Figure()
 
-    categories = ['Suspenso', 'Aprobado', 'Notable', 'Sobresaliente']
+    categories = ['No presentado','Suspenso', 'Aprobado', 'Notable', 'Sobresaliente']
     student_grades = {row[0]: row[1] for row in student_data}
     all_subjects = sorted(set(row[0] for row in general_data))
     grade_counts = {subject: {category: 0 for category in categories} for subject in all_subjects}
@@ -60,7 +60,7 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
             grade_counts[subject][calif] += grade_count
 
     traces = []
-    color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'orange', 'Suspenso': 'red'}
+    color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'orange', 'Suspenso': 'red', 'No presentado': 'gray'}
 
     # Crear trazas normales
     for category in categories:
@@ -78,17 +78,19 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
         for subject in all_subjects:
             if category == student_grades.get(subject):
                 x.append(subject)
-                y.append(1)  # Solo resaltar la barra del estudiante con una cuenta de 1
+                y.append(1)
         if y:  # Solo agregar la traza si hay datos
             traces.append(go.Bar(x=x, y=y, name=category + " (Yo)", marker=dict(color=color_mapping[category], line=dict(color='black', width=2)), opacity=0.9))
 
     layout = go.Layout(
-        title={'text': 'Alumnos matriculados por asignatura y calificación <br> por curso académico', 'x': 0.5},
+        title={'text': 'Alumnos matriculados por asignatura y calificación por curso académico', 'x': 0.5},
         barmode='stack',
         xaxis={'title': 'Asignatura', 'tickangle': 45},
         yaxis={'title': 'Número de Alumnos Matriculados'},
         showlegend=True,
-        legend={'title': 'Calificación'}
+        legend={'title': 'Calificación'},
+        height=600,
+        
     )
 
     return go.Figure(data=traces, layout=layout)

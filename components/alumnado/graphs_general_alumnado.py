@@ -20,5 +20,5 @@ def graphs_general_alumnado():
           id='nota-media-general-mi-nota',
           figure={},
     )], className='graph-item'),
-  ], className='graphs-container')            
+  ], className='graphs-container-general-alumnado')            
   
