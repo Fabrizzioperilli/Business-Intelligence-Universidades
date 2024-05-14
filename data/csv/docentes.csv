@@ -1,0 +1,28 @@
+indice,id_docente,cod_universidad,universidad,titulacion,cod_asignatura,asignatura,curso_aca
+1,123456LMP,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315ALG,Álgebra,2017/2018
+2,123456LMP,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315ALG,Álgebra,2018/2019
+3,123456LMP,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315ALG,Álgebra,2019/2020
+4,123456LMP,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315ALG,Álgebra,2021/2022
+5,894745KJH,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315ALG,Álgebra,2017/2018
+6,894745KJH,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315ALG,Álgebra,2018/2019
+7,894745KJH,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315ALG,Álgebra,2019/2020
+8,894745KJH,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315ALG,Álgebra,2021/2022
+9,658948JHG,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315ALG,Álgebra,2017/2018
+10,658948JHG,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315ALG,Álgebra,2018/2019
+11,658948JHG,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315ALG,Álgebra,2019/2020
+12,658948JHG,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315ALG,Álgebra,2021/2022
+13,879546GJT,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315CAL,Cálculo,2017/2018
+14,879546GJT,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315CAL,Cálculo,2018/2019
+15,879546GJT,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315CAL,Cálculo,2019/2020
+16,879546GJT,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315CAL,Cálculo,2020/2021
+17,789542HJL,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315CAL,Cálculo,2017/2018
+18,789542HJL,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315CAL,Cálculo,2018/2019
+19,789542HJL,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315CAL,Cálculo,2019/2020
+20,789542HJL,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315CAL,Cálculo,2020/2021
+21,789542HJL,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315CAL,Cálculo,2021/2022
+22,154689QWE,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315INF,Informática Básica,2017/2018
+23,154689QWE,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315INF,Informática Básica,2018/2019
+24,154689QWE,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315INF,Informática Básica,2019/2020
+25,154689QWE,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315INF,Informática Básica,2020/2021
+26,154689QWE,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315INF,Informática Básica,2021/2022
+27,154689QWE,ULL015,Universidad de La Laguna,Ingeniería Informática,3012315INF,Informática Básica,2022/2023

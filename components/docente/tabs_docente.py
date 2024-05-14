@@ -1,4 +1,5 @@
 from dash import html, dcc
+from callbacks.docente.callback_tabs_docente import render_content
 
 def tabs_docente():
     return html.Div([
@@ -7,4 +8,5 @@ def tabs_docente():
             dcc.Tab(label='Rendimiento Académico', value='rendimiento-academico-tab'),
         ], className='tabs'),
         html.Div(id='tabs-docente-content'),
+        dcc.Store(id='selected-docente-store', storage_type='local')
     ])

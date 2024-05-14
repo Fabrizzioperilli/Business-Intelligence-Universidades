@@ -1,8 +1,5 @@
-# components/header.py
 from dash import html, dcc, callback, Output, Input
 
-
-# En header.py
 def Header(store_id):
     return html.Div([
         html.Img(src='assets/images/logoULL.png', className='logo'),

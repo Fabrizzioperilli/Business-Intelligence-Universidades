@@ -30,13 +30,13 @@ def update_resumen_alumnado(alumno_id):
 
     return html.Div([
         html.H2("Resumen"),
-        html.P("Universidad:", className="resumen-alumnado__label"),
+        html.P("Universidad:", className="resumen-label"),
         html.P(universidad),
-        html.P("Titulación:", className="resumen-alumnado__label"),
+        html.P("Titulación:", className="resumen-label"),
         html.P(titulacion),
-        html.P("Alumno:", className="resumen-alumnado__label"),
+        html.P("Alumno:", className="resumen-label"),
         html.P(id),
-        html.P("Nota Media:", className="resumen-alumnado__label"),
+        html.P("Nota Media:", className="resumen-label"),
         html.P(calculate_average_grade(alumno_id)),
         html.Hr(),
     ])

@@ -1,4 +1,4 @@
-from dash import dash, html
+from dash import dash, html, dcc
 import components.common.header as header
 import components.common.footer as footer
 from layouts.alumno_layout import alumno_layout

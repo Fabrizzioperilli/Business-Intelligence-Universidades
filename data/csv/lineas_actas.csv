@@ -178,4 +178,79 @@ indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,
 177,Trabajo Fin de Grado,9.5,Sobresaliente,3568974TFG,BDCX8,1,2020/2021,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
 178,Prácticas Externas,9.5,Sobresaliente,3568974PRE,BDCX8,1,2020/2021,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
 179,Trabajo Fin de Grado,9.5,Sobresaliente,3568974TFG,BDCX8,1,2023/2024,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-180,Prácticas Externas,9.5,Sobresaliente,3568974PRE,BDCX8,1,2023/2024,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+180,Prácticas Externas,9.5,Sobresaliente,3568974PRE,BDCX8,1,2023/2024,FPM12345,Plan 2018,Universidad de la Laguna,
+190,Informática Básica,7.60,Notable,3012315INF,BDCX8,Enero,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+191,Álgebra,5.00,Aprobado,3012315ALG,BDCX8,Enero,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+192,Cálculo,,No presentado,3012315CAL,BDCX8,Julio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+193,Cálculo,,No presentado,3012315CAL,BDCX8,Septiembre,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+194,Cálculo,,No presentado,3012315CAL,BDCX8,Enero,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+195,Cálculo,5.60,Aprobado,3012315CAL,BDCX8,Julio,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+196,Cálculo,2.80,Suspenso,3012315CAL,BDCX8,Enero,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+197,Fundamentos Físicos,6.30,Aprobado,3012315FIS,BDCX8,Enero,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+198,Organizaciones Empresariales,5.10,Aprobado,3012315ORG,BDCX8,Julio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+199,Organizaciones Empresariales,3.50,Suspenso,3012315ORG,BDCX8,Enero,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+200,Algoritmos y Estructuras de Datos,2.40,Suspenso,3012315ALG,BDCX8,Julio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+201,Algoritmos y Estructuras de Datos,5.40,Aprobado,3012315ALG,BDCX8,Septiembre,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+202,Principios de Computadores,2.80,Suspenso,3012315PRI,BDCX8,Junio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+203,Principios de Computadores,6.40,Aprobado,3012315PRI,BDCX8,Julio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+204,Optimización,,No presentado,3012315OPT,BDCX8,Junio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+205,Optimización,,No presentado,3012315OPT,BDCX8,Julio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+206,Optimización,,No presentado,3012315OPT,BDCX8,Septiembre,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+207,Optimización,7.50,Notable,3012315OPT,BDCX8,Junio,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+208,Sistemas Electrónicos Digitales,,No presentado,3012315SED,BDCX8,Junio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+209,Sistemas Electrónicos Digitales,,No presentado,3012315SED,BDCX8,Julio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+210,Sistemas Electrónicos Digitales,,No presentado,3012315SED,BDCX8,Septiembre,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+211,Sistemas Electrónicos Digitales,8.50,Notable,3012315SED,BDCX8,Junio,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+212,Expresión Gráfica,7.10,Notable,3012315EXP,BDCX8,Junio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+213,Estadística,5.00,Aprobado,3012315EST,BDCX8,Julio,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+214,Estadística,3.10,Suspenso,3012315EST,BDCX8,Enero,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+215,Computabilidad y Algoritmia,3.80,Suspenso,3012315COM,BDCX8,Julio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+216,Computabilidad y Algoritmia,,No presentado,3012315COM,BDCX8,Septiembre,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+217,Computabilidad y Algoritmia,,No presentado,3012315COM,BDCX8,Enero,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+218,Computabilidad y Algoritmia,,No presentado,3012315COM,BDCX8,Julio,2022/2023,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+219,Computabilidad y Algoritmia,,No presentado,3012315COM,BDCX8,Enero,2022/2023,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+220,Computabilidad y Algoritmia,5.70,Aprobado,3012315COM,BDCX8,Enero,2023/2024,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+221,Estructuras de Computadores,8.20,Notable,3012315EST,BDCX8,Julio,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+222,Sistemas Operativos,,No presentado,3012315SIS,BDCX8,Julio,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+223,Sistemas Operativos,,No presentado,3012315SIS,BDCX8,Septiembre,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+224,Sistemas Operativos,,No presentado,3012315SIS,BDCX8,Enero,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+225,Sistemas Operativos,7.30,Notable,3012315SIS,BDCX8,Julio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+226,Inglés Técnico,8.50,Notable,3012315ING,BDCX8,Julio,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+227,Algoritmos y Estructuras de Datos Avanzados,,No presentado,3568974ALA,BDCX8,Junio,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+228,Algoritmos y Estructuras de Datos Avanzados,,No presentado,3568974ALA,BDCX8,Julio,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+229,Algoritmos y Estructuras de Datos Avanzados,,No presentado,3568974ALA,BDCX8,Septiembre,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+230,Algoritmos y Estructuras de Datos Avanzados,,No presentado,3568974ALA,BDCX8,Junio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+231,Algoritmos y Estructuras de Datos Avanzados,,No presentado,3568974ALA,BDCX8,Julio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+232,Algoritmos y Estructuras de Datos Avanzados,,No presentado,3568974ALA,BDCX8,Septiembre,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+233,Algoritmos y Estructuras de Datos Avanzados,7.30,Notable,3568974ALA,BDCX8,Mayo,2022/2023,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+234,Redes y Sistemas Distribuidos,4.50,Suspenso,3568974RED,BDCX8,Junio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+235,Redes y Sistemas Distribuidos,7.60,Notable,3568974RED,BDCX8,Julio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+236,Administración de Sistemas,7.00,Notable,3568974ADM,BDCX8,Junio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+237,Fundamentos de Ingeniería del Software,7.40,Notable,3012315FIS,BDCX8,Junio,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+238,Código Deontológico y Aspectos Legales,9.30,Sobresaliente,3012315COD,BDCX8,Junio,2019/2020,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+239,Bases de Datos,,No presentado,3568974BDA,BDCX8,Julio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+240,Bases de Datos,,No presentado,3568974BDA,BDCX8,Septiembre,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+241,Bases de Datos,,No presentado,3568974BDA,BDCX8,Enero,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+242,Bases de Datos,5.00,Aprobado,3568974BDA,BDCX8,Julio,2022/2023,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+243,Bases de Datos,4.00,Suspenso,3568974BDA,BDCX8,Septiembre,2022/2023,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+244,Inteligencia Artificial,,No presentado,3568974INT,BDCX8,Enero,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+245,Inteligencia Artificial,5.00,Aprobado,3568974INT,BDCX8,Julio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+246,Sistemas de Interacción Persona-Computador,7.10,Notable,3568974SIP,BDCX8,Enero,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+247,Lenguajes y Paradigmas de Programación,5.80,Aprobado,3568974LPP,BDCX8,Enero,2022/2023,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+248,Gestión de Proyectos Informáticos,5.80,Aprobado,3568974GPI,BDCX8,Enero,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+249,Modelado de Sistemas Software,,No presentado,3568974MSS,BDCX8,Julio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+250,Modelado de Sistemas Software,,No presentado,3568974MSS,BDCX8,Septiembre,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+251,Modelado de Sistemas Software,,No presentado,3568974MSS,BDCX8,Junio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+252,Modelado de Sistemas Software,6.20,Aprobado,3568974MSS,BDCX8,Mayo,2022/2023,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+253,Análisis de Sistemas Software,5.30,Aprobado,3568974ASS,BDCX8,Junio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+254,Modelado de Datos,7.30,Notable,3568974MOD,BDCX8,Junio,2020/2021,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+255,Gestión de la Calidad,7.70,Notable,3568974GCA,BDCX8,Mayo,2022/2023,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+256,Gestión de Riesgos en Ingeniería del Software,8.80,Notable,3568974GRI,BDCX8,Mayo,2022/2023,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+257,Visión por Computador,7.60,Notable,3568974VPC,BDCX8,Enero,2023/2024,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+258,Robótica Computacional,7.90,Notable,3568974RCO,BDCX8,Enero,2023/2024,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+259,Inteligencia Emocional,6.10,Aprobado,3568974IEM,BDCX8,Mayo,2022/2023,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+260,Laboratorio de Desarrollo y Herramientas,9.30,Sobresaliente,3568974LDH,BDCX8,Enero,2023/2024,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+261,Normativa y Regulación,7.50,Notable,3568974NOR,BDCX8,Enero,2022/2023,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+262,Diseño Arquitectónico y Patrones,8.20,Notable,3568974DAP,BDCX8,Enero,2023/2024,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+263,Prácticas Externas,10.00,Sobresaliente,3568974PRE,BDCX8,Mayo,2023/2024,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+264,Trabajo Fin de Grado,10.00,Sobresaliente,3568974TFG,BDCX8,Julio,2023/2024,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
