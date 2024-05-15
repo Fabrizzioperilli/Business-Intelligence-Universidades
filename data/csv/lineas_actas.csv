@@ -14,19 +14,19 @@ indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,
 13,Cálculo,5.8,Aprobado,3012315CAL,BDCX8,Julio,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 14,Cálculo,,No presentado,3012315CAL,BDCX8,Enero,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 15,Fundamentos Físicos,6.0,Aprobado,3012315FIS,BDCX8,Julio,2017/2018,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-16,Algoritmos y Estructuras de Datos,,No presentado,3012315ALG,BDCX8,Junio,2017/2018,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-17,Algoritmos y Estructuras de Datos,,No presentado,3012315ALG,BDCX8,Julio,2017/2018,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-18,Algoritmos y Estructuras de Datos,,No presentado,3012315ALG,BDCX8,Septiembre,2017/2018,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-19,Algoritmos y Estructuras de Datos,,No presentado,3012315ALG,BDCX8,Junio,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-20,Algoritmos y Estructuras de Datos,,No presentado,3012315ALG,BDCX8,Julio,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-21,Algoritmos y Estructuras de Datos,,No presentado,3012315ALG,BDCX8,Septiembre,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-22,Algoritmos y Estructuras de Datos,4.3,Suspenso,3012315ALG,BDCX8,Junio,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-23,Algoritmos y Estructuras de Datos,,No presentado,3012315ALG,BDCX8,Julio,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-24,Algoritmos y Estructuras de Datos,0.1,Suspenso,3012315ALG,BDCX8,Septiembre,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-25,Algoritmos y Estructuras de Datos,4.5,Suspenso,3012315ALG,BDCX8,Junio,2020/2021,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-26,Algoritmos y Estructuras de Datos,3.3,Suspenso,3012315ALG,BDCX8,Julio,2020/2021,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-27,Algoritmos y Estructuras de Datos,2.2,Suspenso,3012315ALG,BDCX8,Septiembre,2020/2021,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
-28,Algoritmos y Estructuras de Datos,7.4,Notable,3012315ALG,BDCX8,Junio,2021/2022,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+16,Algoritmos y Estructuras de Datos,,No presentado,3012315AED,BDCX8,Junio,2017/2018,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+17,Algoritmos y Estructuras de Datos,,No presentado,3012315AED,BDCX8,Julio,2017/2018,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+18,Algoritmos y Estructuras de Datos,,No presentado,3012315AED,BDCX8,Septiembre,2017/2018,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+19,Algoritmos y Estructuras de Datos,,No presentado,3012315AED,BDCX8,Junio,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+20,Algoritmos y Estructuras de Datos,,No presentado,3012315AED,BDCX8,Julio,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+21,Algoritmos y Estructuras de Datos,,No presentado,3012315AED,BDCX8,Septiembre,2018/2019,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+22,Algoritmos y Estructuras de Datos,4.3,Suspenso,3012315AED,BDCX8,Junio,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+23,Algoritmos y Estructuras de Datos,,No presentado,3012315AED,BDCX8,Julio,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+24,Algoritmos y Estructuras de Datos,0.1,Suspenso,3012315AED,BDCX8,Septiembre,2019/2020,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+25,Algoritmos y Estructuras de Datos,4.5,Suspenso,3012315AED,BDCX8,Junio,2020/2021,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+26,Algoritmos y Estructuras de Datos,3.3,Suspenso,3012315AED,BDCX8,Julio,2020/2021,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+27,Algoritmos y Estructuras de Datos,2.2,Suspenso,3012315AED,BDCX8,Septiembre,2020/2021,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+28,Algoritmos y Estructuras de Datos,7.4,Notable,3012315AED,BDCX8,Junio,2021/2022,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 29,Principios de Computadores,,No presentado,3012315PRI,BDCX8,Junio,2017/2018,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 30,Principios de Computadores,,No presentado,3012315PRI,BDCX8,Julio,2017/2018,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 31,Principios de Computadores,,No presentado,3012315PRI,BDCX8,Septiembre,2017/2018,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
@@ -123,7 +123,7 @@ indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,
 122,Informática Básica,9.0,Sobresaliente,3012315INF,BDCX8,1,2017/2018,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
 123,Cálculo,7,Notable,3012315CAL,BDCX8,1,2017/2018,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
 124,Fundamentos Físicos,7,Notable,3012315FIS,BDCX8,1,2017/2018,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
-125,Algoritmos y Estructuras de Datos,6,Aprobado,3012315ALG,BDCX8,1,2017/2018,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
+125,Algoritmos y Estructuras de Datos,6,Aprobado,3012315AED,BDCX8,1,2017/2018,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
 126,Principios de Computadores,9.5,Sobresaliente,3012315PRI,BDCX8,1,2017/2018,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
 127,Optimización,9.5,Sobresaliente,3012315OPT,BDCX8,1,2017/2018,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
 128,Sistemas Electrónicos Digitales,8.7,Notable,3012315SED,BDCX8,1,2017/2018,VMM14584,Plan 2018,Universidad de la Laguna,ULL015
@@ -159,7 +159,7 @@ indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,
 158,Informática Básica,2.5,Suspenso,3012315INF,BDCX8,1,2017/2018,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
 159,Cálculo,1.5,Suspenso,3012315CAL,BDCX8,1,2017/2018,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
 160,Fundamentos Físicos,5,Aprobado,3012315FIS,BDCX8,1,2017/2018,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
-161,Algoritmos y Estructuras de Datos,5.3,Aprobado,3012315ALG,BDCX8,1,2017/2018,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
+161,Algoritmos y Estructuras de Datos,5.3,Aprobado,3012315AED,BDCX8,1,2017/2018,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
 162,Principios de Computadores,1.5,Suspenso,3012315PRI,BDCX8,1,2017/2018,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
 163,Optimización,4.1,Suspenso,3012315OPT,BDCX8,1,2017/2018,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
 164,Sistemas Electrónicos Digitales,7.2,Notable,3012315SED,BDCX8,1,2017/2018,CVM56789,Plan 2018,Universidad de la Laguna,ULL015
@@ -189,8 +189,8 @@ indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,
 197,Fundamentos Físicos,6.30,Aprobado,3012315FIS,BDCX8,Enero,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
 198,Organizaciones Empresariales,5.10,Aprobado,3012315ORG,BDCX8,Julio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
 199,Organizaciones Empresariales,3.50,Suspenso,3012315ORG,BDCX8,Enero,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
-200,Algoritmos y Estructuras de Datos,2.40,Suspenso,3012315ALG,BDCX8,Julio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
-201,Algoritmos y Estructuras de Datos,5.40,Aprobado,3012315ALG,BDCX8,Septiembre,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+200,Algoritmos y Estructuras de Datos,2.40,Suspenso,3012315AED,BDCX8,Julio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
+201,Algoritmos y Estructuras de Datos,5.40,Aprobado,3012315AED,BDCX8,Septiembre,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
 202,Principios de Computadores,2.80,Suspenso,3012315PRI,BDCX8,Junio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
 203,Principios de Computadores,6.40,Aprobado,3012315PRI,BDCX8,Julio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015
 204,Optimización,,No presentado,3012315OPT,BDCX8,Junio,2018/2019,FRA98765,Plan 2018,Universidad de la Laguna,ULL015

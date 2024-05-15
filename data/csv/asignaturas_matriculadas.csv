@@ -3,7 +3,7 @@ indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipolo
 2,Informática Básica,3012315INF,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 3,Cálculo,3012315CAL,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 4,Fundamentos Físicos,3012315FIS,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-5,Algoritmos y Estructuras de Datos,3012315ALG,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+5,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 6,Principios de Computadores,3012315PRI,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 7,Optimización,3012315OPT,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 8,Sistemas Electrónicos Digitales,3012315SED,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
@@ -16,10 +16,10 @@ indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipolo
 15,Código Deontológico y Aspectos Legales,3012315COD,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 16,Informática Básica,3012315INF,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 17,Cálculo,3012315CAL,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-18,Algoritmos y Estructuras de Datos,3012315ALG,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+18,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 19,Principios de Computadores,3012315PRI,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 20,Optimización,3012315OPT,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-21,Algoritmos y Estructuras de Datos,3012315ALG,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+21,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 22,Cálculo,3012315CAL,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 23,Principios de Computadores,3012315PRI,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 24,Estadística,3012315EST,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
@@ -29,7 +29,7 @@ indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipolo
 28,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 29,Redes y Sistemas Distribuidos,3568974RED,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 30,Administración de Sistemas,3568974ADM,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-31,Algoritmos y Estructuras de Datos,3012315ALG,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+31,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 32,Estadística,3012315EST,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 33,Computabilidad y Algoritmia,3012315COM,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 34,Sistemas Operativos,3012315SIS,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
@@ -39,7 +39,7 @@ indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipolo
 38,Gestión de Proyectos Informáticos,3568974GPI,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 39,Modelado de Datos,3568974MOD,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 40,Gestión de la Calidad,3568974GCA,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-41,Algoritmos y Estructuras de Datos,3012315ALG,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+41,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 42,Estadística,3012315EST,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 43,Computabilidad y Algoritmia,3012315COM,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 44,Sistemas Operativos,3012315SIS,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
@@ -65,7 +65,7 @@ indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipolo
 64,Informática Básica,3012315INF,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 65,Cálculo,3012315CAL,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 66,Fundamentos Físicos,3012315FIS,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-67,Algoritmos y Estructuras de Datos,3012315ALG,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+67,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 68,Principios de Computadores,3012315PRI,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 69,Optimización,3012315OPT,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 70,Sistemas Electrónicos Digitales,3012315SED,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
@@ -101,7 +101,7 @@ indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipolo
 100,Informática Básica,3012315INF,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 101,Cálculo,3012315CAL,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 102,Fundamentos Físicos para la Ingeniería,3012315FIS,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-103,Algoritmos y Estructuras de Datos,3012315ALG,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+103,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 104,Principios de Computadores,3012315PRI,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 105,Optimización,3012315OPT,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 106,Sistemas Electrónicos Digitales,3012315SED,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
@@ -125,7 +125,7 @@ indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipolo
 124,Álgebra,3012315ALG,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 125,Cálculo,3012315CAL,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 126,Fundamentos Físicos,3012315FIS,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-127,Algoritmos y Estructuras de Datos,3012315ALG,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+127,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 128,Principios de Computadores,3012315PRI,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 129,Optimización,3012315OPT,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 130,Sistemas Electrónicos Digitales,3012315SED,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015

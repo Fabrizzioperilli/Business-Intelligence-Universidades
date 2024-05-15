@@ -16,5 +16,4 @@ def filter_asignaturas_docente():
             persistence=True,
             persistence_type='local',
         ),
-        html.Button('Seleccionar todo', id='select-all-button-asignaturas', className='button-select-all-filter', n_clicks=0),
     ])

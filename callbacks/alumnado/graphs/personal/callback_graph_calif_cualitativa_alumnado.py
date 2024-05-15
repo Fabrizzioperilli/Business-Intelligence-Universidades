@@ -5,7 +5,8 @@ from utils.utils import list_to_tuple
 
 @callback(
     Output('graph-bar-evolucion-asignaturas-matriculadas', 'figure'),
-    [Input('selected-alumnado-store', 'data'), Input('curso-academico', 'value')]
+    [Input('selected-alumnado-store', 'data'), 
+    Input('curso-academico', 'value')]
 )
 def update_graph_alumnado(alumno_id, curso_academico):  
 
