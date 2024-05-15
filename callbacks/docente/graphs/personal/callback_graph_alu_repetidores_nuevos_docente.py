@@ -1,4 +1,4 @@
-from dash import html, dcc, callback, Input, Output
+from dash import callback, Input, Output
 import plotly.graph_objs as go
 from data.db_connector import db
 from utils.utils import list_to_tuple
