@@ -2,6 +2,8 @@ from dash import html, callback, Input, Output,State
 from components.docente.select_docente import select_docente
 from components.common.sidebar import sidebar
 from components.docente.resumen_docente import resumen_docente
+from components.docente.filter_curso_academico_docente import filter_curso_academico_docente
+from components.docente.filter_asignaturas_docente import filter_asignaturas_docente
 
 @callback(
     Output('tabs-docente-content', 'children'),
@@ -14,7 +16,9 @@ def render_content(tab, selected_docente):
             html.H2("Dashboard Docente", style={'textAlign': 'center'}),
             html.Div([
                 sidebar([
-                  resumen_docente()
+                  resumen_docente(),
+                  filter_curso_academico_docente(),
+                  filter_asignaturas_docente()
                 ])
             ], className='content-layout-dashboard')
         ])

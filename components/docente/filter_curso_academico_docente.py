@@ -1,11 +1,11 @@
 from dash import html, dcc
-from callbacks.alumnado.callback_filter_curso_cademico_alumnado import update_filter_curso_academico_alumnado
+from callbacks.docente.callback_filter_curso_academico_docente import update_filter_curso_academico_docente
 
-def filter_curso_academico_alumnado():
+def filter_curso_academico_docente():
     return html.Div([
         html.Label("Curso académico"),
         dcc.Dropdown(
-            id="curso-academico",
+            id="curso-academico-docente",
             searchable=False,
             multi=True,
             clearable=True,
@@ -15,6 +15,6 @@ def filter_curso_academico_alumnado():
             persistence=True,
             persistence_type='session',
         ),
-        html.Button('Seleccionar todo', id='select-all-cursos-academicos', className='button-select-all-filter', n_clicks=0),
+        html.Button('Seleccionar todo', id='select-all-cursos-academicos-docente', className='button-select-all-filter',n_clicks=0),
         html.Hr(),
     ])

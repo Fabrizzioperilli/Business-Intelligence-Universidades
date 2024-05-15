@@ -5,7 +5,6 @@ from layouts.alumno_layout import alumno_layout
 from layouts.docente_layout import docente_layout
 from layouts.gestor_layout import gestor_layout
 from callbacks.common.callback_update_layout import update_layout
-from callbacks.alumnado.callback_select_alumnado import store_selected_alumnado
 from data.db_connector import db 
 import atexit
 

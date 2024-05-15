@@ -16,6 +16,6 @@ def filter_asignaturas_matri_alumnado():
             persistence=True,
             persistence_type='local',
         ),
-        html.Button('Seleccionar todo', id='select-all-button', n_clicks=0),
+        html.Button('Seleccionar todo', id='select-all-button', className='button-select-all-filter', n_clicks=0),
     ])
    
