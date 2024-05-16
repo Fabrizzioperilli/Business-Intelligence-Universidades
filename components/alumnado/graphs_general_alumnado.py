@@ -9,16 +9,16 @@ def graphs_general_alumnado():
       dcc.Graph(
           id='asignaturas-superadas-general-mi-nota',
           figure={}
-    )], className='graph-item'),
+    )], className='graph-item-general-alumnado'),
     html.Div([
       dcc.Graph(
           id='nota-cualitativa-general-mi-nota',
           figure={}
-    )], className='graph-item'),
+    )], className='graph-item-general-alumnado'),
     html.Div([
       dcc.Graph(
           id='nota-media-general-mi-nota',
           figure={},
-    )], className='graph-item'),
+    )], className='graph-item-general-alumnado'),
   ], className='graphs-container-general-alumnado')            
   

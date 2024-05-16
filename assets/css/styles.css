@@ -134,7 +134,7 @@ body {
   transform: scale(1.1);
 }
 
-.graphs-container {
+.graphs-container-personal-alumnado {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Mantiene dos columnas */
   grid-template-rows: auto auto auto; /* Añade filas explícitas */
@@ -148,7 +148,7 @@ body {
 }
 
 .graphs-container-general-alumnado {
-  grid-area: main; /* Usa el área principal */
+  grid-area: main; 
   display: grid;
   width: 100%;
   height: 100%;
@@ -160,10 +160,11 @@ body {
   margin-bottom: 20px;
 }
 
-.graphs-container-docente {
+.graphs-container-personal-docente {
   grid-area: main; /* Usa el área principal */
   display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Dos columnas */
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  grid-template-rows: repeat(2, 1fr); /* Dos filas */
   grid-gap: var(--grid-gap);
   align-items: start;
   margin: var(--grid-gap);
@@ -171,20 +172,25 @@ body {
   height: 100%;
 }
 
-.graph-item {
+.graph-item-personal-alumnado, 
+.graph-item-general-alumnado,
+.graph-item-personal-docente{
   display: flex;
   justify-content: center;
   align-items: center;
   margin: var(--grid-gap);
 }
 
-.graph-item:nth-child(1), .graph-item:nth-child(2) {
+.graph-item-personal-alumnado:nth-child(1), 
+.graph-item-personal-alumnado:nth-child(2) {
   grid-column: span 1; /* Cada uno ocupa una columna */
 }
 
-.graph-item:nth-child(3), .graph-item:nth-child(4) {
+.graph-item-personal-alumnado:nth-child(3), 
+.graph-item-personal-alumnado:nth-child(4) {
   grid-column: 1 / -1; /* Cada uno ocupa ambas columnas */
 }
+
 
 @media screen and (max-width: 1024px){
   .graphs-container {

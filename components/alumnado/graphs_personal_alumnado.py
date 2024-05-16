@@ -10,21 +10,21 @@ def graphs_personal_alumnado():
       dcc.Graph(
           id='graph-evolucion-progreso-academico',
           figure={},
-    )], className='graph-item'),
+    )], className='graph-item-personal-alumnado'),
     html.Div([
       dcc.Graph(
           id='graph-bar-evolucion-asignaturas-matriculadas',
           figure={}
-    )], className='graph-item'),
+    )], className='graph-item-personal-alumnado'),
     html.Div([
       dcc.Graph(
           id='graph-bar-calificaciones-por-asignatura',
           figure={},
-    )], className='graph-item'),
+    )], className='graph-item-personal-alumnado'),
     html.Div([
       dcc.Graph(
           id='graph-bar-tasa-exito',
           figure={}
-    )], className='graph-item')
-  ], className='graphs-container')            
+    )], className='graph-item-personal-alumnado')
+  ], className='graphs-container-personal-alumnado')            
   
