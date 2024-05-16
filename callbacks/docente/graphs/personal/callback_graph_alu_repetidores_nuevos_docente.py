@@ -87,7 +87,7 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
         x=cursos_academicos,
         y=alumnos_nuevo_ingreso,
         name='Alumnos de primera matrícula',
-        marker_color='blue',
+        marker_color='green',
         opacity=0.8
     )
 

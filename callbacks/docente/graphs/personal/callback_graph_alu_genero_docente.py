@@ -73,11 +73,15 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
         datos_procesados[curso][sexo] = row[2]
     
     fig = go.Figure()
+    colores = {'Mujeres': 'red', 'Hombres': 'blue'}
+    
     for sexo in sexos:
         fig.add_trace(go.Bar(
             x=cursos,
             y=[datos_procesados[curso][sexo] for curso in cursos],
-            name=sexo
+            name=sexo,
+            marker_color=colores[sexo],
+            opacity=0.8
         ))
     
     fig.update_layout(

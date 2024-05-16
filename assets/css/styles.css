@@ -160,6 +160,17 @@ body {
   margin-bottom: 20px;
 }
 
+.graphs-container-docente {
+  grid-area: main; /* Usa el área principal */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Dos columnas */
+  grid-gap: var(--grid-gap);
+  align-items: start;
+  margin: var(--grid-gap);
+  width: 100%;
+  height: 100%;
+}
+
 .graph-item {
   display: flex;
   justify-content: center;
