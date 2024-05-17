@@ -6,24 +6,17 @@ from utils.utils import list_to_tuple
     Output('asignaturas-docente', 'options'),
     Output('asignaturas-docente', 'value'),
     Input('selected-docente-store', 'data'),
-    Input('curso-academico-docente', 'value'),
   
 )
-def update_filter_asignaturas_docente(docente_id, curso_academico):
+def update_filter_asignaturas_docente(docente_id):
    
-    if not docente_id or not curso_academico:
+    if not docente_id:
         return [], None
-    
-    try:
-        curso_academico = list_to_tuple(curso_academico)
-    except Exception as e:
-        return [], None
-    
+     
     query = """
     SELECT DISTINCT asignatura FROM docentes WHERE id_docente = :id_docente
-    AND curso_aca IN :curso_academico
     """
-    params = {'id_docente': docente_id, 'curso_academico': curso_academico}
+    params = {'id_docente': docente_id}
 
     try:
         data = db.execute_query(query, params)

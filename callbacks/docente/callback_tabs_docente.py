@@ -5,6 +5,8 @@ from components.docente.resumen_docente import resumen_docente
 from components.docente.filter_curso_academico_docente import filter_curso_academico_docente
 from components.docente.filter_asignaturas_docente import filter_asignaturas_docente
 from components.docente.graphs_personal_docente import graphs_personal_docente
+from components.docente.graphs_general_docente import graphs_general_docente
+from components.common.filters import filters
 
 @callback(
     Output('tabs-docente-content', 'children'),
@@ -18,15 +20,27 @@ def render_content(tab, selected_docente):
             html.Div([
                 sidebar([
                   resumen_docente(),
-                  filter_curso_academico_docente(),
-                  filter_asignaturas_docente()
+                  filters([
+                    filter_asignaturas_docente(),
+                    filter_curso_academico_docente()
+                  ]),
                 ]),
                 graphs_personal_docente()
             ], className='content-layout-dashboard')
         ])
     elif tab == 'rendimiento-academico-tab':
         return html.Div([
-            html.H3("Rendimiento Académico")
+            html.H2("Dashboard Docente", style={'textAlign': 'center'}),
+            html.Div([
+                sidebar([
+                  resumen_docente(),
+                  filters([
+                    filter_asignaturas_docente(),
+                    filter_curso_academico_docente()
+                  ]),
+                ]),
+                graphs_general_docente()
+            ], className='content-layout-dashboard')
         ])
     else:
         return html.Div([

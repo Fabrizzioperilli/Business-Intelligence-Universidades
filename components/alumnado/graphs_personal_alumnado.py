@@ -27,4 +27,3 @@ def graphs_personal_alumnado():
           figure={}
     )], className='graph-item-personal-alumnado')
   ], className='graphs-container-personal-alumnado')            
-  

@@ -16,4 +16,5 @@ def filter_asignaturas_docente():
             persistence=True,
             persistence_type='local',
         ),
+        html.Hr()
     ])

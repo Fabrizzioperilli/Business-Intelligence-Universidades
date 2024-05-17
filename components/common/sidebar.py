@@ -1,6 +1,4 @@
 from dash import html
-import components.alumnado.resumen_alumnado as resumen_alumnado
-import components.common.filters as filters
 import dash_bootstrap_components as dbc
 from callbacks.common.callback_sidebar_collapse import sidebar_collapse
 

@@ -147,7 +147,8 @@ body {
   height: 100%;
 }
 
-.graphs-container-general-alumnado {
+.graphs-container-general-alumnado,
+.graphs-container-gerenal-docente {
   grid-area: main; 
   display: grid;
   width: 100%;
@@ -204,23 +205,26 @@ body {
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .sidebar {
     top: 0;
     transform: translateX(-100%);
   }
   .collapse.show .sidebar {
-    transform: translateX(-100%);
+    transform: translateX(0%);
   }
   .page-content {
-    grid-template-columns: 1fr; /* Solo una columna para pantallas pequeñas */
+    grid-template-columns: 1fr; 
     grid-template-areas: 
       "header"
       "sidebar"
-      "graphs"; /* Estructura del layout */
+      "graphs"; 
   }
-  .graphs-container {
-    grid-template-columns: 1fr; /* Solo una columna para pantallas pequeñas */
+  .graphs-container-personal-alumnado,
+  .graphs-container-general-alumnado,
+  .graphs-container-general-docente,
+  .graphs-container-personal-docente {
+    grid-template-columns: 1fr; 
   }
   .dash-graph {
     width: 100%;
@@ -228,7 +232,6 @@ body {
     min-height: 200px;
     max-height: 400px;
   }
-  
 }
 
 .resumen-label {
