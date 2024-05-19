@@ -1,6 +1,6 @@
 from dash import callback, Input, Output
 import plotly.graph_objs as go
-from data.db_connector import db
+from data.queries import asignaturas_superadas_media_abandono
 from utils.utils import list_to_tuple
 
 @callback(
@@ -20,57 +20,16 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, 
     except Exception as e:
         return [], None
 
-    query = """
-    SELECT 
-    a.id, 
-    a.abandona, 
-    AVG(CASE WHEN la.max_calif >= 5 THEN la.max_calif ELSE NULL END) AS NotaMedia, 
-    COUNT(DISTINCT CASE WHEN la.max_calif >= 5 THEN la.asignatura ELSE NULL END) AS "Total asignaturas superadas"
-    FROM 
-        (
-            SELECT 
-                la.id, 
-                la.asignatura,
-                MAX(la.calif_numerica) AS max_calif
-            FROM 
-                public.lineas_actas la
-            JOIN 
-                public.matricula ma ON la.id = ma.id AND la.cod_plan = ma.cod_plan
-            WHERE 
-                la.curso_aca IN :curso_academico
-                AND la.asignatura IN :asignaturas_matriculadas
-                AND ma.titulacion = :titulacion
-            GROUP BY 
-                la.id, la.asignatura
-        ) la
-    JOIN 
-        public.alumnos a ON a.id = la.id 
-    GROUP BY 
-        a.id, a.abandona
-    ORDER BY 
-        a.id;
-    """
-
-    params = {
-        'curso_academico': curso_academico,
-        'asignaturas_matriculadas': asignaturas_matriculadas,
-        'titulacion': titulacion,
-    }
-
-    try:
-        data = db.execute_query(query, params)
-    except Exception as e:
-        print("Query execution failed:", e)
-        return go.Figure()
+    data = asignaturas_superadas_media_abandono(curso_academico, asignaturas_matriculadas, titulacion)
 
     if not data:
         return go.Figure()
 
     traces = {
-    'Abandono (Yo)': {'x': [], 'y': [], 'name': 'Abandono (Yo)', 'color': 'yellow'},
-    'No Abandono (Yo)': {'x': [], 'y': [], 'name': 'No Abandono (Yo)', 'color': 'yellow'},
-    'Abandono': {'x': [], 'y': [], 'name': 'Abandono', 'color': 'red'},
-    'No Abandono': {'x': [], 'y': [], 'name': 'No Abandono', 'color': 'blue'}
+        'Abandono (Yo)': {'x': [], 'y': [], 'name': 'Abandono (Yo)', 'color': 'yellow'},
+        'No Abandono (Yo)': {'x': [], 'y': [], 'name': 'No Abandono (Yo)', 'color': 'yellow'},
+        'Abandono': {'x': [], 'y': [], 'name': 'Abandono', 'color': 'red'},
+        'No Abandono': {'x': [], 'y': [], 'name': 'No Abandono', 'color': 'blue'}
     }
 
     for student in data:
@@ -81,24 +40,44 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, 
         traces[key]['x'].append(student[2])
         traces[key]['y'].append(student[3])
 
-
     fig = go.Figure()
 
+    # Primero, agregamos los puntos generales
     for status, trace_data in traces.items():
-        fig.add_trace(
-            go.Scatter(
-                x=trace_data['x'], 
-                y=trace_data['y'], 
-                mode='markers', 
-                name=trace_data['name'],
-                marker=dict(
-                    size=12,
-                    line=dict(width=1),
-                    color=trace_data['color']
-                ),
-                opacity=0.8
+        if ' (Yo)' not in status:
+            fig.add_trace(
+                go.Scatter(
+                    x=trace_data['x'], 
+                    y=trace_data['y'], 
+                    mode='markers', 
+                    name=trace_data['name'],
+                    marker=dict(
+                        size=12,
+                        line=dict(width=1),
+                        color=trace_data['color']
+                    ),
+                    opacity=0.8
+                )
             )
-        )
+
+    # Luego, agregamos los puntos del usuario para que se superpongan a los anteriores
+    for status, trace_data in traces.items():
+        if ' (Yo)' in status:
+            fig.add_trace(
+                go.Scatter(
+                    x=trace_data['x'], 
+                    y=trace_data['y'], 
+                    mode='markers', 
+                    name=trace_data['name'],
+                    marker=dict(
+                        size=12,
+                        line=dict(width=2),
+                        color=trace_data['color'],
+                        symbol='square'  # Cambiar el símbolo del marcador para destacar
+                    ),
+                    opacity=1.0
+                )
+            )
 
     fig.update_layout(
         title={'text':'Relación nota media y número de asignaturas superadas por curso académico', 'x':0.5},
@@ -111,4 +90,3 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, 
     )
 
     return fig
-

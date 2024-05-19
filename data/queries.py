@@ -49,5 +49,70 @@ def titulacion_alumnado(alumno_id):
     params = {'alumno_id': alumno_id}
 
     return check_data(query, params)
+
+def asignaturas_superadas(alumno_id, curso_academico, titulacion):
+    query = queries['alumnado']['graphs']['personal']['curso_academico_asignaturas_superadas']
+    params = {'alumno_id': alumno_id, 
+              'curso_academico': curso_academico, 
+              'titulacion': titulacion}
+
+    return check_data(query, params)
+
+def calif_cualitativa_asignatura(alumno_id, curso_academico, titulacion):
+    query = queries['alumnado']['graphs']['personal']['calif_cualitativa_asginatura']
+    params = {'alumno_id': alumno_id, 
+              'curso_academico': curso_academico, 
+              'titulacion': titulacion}
+
+    return check_data(query, params)
+
+def calif_numerica_asignatura(alumno_id, curso_academico, titulacion):
+    query = queries['alumnado']['graphs']['personal']['calif_numerica_asignatura']
+    params = {'alumno_id': alumno_id, 
+              'curso_academico': curso_academico, 
+              'titulacion': titulacion}
+
+    return check_data(query, params)
+
+def asignaturas_matriculadas_y_superadas(alumno_id, curso_academico, titulacion):
+    query = queries['alumnado']['graphs']['personal']['asignaturas_matriculadas_y_superadas']
+    params = {'alumno_id': alumno_id, 
+              'curso_academico': curso_academico, 
+              'titulacion': titulacion}
+
+    return check_data(query, params)
         
+def asignaturas_superadas_media_abandono(curso_academico, asignaturas_matriculadas, titulacion):
+    query = queries['alumnado']['graphs']['general']['asignaturas_superadas_media_abandono']
+    params = {'curso_academico': curso_academico, 
+              'asignaturas_matriculadas': asignaturas_matriculadas, 
+              'titulacion': titulacion}
+
+    return check_data(query, params)
+
+def calif_cualitativa_comparativa(curso_academico, asignaturas_matriculadas, titulacion):
+    query = queries['alumnado']['graphs']['general']['calif_cualitativa_comparativa']
+    params = {'curso_academico': curso_academico, 
+              'asignaturas_matriculadas': asignaturas_matriculadas,
+              'titulacion': titulacion}
+
+    return check_data(query, params)
+
+def calif_cualitativa_alumno_asignaturas(alumno_id, curso_academico, asignaturas_matriculadas, titulacion):
+    query = queries['alumnado']['graphs']['general']['calif_cualitativa_alumno_asignaturas']
+    params = {'alumno_id': alumno_id,
+              'curso_academico': curso_academico, 
+              'asignaturas_matriculadas': asignaturas_matriculadas,
+              'titulacion': titulacion}
+    
+    return check_data(query, params)
+
+def nota_media_general_mi_nota(curso_academico, asignaturas_matriculadas, alumno_id, titulacion):
+    query = queries['alumnado']['graphs']['general']['nota_media_general_mi_nota']
+    params = {'curso_academico': curso_academico, 
+              'asignaturas_matriculadas': asignaturas_matriculadas, 
+              'alumno_id': alumno_id,
+              'titulacion': titulacion}
+
+    return check_data(query, params)
     

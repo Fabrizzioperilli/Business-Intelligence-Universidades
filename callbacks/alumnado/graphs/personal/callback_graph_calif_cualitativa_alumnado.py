@@ -1,5 +1,5 @@
 from dash import Input, Output, callback
-from data.db_connector import db
+from data.queries import calif_cualitativa_asignatura
 import plotly.graph_objs as go
 from utils.utils import list_to_tuple
 
@@ -20,38 +20,7 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
         print("Error:", e)
         return go.Figure()
 
-    # Modificando la consulta para obtener la máxima calificación por curso y por asignatura
-    query = """
-    WITH RankedGrades AS (
-        SELECT li.curso_aca, li.calif, 
-            ROW_NUMBER() OVER (PARTITION BY li.curso_aca, li.asignatura ORDER BY 
-                CASE 
-                    WHEN li.calif = 'Sobresaliente' THEN 5
-                    WHEN li.calif = 'Notable' THEN 4
-                    WHEN li.calif = 'Aprobado' THEN 3
-                    WHEN li.calif = 'Suspenso' THEN 2
-                    WHEN li.calif = 'No presentado' THEN 1
-                    ELSE 0 
-                END DESC) AS rk
-        FROM lineas_actas li
-        JOIN matricula ma ON li.id = ma.id AND li.cod_plan = ma.cod_plan
-        WHERE li.id = :alumno_id
-        AND li.curso_aca IN :curso_academico
-        AND ma.titulacion = :titulacion
-    )
-    SELECT curso_aca, calif, COUNT(*) AS grade_count
-    FROM RankedGrades
-    WHERE rk = 1
-    GROUP BY curso_aca, calif
-    ORDER BY curso_aca;
-    """
-    params = {'alumno_id': alumno_id, 'curso_academico': curso_academico, 'titulacion': titulacion}
-
-    try:
-        data = db.execute_query(query, params)
-    except Exception as e:
-        print("Query execution failed:", e)
-        return go.Figure()
+    data = calif_cualitativa_asignatura(alumno_id, curso_academico, titulacion)
 
     if not data:
         return go.Figure()
@@ -75,7 +44,6 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
                 name=category,
                 marker_color=color_mapping[category],
                 opacity=0.8
-
             )
         )
 

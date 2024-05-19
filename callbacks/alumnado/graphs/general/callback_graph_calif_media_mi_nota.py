@@ -1,5 +1,5 @@
 from dash import callback, Input, Output
-from data.db_connector import db
+from data.queries import nota_media_general_mi_nota
 import plotly.graph_objs as go
 from utils.utils import list_to_tuple
 
@@ -22,48 +22,7 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, 
         return [], None
 
 
-    query = """
-    SELECT 
-        subquery.asignatura, 
-        AVG(subquery.max_calif_numerica) AS media_calif,
-        MAX(CASE WHEN subquery.id = :alumno_id THEN subquery.max_calif_numerica ELSE NULL END) AS calif_alumno
-    FROM (
-        SELECT 
-            l.asignatura, 
-            l.id,
-            l.curso_aca,
-            MAX(l.calif_numerica) AS max_calif_numerica
-        FROM 
-            lineas_actas l
-        JOIN 
-            matricula m ON l.id = m.id AND l.cod_plan = m.cod_plan
-        WHERE 
-            l.asignatura IN :asignaturas_matriculadas AND 
-            l.curso_aca IN :curso_academico AND 
-            m.titulacion = :titulacion
-        GROUP BY 
-            l.asignatura, 
-            l.id,
-            l.curso_aca
-    ) subquery
-    GROUP BY 
-        subquery.asignatura
-    ORDER BY 
-        subquery.asignatura;
-
-    """
-    params = {
-        'asignaturas_matriculadas': asignaturas_matriculadas, 
-        'curso_academico': curso_academico,
-        'alumno_id': alumno_id,
-        'titulacion': titulacion
-    }
-
-    try:
-        data = db.execute_query(query, params)
-    except Exception as e:
-        print("Query execution failed:", e)
-        return go.Figure()
+    data = nota_media_general_mi_nota(curso_academico, asignaturas_matriculadas, alumno_id, titulacion)
 
     if not data:
         return go.Figure()
