@@ -1,6 +1,7 @@
 from dash import Input, Output, State, callback, callback_context
 from data.db_connector import db
 from utils.utils import list_to_tuple
+from data.queries import asignaturas_matriculadas
 
 @callback(
     Output('asignaturas-matriculadas', 'options'),
@@ -30,19 +31,7 @@ def update_filter_asignaturas_matri_alumnado(alumno_id, curso_academico, titulac
     except Exception as e:
         return [], None
 
-    query = """
-    SELECT DISTINCT AM.asignatura 
-    FROM asignaturas_matriculadas AM
-    JOIN matricula MA ON AM.id = MA.id AND AM.cod_plan = MA.cod_plan
-    WHERE AM.id = :id AND AM.curso_aca IN :curso_academico AND MA.titulacion = :titulacion;
-    """
-    params = {'id': alumno_id, 'curso_academico': curso_academico, 'titulacion': titulacion}
-
-    try:
-        data = db.execute_query(query, params)
-    except Exception as e:
-        print("Query execution failed:", e)
-        return [], None
+    data = asignaturas_matriculadas(alumno_id, curso_academico, titulacion)
     
     if not data:
         return [], None
