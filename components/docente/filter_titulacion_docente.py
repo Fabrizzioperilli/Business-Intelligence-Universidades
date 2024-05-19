@@ -1,12 +1,12 @@
 from dash import html, dcc
-from callbacks.alumnado.callback_filter_titulacion_alumnado import update_filter_titulacion_alumnado
+from callbacks.docente.callback_filter_titulacion_docente import update_filter_titulacion_docente
 
 
-def filter_titulacion_alumnado():
+def filter_titulacion_docente():
     return html.Div([
         html.Label("Titulación"),
         dcc.Dropdown(
-          id='titulacion-alumnado',
+          id='titulacion-docente',
           options=[],
           value=None,
           searchable=False,

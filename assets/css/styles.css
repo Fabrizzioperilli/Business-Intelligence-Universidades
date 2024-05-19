@@ -113,6 +113,8 @@ body {
   z-index: 2000;
   border-radius: 10px;
   background: white;
+  overflow-y: auto;
+  max-height: 800px;
 }
 
 .collapse.show .sidebar {

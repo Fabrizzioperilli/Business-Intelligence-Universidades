@@ -11,10 +11,9 @@ from components.alumnado.filter_titulacion_alumnado import filter_titulacion_alu
 from components.alumnado.recomendador_alumnado import recomendador_alumnado
 
 
-
 @callback(
     Output('tabs-alumnado-content', 'children'),
-    [Input('tabs-alumnado', 'value')],
+    Input('tabs-alumnado', 'value'),
     State('selected-alumnado-store', 'data')
 )
 def render_content(tab, selected_alumnado):

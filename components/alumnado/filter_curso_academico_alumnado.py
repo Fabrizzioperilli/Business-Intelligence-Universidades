@@ -3,6 +3,7 @@ from callbacks.alumnado.callback_filter_curso_cademico_alumnado import update_fi
 
 def filter_curso_academico_alumnado():
     return html.Div([
+        html.Br(),
         html.Label("Curso académico"),
         dcc.Dropdown(
             id="curso-academico",

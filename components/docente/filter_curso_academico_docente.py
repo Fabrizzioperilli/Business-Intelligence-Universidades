@@ -3,6 +3,7 @@ from callbacks.docente.callback_filter_curso_academico_docente import update_fil
 
 def filter_curso_academico_docente():
     return html.Div([
+        html.Br(),
         html.Label("Curso académico"),
         dcc.Dropdown(
             id="curso-academico-docente",
@@ -16,5 +17,4 @@ def filter_curso_academico_docente():
             persistence_type='session',
         ),
         html.Button('Seleccionar todo', id='select-all-cursos-academicos-docente', className='button-select-all-filter',n_clicks=0),
-        html.Hr(),
     ])

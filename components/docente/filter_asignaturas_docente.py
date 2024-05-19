@@ -4,6 +4,7 @@ from callbacks.docente.callback_filter_asignaturas_docente import update_filter_
 
 def filter_asignaturas_docente():
     return html.Div([
+        html.Br(),
         html.Label("Asignaturas"),
         dcc.Dropdown(
             id="asignaturas-docente",
@@ -15,6 +16,5 @@ def filter_asignaturas_docente():
             optionHeight=50,
             persistence=True,
             persistence_type='local',
-        ),
-        html.Hr()
+        )
     ])

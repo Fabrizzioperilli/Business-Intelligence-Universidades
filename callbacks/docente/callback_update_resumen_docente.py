@@ -4,14 +4,19 @@ from callbacks.docente.callback_select_docente import store_selected_docente
 
 @callback(
     Output('resumen-docente', 'children'),
-    [Input('selected-docente-store', 'data')]
+    Input('selected-docente-store', 'data'),
+    Input('titulacion-docente', 'value')
 )
-def update_resumen_docente(docente_id):
-    if not docente_id:
+def update_resumen_docente(docente_id, titulacion):
+    if not docente_id or not titulacion:
         return not_data()
 
-    query = "SELECT DISTINCT universidad, titulacion, id_docente FROM docentes WHERE id_docente = :docente_id"
-    params = {'docente_id': docente_id}
+    query = """
+    SELECT DISTINCT universidad, titulacion, id_docente 
+    FROM docentes 
+    WHERE id_docente = :docente_id AND titulacion = :titulacion;
+    """
+    params = {'docente_id': docente_id, 'titulacion': titulacion}
 
     try:
         data = db.execute_query(query, params)

@@ -3,7 +3,6 @@ from callbacks.alumnado.callback_filter_asignaturas_matri_alumnado import update
 
 def filter_asignaturas_matri_alumnado():
    return html.Div([
-        html.Br(),
         html.Label("Asignaturas matriculadas"),
         dcc.Dropdown(
             id="asignaturas-matriculadas",
