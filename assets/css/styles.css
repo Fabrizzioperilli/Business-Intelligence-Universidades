@@ -66,7 +66,7 @@ body {
 .footer {
   background: var(--primary-color);
   color: var(--text-color);
-  font-size: 15px;
+  font-size: 12px;
   text-align: left;
   position: absolute;
   bottom: 0;
@@ -270,4 +270,34 @@ body {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+}
+
+/**Estilos para el tab recomendaciones alumnado */ 
+
+.titulo-recomendador-alumnado {
+  text-align: center;
+}
+
+.imagen-recomendador-alumnado {
+  width: 40%;
+  float: left;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.p-recomendador-alumnado {
+  text-align: justify;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.sb-recomendador-alumnado {
+  text-align: left;
+  margin: 20px;
+}
+
+.li-recomendador-alumnado {
+  text-align: justify;
+  font-size: 20px;
+  margin: 20px;
 }

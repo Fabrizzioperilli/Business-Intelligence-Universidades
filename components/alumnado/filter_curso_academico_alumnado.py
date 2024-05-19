@@ -13,6 +13,5 @@ def filter_curso_academico_alumnado():
             value=None,    
             maxHeight=300
         ),
-        html.Button('Seleccionar todo', id='select-all-cursos-academicos', className='button-select-all-filter', n_clicks=0),
-        html.Br()
+        html.Button('Seleccionar todo', id='select-all-cursos-academicos', className='button-select-all-filter', n_clicks=0)
     ])

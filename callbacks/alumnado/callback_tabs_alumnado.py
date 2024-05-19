@@ -8,6 +8,7 @@ from components.common.filters import filters
 from components.alumnado.filter_curso_academico_alumnado import filter_curso_academico_alumnado
 from components.alumnado.filter_asignaturas_matri_alumnado import filter_asignaturas_matri_alumnado
 from components.alumnado.filter_titulacion_alumnado import filter_titulacion_alumnado
+from components.alumnado.recomendador_alumnado import recomendador_alumnado
 
 
 
@@ -49,9 +50,5 @@ def render_content(tab, selected_alumnado):
         ])
     elif tab == 'recomendador-tab':
         return html.Div([
-            html.P("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec elit lacinia fermentum.")
-        ])
-    else:
-        return html.Div([
-            html.H3("Expediente Académico Personal")
+            recomendador_alumnado()
         ])
