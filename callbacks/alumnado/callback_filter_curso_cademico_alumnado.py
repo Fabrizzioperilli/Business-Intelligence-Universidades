@@ -6,11 +6,12 @@ from callbacks.alumnado.callback_select_alumnado import store_selected_alumnado
     Output('curso-academico', 'options'),
     Output('curso-academico', 'value'),
     Input('selected-alumnado-store', 'data'),
+    Input('titulacion-alumnado', 'value'),
     Input('select-all-cursos-academicos', 'n_clicks'),
     State('curso-academico', 'options'),
     State('select-all-cursos-academicos', 'n_clicks_timestamp')  # Añadido para revisar cuándo fue clickeado
 )
-def update_filter_curso_academico_alumnado(alumno_id, n_clicks, existing_options, last_clicked):
+def update_filter_curso_academico_alumnado(alumno_id, titulacion, n_clicks, existing_options, last_clicked):
     ctx = callback_context
 
     trigger_id = ctx.triggered[0]['prop_id'].split('.')[0]
@@ -23,8 +24,8 @@ def update_filter_curso_academico_alumnado(alumno_id, n_clicks, existing_options
             return [], []
 
     if alumno_id:
-        query = "SELECT curso_aca FROM matricula WHERE id = :id"
-        params = {'id': alumno_id}
+        query = "SELECT curso_aca FROM matricula WHERE id = :id AND titulacion = :titulacion;"
+        params = {'id': alumno_id, 'titulacion': titulacion}
         try:
             result = db.execute_query(query, params)
         except Exception as e:

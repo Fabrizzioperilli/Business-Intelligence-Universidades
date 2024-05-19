@@ -5,9 +5,10 @@ from utils.utils import calculate_average_grade
 
 @callback(
     Output('resumen-alumnado', 'children'),
-    [Input('selected-alumnado-store', 'data')]
+    Input('selected-alumnado-store', 'data'),
+    Input('titulacion-alumnado', 'value')
 )
-def update_resumen_alumnado(alumno_id):
+def update_resumen_alumnado(alumno_id, titulacion):
     if not alumno_id:
         return html.Div([
             html.H2("Resumen"),
@@ -18,8 +19,8 @@ def update_resumen_alumnado(alumno_id):
             html.Hr(),
         ])
 
-    query = "SELECT DISTINCT universidad, titulacion, id FROM matricula WHERE id = :id"
-    result = db.execute_query(query, {'id': alumno_id})
+    query = "SELECT DISTINCT universidad, titulacion, id FROM matricula WHERE id = :id AND titulacion = :titulacion;"
+    result = db.execute_query(query, {'id': alumno_id, 'titulacion': titulacion})
 
     if result:
         universidad = result[0][0]
@@ -37,6 +38,6 @@ def update_resumen_alumnado(alumno_id):
         html.P("Alumno:", className="resumen-label"),
         html.P(id),
         html.P("Nota Media:", className="resumen-label"),
-        html.P(calculate_average_grade(alumno_id)),
+        html.P(calculate_average_grade(alumno_id, titulacion)),
         html.Hr(),
     ])

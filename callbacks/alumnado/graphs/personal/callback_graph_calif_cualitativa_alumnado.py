@@ -5,12 +5,13 @@ from utils.utils import list_to_tuple
 
 @callback(
     Output('graph-bar-evolucion-asignaturas-matriculadas', 'figure'),
-    [Input('selected-alumnado-store', 'data'), 
-    Input('curso-academico', 'value')]
+    Input('selected-alumnado-store', 'data'), 
+    Input('curso-academico', 'value'),
+    Input('titulacion-alumnado','value')
 )
-def update_graph_alumnado(alumno_id, curso_academico):  
+def update_graph_alumnado(alumno_id, curso_academico, titulacion):  
 
-    if not alumno_id or not curso_academico:
+    if not alumno_id or not curso_academico or not titulacion:
         return go.Figure()
 
     try:
@@ -22,23 +23,29 @@ def update_graph_alumnado(alumno_id, curso_academico):
     # Modificando la consulta para obtener la máxima calificación por curso y por asignatura
     query = """
     WITH RankedGrades AS (
-        SELECT curso_aca, calif, ROW_NUMBER() OVER (PARTITION BY curso_aca, asignatura ORDER BY CASE 
-            WHEN calif = 'Sobresaliente' THEN 5
-            WHEN calif = 'Notable' THEN 4
-            WHEN calif = 'Aprobado' THEN 3
-            WHEN calif = 'Suspenso' THEN 2
-            WHEN calif = 'No presentado' THEN 1
-            ELSE 0 END DESC) AS rk
-        FROM lineas_actas
-        WHERE id = :alumno_id AND curso_aca IN :curso_academico
+        SELECT li.curso_aca, li.calif, 
+            ROW_NUMBER() OVER (PARTITION BY li.curso_aca, li.asignatura ORDER BY 
+                CASE 
+                    WHEN li.calif = 'Sobresaliente' THEN 5
+                    WHEN li.calif = 'Notable' THEN 4
+                    WHEN li.calif = 'Aprobado' THEN 3
+                    WHEN li.calif = 'Suspenso' THEN 2
+                    WHEN li.calif = 'No presentado' THEN 1
+                    ELSE 0 
+                END DESC) AS rk
+        FROM lineas_actas li
+        JOIN matricula ma ON li.id = ma.id AND li.cod_plan = ma.cod_plan
+        WHERE li.id = :alumno_id
+        AND li.curso_aca IN :curso_academico
+        AND ma.titulacion = :titulacion
     )
-    SELECT curso_aca, calif, COUNT(*) as grade_count
+    SELECT curso_aca, calif, COUNT(*) AS grade_count
     FROM RankedGrades
     WHERE rk = 1
     GROUP BY curso_aca, calif
     ORDER BY curso_aca;
     """
-    params = {'alumno_id': alumno_id, 'curso_academico': curso_academico}
+    params = {'alumno_id': alumno_id, 'curso_academico': curso_academico, 'titulacion': titulacion}
 
     try:
         data = db.execute_query(query, params)

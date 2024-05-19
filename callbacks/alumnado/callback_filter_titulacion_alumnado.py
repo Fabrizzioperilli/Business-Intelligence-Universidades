@@ -2,20 +2,19 @@ from dash import Input, Output, callback
 from data.db_connector import db
 
 @callback(
-    Output('asignaturas-docente', 'options'),
-    Output('asignaturas-docente', 'value'),
-    Input('selected-docente-store', 'data'),
-  
+  Output('titulacion-alumnado', 'options'),
+  Output('titulacion-alumnado', 'value'),
+  Input('selected-alumnado-store', 'data')
 )
-def update_filter_asignaturas_docente(docente_id):
-   
-    if not docente_id:
+def update_filter_titulacion_alumnado(alumno_id):
+    if not alumno_id:
         return [], None
-     
+    
     query = """
-    SELECT DISTINCT asignatura FROM docentes WHERE id_docente = :id_docente
+    SELECT DISTINCT titulacion FROM matricula WHERE id = :alumno_id
     """
-    params = {'id_docente': docente_id}
+
+    params = {'alumno_id': alumno_id}
 
     try:
         data = db.execute_query(query, params)

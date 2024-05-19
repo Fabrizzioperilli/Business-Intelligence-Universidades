@@ -8,10 +8,11 @@ from utils.utils import list_to_tuple
     Input('curso-academico', 'value'),
     Input('asignaturas-matriculadas', 'value'),
     Input('selected-alumnado-store', 'data'),
+    Input('titulacion-alumnado', 'value')
 )
 
-def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
-    if not curso_academico or not asignaturas_matriculadas or not alumno_id:
+def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, titulacion):
+    if not curso_academico or not asignaturas_matriculadas or not alumno_id or not titulacion:
         return go.Figure()
 
     try:
@@ -34,9 +35,12 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
             MAX(l.calif_numerica) AS max_calif_numerica
         FROM 
             lineas_actas l
+        JOIN 
+            matricula m ON l.id = m.id AND l.cod_plan = m.cod_plan
         WHERE 
             l.asignatura IN :asignaturas_matriculadas AND 
-            l.curso_aca IN :curso_academico
+            l.curso_aca IN :curso_academico AND 
+            m.titulacion = :titulacion
         GROUP BY 
             l.asignatura, 
             l.id,
@@ -44,12 +48,15 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
     ) subquery
     GROUP BY 
         subquery.asignatura
-    ORDER BY subquery.asignatura;
+    ORDER BY 
+        subquery.asignatura;
+
     """
     params = {
         'asignaturas_matriculadas': asignaturas_matriculadas, 
         'curso_academico': curso_academico,
-        'alumno_id': alumno_id
+        'alumno_id': alumno_id,
+        'titulacion': titulacion
     }
 
     try:

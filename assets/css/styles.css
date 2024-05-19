@@ -47,7 +47,7 @@ body {
 }
 
 .title {
-  font-size: 40px;
+  font-size: 30px;
   margin: 0;
   flex-grow: 1;
   text-align: center;
@@ -252,6 +252,13 @@ body {
 .Select-multi-value-wrapper {
   max-height: 200px;  /* Ajusta esta altura al tamaño deseado */
   overflow-y: auto;
+}
+
+
+.Select-value {
+  display: block;
+  white-space: normal; /* Permite el ajuste del texto en varias líneas */
+  word-wrap: break-word; /* Asegura que el texto se ajuste correctamente */
 }
 
 .button-select-all-filter {

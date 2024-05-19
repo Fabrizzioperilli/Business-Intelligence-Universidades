@@ -5,10 +5,13 @@ from utils.utils import list_to_tuple
 
 @callback(
     Output('graph-bar-tasa-exito', 'figure'),
-    [Input('selected-alumnado-store', 'data'), Input('curso-academico', 'value')]
+    Input('selected-alumnado-store', 'data'), 
+    Input('curso-academico', 'value'),
+    Input('titulacion-alumnado','value')
+
 )
-def update_graph_alumnado(alumno_id, curso_academico):
-    if not alumno_id or not curso_academico:
+def update_graph_alumnado(alumno_id, curso_academico, titulacion):
+    if not alumno_id or not curso_academico or not titulacion:
         return go.Figure()
     
     try:
@@ -24,15 +27,19 @@ def update_graph_alumnado(alumno_id, curso_academico):
     FROM
         asignaturas_matriculadas AM
     LEFT JOIN
-        lineas_actas LA ON AM.cod_asignatura = LA.cod_asig AND LA.id = AM.id AND LA.curso_aca = AM.curso_aca
+        lineas_actas LA ON AM.cod_asignatura = LA.cod_asig AND AM.id = LA.id AND AM.curso_aca = LA.curso_aca
+    JOIN
+        matricula MA ON AM.id = MA.id AND AM.cod_plan = MA.cod_plan
     WHERE
-        AM.id = :alumno_id AND AM.curso_aca IN :curso_academico
+        AM.id = :alumno_id 
+        AND AM.curso_aca IN :curso_academico
+        AND MA.titulacion = :titulacion
     GROUP BY
         AM.curso_aca;
     """
 
 
-    params = {'alumno_id': alumno_id, 'curso_academico': curso_academico}
+    params = {'alumno_id': alumno_id, 'curso_academico': curso_academico, 'titulacion': titulacion}
 
     try:
         data = db.execute_query(query, params)

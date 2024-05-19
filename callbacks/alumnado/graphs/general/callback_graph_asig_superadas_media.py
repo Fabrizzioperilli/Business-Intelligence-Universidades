@@ -8,9 +8,10 @@ from utils.utils import list_to_tuple
     Input('curso-academico', 'value'),
     Input('selected-alumnado-store', 'data'),
     Input('asignaturas-matriculadas', 'value'),
+    Input('titulacion-alumnado', 'value')
 )
-def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas):
-    if not curso_academico or not alumno_id or not asignaturas_matriculadas:
+def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, titulacion):
+    if not curso_academico or not alumno_id or not asignaturas_matriculadas or not titulacion: 
         return go.Figure()
 
     try:
@@ -21,10 +22,10 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas):
 
     query = """
     SELECT 
-        a.id, 
-        a.abandona, 
-        AVG(CASE WHEN la.max_calif >= 5 THEN la.max_calif ELSE NULL END) AS NotaMedia, 
-        COUNT(DISTINCT CASE WHEN la.max_calif >= 5 THEN la.asignatura ELSE NULL END) AS "Total asignaturas superadas"
+    a.id, 
+    a.abandona, 
+    AVG(CASE WHEN la.max_calif >= 5 THEN la.max_calif ELSE NULL END) AS NotaMedia, 
+    COUNT(DISTINCT CASE WHEN la.max_calif >= 5 THEN la.asignatura ELSE NULL END) AS "Total asignaturas superadas"
     FROM 
         (
             SELECT 
@@ -32,24 +33,28 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas):
                 la.asignatura,
                 MAX(la.calif_numerica) AS max_calif
             FROM 
-                lineas_actas la
+                public.lineas_actas la
+            JOIN 
+                public.matricula ma ON la.id = ma.id AND la.cod_plan = ma.cod_plan
             WHERE 
                 la.curso_aca IN :curso_academico
                 AND la.asignatura IN :asignaturas_matriculadas
+                AND ma.titulacion = :titulacion
             GROUP BY 
                 la.id, la.asignatura
         ) la
     JOIN 
-        alumnos a ON a.id = la.id 
+        public.alumnos a ON a.id = la.id 
     GROUP BY 
-        a.id  
+        a.id, a.abandona
     ORDER BY 
         a.id;
     """
 
     params = {
         'curso_academico': curso_academico,
-        'asignaturas_matriculadas': asignaturas_matriculadas
+        'asignaturas_matriculadas': asignaturas_matriculadas,
+        'titulacion': titulacion,
     }
 
     try:

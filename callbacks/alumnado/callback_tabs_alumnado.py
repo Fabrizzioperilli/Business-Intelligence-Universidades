@@ -7,6 +7,8 @@ from components.alumnado.resumen_alumnado import resumen_alumnado
 from components.common.filters import filters
 from components.alumnado.filter_curso_academico_alumnado import filter_curso_academico_alumnado
 from components.alumnado.filter_asignaturas_matri_alumnado import filter_asignaturas_matri_alumnado
+from components.alumnado.filter_titulacion_alumnado import filter_titulacion_alumnado
+
 
 
 @callback(
@@ -23,6 +25,7 @@ def render_content(tab, selected_alumnado):
                 sidebar([
                     resumen_alumnado(), 
                     filters([
+                        filter_titulacion_alumnado(),
                         filter_curso_academico_alumnado()
                         ])
                     ]),
@@ -36,6 +39,7 @@ def render_content(tab, selected_alumnado):
                 sidebar([
                     resumen_alumnado(),
                     filters([
+                        filter_titulacion_alumnado(),
                         filter_curso_academico_alumnado(),
                         filter_asignaturas_matri_alumnado()
                         ])

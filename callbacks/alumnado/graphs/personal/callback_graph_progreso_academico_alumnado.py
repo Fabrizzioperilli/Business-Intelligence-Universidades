@@ -5,10 +5,12 @@ from utils.utils import list_to_tuple
 
 @callback(
     Output('graph-evolucion-progreso-academico', 'figure'),
-    [Input('selected-alumnado-store', 'data'), Input('curso-academico', 'value')]
+    Input('selected-alumnado-store', 'data'), 
+    Input('curso-academico', 'value'),
+    Input('titulacion-alumnado','value')
 )
-def update_graph_alumnado(alumno_id, curso_academico):
-    if not alumno_id or not curso_academico:
+def update_graph_alumnado(alumno_id, curso_academico, titulacion):
+    if not alumno_id or not curso_academico or not titulacion:
         return go.Figure()
 
     try:
@@ -17,14 +19,16 @@ def update_graph_alumnado(alumno_id, curso_academico):
         return [], None
 
     query = """
-    SELECT curso_aca, COUNT(*) as aprobadas
-    FROM lineas_actas
-    WHERE id = :alumno_id AND calif_numerica >= 5 AND curso_aca IN :curso_academico
-    GROUP BY curso_aca
-    ORDER BY curso_aca;
+    SELECT li.curso_aca, COUNT(DISTINCT li.asignatura) AS N_asig_superada
+    FROM lineas_actas li
+    JOIN matricula ma ON li.id = ma.id AND li.cod_plan = ma.cod_plan
+    WHERE li.id = :alumno_id AND li.calif_numerica >= 5 AND li.curso_aca IN :curso_academico 
+    AND ma.titulacion = :titulacion
+    GROUP BY li.curso_aca
+    ORDER BY li.curso_aca;
     """
 
-    params = {'alumno_id': alumno_id, 'curso_academico': curso_academico}
+    params = {'alumno_id': alumno_id, 'curso_academico': curso_academico, 'titulacion': titulacion}
 
     try:
         data = db.execute_query(query, params)

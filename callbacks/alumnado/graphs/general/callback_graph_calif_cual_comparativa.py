@@ -8,74 +8,97 @@ from utils.utils import list_to_tuple
     Input('curso-academico', 'value'),
     Input('asignaturas-matriculadas', 'value'),
     Input('selected-alumnado-store', 'data'),
+    Input('titulacion-alumnado', 'value')
 )
-def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id):
-    if not curso_academico or not asignaturas_matriculadas or not alumno_id:
+def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, titulacion):
+    if not curso_academico or not asignaturas_matriculadas or not alumno_id or not titulacion:
         return go.Figure()
 
     curso_academico = list_to_tuple(curso_academico)
     asignaturas_matriculadas = list_to_tuple(asignaturas_matriculadas)
 
     general_query = """
-        WITH CalificacionesMaximas AS (
-            SELECT
-                lineas_actas.id,
-                asignatura,
-                curso_aca,
-                calif,
-                ROW_NUMBER() OVER (PARTITION BY id, curso_aca, asignatura ORDER BY CASE 
-                    WHEN calif = 'Sobresaliente' THEN 5
-                    WHEN calif = 'Notable' THEN 4
-                    WHEN calif = 'Aprobado' THEN 3
-                    WHEN calif = 'Suspenso' THEN 2
-                    WHEN calif = 'No presentado' THEN 1
-                    ELSE 0 END DESC) AS rk
-            FROM lineas_actas
-            WHERE curso_aca IN :curso_academico AND asignatura IN :asignaturas_matriculadas
-            AND calif IN ('Sobresaliente', 'Notable', 'Aprobado', 'Suspenso', 'No presentado')
-        )
-
+    WITH CalificacionesMaximas AS (
         SELECT
-            c.asignatura,
-            c.calif,
-            COUNT(*) AS count_grades
-        FROM CalificacionesMaximas c
-        WHERE c.rk = 1
-        GROUP BY c.asignatura, c.calif;
+            la.id,
+            la.asignatura,
+            la.curso_aca,
+            la.calif,
+            ROW_NUMBER() OVER (PARTITION BY la.id, la.curso_aca, la.asignatura ORDER BY CASE 
+                WHEN la.calif = 'Sobresaliente' THEN 5
+                WHEN la.calif = 'Notable' THEN 4
+                WHEN la.calif = 'Aprobado' THEN 3
+                WHEN la.calif = 'Suspenso' THEN 2
+                WHEN la.calif = 'No presentado' THEN 1
+                ELSE 0 END DESC) AS rk
+        FROM 
+            lineas_actas la
+        JOIN 
+            matricula ma ON la.id = ma.id AND la.cod_plan = ma.cod_plan
+        WHERE 
+            la.curso_aca IN :curso_academico AND 
+            la.asignatura IN :asignaturas_matriculadas AND 
+            la.calif IN ('Sobresaliente', 'Notable', 'Aprobado', 'Suspenso', 'No presentado') AND
+            ma.titulacion = :titulacion
+    )
+
+    SELECT
+        c.asignatura,
+        c.calif,
+        COUNT(*) AS count_grades
+    FROM 
+        CalificacionesMaximas c
+    WHERE 
+        c.rk = 1
+    GROUP BY 
+        c.asignatura, c.calif;
+
         """
 
     student_query = """
-        WITH CalificacionesMaximas AS (
-            SELECT
-                lineas_actas.id,
-                asignatura,
-                curso_aca,
-                calif,
-                ROW_NUMBER() OVER (PARTITION BY id, curso_aca, asignatura ORDER BY CASE 
-                    WHEN calif = 'Sobresaliente' THEN 5
-                    WHEN calif = 'Notable' THEN 4
-                    WHEN calif = 'Aprobado' THEN 3
-                    WHEN calif = 'Suspenso' THEN 2
-                    WHEN calif = 'No presentado' THEN 1
-                    ELSE 0 END DESC) AS rk
-            FROM lineas_actas
-            WHERE curso_aca IN :curso_academico AND asignatura IN :asignaturas_matriculadas AND id = :alumno_id
-            AND calif IN ('Sobresaliente', 'Notable', 'Aprobado', 'Suspenso', 'No presentado')
-        )
-
+    WITH CalificacionesMaximas AS (
         SELECT
-            c.asignatura,
-            c.calif,
-            COUNT(*) AS count_grades
-        FROM CalificacionesMaximas c
-        WHERE c.rk = 1
-        GROUP BY c.asignatura, c.calif;
+            la.id,
+            la.asignatura,
+            la.curso_aca,
+            la.calif,
+            ROW_NUMBER() OVER (PARTITION BY la.id, la.curso_aca, la.asignatura ORDER BY CASE 
+                WHEN la.calif = 'Sobresaliente' THEN 5
+                WHEN la.calif = 'Notable' THEN 4
+                WHEN la.calif = 'Aprobado' THEN 3
+                WHEN la.calif = 'Suspenso' THEN 2
+                WHEN la.calif = 'No presentado' THEN 1
+                ELSE 0 END DESC) AS rk
+        FROM 
+            lineas_actas la
+        JOIN 
+            matricula ma ON la.id = ma.id AND la.cod_plan = ma.cod_plan
+        WHERE 
+            la.curso_aca IN :curso_academico AND 
+            la.asignatura IN :asignaturas_matriculadas AND 
+            la.id = :alumno_id AND 
+            la.calif IN ('Sobresaliente', 'Notable', 'Aprobado', 'Suspenso', 'No presentado') AND
+            ma.titulacion = :titulacion
+    )
+
+    SELECT
+        c.asignatura,
+        c.calif,
+        COUNT(*) AS count_grades
+    FROM 
+        CalificacionesMaximas c
+    WHERE 
+        c.rk = 1
+    GROUP BY 
+        c.asignatura, c.calif;
+
         """
 
     params = {
         'asignaturas_matriculadas': asignaturas_matriculadas,
         'curso_academico': curso_academico,
-        'alumno_id': alumno_id
+        'alumno_id': alumno_id,
+        'titulacion': titulacion
     }
 
     try:

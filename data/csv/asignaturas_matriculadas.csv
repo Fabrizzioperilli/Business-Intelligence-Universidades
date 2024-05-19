@@ -1,169 +1,180 @@
 indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipologia,universidad,cod_universidad
-1,Álgebra,3012315ALG,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-2,Informática Básica,3012315INF,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-3,Cálculo,3012315CAL,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-4,Fundamentos Físicos,3012315FIS,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-5,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-6,Principios de Computadores,3012315PRI,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-7,Optimización,3012315OPT,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-8,Sistemas Electrónicos Digitales,3012315SED,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-9,Expresión Gráfica,3012315EXP,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-10,Organizaciones Empresariales,3012315ORG,BDCX8,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-11,Estructuras de Computadores,3012315EST,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-12,Sistemas Operativos,3012315SIS,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-13,Inglés Técnico,3012315ING,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-14,Fundamentos de Ingeniería del Software,3012315FIS,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-15,Código Deontológico y Aspectos Legales,3012315COD,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-16,Informática Básica,3012315INF,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-17,Cálculo,3012315CAL,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-18,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-19,Principios de Computadores,3012315PRI,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-20,Optimización,3012315OPT,BDCX8,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-21,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-22,Cálculo,3012315CAL,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-23,Principios de Computadores,3012315PRI,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-24,Estadística,3012315EST,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-25,Computabilidad y Algoritmia,3012315COM,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-26,Estructuras de Computadores,3012315EST,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-27,Sistemas Operativos,3012315SIS,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-28,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-29,Redes y Sistemas Distribuidos,3568974RED,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-30,Administración de Sistemas,3568974ADM,BDCX8,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-31,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-32,Estadística,3012315EST,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-33,Computabilidad y Algoritmia,3012315COM,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-34,Sistemas Operativos,3012315SIS,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-35,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-36,Administración de Sistemas,3568974ADM,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-37,Sistemas de Interacción Persona-Computador,3568974SIP,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-38,Gestión de Proyectos Informáticos,3568974GPI,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-39,Modelado de Datos,3568974MOD,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-40,Gestión de la Calidad,3568974GCA,BDCX8,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-41,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-42,Estadística,3012315EST,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-43,Computabilidad y Algoritmia,3012315COM,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-44,Sistemas Operativos,3012315SIS,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-45,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-46,Bases de Datos,3568974BDA,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-47,Inteligencia Artificial,3568974INT,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-48,Modelado de Sistemas Software,3568974MSS,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-49,Análisis de Sistemas Software,3568974ASS,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-50,Gestión de Riesgos en Ingeniería del Software,3568974GRI,BDCX8,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-51,Computabilidad y Algoritmia,3012315COM,BDCX8,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-52,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,BDCX8,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-53,Lenguajes y Paradigmas de Programación,3568974LPP,BDCX8,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-54,Modelado de Sistemas Software,3568974MSS,BDCX8,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-55,Administración y Diseño de Bases de Datos,3568974ADB,BDCX8,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-56,Ingeniería Logística,3568974LOG,BDCX8,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-57,Inteligencia Emocional,3568974IEM,BDCX8,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-58,Laboratorio de Desarrollo y Herramientas,3568974LDH,BDCX8,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-59,Normativa y Regulación,3568974NOR,BDCX8,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-60,Diseño Arquitectónico y Patrones,3568974DAP,BDCX8,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-61,Computabilidad y Algoritmia,3012315COM,BDCX8,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-62,Diseño Arquitectónico y Patrones,3568974DAP,BDCX8,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-63,Álgebra,3012315ALG,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-64,Informática Básica,3012315INF,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-65,Cálculo,3012315CAL,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-66,Fundamentos Físicos,3012315FIS,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-67,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-68,Principios de Computadores,3012315PRI,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-69,Optimización,3012315OPT,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-70,Sistemas Electrónicos Digitales,3012315SED,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-71,Expresión Gráfica,3012315EXP,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-72,Organizaciones Empresariales,3012315ORG,BDCX8,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-73,Estructuras de Computadores,3012315EST,BDCX8,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-74,Sistemas Operativos,3012315SIS,BDCX8,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-75,Inglés Técnico,3012315ING,BDCX8,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-76,Fundamentos de Ingeniería del Software,3012315FIS,BDCX8,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-77,Código Deontológico y Aspectos Legales,3012315COD,BDCX8,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-78,Estadística,3012315EST,BDCX8,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-79,Computabilidad y Algoritmia,3012315COM,BDCX8,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-80,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,BDCX8,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-81,Redes y Sistemas Distribuidos,3568974RED,BDCX8,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-82,Administración de Sistemas,3568974ADM,BDCX8,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-83,Sistemas de Interacción Persona-Computador,3568974SIP,BDCX8,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-84,Gestión de Proyectos Informáticos,3568974GPI,BDCX8,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-85,Modelado de Datos,3568974MOD,BDCX8,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-86,Gestión de la Calidad,3568974GCA,BDCX8,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-87,Bases de Datos,3568974BDA,BDCX8,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-88,Inteligencia Artificial,3568974INT,BDCX8,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-89,Modelado de Sistemas Software,3568974MSS,BDCX8,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-90,Análisis de Sistemas Software,3568974ASS,BDCX8,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-91,Gestión de Riesgos en Ingeniería del Software,3568974GRI,BDCX8,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-92,Lenguajes y Paradigmas de Programación,3568974LPP,BDCX8,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-93,Administración y Diseño de Bases de Datos,3568974ADB,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-94,Ingeniería Logística,3568974LOG,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-95,Inteligencia Emocional,3568974IEM,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-96,Laboratorio de Desarrollo y Herramientas,3568974LDH,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-97,Normativa y Regulación,3568974NOR,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-98,Diseño Arquitectónico y Patrones,3568974DAP,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-99,Álgebra,3012315ALG,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-100,Informática Básica,3012315INF,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-101,Cálculo,3012315CAL,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-102,Fundamentos Físicos para la Ingeniería,3012315FIS,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-103,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-104,Principios de Computadores,3012315PRI,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-105,Optimización,3012315OPT,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-106,Sistemas Electrónicos Digitales,3012315SED,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-107,Expresión Gráfica para la Ingeniería,3012315EXP,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-108,Organizaciones Empresariales,3012315ORG,BDCX8,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-109,Estructuras de Computadores,3012315EST,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-110,Sistemas Operativos,3012315SIS,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-111,Inglés Técnico,3012315ING,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-112,Fundamentos de Ingeniería del Software,3012315FIS,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-113,Código Deontológico y Aspectos Legales,3012315COD,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-114,Estadística,3012315EST,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-115,Computabilidad y Algoritmia,3012315COM,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-116,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-117,Redes y Sistemas Distribuidos,3568974RED,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-118,Administración de Sistemas,3568974ADM,BDCX8,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-119,Trabajo Fin de Grado,3568974TFG,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-120,Prácticas Externas,3568974PRE,BDCX8,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-121,Trabajo Fin de Grado,3568974TFG,BDCX8,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-122,Prácticas Externas,3568974PRE,BDCX8,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-123,Informática Básica,3012315INF,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-124,Álgebra,3012315ALG,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-125,Cálculo,3012315CAL,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-126,Fundamentos Físicos,3012315FIS,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-127,Algoritmos y Estructuras de Datos,3012315AED,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-128,Principios de Computadores,3012315PRI,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-129,Optimización,3012315OPT,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-130,Sistemas Electrónicos Digitales,3012315SED,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-131,Expresión Gráfica,3012315EXP,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-132,Organizaciones Empresariales,3012315ORG,BDCX8,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-133,Estructuras de Computadores,3012315EST,BDCX8,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-134,Sistemas Operativos,3012315SIS,BDCX8,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-135,Inglés Técnico,3012315ING,BDCX8,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-136,Fundamentos de Ingeniería del Software,3012315FIS,BDCX8,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-137,Código Deontológico y Aspectos Legales,3012315COD,BDCX8,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-138,Estadística,3012315EST,BDCX8,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-139,Cálculo,3012315CAL,BDCX8,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-140,Optimización,3012315OPT,BDCX8,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-141,Sistema Electrónicos Digitales,3012315SED,BDCX8,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-142,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,BDCX8,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-143,Computabilidad y Algoritmia,3012315COM,BDCX8,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,
-144,Sistemas Operativos,3012315SIS,BDCX8,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-145,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,BDCX8,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-146,Administración de Sistemas,3568974ADM,BDCX8,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-147,Bases de Datos,3568974BDA,BDCX8,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-148,Inteligencia Artificial,3568974INT,BDCX8,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-149,Sistemas de Interacción Persona-Computador,3568974SIP,BDCX8,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-150,Gestión de Proyectos Informáticos,3568974GPI,BDCX8,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-151,Modelado de Sistemas Software,3568974MSS,BDCX8,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-152,Análisis de Sistemas Software,3568974ASS,BDCX8,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-153,Gestión de Riesgos en Ingeniería del Software,3568974GRI,BDCX8,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-154,Computabilidad y Algoritmia,3012315COM,BDCX8,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-155,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,BDCX8,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-156,Bases de Datos,3568974BDA,BDCX8,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-157,Lenguajes y Paradigmas de Programación,3568974LPP,BDCX8,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-158,Modelado de Sistemas Software,3568974MSS,BDCX8,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-159,Gestión de la Calidad,3568974GCA,BDCX8,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-160,Inteligencia Emocional,3568974IEM,BDCX8,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-161,Normativa y Regulación,3568974NOR,BDCX8,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-162,Computabilidad y Algoritmia,3012315COM,BDCX8,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-163,Visión por Computador,3568974VPC,BDCX8,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-164,Robótica Computacional,3568974RCO,BDCX8,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-165,Prácticas Externas,3568974PRE,BDCX8,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-166,Trabajo Fin de Grado,3568974TFG,BDCX8,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-167,Laboratorio de Desarrollo y Herramientas,3568974LDH,BDCX8,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
-168,Diseño Arquitectónico y Patrones,3568974DAP,BDCX8,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+1,Álgebra,3012315ALG,ING-Informática,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+2,Informática Básica,3012315INF,ING-Informática,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+3,Cálculo,3012315CAL,ING-Informática,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+4,Fundamentos Físicos,3012315FIS,ING-Informática,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+5,Algoritmos y Estructuras de Datos,3012315AED,ING-Informática,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+6,Principios de Computadores,3012315PRI,ING-Informática,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+7,Optimización,3012315OPT,ING-Informática,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+8,Sistemas Electrónicos Digitales,3012315SED,ING-Informática,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+9,Expresión Gráfica,3012315EXP,ING-Informática,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+10,Organizaciones Empresariales,3012315ORG,ING-Informática,2017/2018,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+11,Estructuras de Computadores,3012315EST,ING-Informática,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+12,Sistemas Operativos,3012315SIS,ING-Informática,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+13,Inglés Técnico,3012315ING,ING-Informática,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+14,Fundamentos de Ingeniería del Software,3012315FIS,ING-Informática,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+15,Código Deontológico y Aspectos Legales,3012315COD,ING-Informática,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+16,Informática Básica,3012315INF,ING-Informática,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+17,Cálculo,3012315CAL,ING-Informática,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+18,Algoritmos y Estructuras de Datos,3012315AED,ING-Informática,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+19,Principios de Computadores,3012315PRI,ING-Informática,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+20,Optimización,3012315OPT,ING-Informática,2018/2019,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+21,Algoritmos y Estructuras de Datos,3012315AED,ING-Informática,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+22,Cálculo,3012315CAL,ING-Informática,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+23,Principios de Computadores,3012315PRI,ING-Informática,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+24,Estadística,3012315EST,ING-Informática,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+25,Computabilidad y Algoritmia,3012315COM,ING-Informática,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+26,Estructuras de Computadores,3012315EST,ING-Informática,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+27,Sistemas Operativos,3012315SIS,ING-Informática,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+28,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,ING-Informática,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+29,Redes y Sistemas Distribuidos,3568974RED,ING-Informática,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+30,Administración de Sistemas,3568974ADM,ING-Informática,2019/2020,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+31,Algoritmos y Estructuras de Datos,3012315AED,ING-Informática,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+32,Estadística,3012315EST,ING-Informática,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+33,Computabilidad y Algoritmia,3012315COM,ING-Informática,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+34,Sistemas Operativos,3012315SIS,ING-Informática,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+35,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,ING-Informática,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+36,Administración de Sistemas,3568974ADM,ING-Informática,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+37,Sistemas de Interacción Persona-Computador,3568974SIP,ING-Informática,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+38,Gestión de Proyectos Informáticos,3568974GPI,ING-Informática,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+39,Modelado de Datos,3568974MOD,ING-Informática,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+40,Gestión de la Calidad,3568974GCA,ING-Informática,2020/2021,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+41,Algoritmos y Estructuras de Datos,3012315AED,ING-Informática,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+42,Estadística,3012315EST,ING-Informática,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+43,Computabilidad y Algoritmia,3012315COM,ING-Informática,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+44,Sistemas Operativos,3012315SIS,ING-Informática,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+45,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,ING-Informática,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+46,Bases de Datos,3568974BDA,ING-Informática,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+47,Inteligencia Artificial,3568974INT,ING-Informática,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+48,Modelado de Sistemas Software,3568974MSS,ING-Informática,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+49,Análisis de Sistemas Software,3568974ASS,ING-Informática,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+50,Gestión de Riesgos en Ingeniería del Software,3568974GRI,ING-Informática,2021/2022,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+51,Computabilidad y Algoritmia,3012315COM,ING-Informática,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+52,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,ING-Informática,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+53,Lenguajes y Paradigmas de Programación,3568974LPP,ING-Informática,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+54,Modelado de Sistemas Software,3568974MSS,ING-Informática,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+55,Administración y Diseño de Bases de Datos,3568974ADB,ING-Informática,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+56,Ingeniería Logística,3568974LOG,ING-Informática,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+57,Inteligencia Emocional,3568974IEM,ING-Informática,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+58,Laboratorio de Desarrollo y Herramientas,3568974LDH,ING-Informática,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+59,Normativa y Regulación,3568974NOR,ING-Informática,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+60,Diseño Arquitectónico y Patrones,3568974DAP,ING-Informática,2022/2023,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+61,Computabilidad y Algoritmia,3012315COM,ING-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+62,Diseño Arquitectónico y Patrones,3568974DAP,ING-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+63,Álgebra,3012315ALG,ING-Informática,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+64,Informática Básica,3012315INF,ING-Informática,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+65,Cálculo,3012315CAL,ING-Informática,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+66,Fundamentos Físicos,3012315FIS,ING-Informática,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+67,Algoritmos y Estructuras de Datos,3012315AED,ING-Informática,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+68,Principios de Computadores,3012315PRI,ING-Informática,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+69,Optimización,3012315OPT,ING-Informática,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+70,Sistemas Electrónicos Digitales,3012315SED,ING-Informática,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+71,Expresión Gráfica,3012315EXP,ING-Informática,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+72,Organizaciones Empresariales,3012315ORG,ING-Informática,2017/2018,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+73,Estructuras de Computadores,3012315EST,ING-Informática,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+74,Sistemas Operativos,3012315SIS,ING-Informática,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+75,Inglés Técnico,3012315ING,ING-Informática,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+76,Fundamentos de Ingeniería del Software,3012315FIS,ING-Informática,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+77,Código Deontológico y Aspectos Legales,3012315COD,ING-Informática,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+78,Estadística,3012315EST,ING-Informática,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+79,Computabilidad y Algoritmia,3012315COM,ING-Informática,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+80,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,ING-Informática,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+81,Redes y Sistemas Distribuidos,3568974RED,ING-Informática,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+82,Administración de Sistemas,3568974ADM,ING-Informática,2018/2019,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+83,Sistemas de Interacción Persona-Computador,3568974SIP,ING-Informática,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+84,Gestión de Proyectos Informáticos,3568974GPI,ING-Informática,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+85,Modelado de Datos,3568974MOD,ING-Informática,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+86,Gestión de la Calidad,3568974GCA,ING-Informática,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+87,Bases de Datos,3568974BDA,ING-Informática,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+88,Inteligencia Artificial,3568974INT,ING-Informática,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+89,Modelado de Sistemas Software,3568974MSS,ING-Informática,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+90,Análisis de Sistemas Software,3568974ASS,ING-Informática,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+91,Gestión de Riesgos en Ingeniería del Software,3568974GRI,ING-Informática,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+92,Lenguajes y Paradigmas de Programación,3568974LPP,ING-Informática,2019/2020,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+93,Administración y Diseño de Bases de Datos,3568974ADB,ING-Informática,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+94,Ingeniería Logística,3568974LOG,ING-Informática,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+95,Inteligencia Emocional,3568974IEM,ING-Informática,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+96,Laboratorio de Desarrollo y Herramientas,3568974LDH,ING-Informática,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+97,Normativa y Regulación,3568974NOR,ING-Informática,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+98,Diseño Arquitectónico y Patrones,3568974DAP,ING-Informática,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+99,Álgebra,3012315ALG,ING-Informática,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+100,Informática Básica,3012315INF,ING-Informática,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+101,Cálculo,3012315CAL,ING-Informática,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+102,Fundamentos Físicos para la Ingeniería,3012315FIS,ING-Informática,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+103,Algoritmos y Estructuras de Datos,3012315AED,ING-Informática,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+104,Principios de Computadores,3012315PRI,ING-Informática,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+105,Optimización,3012315OPT,ING-Informática,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+106,Sistemas Electrónicos Digitales,3012315SED,ING-Informática,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+107,Expresión Gráfica para la Ingeniería,3012315EXP,ING-Informática,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+108,Organizaciones Empresariales,3012315ORG,ING-Informática,2017/2018,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+109,Estructuras de Computadores,3012315EST,ING-Informática,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+110,Sistemas Operativos,3012315SIS,ING-Informática,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+111,Inglés Técnico,3012315ING,ING-Informática,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+112,Fundamentos de Ingeniería del Software,3012315FIS,ING-Informática,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+113,Código Deontológico y Aspectos Legales,3012315COD,ING-Informática,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+114,Estadística,3012315EST,ING-Informática,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+115,Computabilidad y Algoritmia,3012315COM,ING-Informática,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+116,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,ING-Informática,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+117,Redes y Sistemas Distribuidos,3568974RED,ING-Informática,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+118,Administración de Sistemas,3568974ADM,ING-Informática,2018/2019,CVM56789,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+119,Trabajo Fin de Grado,3568974TFG,ING-Informática,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+120,Prácticas Externas,3568974PRE,ING-Informática,2020/2021,VMM14584,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+121,Trabajo Fin de Grado,3568974TFG,ING-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+122,Prácticas Externas,3568974PRE,ING-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+123,Informática Básica,3012315INF,ING-Informática,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+124,Álgebra,3012315ALG,ING-Informática,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+125,Cálculo,3012315CAL,ING-Informática,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+126,Fundamentos Físicos,3012315FIS,ING-Informática,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+127,Algoritmos y Estructuras de Datos,3012315AED,ING-Informática,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+128,Principios de Computadores,3012315PRI,ING-Informática,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+129,Optimización,3012315OPT,ING-Informática,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+130,Sistemas Electrónicos Digitales,3012315SED,ING-Informática,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+131,Expresión Gráfica,3012315EXP,ING-Informática,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+132,Organizaciones Empresariales,3012315ORG,ING-Informática,2018/2019,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+133,Estructuras de Computadores,3012315EST,ING-Informática,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+134,Sistemas Operativos,3012315SIS,ING-Informática,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+135,Inglés Técnico,3012315ING,ING-Informática,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+136,Fundamentos de Ingeniería del Software,3012315FIS,ING-Informática,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+137,Código Deontológico y Aspectos Legales,3012315COD,ING-Informática,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+138,Estadística,3012315EST,ING-Informática,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+139,Cálculo,3012315CAL,ING-Informática,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+140,Optimización,3012315OPT,ING-Informática,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+141,Sistema Electrónicos Digitales,3012315SED,ING-Informática,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+142,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,ING-Informática,2019/2020,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+143,Computabilidad y Algoritmia,3012315COM,ING-Informática,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,
+144,Sistemas Operativos,3012315SIS,ING-Informática,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+145,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,ING-Informática,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+146,Administración de Sistemas,3568974ADM,ING-Informática,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+147,Bases de Datos,3568974BDA,ING-Informática,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+148,Inteligencia Artificial,3568974INT,ING-Informática,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+149,Sistemas de Interacción Persona-Computador,3568974SIP,ING-Informática,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+150,Gestión de Proyectos Informáticos,3568974GPI,ING-Informática,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+151,Modelado de Sistemas Software,3568974MSS,ING-Informática,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+152,Análisis de Sistemas Software,3568974ASS,ING-Informática,2020/2021,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+153,Gestión de Riesgos en Ingeniería del Software,3568974GRI,ING-Informática,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+154,Computabilidad y Algoritmia,3012315COM,ING-Informática,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+155,Algoritmos y Estructuras de Datos Avanzados,3568974ALA,ING-Informática,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+156,Bases de Datos,3568974BDA,ING-Informática,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+157,Lenguajes y Paradigmas de Programación,3568974LPP,ING-Informática,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+158,Modelado de Sistemas Software,3568974MSS,ING-Informática,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+159,Gestión de la Calidad,3568974GCA,ING-Informática,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+160,Inteligencia Emocional,3568974IEM,ING-Informática,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+161,Normativa y Regulación,3568974NOR,ING-Informática,2022/2023,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+162,Computabilidad y Algoritmia,3012315COM,ING-Informática,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+163,Visión por Computador,3568974VPC,ING-Informática,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+164,Robótica Computacional,3568974RCO,ING-Informática,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+165,Prácticas Externas,3568974PRE,ING-Informática,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+166,Trabajo Fin de Grado,3568974TFG,ING-Informática,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+167,Laboratorio de Desarrollo y Herramientas,3568974LDH,ING-Informática,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+168,Diseño Arquitectónico y Patrones,3568974DAP,ING-Informática,2023/2024,FRA98765,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+169,Dirección y Gestión de Proyectos,3568974DGP,M-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+170,Administración de Infraestructuras TIC y Sistemas,3568974AIT,M-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+171,Sistemas y Tecnologías Web Cliente,3568974STW,M-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+172,Sistemas y Tecnologías Web Servidor,3568974STS,M-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+173,Gestión de Comunicación y Conocimiento Empresarial,3568974GCE,M-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+174,Computación en la Nube,3568974CCN,M-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+175,Ánalisis de Datos Masivos,3568974ADM,M-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+176,Sistemas y Técnologías Web Arquitectura,3568974STA,M-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+177,Sistemas y Tecnologías Despliegue y Mantenimiento,3568974SDM,M-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+178,Seguridad en Sistemas y Tecnologías Web,3568974SST,M-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+179,Trabajo de Fin de Máster,3568974TFM,M-Informática,2024/2025,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015

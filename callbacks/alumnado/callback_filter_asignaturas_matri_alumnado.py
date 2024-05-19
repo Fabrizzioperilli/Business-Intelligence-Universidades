@@ -7,10 +7,11 @@ from utils.utils import list_to_tuple
     Output('asignaturas-matriculadas', 'value'),
     Input('selected-alumnado-store', 'data'),
     Input('curso-academico', 'value'),
+    Input('titulacion-alumnado', 'value'),
     Input('select-all-button', 'n_clicks'),
     State('asignaturas-matriculadas', 'options')
 )
-def update_filter_asignaturas_matri_alumnado(alumno_id, curso_academico, n_clicks, existing_options):
+def update_filter_asignaturas_matri_alumnado(alumno_id, curso_academico, titulacion, n_clicks, existing_options):
     ctx = callback_context
 
     if not ctx.triggered:
@@ -21,7 +22,7 @@ def update_filter_asignaturas_matri_alumnado(alumno_id, curso_academico, n_click
     if button_id == 'select-all-button' and n_clicks > 0:
         return existing_options, [option['value'] for option in existing_options]
 
-    if not alumno_id or not curso_academico:
+    if not alumno_id or not curso_academico or not titulacion:
         return [], None
     
     try:
@@ -30,10 +31,12 @@ def update_filter_asignaturas_matri_alumnado(alumno_id, curso_academico, n_click
         return [], None
 
     query = """
-    SELECT asignatura FROM asignaturas_matriculadas WHERE id = :id
-    AND curso_aca IN :curso_academico
+    SELECT DISTINCT AM.asignatura 
+    FROM asignaturas_matriculadas AM
+    JOIN matricula MA ON AM.id = MA.id AND AM.cod_plan = MA.cod_plan
+    WHERE AM.id = :id AND AM.curso_aca IN :curso_academico AND MA.titulacion = :titulacion;
     """
-    params = {'id': alumno_id, 'curso_academico': curso_academico}
+    params = {'id': alumno_id, 'curso_academico': curso_academico, 'titulacion': titulacion}
 
     try:
         data = db.execute_query(query, params)

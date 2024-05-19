@@ -5,10 +5,12 @@ from utils.utils import list_to_tuple
 
 @callback(
     Output('graph-bar-calificaciones-por-asignatura', 'figure'),
-    [Input('selected-alumnado-store', 'data'), Input('curso-academico', 'value')]
+    Input('selected-alumnado-store', 'data'), 
+    Input('curso-academico', 'value'),
+    Input('titulacion-alumnado','value')
 )
-def update_graph_alumnado(alumno_id, curso_academico):
-    if not alumno_id or not curso_academico:
+def update_graph_alumnado(alumno_id, curso_academico, titulacion):
+    if not alumno_id or not curso_academico or not titulacion:
         return go.Figure()
 
     try:
@@ -18,13 +20,16 @@ def update_graph_alumnado(alumno_id, curso_academico):
 
     # Consulta ajustada para seleccionar la máxima calificación por asignatura en los cursos seleccionados
     query = """
-    SELECT asignatura, MAX(calif_numerica) as calif_numerica
-    FROM lineas_actas
-    WHERE id = :alumno_id AND curso_aca IN :curso_academico
-    GROUP BY asignatura
-    ORDER BY asignatura;
+    SELECT li.asignatura, MAX(li.calif_numerica) AS calif_numerica
+    FROM lineas_actas li
+    JOIN matricula ma ON li.id = ma.id AND li.cod_plan = ma.cod_plan
+    WHERE li.id = :alumno_id 
+    AND li.curso_aca IN :curso_academico
+    AND ma.titulacion = :titulacion
+    GROUP BY li.asignatura
+    ORDER BY li.asignatura;
     """
-    params = {'alumno_id': alumno_id, 'curso_academico': curso_academico}
+    params = {'alumno_id': alumno_id, 'curso_academico': curso_academico, 'titulacion': titulacion}
 
     try:
         data = db.execute_query(query, params)
