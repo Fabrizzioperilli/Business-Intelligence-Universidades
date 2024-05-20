@@ -1,6 +1,6 @@
 from dash import callback, Input, Output
 import plotly.graph_objs as go
-from data.db_connector import db
+from data.queries import alumnos_genero_docente
 from utils.utils import list_to_tuple
 
 @callback(
@@ -18,43 +18,8 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
     except Exception as e:
         return go.Figure()
     
-    query = """
-    WITH docente_asignaturas AS (
-    SELECT cod_asignatura
-    FROM public.docentes
-    WHERE id_docente = :docente_id
-      AND asignatura = :asignaturas
-    ),
-    asignaturas_matriculadas AS (
-        SELECT DISTINCT am.id, am.cod_asignatura, am.curso_aca
-        FROM public.asignaturas_matriculadas am
-        JOIN docente_asignaturas da ON am.cod_asignatura = da.cod_asignatura
-        WHERE am.curso_aca IN :curso_academico
-          AND am.asignatura = :asignaturas
-    ),
-    estudiantes_sexo AS (
-        SELECT DISTINCT m.id AS alumno_id, m.sexo
-        FROM public.matricula m
-        JOIN asignaturas_matriculadas am ON m.id = am.id
-    )
-    SELECT am.curso_aca, m.sexo, COUNT(*) AS cantidad
-    FROM estudiantes_sexo m
-    JOIN asignaturas_matriculadas am ON m.alumno_id = am.id
-    GROUP BY am.curso_aca, m.sexo
-    ORDER BY am.curso_aca, m.sexo;
-    """
-
-    params = {
-        'curso_academico': curso_academico,
-        'asignaturas': asignaturas,
-        'docente_id': docente_id
-    }
-
-    try:
-        data = db.execute_query(query, params)
-    except Exception as e:
-        print("Query execution failed:", e)
-        return go.Figure()
+    data = alumnos_genero_docente(docente_id, asignaturas, curso_academico)
+    
     
     if not data:
         return go.Figure()

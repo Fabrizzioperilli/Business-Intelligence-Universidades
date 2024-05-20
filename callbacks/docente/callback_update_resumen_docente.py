@@ -1,5 +1,5 @@
 from dash import html, callback, Output, Input
-from data.db_connector import db
+from data.queries import resumen_docente
 from callbacks.docente.callback_select_docente import store_selected_docente
 
 @callback(
@@ -11,18 +11,7 @@ def update_resumen_docente(docente_id, titulacion):
     if not docente_id or not titulacion:
         return not_data()
 
-    query = """
-    SELECT DISTINCT universidad, titulacion, id_docente 
-    FROM docentes 
-    WHERE id_docente = :docente_id AND titulacion = :titulacion;
-    """
-    params = {'docente_id': docente_id, 'titulacion': titulacion}
-
-    try:
-        data = db.execute_query(query, params)
-    except Exception as e:
-        print("Query execution failed:", e)
-        return not_data()
+    data = resumen_docente(docente_id, titulacion)
 
     if not data:
         return not_data()

@@ -12,8 +12,8 @@ def check_data(query, params):
     return data
 
     
-def alumnos():
-    query = queries['alumnado']['common']['alumnos']
+def alumnos_all():
+    query = queries['alumnado']['common']['alumnos_all']
     return check_data(query, {})
 
 def resumen_alumno(alumno_id, titulacion):
@@ -115,4 +115,68 @@ def nota_media_general_mi_nota(curso_academico, asignaturas_matriculadas, alumno
               'titulacion': titulacion}
 
     return check_data(query, params)
+
+def alumnos_repetidores_nuevos(docente_id, curso_academico, asignaturas):
+    query = queries['docente']['graphs']['personal']['alumnos_repetidores_nuevos']
+    params = {'docente_id': docente_id,
+              'curso_academico': curso_academico,
+              'asignaturas': asignaturas}
+
+    return check_data(query, params)
+
+
+def asignaturas_docente(id_docente, titulacion):
+    query = queries['docente']['filters']['asignaturas_docente']
+    params = {'id_docente': id_docente, 'titulacion': titulacion}
+
+    return check_data(query, params)
+
+
+def curso_academico_docente(id_docente, asignatura):
+    query = queries['docente']['filters']['curso_academico_docente']
+    params = {'id_docente': id_docente, 'asignatura': asignatura}
+
+    return check_data(query, params)
+
+
+def titulacion_docente(id_docente):
+    query = queries['docente']['filters']['titulacion_docente']
+    params = {'id_docente': id_docente}
+
+    return check_data(query, params)
     
+
+def resumen_docente(id_docente, titulacion):
+    query = queries['docente']['common']['resumen_docente']
+    params = {'id_docente': id_docente, 'titulacion': titulacion}
+
+    return check_data(query, params)
+
+
+def docentes_all():
+    query = queries['docente']['common']['docentes_all']
+    return check_data(query, {})
+
+def alumnos_genero_docente(id_docente, asignaturas, curso_academico):
+    query = queries['docente']['graphs']['personal']['alumnos_genero_docente']
+    params = {'id_docente': id_docente, 
+              'asignaturas': asignaturas, 
+              'curso_academico': curso_academico}
+
+    return check_data(query, params)
+
+
+def alumnos_nota_media_docente(asignaturas, curso_academico):
+    query = queries['docente']['graphs']['personal']['alumnos_nota_media_docente']
+    params = {'asignaturas': asignaturas, 
+              'curso_academico': curso_academico}
+
+    return check_data(query, params)
+
+
+def alumnos_nota_cualitativa_docente(asignaturas, curso_academico):
+    query = queries['docente']['graphs']['personal']['alumnos_nota_cualitativa_docente']
+    params = {'asignaturas': asignaturas, 
+              'curso_academico': curso_academico}
+
+    return check_data(query, params)

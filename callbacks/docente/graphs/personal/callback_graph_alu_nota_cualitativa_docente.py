@@ -1,6 +1,6 @@
 from dash import callback, Input, Output
 import plotly.graph_objs as go
-from data.db_connector import db
+from data.queries import alumnos_nota_cualitativa_docente
 from utils.utils import list_to_tuple
 
 @callback(
@@ -19,34 +19,7 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
     except Exception as e:
         return go.Figure()
     
-    query = """
-    SELECT DISTINCT
-        l.curso_aca,  
-        l.calif, 
-        COUNT(*) AS num_alumnos
-    FROM 
-        lineas_actas l
-    WHERE 
-        l.asignatura = :asignaturas AND 
-        l.curso_aca IN :curso_academico
-    GROUP BY 
-        l.curso_aca,
-        l.calif
-    ORDER BY 
-        l.curso_aca,
-        l.calif;
-    """
-
-    params = {
-        'curso_academico': curso_academico,
-        'asignaturas': asignaturas
-    }
-
-    try:
-        data = db.execute_query(query, params)
-    except Exception as e:
-        print("Query execution failed:", e)
-        return go.Figure()
+    data = alumnos_nota_cualitativa_docente(asignaturas, curso_academico)
     
     if not data:
         return go.Figure()

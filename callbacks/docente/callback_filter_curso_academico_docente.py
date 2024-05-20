@@ -1,5 +1,5 @@
 from dash import Input, Output, callback, State, callback_context
-from data.db_connector import db
+from data.queries import curso_academico_docente
 from callbacks.docente.callback_select_docente import store_selected_docente
 
 @callback(
@@ -21,22 +21,12 @@ def update_filter_curso_academico_docente(docente_id, asignatura, n_clicks, exis
         else:
             return [], []
 
-    if docente_id:
-        query = """
-        SELECT curso_aca 
-        FROM docentes 
-        WHERE id_docente = :id_docente AND asignatura = :asignatura;
-        """
-        params = {'id_docente': docente_id, 'asignatura': asignatura}
+    if not docente_id or not asignatura:
+        return [], []
+    
+    data = curso_academico_docente(docente_id, asignatura)
 
-        try: 
-            result = db.execute_query(query, params)
-        except Exception as e:
-            print("Query execution failed:", e)
-            return [], []
-      
-        
-        opciones_dropdown = [{'label': curso[0], 'value': curso[0]} for curso in result]
-        return opciones_dropdown, [option['value'] for option in opciones_dropdown] if opciones_dropdown else []
-
-    return [], []
+    opciones_dropdown = [{'label': curso[0], 'value': curso[0]} for curso in data]
+    value = [option['value'] for option in opciones_dropdown] if opciones_dropdown else []
+    
+    return opciones_dropdown, value

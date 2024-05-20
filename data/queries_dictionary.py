@@ -3,7 +3,7 @@ queries = {
   "alumnado": {
       "common": {
           # Consulta para obtener los alumnos.
-          "alumnos": """
+          "alumnos_all": """
                 SELECT id FROM alumnos;
                 """,
           # Consulta para obtener los datos que se muestran en el resumen de un alumno.
@@ -164,6 +164,7 @@ queries = {
                           WHERE c.rk = 1
                           GROUP BY c.asignatura, c.calif;
                           """,
+                  # Consulta para obtener la calificación cualitativa del alumno.
                   "calif_cualitativa_alumno_asignaturas": """
                         WITH CalificacionesMaximas AS (
                               SELECT
@@ -235,11 +236,138 @@ queries = {
   },
   "docente": {
       "common": {
+          # Consulta para obtener los docentes.
+          "docentes_all": """
+                SELECT DISTINCT id_docente FROM docentes;
+                """,
+          #Consulta para obtener los datos que se muestran en el resumen del docente 
+          "resumen_docente": """
+                SELECT DISTINCT universidad, titulacion, id_docente 
+                FROM docentes 
+                WHERE id_docente = :id_docente AND titulacion = :titulacion;
+                """
       },
       "filters": {
+          # Consulta para obtener las asignaturas de un docente según la titulación.
+          "asignaturas_docente": """
+                SELECT DISTINCT asignatura 
+                FROM docentes 
+                WHERE id_docente = :id_docente AND titulacion = :titulacion;
+                """,
+          # Consulta para obtener los cursos académicos de un docente según la asignatura.
+          "curso_academico_docente": """
+                SELECT curso_aca 
+                FROM docentes 
+                WHERE id_docente = :id_docente AND asignatura = :asignatura;
+                """,
+          # Consulta para obtener la titulación de un docente.
+          "titulacion_docente": """
+                SELECT DISTINCT titulacion 
+                FROM docentes 
+                WHERE id_docente = :id_docente;
+                """
       },
       "graphs": {
           "personal": {
+              # Consulta para obtener el número de alumnos repetidores y de nuevo ingreso en una asignatura.
+              "alumnos_repetidores_nuevos": """
+                        WITH Asignatura AS (
+                        SELECT DISTINCT am.id AS student_id, am.curso_aca
+                        FROM public.asignaturas_matriculadas am
+                        JOIN public.docentes d ON am.cod_asignatura = d.cod_asignatura
+                        WHERE d.id_docente = :docente_id
+                        AND am.asignatura = :asignaturas
+                        AND am.curso_aca IN :curso_academico
+                        ),
+                        repetidores AS (
+                            SELECT DISTINCT am.id AS student_id, MIN(am.curso_aca) AS primer_curso_aca
+                            FROM public.asignaturas_matriculadas am
+                            WHERE am.asignatura = :asignaturas
+                            GROUP BY am.id
+                            HAVING COUNT(am.curso_aca) > 1
+                        ),
+                        alumnos_categoria AS (
+                            SELECT 
+                                am.id,
+                                am.curso_aca,
+                                CASE 
+                                    WHEN am.id IN (SELECT student_id FROM repetidores WHERE repetidores.primer_curso_aca <> am.curso_aca) THEN 'repetidor'
+                                    ELSE 'nuevo_ingreso'
+                                END AS categoria
+                            FROM public.asignaturas_matriculadas am
+                            WHERE am.asignatura = :asignaturas
+                            AND am.curso_aca IN :curso_academico
+                        )
+                        SELECT
+                            am.curso_aca AS curso_academico,
+                            COUNT(DISTINCT am.id) FILTER (WHERE categoria = 'repetidor') AS alumnos_repetidores,
+                            COUNT(DISTINCT am.id) FILTER (WHERE categoria = 'nuevo_ingreso') AS alumnos_nuevo_ingreso
+                        FROM alumnos_categoria am
+                        GROUP BY am.curso_aca
+                        ORDER BY am.curso_aca;
+                        """,
+                  #Consulta para el número de alumnos por género en una asignatura.
+                  "alumnos_genero_docente": """
+                            WITH docente_asignaturas AS (
+                            SELECT cod_asignatura
+                            FROM public.docentes
+                            WHERE id_docente = :id_docente
+                              AND asignatura = :asignaturas
+                            ),
+                            asignaturas_matriculadas AS (
+                                SELECT DISTINCT am.id, am.cod_asignatura, am.curso_aca
+                                FROM public.asignaturas_matriculadas am
+                                JOIN docente_asignaturas da ON am.cod_asignatura = da.cod_asignatura
+                                WHERE am.curso_aca IN :curso_academico
+                                  AND am.asignatura = :asignaturas
+                            ),
+                            estudiantes_sexo AS (
+                                SELECT DISTINCT m.id AS alumno_id, m.sexo
+                                FROM public.matricula m
+                                JOIN asignaturas_matriculadas am ON m.id = am.id
+                            )
+                            SELECT am.curso_aca, m.sexo, COUNT(*) AS cantidad
+                            FROM estudiantes_sexo m
+                            JOIN asignaturas_matriculadas am ON m.alumno_id = am.id
+                            GROUP BY am.curso_aca, m.sexo
+                            ORDER BY am.curso_aca, m.sexo;
+                    """,
+                    #Consulta para obtener la nota media de los alumnos por asignatura y curso académico.
+                    "alumnos_nota_media_docente": """
+                            SELECT
+                                l.curso_aca,  
+                                l.asignatura, 
+                                AVG(l.calif_numerica) AS media_calif
+                            FROM 
+                                lineas_actas l
+                            WHERE 
+                                l.asignatura IN :asignaturas AND 
+                                l.curso_aca IN :curso_academico
+                            GROUP BY 
+                                l.curso_aca,
+                                l.asignatura
+                            ORDER BY 
+                                l.curso_aca,
+                                l.asignatura;
+                                """,
+                    #Consulta para obtener la nota cualitativa de los alumnos por asignatura y curso académico.
+                      "alumnos_nota_cualitativa_docente": """
+                            SELECT DISTINCT
+                                l.curso_aca,  
+                                l.calif, 
+                                COUNT(*) AS num_alumnos
+                            FROM 
+                                lineas_actas l
+                            WHERE 
+                                l.asignatura = :asignaturas AND 
+                                l.curso_aca IN :curso_academico
+                            GROUP BY 
+                                l.curso_aca,
+                                l.calif
+                            ORDER BY 
+                                l.curso_aca,
+                                l.calif;
+                            """
           },
           "general": {
           }

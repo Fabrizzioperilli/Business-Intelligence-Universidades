@@ -1,5 +1,5 @@
 from dash import Input, Output, callback
-from data.db_connector import db
+from data.queries import asignaturas_docente
 
 @callback(
     Output('asignaturas-docente', 'options'),
@@ -12,18 +12,7 @@ def update_filter_asignaturas_docente(docente_id, titulacion):
     if not docente_id or not titulacion:
         return [], None
      
-    query = """
-    SELECT DISTINCT asignatura 
-    FROM docentes 
-    WHERE id_docente = :id_docente AND titulacion = :titulacion;
-    """
-    params = {'id_docente': docente_id, 'titulacion': titulacion}
-
-    try:
-        data = db.execute_query(query, params)
-    except Exception as e:
-        print("Query execution failed:", e)
-        return [], None
+    data = asignaturas_docente(docente_id, titulacion)
     
     if not data:
         return [], None
