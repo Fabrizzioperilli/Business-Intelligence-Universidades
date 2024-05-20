@@ -114,7 +114,7 @@ body {
   border-radius: 10px;
   background: white;
   overflow-y: auto;
-  max-height: 900px;
+  max-height: 1000px;
 }
 
 .collapse.show .sidebar {
