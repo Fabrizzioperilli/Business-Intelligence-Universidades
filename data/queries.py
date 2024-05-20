@@ -180,3 +180,17 @@ def alumnos_nota_cualitativa_docente(asignaturas, curso_academico):
               'curso_academico': curso_academico}
 
     return check_data(query, params)
+
+
+def curso_academico_actas_titulacion(titulacion):
+    query = queries['docente']['filters']['curso_academico_actas_titulacion']
+    params = {'titulacion': titulacion}
+
+    return check_data(query, params)
+
+
+def asignaturas_actas_titulacion(titulacion, curso_academico):
+    query = queries['docente']['filters']['asignaturas_actas_titulacion']
+    params = {'titulacion': titulacion, 'curso_academico': curso_academico}
+
+    return check_data(query, params)

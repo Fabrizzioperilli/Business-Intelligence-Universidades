@@ -5,6 +5,8 @@ from components.docente.resumen_docente import resumen_docente
 from components.docente.filter_curso_academico_docente import filter_curso_academico_docente
 from components.docente.filter_asignaturas_docente import filter_asignaturas_docente
 from components.docente.filter_titulacion_docente import filter_titulacion_docente
+from components.docente.filter_all_curso_academico import filter_all_curso_academico
+from components.docente.filter_all_asignaturas_titulacion_docente import filter_all_asignaturas_titulacion_docente
 from components.docente.graphs_personal_docente import graphs_personal_docente
 from components.docente.graphs_general_docente import graphs_general_docente
 from components.common.filters import filters
@@ -39,8 +41,8 @@ def render_content(tab, selected_docente):
                   resumen_docente(),
                   filters([
                     filter_titulacion_docente(),
-                    filter_asignaturas_docente(),
-                    filter_curso_academico_docente()
+                    filter_all_curso_academico(),
+                    filter_all_asignaturas_titulacion_docente()
                   ]),
                 ]),
                 graphs_general_docente()

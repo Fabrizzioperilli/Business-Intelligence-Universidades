@@ -265,7 +265,24 @@ queries = {
                 SELECT DISTINCT titulacion 
                 FROM docentes 
                 WHERE id_docente = :id_docente;
-                """
+                """,
+          #Consulta para obtener todos los cursos acádemicos de las actas según la titulación
+          "curso_academico_actas_titulacion": """
+                SELECT DISTINCT li.curso_aca
+                FROM lineas_actas li
+                JOIN docentes ON li.cod_plan = docentes.cod_plan
+                WHERE docentes.titulacion = :titulacion
+                ORDER BY curso_aca;
+                """,
+          #Consulta para obtener todas las asignaturas por curso académico y titulación
+          "asignaturas_actas_titulacion": """
+                SELECT DISTINCT li.asignatura
+                FROM lineas_actas li
+                JOIN docentes ON li.cod_plan = docentes.cod_plan
+                WHERE docentes.titulacion = :titulacion AND li.curso_aca = :curso_academico
+                ORDER BY li.asignatura;
+
+          """
       },
       "graphs": {
           "personal": {
