@@ -387,6 +387,21 @@ queries = {
                             """
           },
           "general": {
+                  #Consulta para obtener el número de calificaciones cualitativas 
+                  # de los alumnos por asignatura y curso académico.
+                  "calif_all_cualitativa_asignaturas": """
+                            SELECT DISTINCT li.curso_aca, 
+                                  li.asignatura,  
+                                  li.calif, 
+                                  COUNT(DISTINCT li.id) AS n_alumnos
+                            FROM lineas_actas li
+                            JOIN docentes ON li.cod_plan = docentes.cod_plan
+                            WHERE docentes.titulacion = :titulacion AND 
+                                  li.curso_aca = :curso_academico AND 
+                                  li.asignatura IN :asignaturas
+                            GROUP BY li.curso_aca, li.asignatura, li.calif
+                            ORDER BY li.asignatura;
+                            """
           }
       },
   },

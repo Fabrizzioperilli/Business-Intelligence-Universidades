@@ -194,3 +194,11 @@ def asignaturas_actas_titulacion(titulacion, curso_academico):
     params = {'titulacion': titulacion, 'curso_academico': curso_academico}
 
     return check_data(query, params)
+
+def calif_all_cualitativa_asignaturas(titulacion, curso_academico, asignaturas):
+    query = queries['docente']['graphs']['general']['calif_all_cualitativa_asignaturas']
+    params = {'titulacion': titulacion,
+               'curso_academico': curso_academico, 
+               'asignaturas': asignaturas}
+              
+    return check_data(query, params)
