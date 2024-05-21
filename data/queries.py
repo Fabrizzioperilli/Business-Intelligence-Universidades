@@ -22,6 +22,12 @@ def resumen_alumno(alumno_id, titulacion):
     
     return check_data(query, params)
 
+def resumen_gestor(gestor_id):
+    query = queries['gestor']['common']['resumen_gestor']
+    params = {'gestor_id': gestor_id}
+    
+    return check_data(query, params)
+
 def nota_media_alumno_titulacion(alumno_id, titulacion):
     query = queries['alumnado']['common']['nota_media_alumno_titulacion']
     params = {'alumno_id': alumno_id, 'titulacion': titulacion}
@@ -201,4 +207,34 @@ def calif_all_cualitativa_asignaturas(titulacion, curso_academico, asignaturas):
                'curso_academico': curso_academico, 
                'asignaturas': asignaturas}
               
+    return check_data(query, params)
+
+def gestores_all():
+    query = queries['gestor']['common']['gestores_all']
+    return check_data(query, {})
+
+def numero_alumnos_matriculados_universidad(universidad):
+    query = queries['gestor']['common']['numero_alumnos_matriculados_universidad']
+    params = {'universidad': universidad}
+
+    return check_data(query, params)
+
+def universidades_gestor(gestor_id):
+    query = queries['gestor']['common']['universidades_gestor']
+    params = {'gestor_id': gestor_id}
+
+    return check_data(query, params)
+
+
+def curso_academico_universidad(cod_universidad):
+    query = queries['gestor']['filters']['curso_academico_universidad']
+    params = {'cod_universidad': cod_universidad}
+
+    return check_data(query, params)
+
+def titulaciones_universidad_gestor(cod_universidad, curso_academico):
+    query = queries['gestor']['filters']['titulaciones_universidad_gestor']
+    params = {'cod_universidad': cod_universidad, 
+              'curso_academico': curso_academico}
+    
     return check_data(query, params)

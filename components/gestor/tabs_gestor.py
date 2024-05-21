@@ -9,4 +9,6 @@ def tabs_gestor():
             dcc.Tab(label='Riesgo de abandono', value='riesgo-abandono-tab'),
         ], className='tabs'),
         html.Div(id='tabs-gestor-content'),
+        dcc.Store(id='selected-gestor-store', storage_type='local'),
+        dcc.Location(id='url', refresh=False)
     ])

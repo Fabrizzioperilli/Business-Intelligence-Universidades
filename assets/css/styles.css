@@ -53,7 +53,9 @@ body {
   text-align: center;
 }
 
-.select-alumnado, .select-docente {
+.select-alumnado, 
+.select-docente,
+.select-gestor {
   margin-left: auto;
   margin-right: 0;
   margin-top: 15px;
@@ -252,17 +254,6 @@ body {
   max-height: 600px;
 }
 
-.Select-multi-value-wrapper {
-  max-height: 200px;  /* Ajusta esta altura al tamaño deseado */
-  overflow-y: auto;
-}
-
-
-.Select-value {
-  display: block;
-  white-space: normal; /* Permite el ajuste del texto en varias líneas */
-  word-wrap: break-word; /* Asegura que el texto se ajuste correctamente */
-}
 
 .button-select-all-filter {
   background-color: #007eff;

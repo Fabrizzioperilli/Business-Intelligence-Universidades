@@ -13,15 +13,12 @@ def update_resumen_docente(docente_id, titulacion):
 
     data = resumen_docente(docente_id, titulacion)
 
-    if not data:
-        return not_data()
-
     if data:
         universidad = data[0][0]
         titulacion = data[0][1]
         id = data[0][2]
     else:
-        universidad = titulacion = id = "No disponible"
+        return not_data()
 
     return html.Div([
         html.H2("Resumen"),

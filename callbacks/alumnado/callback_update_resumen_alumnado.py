@@ -11,14 +11,7 @@ from data.queries import resumen_alumno
 )
 def update_resumen_alumnado(alumno_id, titulacion):
     if not alumno_id:
-        return html.Div([
-            html.H2("Resumen"),
-            html.P("Universidad: No disponible"), 
-            html.P("Titulación: No disponible"),
-            html.P("Alumno: No disponible"),
-            html.P("Nota Media: No disponible"),
-            html.Hr(),
-        ])
+        return not_data()
 
     data = resumen_alumno(alumno_id, titulacion)
     
@@ -28,9 +21,7 @@ def update_resumen_alumnado(alumno_id, titulacion):
         titulacion = data[0][1]
         id = data[0][2]
     else:
-        universidad = "No disponible"
-        titulacion = "No disponible"
-        id = "No disponible"
+        return not_data()
 
     return html.Div([
         html.H2("Resumen"),
@@ -44,3 +35,13 @@ def update_resumen_alumnado(alumno_id, titulacion):
         html.P(calculate_average_grade(alumno_id, titulacion)),
         html.Hr(),
     ])
+
+
+def not_data():
+    return html.Div([
+            html.H2("Resumen"),
+            html.P("Universidad: No disponible"), 
+            html.P("Titulación: No disponible"),
+            html.P("Docente: No disponible"),
+            html.Hr(),
+        ])

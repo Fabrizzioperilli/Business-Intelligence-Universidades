@@ -407,8 +407,43 @@ queries = {
   },
   "gestor": {
       "common": {
+            #Consulta para obtener los gestores.
+            "gestores_all": """
+                SELECT DISTINCT gestor_id FROM gestores;
+                """,
+            #Consulta para obtener los datos que se muestran en el resumen del gestor.
+            "resumen_gestor": """
+                SELECT DISTINCT universidad, gestor_id
+                FROM gestores
+                WHERE gestor_id = :gestor_id;
+                """,
+            #Consulta para obtener el número de alumnos matriculados en una universidad.
+            "numero_alumnos_matriculados_universidad": """
+                SELECT COUNT(alumnos.id) AS n_alumnos_universidad
+                FROM alumnos
+                WHERE universidad = :universidad AND abandona = 'no';
+                """,
+            #Consulta que muestra la universidad de un gestor.
+            "universidades_gestor": """
+                SELECT DISTINCT cod_universidad
+                FROM gestores 
+                WHERE gestor_id = :gestor_id;
+                """
       },
       "filters": {
+            #Consulta para obtener los cursos académicos de una universidad.
+            "curso_academico_universidad": """
+                SELECT DISTINCT curso_aca
+                FROM matricula
+                WHERE cod_universidad = :cod_universidad
+                ORDER BY curso_aca;
+                """,
+            #Consulta para obtener las titulaciones de una universidad.
+            "titulaciones_universidad_gestor": """
+                SELECT DISTINCT titulacion
+                FROM matricula
+                WHERE cod_universidad = :cod_universidad AND curso_aca = :curso_academico;
+                """
       },
       "graphs": {
           "personal": {

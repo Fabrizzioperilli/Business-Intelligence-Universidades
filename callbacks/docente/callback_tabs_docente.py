@@ -14,8 +14,9 @@ from components.common.filters import filters
 
 @callback(
     Output('tabs-docente-content', 'children'),
-    [Input('tabs-docente', 'value')],
-    State('selected-docente-store', 'data'))
+    Input('tabs-docente', 'value'),
+    State('selected-docente-store', 'data')
+    )
 def render_content(tab, selected_docente):
     if tab == 'rendimiento-academico-asignatura-tab':
         return html.Div([
