@@ -21,10 +21,16 @@ def update_resumen_alumnado(alumno_id, titulacion):
         ])
 
     data = resumen_alumno(alumno_id, titulacion)
-
-    universidad = data[0][0]
-    titulacion = data[0][1]
-    id = data[0][2]
+    
+    #Comprobamos si hay datos
+    if data:
+        universidad = data[0][0]
+        titulacion = data[0][1]
+        id = data[0][2]
+    else:
+        universidad = "No disponible"
+        titulacion = "No disponible"
+        id = "No disponible"
 
     return html.Div([
         html.H2("Resumen"),

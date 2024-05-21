@@ -55,6 +55,7 @@ def update_graph_all_calif_cualitativa_docente(titulacion, curso_academico, asig
         title={'text':'Alumnos matriculados por asignatura y relación con la calificación por curso académico', 'x': 0.5},
         xaxis_title='Asignaturas',
         yaxis_title='Nº Alumnos matriculados',
+        height=700,
         legend=dict(
             x=1,
             y=1,

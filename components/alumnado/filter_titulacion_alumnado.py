@@ -13,5 +13,8 @@ def filter_titulacion_alumnado():
           clearable=False,
           optionHeight=50,
           maxHeight=300,
+          persistence=True,
+          persistence_type='local',  # 'local' para persistencia a largo plazo
+          persisted_props=['value']
         )
     ])
