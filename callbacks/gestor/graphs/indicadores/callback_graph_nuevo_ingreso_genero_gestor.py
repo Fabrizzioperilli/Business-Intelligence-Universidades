@@ -12,8 +12,20 @@ from data.queries import alumnos_nuevo_ingreso_genero_titulacion, universidades_
     Input('titulaciones-gestor', 'value')
 )
 def update_graph_gestor(docente_id, curso_academico, titulaciones):
+
+    fig = go.Figure()
+
+    fig.update_layout(
+        barmode='stack',
+        title={'text': 'Alumnos de nuevo ingreso por género y titulación', 'x': 0.5},
+        xaxis=dict(title='Titulaciones'),
+        yaxis=dict(title='Nº de alumnos de nuevo ingreso'),
+        showlegend=True,
+        legend=dict(title='Género')
+    )
+
     if not docente_id or not curso_academico or not titulaciones:
-        return go.Figure()
+        return fig
     
     try:
         titulaciones = list_to_tuple(titulaciones)
@@ -22,12 +34,12 @@ def update_graph_gestor(docente_id, curso_academico, titulaciones):
     
     data_universidad = universidades_gestor(docente_id)
     if not data_universidad:
-        return go.Figure()
+        return fig
     
     data = alumnos_nuevo_ingreso_genero_titulacion(curso_academico, titulaciones, data_universidad[0][0])
 
     if not data:
-        return go.Figure()
+        return fig
     
         # Parsear los datos
     titulaciones = []
@@ -42,8 +54,7 @@ def update_graph_gestor(docente_id, curso_academico, titulaciones):
         else:
             mujeres.append(row[3])
 
-    # Crear el gráfico
-    fig = go.Figure()
+
 
     fig.add_trace(go.Bar(
         x=titulaciones,
@@ -60,15 +71,6 @@ def update_graph_gestor(docente_id, curso_academico, titulaciones):
         marker_color='red',
         opacity=0.8
     ))
-
-    fig.update_layout(
-        barmode='stack',
-        title={'text': 'Alumnos de nuevo ingreso por género y titulación', 'x': 0.5},
-        xaxis=dict(title='Titulaciones'),
-        yaxis=dict(title='Nº de alumnos de nuevo ingreso'),
-        showlegend=True,
-        legend=dict(title='Género')
-    )
 
     return fig
 

@@ -9,21 +9,33 @@ from utils.utils import list_to_tuple
     Input('curso-academico', 'value'),
     Input('titulacion-alumnado','value')
 )
-def update_graph_alumnado(alumno_id, curso_academico, titulacion):  
+def update_graph_alumnado(alumno_id, curso_academico, titulacion):
+
+    fig = go.Figure()
+
+    fig.update_layout(
+        title={'text': 'Calificación cualitativa de las asignaturas <br> matriculadas del alumno', 'x': 0.5},
+        barmode='stack',
+        xaxis={'title': 'Curso académico'},
+        yaxis={'title': 'Nº Asignaturas matriculadas'},
+        showlegend=True,
+        legend={'title': 'Calificación'},
+        
+    )
 
     if not alumno_id or not curso_academico or not titulacion:
-        return go.Figure()
+        return fig
 
     try:
         curso_academico = list_to_tuple(curso_academico)
     except Exception as e:
         print("Error:", e)
-        return go.Figure()
+        return fig
 
     data = calif_cualitativa_asignatura(alumno_id, curso_academico, titulacion)
 
     if not data:
-        return go.Figure()
+        return fig
 
     categories = ['No presentado', 'Suspenso', 'Aprobado', 'Notable', 'Sobresaliente']
     all_courses = sorted(set(row[0] for row in data))
@@ -34,10 +46,10 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
         if calif in grade_counts:
             grade_counts[calif][curso_aca] = grade_count
 
-    traces = []
+
     color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'orange', 'Suspenso': 'red', 'No presentado': 'gray'}
     for category in categories:
-        traces.append(
+        fig.add_trace(
             go.Bar(
                 x=all_courses,
                 y=[grade_counts[category].get(course, 0) for course in all_courses],
@@ -47,14 +59,4 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
             )
         )
 
-    layout = go.Layout(
-        title={'text': 'Calificación cualitativa de las asignaturas <br> matriculadas del alumno', 'x': 0.5},
-        barmode='stack',
-        xaxis={'title': 'Curso académico'},
-        yaxis={'title': 'Nº Asignaturas matriculadas'},
-        showlegend=True,
-        legend={'title': 'Calificación'},
-        
-    )
-
-    return go.Figure(data=traces, layout=layout)
+    return fig

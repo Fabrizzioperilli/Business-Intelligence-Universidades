@@ -11,19 +11,32 @@ from utils.utils import list_to_tuple
     Input('titulacion-alumnado', 'value')
 )
 def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, titulacion):
+    fig = go.Figure()
+
+    fig.update_layout(
+        title={'text':'Relación nota media y número de asignaturas superadas por curso académico', 'x':0.5},
+        xaxis_title='Nota Media',
+        yaxis_title='Número de asignaturas superadas',
+        legend_title='Estado del alumno',
+        showlegend=True,
+        xaxis=dict(range=[0, 10]),
+        yaxis=dict(range=[0, 40])
+    )
+
     if not curso_academico or not alumno_id or not asignaturas_matriculadas or not titulacion: 
-        return go.Figure()
+        return fig
 
     try:
         curso_academico = list_to_tuple(curso_academico)
         asignaturas_matriculadas = list_to_tuple(asignaturas_matriculadas)
     except Exception as e:
-        return [], None
+        print('Error:', e)
+        return fig
 
     data = asignaturas_superadas_media_abandono(curso_academico, asignaturas_matriculadas, titulacion)
 
     if not data:
-        return go.Figure()
+        return fig
 
     traces = {
         'Abandono (Yo)': {'x': [], 'y': [], 'name': 'Abandono (Yo)', 'color': 'yellow'},
@@ -39,8 +52,6 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, 
 
         traces[key]['x'].append(student[2])
         traces[key]['y'].append(student[3])
-
-    fig = go.Figure()
 
     # Primero, agregamos los puntos generales
     for status, trace_data in traces.items():
@@ -78,15 +89,5 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, 
                     opacity=1.0
                 )
             )
-
-    fig.update_layout(
-        title={'text':'Relación nota media y número de asignaturas superadas por curso académico', 'x':0.5},
-        xaxis_title='Nota Media',
-        yaxis_title='Número de asignaturas superadas',
-        legend_title='Estado del alumno',
-        showlegend=True,
-        xaxis=dict(range=[0, 10]),
-        yaxis=dict(range=[0, 40])
-    )
 
     return fig

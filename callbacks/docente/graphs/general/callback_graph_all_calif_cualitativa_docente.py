@@ -11,46 +11,10 @@ from utils.utils import list_to_tuple
     Input('all-asignaturas-titulacion-docente', 'value'),
 )
 def update_graph_all_calif_cualitativa_docente(titulacion, curso_academico, asignatura):
-    if not curso_academico or not asignatura:
-        return go.Figure()
-    
-    try:
-        asignatura = list_to_tuple(asignatura)
-    except Exception as e:
-        return go.Figure()
-    
-    data = calif_all_cualitativa_asignaturas(titulacion, curso_academico, asignatura)
 
-    if not data:
-        return go.Figure()
+    fig = go.Figure()
     
-    colors = {
-        'Sobresaliente': 'blue',
-        'Notable': 'green',
-        'Aprobado': 'orange',
-        'Suspenso': 'red',
-        'No presentado': 'gray'
-    }
-
-    traces = []
-    for calif in colors.keys():
-        filtered_data = [d for d in data if d[2] == calif]
-        if filtered_data:
-            x = [d[1] for d in filtered_data] 
-            y = [d[3] for d in filtered_data]
-            traces.append(
-                go.Bar(
-                    x=x,
-                    y=y,
-                    name=calif,
-                    marker_color=colors[calif],
-                    opacity=0.8
-                )
-            )
-
-    figure = go.Figure(data=traces)
-    
-    figure.update_layout(
+    fig.update_layout(
         barmode='stack',
         title={'text':'Alumnos matriculados por asignatura y relación con la calificación por curso académico', 'x': 0.5},
         xaxis_title='Asignaturas',
@@ -67,4 +31,41 @@ def update_graph_all_calif_cualitativa_docente(titulacion, curso_academico, asig
         )
     )
 
-    return figure
+    if not curso_academico or not asignatura:
+        return fig
+    
+    try:
+        asignatura = list_to_tuple(asignatura)
+    except Exception as e:
+        return fig
+    
+    data = calif_all_cualitativa_asignaturas(titulacion, curso_academico, asignatura)
+
+    if not data:
+        return fig
+    
+    colors = {
+        'Sobresaliente': 'blue',
+        'Notable': 'green',
+        'Aprobado': 'orange',
+        'Suspenso': 'red',
+        'No presentado': 'gray'
+    }
+
+    
+    for calif in colors.keys():
+        filtered_data = [d for d in data if d[2] == calif]
+        if filtered_data:
+            x = [d[1] for d in filtered_data] 
+            y = [d[3] for d in filtered_data]
+            fig.add_trace(
+                go.Bar(
+                    x=x,
+                    y=y,
+                    name=calif,
+                    marker_color=colors[calif],
+                    opacity=0.8
+                )
+            )
+
+    return fig

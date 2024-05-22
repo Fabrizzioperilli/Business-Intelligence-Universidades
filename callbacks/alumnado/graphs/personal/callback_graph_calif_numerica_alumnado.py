@@ -10,35 +10,10 @@ from utils.utils import list_to_tuple, random_color
     Input('titulacion-alumnado','value')
 )
 def update_graph_alumnado(alumno_id, curso_academico, titulacion):
-    if not alumno_id or not curso_academico or not titulacion:
-        return go.Figure()
 
-    try:
-        curso_academico = list_to_tuple(curso_academico)
-    except Exception as e:
-        return go.Figure()
-    
-    data = calif_numerica_asignatura(alumno_id, curso_academico, titulacion)
+    fig = go.Figure()
 
-    if not data:
-        print("No data returned from the query.")
-        return go.Figure()
-
-    subjects = []
-    grades = []
-    for row in data:
-        subject, grade = row
-        subjects.append(subject)
-        grades.append(grade)
-
-    colors = random_color(len(subjects))
-
-    # Crear una barra para cada asignatura con su propio color
-    traces = []
-    for subject, grade, color in zip(subjects, grades, colors):
-        traces.append(go.Bar(x=[subject], y=[grade], name=subject, marker_color=color, opacity=0.8))
-
-    layout = go.Layout(
+    fig.update_layout(
         title={'text': 'Calificación cuantitativa de las asignaturas matriculadas del alumno', 'x': 0.5},
         xaxis={'title': 'Asignatura', 'tickangle': 45},
         yaxis={'title': 'Calificación'},
@@ -55,5 +30,30 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
         )
     )
 
-    figure = go.Figure(data=traces, layout=layout)
-    return figure
+    if not alumno_id or not curso_academico or not titulacion:
+        return fig
+
+    try:
+        curso_academico = list_to_tuple(curso_academico)
+    except Exception as e:
+        print("Error:", e)
+        return fig
+    
+    data = calif_numerica_asignatura(alumno_id, curso_academico, titulacion)
+
+    if not data:
+        return fig
+
+    subjects = []
+    grades = []
+    for row in data:
+        subject, grade = row
+        subjects.append(subject)
+        grades.append(grade)
+
+    colors = random_color(len(subjects))
+    
+    for subject, grade, color in zip(subjects, grades, colors):
+        fig.add_trace(go.Bar(x=[subject], y=[grade], name=subject, marker_color=color, opacity=0.8))
+
+    return fig

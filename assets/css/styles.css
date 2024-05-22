@@ -258,6 +258,12 @@ body {
   cursor: pointer;
 }
 
+.Select-multi-value-wrapper {
+  max-height: 150px;
+  overflow-y: auto;
+
+}
+
 /**Estilos para el tab recomendaciones alumnado */ 
 
 .titulo-recomendador-alumnado {

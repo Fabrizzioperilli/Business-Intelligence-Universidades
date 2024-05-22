@@ -23,7 +23,6 @@ def update_graph_gestor(docente_id, curso_academico, titulaciones):
         legend=dict(title='Nacionalidad')
     )
 
-
     if not docente_id or not curso_academico or not titulaciones:
         return fig
     
