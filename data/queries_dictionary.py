@@ -446,7 +446,55 @@ queries = {
                 """
       },
       "graphs": {
-          "personal": {
+          "indicadores": {
+                #Consulta para obtener el número de alumnos de nuevo ingreso por género y titulación.
+                "alumnos_nuevo_ingreso_genero_titulacion": """
+                    SELECT curso_aca, titulacion, sexo, COUNT(*) as num_alumnos
+                    FROM matricula
+                    WHERE curso_aca = :curso_academico
+                    AND titulacion IN :titulaciones
+                    AND nuevo_ingreso = 'si'
+                    AND cod_universidad = :cod_universidad
+                    GROUP BY curso_aca, titulacion, sexo
+                    """,
+                #Consulta para obter el número de alumnos egresados por genero y titulación.
+                "alumnos_egresados_genero_titulacion": """
+                    SELECT 
+                        m.titulacion AS Titulacion,
+                        m.sexo AS Genero,
+                        COUNT(DISTINCT m.id) AS Cantidad
+                    FROM public.egresados e
+                    JOIN public.matricula m ON e.cod_plan = m.cod_plan AND e.curso_aca = m.curso_aca
+                    WHERE e.cod_universidad = :cod_universidad AND 
+                            m.curso_aca = :curso_academico AND 
+                            m.titulacion IN :titulaciones
+                    GROUP BY m.titulacion, m.sexo
+                    ORDER BY m.titulacion, m.sexo;
+                """,
+                #Consulta para obtener el número de alumnos de nuevo ingreso por nacionalidad y titulación.
+                "alumnos_nuevo_ingreso_nacionalidad_titulacion": """
+                    SELECT titulacion, nacionalidad, COUNT(*) as num_alumnos
+                    FROM matricula
+                    WHERE curso_aca = :curso_academico
+                    AND titulacion IN :titulaciones
+                    AND nuevo_ingreso = 'si'
+                    AND cod_universidad = :cod_universidad
+                    GROUP BY titulacion, nacionalidad
+                """,
+                #Consulta para obtener el número de alumnos egresados por nacionalidad y titulación.
+                "alumnos_egresados_nacionalidad_titulacion": """
+                SELECT 
+                        m.titulacion AS Titulacion,
+                        m.nacionalidad,
+                        COUNT(DISTINCT m.id) AS Cantidad
+                    FROM public.egresados e
+                    JOIN public.matricula m ON e.cod_plan = m.cod_plan AND e.curso_aca = m.curso_aca
+                    WHERE e.cod_universidad = :cod_universidad AND 
+                            m.curso_aca = :curso_academico AND 
+                            m.titulacion IN :titulaciones
+                    GROUP BY m.titulacion, m.nacionalidad
+                    ORDER BY m.titulacion, m.nacionalidad;
+                """
           },
           "general": {
           }

@@ -5,6 +5,7 @@ from components.gestor.resumen_gestor import resumen_gestor
 from components.common.filters import filters
 from components.gestor.filter_curso_academico_gestor import filter_curso_academico_gestor
 from components.gestor.filter_titulaciones_gestor import filter_titulaciones_gestor
+from components.gestor.graphs_indicadores_gestor import graphs_indicadores_gestor
 
 @callback(
         Output('tabs-gestor-content', 'children'),
@@ -22,8 +23,9 @@ def render_content(tab, selected_gestor):
                     filters([
                         filter_curso_academico_gestor(),
                         filter_titulaciones_gestor()
-                    ])
-                ])
+                    ]),
+                ]),
+                graphs_indicadores_gestor()
             ], className='content-layout-dashboard')
 
         ])

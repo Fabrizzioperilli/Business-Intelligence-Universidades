@@ -238,3 +238,38 @@ def titulaciones_universidad_gestor(cod_universidad, curso_academico):
               'curso_academico': curso_academico}
     
     return check_data(query, params)
+
+
+def alumnos_nuevo_ingreso_genero_titulacion(curso_academico, titulaciones, cod_universidad):
+    query = queries['gestor']['graphs']['indicadores']['alumnos_nuevo_ingreso_genero_titulacion']
+    params = {'curso_academico': curso_academico, 
+              'titulaciones': titulaciones, 
+              'cod_universidad': cod_universidad}
+
+    return check_data(query, params)
+
+def alumnos_egresados_genero_titulacion(cod_universidad, curso_academico, titulaciones):
+    query = queries['gestor']['graphs']['indicadores']['alumnos_egresados_genero_titulacion']
+    params = {'cod_universidad': cod_universidad, 
+              'curso_academico': curso_academico,
+              'titulaciones': titulaciones}
+    
+    return check_data(query, params)
+
+
+def alumnos_egresados_nacionalidad_titulacion(cod_universidad, curso_academico, titulaciones):
+    query = queries['gestor']['graphs']['indicadores']['alumnos_egresados_nacionalidad_titulacion']
+    params = {'cod_universidad': cod_universidad, 
+              'curso_academico': curso_academico,
+              'titulaciones': titulaciones}
+    
+    return check_data(query, params)
+
+def alumnos_nuevo_ingreso_nacionalidad_titulacion(cod_universidad, curso_academico, titulaciones):
+    query = queries['gestor']['graphs']['indicadores']['alumnos_nuevo_ingreso_nacionalidad_titulacion']
+    params = {'cod_universidad': cod_universidad, 
+              'curso_academico': curso_academico,
+                'titulaciones': titulaciones}
+    
+    return check_data(query, params)
+    
