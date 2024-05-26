@@ -10,6 +10,7 @@ from components.docente.filter_all_asignaturas_titulacion_docente import filter_
 from components.docente.graphs_personal_docente import graphs_personal_docente
 from components.docente.graphs_general_docente import graphs_general_docente
 from components.common.filters import filters
+from components.docente.recomendador_docente import recomendador_docente
 
 
 @callback(
@@ -48,4 +49,8 @@ def render_content(tab, selected_docente):
                 ]),
                 graphs_general_docente()
             ], className='content-layout-dashboard')
+        ])
+    elif tab == 'recomendaciones-tab':
+        return html.Div([
+            recomendador_docente()
         ])

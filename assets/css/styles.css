@@ -153,12 +153,13 @@ body {
 }
 
 .graphs-container-general-alumnado,
+.graphs-container-resultados-gestor,
 .graphs-container-general-docente {
   grid-area: main; 
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-columns: repeat(1, 1fr); /* Dos columnas */
+  grid-template-columns: repeat(1, 1fr); 
   grid-gap: var(--grid-gap);
   align-items: start;
   justify-content: center;
@@ -170,8 +171,8 @@ body {
 .graphs-container-indicadores-gestor {
   grid-area: main; /* Usa el área principal */
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-  grid-template-rows: repeat(2, 1fr); /* Dos filas */
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr); 
   grid-gap: var(--grid-gap);
   align-items: start;
   margin: var(--grid-gap);
@@ -220,7 +221,9 @@ body {
   .graphs-container-personal-alumnado,
   .graphs-container-general-alumnado,
   .graphs-container-general-docente,
-  .graphs-container-personal-docente {
+  .graphs-container-personal-docente,
+  .graphs-container-resultados-gestor,  
+  .graphs-container-indicadores-gestor {
     grid-template-columns: 1fr; 
   }
   .dash-graph {
@@ -266,22 +269,30 @@ body {
 
 /**Estilos para el tab recomendaciones alumnado */ 
 
-.titulo-recomendador-alumnado {
+.titulo-recomendador-alumnado,
+.titulo-recomendador-docente,
+.titulo-recomendador-gestor {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.imagen-recomendador-alumnado {
+.imagen-recomendador-alumnado,
+.imagen-recomendador-docente,
+.imagen-recomendador-gestor {
   width: 100%;
+  height: 100%;
   float: left;
   margin-right: 20px;
-  margin-left: 20px;
-  max-width: 650px;
+  margin-left: 40px;
+  max-width: 600px;
+  max-height: 350px;
   border-radius: 10px;
   box-shadow: 0 8px 8px rgba(0,0,0,0.1);
 }
 
-.p-recomendador-alumnado {
+.p-recomendador-alumnado,
+.p-recomendador-docente,
+.p-recomendador-gestor {
   text-align: justify;
   font-size: 18px;
   line-height: 1.6;
@@ -293,16 +304,20 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.sb-recomendador-alumnado {
+.sb-recomendador-alumnado,
+.sb-recomendador-docente,
+.sb-recomendador-gestor {
   text-align: left;
   margin: 20px;
   text-align: left;
   font-size: 1.8em;
-  margin: 20px 20px 5px 20px;
+  margin: 45px 20px 5px 40px;
   padding-bottom: 5px;
 }
 
-.ul-recomendador-alumnado {
+.ul-recomendador-alumnado,
+.ul-recomendador-docente,
+.ul-recomendador-gestor {
   text-align: justify;
   font-size: 18px;
   line-height: 1.6;

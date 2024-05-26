@@ -6,6 +6,7 @@ def tabs_docente():
         dcc.Tabs(id='tabs-docente', value='rendimiento-academico-asignatura-tab', children=[
             dcc.Tab(label='Rendimiento académico por asignatura', value='rendimiento-academico-asignatura-tab'),
             dcc.Tab(label='Rendimiento Académico', value='rendimiento-academico-tab'),
+            dcc.Tab(label='Recomendaciones', value='recomendaciones-tab')
         ], className='tabs'),
         html.Div(id='tabs-docente-content'),
         dcc.Store(id='selected-docente-store', storage_type='local')

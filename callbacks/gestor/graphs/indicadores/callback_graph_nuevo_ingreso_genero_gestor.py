@@ -3,15 +3,13 @@ import plotly.graph_objs as go
 from utils.utils import list_to_tuple
 from data.queries import alumnos_nuevo_ingreso_genero_titulacion, universidades_gestor
 
-
-
 @callback(
     Output('nuevo-ingreso-genero-gestor', 'figure'),
     Input('selected-gestor-store', 'data'),
     Input('curso-academico-gestor', 'value'),
     Input('titulaciones-gestor', 'value')
 )
-def update_graph_gestor(docente_id, curso_academico, titulaciones):
+def update_graph_gestor(gestor_id, curso_academico, titulaciones):
 
     fig = go.Figure()
 
@@ -24,7 +22,7 @@ def update_graph_gestor(docente_id, curso_academico, titulaciones):
         legend=dict(title='Género')
     )
 
-    if not docente_id or not curso_academico or not titulaciones:
+    if not gestor_id or not curso_academico or not titulaciones:
         return fig
     
     try:
@@ -32,7 +30,7 @@ def update_graph_gestor(docente_id, curso_academico, titulaciones):
     except Exception as e:
         return [], None
     
-    data_universidad = universidades_gestor(docente_id)
+    data_universidad = universidades_gestor(gestor_id)
     if not data_universidad:
         return fig
     
@@ -41,23 +39,27 @@ def update_graph_gestor(docente_id, curso_academico, titulaciones):
     if not data:
         return fig
     
-        # Parsear los datos
-    titulaciones = []
-    hombres = []
-    mujeres = []
+    # Parsear los datos
+    titulaciones_dict = {titulacion: {'Hombres': 0, 'Mujeres': 0} for titulacion in titulaciones}
 
     for row in data:
-        if row[1] not in titulaciones:
-            titulaciones.append(row[1])
-        if row[2] == 'Masculino':
-            hombres.append(row[3])
+        tit = row[1]
+        genero = row[2].lower()
+        cantidad = row[3]
+
+        if 'masculin' in genero:
+            titulaciones_dict[tit]['Hombres'] += cantidad
+        elif 'fem' in genero:
+            titulaciones_dict[tit]['Mujeres'] += cantidad
         else:
-            mujeres.append(row[3])
+            continue  # ignorar otros géneros/no especificado
 
-
+    titulaciones_list = list(titulaciones_dict.keys())
+    hombres = [titulaciones_dict[tit]['Hombres'] for tit in titulaciones_list]
+    mujeres = [titulaciones_dict[tit]['Mujeres'] for tit in titulaciones_list]
 
     fig.add_trace(go.Bar(
-        x=titulaciones,
+        x=titulaciones_list,
         y=hombres,
         name='Hombres',
         marker_color='blue',
@@ -65,7 +67,7 @@ def update_graph_gestor(docente_id, curso_academico, titulaciones):
     ))
 
     fig.add_trace(go.Bar(
-        x=titulaciones,
+        x=titulaciones_list,
         y=mujeres,
         name='Mujeres',
         marker_color='red',

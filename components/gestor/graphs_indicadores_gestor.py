@@ -10,20 +10,20 @@ def graphs_indicadores_gestor():
       dcc.Graph(
           id='nuevo-ingreso-genero-gestor',
           figure={},
-    )], className='graph-item-personal-docente'),
+    )], className='graph-item-indicadores-gestor'),
     html.Div([
       dcc.Graph(
           id='egresados-genero-gestor',
           figure={}
-    )], className='graph-item-personal-docente'),
+    )], className='graph-item-indicadores-gestor'),
     html.Div([
       dcc.Graph(
           id='nuevo_ingreso_nacionalidad-gestor',
           figure={},
-    )], className='graph-item-personal-docente'),
+    )], className='graph-item-indicadores-gestor'),
     html.Div([
       dcc.Graph(
           id='egresados-nacionalidad-gestor',
           figure={}
-    )], className='graph-item-personal-docente')
+    )], className='graph-item-indicadores-gestor')
   ], className='graphs-container-indicadores-gestor')

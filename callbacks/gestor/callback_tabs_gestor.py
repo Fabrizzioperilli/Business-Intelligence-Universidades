@@ -6,6 +6,8 @@ from components.common.filters import filters
 from components.gestor.filter_curso_academico_gestor import filter_curso_academico_gestor
 from components.gestor.filter_titulaciones_gestor import filter_titulaciones_gestor
 from components.gestor.graphs_indicadores_gestor import graphs_indicadores_gestor
+from components.gestor.graphs_resultados_gestor import graphs_resultados_gestor
+from components.gestor.recomendador_gestor import recomendador_gestor
 
 @callback(
         Output('tabs-gestor-content', 'children'),
@@ -32,16 +34,22 @@ def render_content(tab, selected_gestor):
     elif tab == 'resultados-academicos-tab':
         return html.Div([
             html.H2("Dashboard Gestor", style={'textAlign': 'center'}),
-            html.H3("Resultados académicos")
+             html.Div([
+                sidebar([
+                    resumen_gestor(),
+                ]),
+                graphs_resultados_gestor()
+            ], className='content-layout-dashboard')
         ])
     elif tab == 'riesgo-abandono-tab':
         return html.Div([
             html.H2("Dashboard Gestor", style={'textAlign': 'center'}),
             html.H3("Riesgo de abandono")
         ])
-    else:
+    elif tab == 'recomendaciones-tab':
         return html.Div([
-            html.H3("Indicadores académicos")
+            recomendador_gestor()
         ])
+
 
 

@@ -9,20 +9,20 @@ from data.queries import alumnos_nuevo_ingreso_nacionalidad_titulacion, universi
     Input('curso-academico-gestor', 'value'),
     Input('titulaciones-gestor', 'value')
 )
-def update_graph_gestor(docente_id, curso_academico, titulaciones):
+def update_graph_gestor(gestor_id, curso_academico, titulaciones):
     
     fig = go.Figure()
     
     fig.update_layout(
         barmode='stack',
-        title='Alumnos de nuevo ingreso por curso académico y nacionalidad',
+        title={'text':'Alumnos de nuevo ingreso por curso académico y nacionalidad','x':0.5},
         xaxis_title='Titulaciones',
         yaxis_title='Nº de alumnos de nuevo ingreso',
         showlegend=True,
         legend_title='Nacionalidad'
     )
 
-    if not docente_id or not curso_academico or not titulaciones:
+    if not gestor_id or not curso_academico or not titulaciones:
         return fig
     
     try:
@@ -30,7 +30,7 @@ def update_graph_gestor(docente_id, curso_academico, titulaciones):
     except Exception as e:
         return fig
     
-    data_universidad = universidades_gestor(docente_id)
+    data_universidad = universidades_gestor(gestor_id)
     if not data_universidad:
         return fig
 

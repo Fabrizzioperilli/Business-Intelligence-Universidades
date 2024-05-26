@@ -1,4 +1,7 @@
 indice,cod_plan,curso_aca,id,nota_media,plan,universidad,cod_universidad
 1,ING-Informática,2023/2024,FPM12345,6.81,Plan 2022,Universidad de la Laguna,ULL015
-2,ING-Informática,2021/2022,VMM14584,8.52,ING-Informática-Plan Propio,Universidad de la Laguna,ULL015
+2,ING-Informática,2020/2021,VMM14584,8.52,ING-Informática-Plan Propio,Universidad de la Laguna,ULL015
 3,ING-Informática,2023/2024,FRA98765,7.06,ING-Informática-Plan Propio,Universidad de la Laguna,ULL015
+4,M-Informática,2024/2025,FPM12345,8.19,ING-Informática-Plan Propio,Universidad de la Laguna,ULL015
+5,ING-Electrónica,2020/2021,EJM11111,7.9,Plan 2022,Universidad de la Laguna,ULL015
+6,SALUD-Enfermería,2020/2021,KKK00000,7.5,Plan 2022,Universidad de la Laguna,ULL015

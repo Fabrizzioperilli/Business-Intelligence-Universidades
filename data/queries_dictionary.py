@@ -428,7 +428,13 @@ queries = {
                 SELECT DISTINCT cod_universidad
                 FROM gestores 
                 WHERE gestor_id = :gestor_id;
-                """
+                """,
+            "cursos_academicos_de_egresados": """
+                SELECT DISTINCT curso_aca
+                FROM egresados
+                WHERE cod_universidad = :cod_universidad
+            """
+            
       },
       "filters": {
             #Consulta para obtener los cursos académicos de una universidad.
@@ -456,6 +462,7 @@ queries = {
                     AND nuevo_ingreso = 'si'
                     AND cod_universidad = :cod_universidad
                     GROUP BY curso_aca, titulacion, sexo
+                    ORDER BY titulacion;
                     """,
                 #Consulta para obter el número de alumnos egresados por genero y titulación.
                 "alumnos_egresados_genero_titulacion": """
@@ -464,7 +471,8 @@ queries = {
                         m.sexo AS Genero,
                         COUNT(DISTINCT m.id) AS Cantidad
                     FROM public.egresados e
-                    JOIN public.matricula m ON e.cod_plan = m.cod_plan AND e.curso_aca = m.curso_aca
+                    JOIN public.matricula m ON e.cod_plan = m.cod_plan AND 
+                            e.curso_aca = m.curso_aca AND e.id = m.id
                     WHERE e.cod_universidad = :cod_universidad AND 
                             m.curso_aca = :curso_academico AND 
                             m.titulacion IN :titulaciones
@@ -483,12 +491,13 @@ queries = {
                 """,
                 #Consulta para obtener el número de alumnos egresados por nacionalidad y titulación.
                 "alumnos_egresados_nacionalidad_titulacion": """
-                SELECT 
+                    SELECT 
                         m.titulacion AS Titulacion,
                         m.nacionalidad,
                         COUNT(DISTINCT m.id) AS Cantidad
                     FROM public.egresados e
-                    JOIN public.matricula m ON e.cod_plan = m.cod_plan AND e.curso_aca = m.curso_aca
+                    JOIN public.matricula m ON e.cod_plan = m.cod_plan AND 
+                         e.curso_aca = m.curso_aca AND e.id = m.id
                     WHERE e.cod_universidad = :cod_universidad AND 
                             m.curso_aca = :curso_academico AND 
                             m.titulacion IN :titulaciones
@@ -496,7 +505,49 @@ queries = {
                     ORDER BY m.titulacion, m.nacionalidad;
                 """
           },
-          "general": {
+          "resultados": {
+                #Consulta para obtener la nota media de acceso de cada titulación.
+                "nota_media_acceso_titulacion": """
+                    SELECT ma.curso_aca, ma.titulacion,
+                        AVG(eb.nota_prue) AS nota_ebau_media
+                    FROM matricula ma
+                    JOIN ebau_prueba eb ON ma.id = eb.id
+                    WHERE nuevo_ingreso = 'si' AND ma.cod_universidad = :cod_universidad
+                    GROUP BY ma.curso_aca, ma.titulacion
+                    ORDER BY ma.curso_aca, ma.titulacion;
+                """,
+                #Consulta para obtener la duración media de los estudios con respecto a la nota media, por titulación y curso académico.
+                "duracion_media_estudios_nota_gestor": """
+                    WITH matriculas_por_estudiante AS (
+                        SELECT
+                            id,
+                            titulacion,
+                            COUNT(*) AS numero_matriculas
+                        FROM matricula
+                        GROUP BY id, titulacion
+                    ),
+                    media_notas_y_duracion AS (
+                        SELECT
+                            e.curso_aca,
+                            m.titulacion,
+                            m.rama,
+                            AVG(e.nota_media) AS nota_media_curso_aca,
+                            ROUND(AVG(mpe.numero_matriculas)) AS duracion_media_estudios
+                        FROM egresados e
+                        JOIN matricula m ON e.id = m.id AND e.cod_plan = m.cod_plan AND e.cod_universidad = m.cod_universidad
+                        JOIN matriculas_por_estudiante mpe ON mpe.id = m.id AND mpe.titulacion = m.titulacion
+                        WHERE e.cod_universidad = 'ULL015'
+                        GROUP BY e.curso_aca, m.titulacion, m.rama
+                    )
+                    SELECT
+                        nota_media_curso_aca,
+                        titulacion,
+                        rama,
+                        curso_aca,
+                        duracion_media_estudios
+                    FROM media_notas_y_duracion
+                    ORDER BY curso_aca;
+                    """
           }
       },
   }

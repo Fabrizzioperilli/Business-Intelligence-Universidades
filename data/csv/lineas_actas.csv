@@ -265,3 +265,66 @@ indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,
 273,Sistemas y Tecnologías Despliegue y Mantenimiento,8.5,Notable,3568974SDM,M-Informática,Enero,2023/2024,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 274,Seguridad en Sistemas y Tecnologías Web,9.5,Sobresaliente,3568974SST,M-Informática,Enero,2023/2024,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
 275,Trabajo de Fin de Máster,9.5,Sobresaliente,3568974TFM,M-Informática,Enero,2024/2025,FPM12345,Plan 2018,Universidad de la Laguna,ULL015
+276,Física 1,7.5,Notable,7894561FIS,ING-Electrónica,Enero,2017/2018,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+277,Expresión Gráfica,8.5,Notable,7894561EXP,ING-Electrónica,Enero,2017/2018,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+278,Informática,6.5,Aprobado,7894561INF,ING-Electrónica,Enero,2017/2018,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+279,Fundamentos Matemáticos,9.2,Sobresaliente,7894561FMA,ING-Electrónica,Enero,2017/2018,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+280,Física 2,3.2,Suspenso,7894561FIS,ING-Electrónica,Enero,2017/2018,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+281,Física 2,5.2,Aprobado,7894561FIS,ING-Electrónica,Julio,2017/2018,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+282,Métodos Estadísticos,8.5,Notable,7894561MES,ING-Electrónica,Enero,2017/2018,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+283,Cálculo,4.1,Suspenso,7894561CAL,ING-Electrónica,Enero,2017/2018,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+284,Cálculo,5.1,Aprobado,7894561CAL,ING-Electrónica,Julio,2017/2018,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+285,Fundamentos Químicos en la Ingeniería,7.5,Notable,7894561FQU,ING-Electrónica,Enero,2017/2018,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+286,Organización y Gestión Empresarial,8.5,Notable,7894561OGE,ING-Electrónica,Enero,2017/2018,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+287,Ingeniería Fluidomecánica,7.5,Notable,7894561IFL,ING-Electrónica,Julio,2018/2019,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+288,Ingeniería de Materiales,8.5,Notable,7894561IMA,ING-Electrónica,Julio,2018/2019,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+289,Automatización y Control Industrial,9.5,Sobresaliente,7894561ACI,ING-Electrónica,Julio,2018/2019,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+290,Fundamentos de Ingeniería Eléctrica,7.5,Notable,7894561FIE,ING-Electrónica,Julio,2018/2019,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+291,Fundamentos de Ingeniería Electrónica,8.5,Notable,7894561FIE,ING-Electrónica,Julio,2018/2019,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+292,Elasticidad y Resistencia de los Materiales,5.6,Aprobado,7894561ERM,ING-Electrónica,Julio,2018/2019,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+293,Ingeniería Térmica,7.5,Notable,7894561ITE,ING-Electrónica,Julio,2018/2019,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+294,Técnología de Procesos de Fabricación,8.5,Notable,7894561TPF,ING-Electrónica,Julio,2018/2019,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+295,Organización y Gestión de Proyectos,9.5,Sobresaliente,7894561OGP,ING-Electrónica,Julio,2018/2019,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+296,Electrónica Analógica,7.5,Notable,7894561EAN,ING-Electrónica,Julio,2019/2020,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+297,Electrónica Digital,8.5,Notable,7894561EDI,ING-Electrónica,Julio,2019/2020,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+298,Modelado y Simulación de Sistemas,9.5,Sobresaliente,7894561MSS,ING-Electrónica,Julio,2019/2020,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+299,Ampliación de Ingeniería Eléctrica,7.5,Notable,7894561AIE,ING-Electrónica,Julio,2019/2020,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+300,Prevención de Riesgos Laborales,6.2,Aprobado,7894561PRL,ING-Electrónica,Julio,2019/2020,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+301,Instrumentación Electrónica,7.5,Notable,7894561INE,ING-Electrónica,Julio,2019/2020,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+302,Ingeniería de Control,8.5,Notable,7894561ICO,ING-Electrónica,Julio,2019/2020,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+303,Sistemas de Comunicación,9.5,Sobresaliente,7894561SDC,ING-Electrónica,Julio,2019/2020,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+304,Sistemas Robotizados,7.5,Notable,7894561SRO,ING-Electrónica,Julio,2019/2020,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+305,Oficina Técnica/Proyectos,7.5,Notable,7894561OTP,ING-Electrónica,Julio,2020/2021,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+306,Electrónica de Potencia,5.23,Aprobado,7894561EPO,ING-Electrónica,Julio,2020/2021,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+307,Informática Industrial,8.5,Notable,7894561IIN,ING-Electrónica,Julio,2020/2021,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+308,Automatización Industrial Anazada,9.5,Sobresaliente,7894561AIA,ING-Electrónica,Julio,2020/2021,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+309,Proyectos de Instalaciones,7.5,Notable,7894561PIN,ING-Electrónica,Julio,2020/2021,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+310,Prácticas Externas,9.5,Sobresaliente,7894561PRE,ING-Electrónica,Julio,2020/2021,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+311,Trabajo Fin de Grado,9.5,Sobresaliente,7894561TFG,ING-Electrónica,Julio,2020/2021,EJM11111,Plan 2018,Universidad de la Laguna,ULL015
+312,Fisiología y Fisiopatología,6.2,Aprobado,5689741FFI,SALUD-Enfermería,Enero,2017/2018,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+313,Investigación y Enfermería,8.5,Notable,5689741IYE,SALUD-Enfermería,Enero,2017/2018,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+314,Anatomía Humana e Histología,7.5,Notable,5689741AAH,SALUD-Enfermería,Enero,2017/2018,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+315,Bioquímica y Nutrición,8.5,Notable,5689741BQN,SALUD-Enfermería,Enero,2017/2018,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+316,Antropología y Bases Teóricas de la Enfermería,9.5,Sobresaliente,5689741ABE,SALUD-Enfermería,Enero,2017/2018,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+317,Física Aplicada,7.5,Notable,5689741FAP,SALUD-Enfermería,Enero,2017/2018,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+318,Inglés para la Salud,8.5,Notable,5689741IPS,SALUD-Enfermería,Enero,2017/2018,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+319,Educación para la Salud,7.5,Notable,5689741EPS,SALUD-Enfermería,Enero,2017/2018,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+320,Prácticas Clinicas I,9.5,Sobresaliente,5689741PCI,SALUD-Enfermería,Enero,2017/2018,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+321,Enfermería Clinica I,6.2,Aprobado,5689741ECI,SALUD-Enfermería,Enero,2018/2019,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+322,Cienias Psicosociales Aplicadas,7.2,Notable,5689741CPA,SALUD-Enfermería,Enero,2018/2019,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+323,Farmacología y Diétitica,9.2,Sobresaliente,5689741FDI,SALUD-Enfermería,Enero,2018/2019,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+324,Bases Teóricas y Metodológicas de la Enfermería,5.0,Aprobado,5689741BME,SALUD-Enfermería,Enero,2018/2019,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+325,Enfermería Comunitaria,9.2,Sobresaliente,5689741ECO,SALUD-Enfermería,Enero,2018/2019,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+326,Enfermería Clinica II,6.2,Aprobado,5689741ECI,SALUD-Enfermería,Enero,2018/2019,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+327,Prácticas Clinicas II,7.3,Notable,5689741PC2,SALUD-Enfermería,Enero,2018/2019,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+328,Enfermería de la Infancia y Adolescencia,6.7,Aprobado,5689741EIA,SALUD-Enfermería,Enero,2019/2020,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+329,Enfermería Clinica Avanzada I,8.2,Notable,5689741ECA,SALUD-Enfermería,Enero,2019/2020,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+330,Prácticas Clinicas III,7.2,Notable,5689741PC3,SALUD-Enfermería,Enero,2019/2020,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+331,Prácticas Clinicas IV,5.2,Aprobado,5689741PC4,SALUD-Enfermería,Enero,2019/2020,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+332,Enfermería Clinica Avanzada,8.2,Notable,5689741ECA,SALUD-Enfermería,Enero,2019/2020,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+333,Inglés Aplicado para la Comunicación en Salud,9.1,Sobresaliente,5689741IAC,SALUD-Enfermería,Enero,2019/2020,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+334,Habilidades Interpersonales y Comunicación,7.2,Notable,5689741HIC,SALUD-Enfermería,Enero,2019/2020,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+335,Procesos Psicosociales,6.2,Aprobado,5689741PPS,SALUD-Enfermería,Enero,2019/2020,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+336,Enfermería en Quirófano,7.3,Notable,5689741EQI,SALUD-Enfermería,Enero,2019/2020,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+337,Prácticas Externas,9.2,Sobresaliente,5689741PRE,SALUD-Enfermería,Enero,2020/2021,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+338,Trabajo Fin de Grado,8.0,Notable,5689741TFG,SALUD-Enfermería,Enero,2020/2021,KKK00000,Plan 2018,Universidad de la Laguna,ULL015

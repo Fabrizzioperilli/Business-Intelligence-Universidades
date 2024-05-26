@@ -178,3 +178,64 @@ indice,asignatura,cod_asignatura,cod_plan,curso_aca,id,cod_tipologia,plan,tipolo
 177,Sistemas y Tecnologías Despliegue y Mantenimiento,3568974SDM,M-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 178,Seguridad en Sistemas y Tecnologías Web,3568974SST,M-Informática,2023/2024,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
 179,Trabajo de Fin de Máster,3568974TFM,M-Informática,2024/2025,FPM12345,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+180,Física 1,7894561FIS,ING-Electrónica,2017/2018,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+182,Expresión Gráfica,7894561EXP,ING-Electrónica,2017/2018,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+183,Informática,7894561INF,ING-Electrónica,2017/2018,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+184,Fundamentos Matemáticos,7894561FMA,ING-Electrónica,2017/2018,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+185,Fisíca 2,7894531FIS,ING-Electrónica,2017/2018,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+187,Métodos Estadísticos,7894561MES,ING-Electrónica,2017/2018,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+188,Cálculo,7894561CAL,ING-Electrónica,2017/2018,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+189,Fundamentos Químicos en la Ingeniería,7894561FQU,ING-Electrónica,2017/2018,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+190,Organización y Gestión Empresarial,7894561OGE,ING-Electrónica,2017/2018,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+191,Ingeniería Fluidomecánica,7894561IFL,ING-Electrónica,2018/2019,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+192,Ingeniería de Materiales,7894561IMA,ING-Electrónica,2018/2019,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+193,Automatización y Control Industrial,7894561ACI,ING-Electrónica,2018/2019,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+194,Fundamentos de Ingeniería Eléctrica,7894561FIE,ING-Electrónica,2018/2019,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+195,Fundamentos de Ingeniería Electrónica,7894561FEL,ING-Electrónica,2018/2019,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+196,Elasticidad y Resistencia de Materiales,7894561ERM,ING-Electrónica,2018/2019,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+197,Ingeniería Térmica,7894561ITE,ING-Electrónica,2018/2019,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+198,Tecnología de Procesos de Fabricación,7894561TPF,ING-Electrónica,2018/2019,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+199,Organización y Gestión de Proyectos,7894561OGP,ING-Electrónica,2018/2019,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+200,Electrónica Analógica,7894561EAN,ING-Electrónica,2019/2020,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+201,Electrónica Digital,7894561EDI,ING-Electrónica,2019/2020,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+202,Modelado y Simulación de Sistemas,7894561MSS,ING-Electrónica,2019/2020,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+203,Ampliación de Ingeniería Eléctrica,7894561AIE,ING-Electrónica,2019/2020,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+204,Preveción de Riesgos Laborales,7894561PRL,ING-Electrónica,2019/2020,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+205,Instrumentación Electrónica,7894561INE,ING-Electrónica,2019/2020,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+206,Ingeniería de Control,7894561ICO,ING-Electrónica,2019/2020,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+207,Sistemas de Comunicación,7894561SDC,ING-Electrónica,2019/2020,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+208,Sistemas Robotizados,7894561SRO,ING-Electrónica,2019/2020,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+209,Oficina Técnica/Proyectos,7894561OTP,ING-Electrónica,2020/2021,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+210,Electrónica de Potencia,7894561EPO,ING-Electrónica,2020/2021,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+211,Informática Industrial,7894561IIN,ING-Electrónica,2020/2021,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+212,Automatización Industrial Avanzada,7894561AIA,ING-Electrónica,2020/2021,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+213,Proyectos de Instalaciones,7894561PIN,ING-Electrónica,2020/2021,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+214,Prácticas Externas,7894561PRE,ING-Electrónica,2020/2021,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+215,Trabajo Fin de Grado,7894561TFG,ING-Electrónica,2020/2021,EJM11111,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+216,Fisiología y Fisiopatología,5689741FFI,SALUD-Enfermería,2017/2018,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+217,Investigación y Enfermería, 5689741IYE,SALUD-Enfermería,2017/2018,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+218,Anatomía Humana e Histología,5689741AAH,SALUD-Enfermería,2017/2018,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+219,Bioquímica y Nutrición,5689741BQN,SALUD-Enfermería,2017/2018,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+220,Antropología y Bases Teóricas de la Enfermería,5689741ABE,SALUD-Enfermería,2017/2018,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+221,Física Aplicada,5689741FAP,SALUD-Enfermería,2017/2018,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+222,Inglés para la Salud,5689741IPS,SALUD-Enfermería,2017/2018,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+223,Educación para la Salud,5689741EPS,SALUD-Enfermería,2017/2018,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+224,Prácticas Clinicas I,5689741PCI,SALUD-Enfermería,2017/2018,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+225,Enfermería Clinica I,5689741ECI,SALUD-Enfermería,2018/2019,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+226,Ciencias Psicosociales Aplicadas,5689741CPA,SALUD-Enfermería,2018/2019,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+227,Farmacología y Diétitica,5689741FDI,SALUD-Enfermería,2018/2019,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+228,Bases Teóricas y Metodológicas de la Enfermería,5689741BME,SALUD-Enfermería,2018/2019,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+229,Enfermería Comunitaria,5689741ECO,SALUD-Enfermería,2018/2019,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+230,Enfermería Clinica II,5689741ECI,SALUD-Enfermería,2018/2019,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+231,Prácticas Clínicas II,5689741PC2,SALUD-Enfermería,2018/2019,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+232,Enfermería de la Infancia y Adolescencia,5689741EIA,SALUD-Enfermería,2019/2020,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+233,Enfermería Clinica Avanzada I,5689741ECA,SALUD-Enfermería,2019/2020,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+234,Prácticas Clinicas III,5689741PC3,SALUD-Enfermería,2019/2020,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+235,Prácticas Clinicas IV,5689741PC4,SALUD-Enfermería,2019/2020,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+236,Enfermería Clinica Avanzada,5689741ECA,SALUD-Enfermería,2019/2020,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+237,Inglés Aplicado para la Comunicación en Salud,5689741IAC,SALUD-Enfermería,2019/2020,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+238,Habilidades Interpersonales y Comunicación,5689741HIC,SALUD-Enfermería,2019/2020,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+239,Procesos Psicosociales,5689741PPS,SALUD-Enfermería,2019/2020,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+240,Enfermería en Quirófano,5689741EQI,SALUD-Enfermería,2019/2020,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+241,Prácticas Externas,5689741PRE,SALUD-Enfermería,2020/2021,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015
+242,Trabajo Fin de Grado,5689741TFG,SALUD-Enfermería,2020/2021,KKK00000,M7QB,Plan 2018,Básica,Universidad de la Laguna,ULL015

@@ -272,4 +272,24 @@ def alumnos_nuevo_ingreso_nacionalidad_titulacion(cod_universidad, curso_academi
                 'titulaciones': titulaciones}
     
     return check_data(query, params)
+
+
+def nota_media_acceso_titulacion(cod_universidad):
+    query = queries['gestor']['graphs']['resultados']['nota_media_acceso_titulacion']
+    params = {'cod_universidad': cod_universidad}
+
+    return check_data(query, params)
     
+
+def duracion_media_estudios_nota_gestor(cod_universidad):
+    query = queries['gestor']['graphs']['resultados']['duracion_media_estudios_nota_gestor']
+    params = {'cod_universidad': cod_universidad}
+
+    return check_data(query, params)
+
+
+def cursos_academicos_egresados(cod_universidad):
+    query = queries['gestor']['common']['cursos_academicos_de_egresados']
+    params = {'cod_universidad': cod_universidad}
+
+    return check_data(query, params)

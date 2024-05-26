@@ -10,7 +10,7 @@ from data.queries import alumnos_egresados_nacionalidad_titulacion, universidade
     Input('curso-academico-gestor', 'value'),
     Input('titulaciones-gestor', 'value')
 )
-def update_graph_gestor(docente_id, curso_academico, titulaciones):
+def update_graph_gestor(gestor_id, curso_academico, titulaciones):
 
     fig = go.Figure()
 
@@ -23,7 +23,7 @@ def update_graph_gestor(docente_id, curso_academico, titulaciones):
         legend=dict(title='Nacionalidad')
     )
 
-    if not docente_id or not curso_academico or not titulaciones:
+    if not gestor_id or not curso_academico or not titulaciones:
         return fig
     
     try:
@@ -31,7 +31,7 @@ def update_graph_gestor(docente_id, curso_academico, titulaciones):
     except Exception as e:
         return fig
     
-    data_universidad = universidades_gestor(docente_id)
+    data_universidad = universidades_gestor(gestor_id)
     if not data_universidad:
         return fig
 
