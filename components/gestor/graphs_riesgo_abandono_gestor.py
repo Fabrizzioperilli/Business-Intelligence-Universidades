@@ -1,5 +1,6 @@
 from dash import html, dcc
 from callbacks.gestor.graphs.riesgo_abandono.callback_graph_tasa_abandono_gestor import update_graph_gestor
+from callbacks.gestor.graphs.riesgo_abandono.callback_graph_tasa_graduacion_gestor import update_graph_gestor
 
 def graphs_riesgo_abandono_gestor():
   return html.Div([
@@ -11,7 +12,7 @@ def graphs_riesgo_abandono_gestor():
     ], className='graph-item-riesgo-abandono-gestor'),
     html.Div([
       dcc.Graph(
-          id='',
+          id='tasa-graduacion-gestor',
           figure={}
     )], className='graph-item-riesgo-abandono-gestor'),
     html.Div([

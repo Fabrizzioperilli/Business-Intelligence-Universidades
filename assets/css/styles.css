@@ -182,15 +182,12 @@ body {
 }
 
 .graph-item-personal-alumnado:nth-child(1), 
-.graph-item-personal-alumnado:nth-child(2),
-.graph-item-riesgo-abandono-gestor:nth-child(1),
-.graph-item-riesgo-abandono-gestor:nth-child(2) {
+.graph-item-personal-alumnado:nth-child(2) {
   grid-column: span 1; /* Cada uno ocupa una columna */
 }
 
 .graph-item-personal-alumnado:nth-child(3), 
-.graph-item-personal-alumnado:nth-child(4),
-.graph-item-riesgo-abandono-gestor:nth-child(3) {
+.graph-item-personal-alumnado:nth-child(4) {
   grid-column: 1 / -1; /* Cada uno ocupa ambas columnas */
 }
 
@@ -330,3 +327,4 @@ body {
   padding: 10px;
   border-radius: 5px;
 }
+

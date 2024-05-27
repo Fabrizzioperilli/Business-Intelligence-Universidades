@@ -4,7 +4,7 @@ from data.queries import asignaturas_matriculadas_y_superadas
 from utils.utils import list_to_tuple
 
 @callback(
-    Output('graph-bar-tasa-exito', 'figure'),
+    Output('graph-bar-tasa-rendimiento', 'figure'),
     Input('selected-alumnado-store', 'data'), 
     Input('curso-academico', 'value'),
     Input('titulacion-alumnado','value')
@@ -15,8 +15,8 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
     fig = go.Figure()
     
     fig.update_layout(
-        title={'text': 'Tasa de éxito por curso académico del alumno', 'x': 0.5},
-        xaxis={'title': 'Porcentaje de éxito'},
+        title={'text': 'Tasa de rendimiento por curso académico', 'x': 0.5},
+        xaxis={'title': 'Tasa de rendimiento (%)'},
         yaxis={'title': 'Curso académico'},
         showlegend=False,
     )

@@ -582,7 +582,29 @@ queries = {
                         ORDER BY 
                             m.curso_aca,
                             m.titulacion;
-                    """
+                    """,
+                    #Consulta para obtener la tasa de graduación de una titulación.
+                    "tasa_graduacion_titulacion_gestor": """
+                        SELECT 
+                            COUNT(DISTINCT matricula.id) AS numero_matriculados,
+                            COALESCE(COUNT( DISTINCT egresados.id), 0) AS numero_egresados,
+                            matricula.curso_aca, 
+                            matricula.titulacion
+                        FROM 
+                            matricula
+                        LEFT JOIN 
+                            egresados ON matricula.id = egresados.id
+                        WHERE 
+                            nuevo_ingreso = 'si' AND 
+                            matricula.cod_universidad = :cod_universidad AND 
+                            matricula.curso_aca IN :curso_academico
+                        GROUP BY 
+                            matricula.curso_aca, 
+                            matricula.titulacion
+                        ORDER BY 
+                            titulacion, 
+                            curso_aca;                    
+                        """
           }
     },
   }
