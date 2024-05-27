@@ -1,4 +1,4 @@
-from dash import callback, Output, Input
+from dash import callback, Output, Input, State
 import plotly.graph_objs as go
 from data.queries import tasa_abandono_titulacion_gestor, universidades_gestor
 import pandas as pd
@@ -56,5 +56,4 @@ def update_graph_gestor(curso_academico, gestor_id):
 
     return fig
     
-
     

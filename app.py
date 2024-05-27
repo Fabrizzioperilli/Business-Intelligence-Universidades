@@ -7,13 +7,14 @@ from layouts.gestor_layout import gestor_layout
 from callbacks.common.callback_update_layout import update_layout
 from data.db_connector import db 
 import atexit
-
+import dash_bootstrap_components as dbc
 # Crear la aplicación Dash
 app = dash.Dash(
     __name__, 
     external_stylesheets=[
         'assets/css/styles.css',
-        'https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-rounded/css/uicons-thin-rounded.css'
+        'https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-rounded/css/uicons-thin-rounded.css',
+        dbc.themes.BOOTSTRAP
     ], 
     suppress_callback_exceptions=True
 )
