@@ -548,7 +548,42 @@ queries = {
                     FROM media_notas_y_duracion
                     ORDER BY curso_aca;
                     """
+          },
+          "riesgo_abandono": {
+                    #Consulta para obtener la tasa de abandono de una titulación.
+                    "tasa_abandono_titulacion_gestor": """
+                        WITH ultima_matricula AS (
+                            SELECT 
+                                m.id,
+                                m.curso_aca,
+                                m.titulacion,
+                                t.abandona,
+                                ROW_NUMBER() OVER (PARTITION BY m.id ORDER BY m.curso_aca DESC) AS row_num
+                            FROM 
+                                public.matricula m
+                            JOIN 
+                                public.alumnos t
+                            ON 
+                                m.id = t.id
+                        )
+
+                        SELECT 
+                            m.curso_aca,
+                            m.titulacion,
+                            COUNT(DISTINCT m.id) AS numero_matriculados,
+                            COUNT(DISTINCT CASE WHEN le.abandona = 'si' AND le.row_num = 1 THEN le.id END) AS numero_abandono
+                        FROM 
+                            public.matricula m
+                        LEFT JOIN  ultima_matricula le ON m.id = le.id AND m.curso_aca = le.curso_aca
+                        WHERE m.cod_universidad = :cod_universidad AND m.curso_aca IN :curso_academico
+                        GROUP BY 
+                            m.curso_aca,
+                            m.titulacion
+                        ORDER BY 
+                            m.curso_aca,
+                            m.titulacion;
+                    """
           }
-      },
+    },
   }
 }

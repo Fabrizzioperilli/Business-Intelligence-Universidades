@@ -154,7 +154,8 @@ body {
 
 .graphs-container-general-alumnado,
 .graphs-container-resultados-gestor,
-.graphs-container-general-docente {
+.graphs-container-general-docente,
+.graphs-container-riesgo-abandono-gestor {
   grid-area: main; 
   display: grid;
   width: 100%;
@@ -181,12 +182,15 @@ body {
 }
 
 .graph-item-personal-alumnado:nth-child(1), 
-.graph-item-personal-alumnado:nth-child(2) {
+.graph-item-personal-alumnado:nth-child(2),
+.graph-item-riesgo-abandono-gestor:nth-child(1),
+.graph-item-riesgo-abandono-gestor:nth-child(2) {
   grid-column: span 1; /* Cada uno ocupa una columna */
 }
 
 .graph-item-personal-alumnado:nth-child(3), 
-.graph-item-personal-alumnado:nth-child(4) {
+.graph-item-personal-alumnado:nth-child(4),
+.graph-item-riesgo-abandono-gestor:nth-child(3) {
   grid-column: 1 / -1; /* Cada uno ocupa ambas columnas */
 }
 

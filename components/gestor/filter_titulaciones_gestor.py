@@ -9,7 +9,7 @@ def filter_titulaciones_gestor():
             id="titulaciones-gestor",
             searchable=True,
             multi=True,
-            clearable=False,
+            clearable=True,
             options=[],
             value=None,    
             maxHeight=200,

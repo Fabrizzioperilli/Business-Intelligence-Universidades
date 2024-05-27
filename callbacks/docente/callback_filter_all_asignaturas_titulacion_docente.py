@@ -7,7 +7,6 @@ from data.queries import asignaturas_actas_titulacion
     Input('titulacion-docente', 'value'),
     Input('all-cursos-academicos-docente', 'value'),
     Input('select-all-asignaturas-titulacion-docente', 'n_clicks'),
-    State('all-asignaturas-titulacion-docente', 'options'),
     State('select-all-asignaturas-titulacion-docente', 'n_clicks_timestamp')
 )
 def update_filter_asignaturas_docente(titulacion, curso_academico, n_clicks, existing_options, last_clicked):

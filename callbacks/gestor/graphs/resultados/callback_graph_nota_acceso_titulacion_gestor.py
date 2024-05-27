@@ -14,7 +14,7 @@ def update_grpht_gestor(gestor_id):
         xaxis_title='Curso académico',
         yaxis_title='Nota media de acceso',
         showlegend=True,
-        legend={'title':'Titulaciones', 'orientation':'h', 'y': -0.5}
+        legend={'title':'Titulaciones'}
     )
 
     if not gestor_id:

@@ -293,3 +293,9 @@ def cursos_academicos_egresados(cod_universidad):
     params = {'cod_universidad': cod_universidad}
 
     return check_data(query, params)
+
+def tasa_abandono_titulacion_gestor(cod_universidad, curso_academico):
+    query = queries['gestor']['graphs']['riesgo_abandono']['tasa_abandono_titulacion_gestor']
+    params = {'cod_universidad': cod_universidad, 'curso_academico': curso_academico}
+
+    return check_data(query, params)

@@ -1,25 +1,12 @@
-from dash import Input, Output, State, callback, callback_context
+from dash import Input, Output, State, callback
 from data.queries import universidades_gestor, curso_academico_universidad
 
 @callback(
     Output('curso-academico-gestor', 'options'),
     Output('curso-academico-gestor', 'value'),
-    Input('selected-gestor-store', 'data'),
-    Input('select-all-titulaciones-gestor', 'n_clicks'),
-    State('curso-academico-gestor', 'options'),
-    State('select-all-titulaciones-gestor', 'n_clicks_timestamp')
+    Input('selected-gestor-store', 'data')
 )
-def update_filter_curso_academico_gestor(gestor_id, n_clicks, existing_options, last_clicked):
-    ctx = callback_context
-    trigger_id = ctx.triggered[0]['prop_id'].split('.')[0]
-
-    #Evento de selección de todos los cursos académicos
-    if trigger_id == 'select-all-cursos-academicos':
-        if existing_options:
-            return existing_options, [option['value'] for option in existing_options]
-        else:
-            return [], []
-    
+def update_filter_curso_academico_gestor(gestor_id):
     if not gestor_id:
         return [], None
     
