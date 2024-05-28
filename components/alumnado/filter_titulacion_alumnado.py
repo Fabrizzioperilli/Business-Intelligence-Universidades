@@ -1,5 +1,5 @@
 from dash import html, dcc
-from callbacks.alumnado.callback_filter_titulacion_alumnado import update_filter_titulacion_alumnado
+from callbacks.alumnado.filters.callback_filter_titulacion_alumnado import update_filter_titulacion_alumnado
 
 
 def filter_titulacion_alumnado():

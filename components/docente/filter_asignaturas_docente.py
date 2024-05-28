@@ -1,5 +1,5 @@
 from dash import html, dcc
-from callbacks.docente.callback_filter_asignaturas_docente import update_filter_asignaturas_docente
+from callbacks.docente.filters.callback_filter_asignaturas_docente import update_filter_asignaturas_docente
 
 
 def filter_asignaturas_docente():

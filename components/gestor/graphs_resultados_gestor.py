@@ -1,7 +1,7 @@
 from dash import html, dcc
 from callbacks.gestor.graphs.resultados.callback_graph_nota_acceso_titulacion_gestor import update_grpht_gestor
 from callbacks.gestor.graphs.resultados.callback_graph_duracion_media_estudios_nota_gestor import update_graph_gestor
-from callbacks.gestor.callback_filter_curso_academico_slider_gestor import update_slider
+from callbacks.gestor.filters.callback_filter_curso_academico_slider_gestor import update_slider
 
 
 def graphs_resultados_gestor():
@@ -11,11 +11,12 @@ def graphs_resultados_gestor():
           id='duración-estudios-nota-media-gestor',
           figure={},
       ),
+      html.Label('Curso académico'),
       dcc.Slider(
           id='slider-curso-academico-gestor',
           step=1,
           marks={},
-          value=1
+          value=1,
           )
     ], className='graph-item-resultados-gestor'),
     html.Div([

@@ -25,7 +25,7 @@ queries = {
       "filters": {
           # Consulta para obtener los cursos académicos en los que un alumno está matriculado en una titulación específica.
           "curso_academico_alumnado": """
-                SELECT curso_aca 
+                SELECT curso_aca
                 FROM matricula 
                 WHERE id = :alumno_id AND titulacion = :titulacion;
                 """,
@@ -47,7 +47,7 @@ queries = {
           "personal": {
               # Consulta para obtener las asignaturas superadas por un alumno en un curso académico y titulación específicos.
               "curso_academico_asignaturas_superadas": """
-                    SELECT li.curso_aca, COUNT(DISTINCT li.asignatura) AS N_asig_superada
+                    SELECT li.curso_aca AS curso_academico, COUNT(DISTINCT li.asignatura) AS n_asig_superadas
                     FROM lineas_actas li
                     JOIN matricula ma ON li.id = ma.id AND li.cod_plan = ma.cod_plan
                     WHERE li.id = :alumno_id AND li.calif_numerica >= 5 AND li.curso_aca IN :curso_academico 
@@ -74,7 +74,7 @@ queries = {
                         AND li.curso_aca IN :curso_academico
                         AND ma.titulacion = :titulacion
                       )
-                      SELECT curso_aca, calif, COUNT(*) AS grade_count
+                      SELECT curso_aca AS curso_academico, calif AS calificaciones, COUNT(*) AS n_calificaciones
                       FROM RankedGrades
                       WHERE rk = 1
                       GROUP BY curso_aca, calif
@@ -166,40 +166,50 @@ queries = {
                           """,
                   # Consulta para obtener la calificación cualitativa del alumno.
                   "calif_cualitativa_alumno_asignaturas": """
-                        WITH CalificacionesMaximas AS (
-                              SELECT
-                                  la.id,
-                                  la.asignatura,
-                                  la.curso_aca,
-                                  la.calif,
-                                  ROW_NUMBER() OVER (PARTITION BY la.id, la.curso_aca, la.asignatura ORDER BY CASE 
-                                      WHEN la.calif = 'Sobresaliente' THEN 5
-                                      WHEN la.calif = 'Notable' THEN 4
-                                      WHEN la.calif = 'Aprobado' THEN 3
-                                      WHEN la.calif = 'Suspenso' THEN 2
-                                      WHEN la.calif = 'No presentado' THEN 1
-                                      ELSE 0 END DESC) AS rk
-                              FROM lineas_actas la
-                              JOIN 
-                                  matricula ma ON la.id = ma.id AND la.cod_plan = ma.cod_plan
-                              WHERE 
-                                  la.curso_aca IN :curso_academico AND 
-                                  la.asignatura IN :asignaturas_matriculadas AND 
-                                  la.id = :alumno_id AND 
-                                  la.calif IN ('Sobresaliente', 'Notable', 'Aprobado', 'Suspenso', 'No presentado') AND
-                                  ma.titulacion = :titulacion
-                          )
+                       WITH CalificacionesMaximas AS (
+                        SELECT
+                            la.id,
+                            la.asignatura,
+                            MAX(CASE 
+                                WHEN la.calif = 'Sobresaliente' THEN 5
+                                WHEN la.calif = 'Notable' THEN 4
+                                WHEN la.calif = 'Aprobado' THEN 3
+                                WHEN la.calif = 'Suspenso' THEN 2
+                                WHEN la.calif = 'No presentado' THEN 1
+                                ELSE 0 END) AS max_calif_value
+                        FROM lineas_actas la
+                        JOIN matricula ma ON la.id = ma.id AND la.cod_plan = ma.cod_plan
+                        WHERE 
+                            la.curso_aca IN :curso_academico AND 
+                            la.asignatura IN :asignaturas_matriculadas AND 
+                            la.id = :alumno_id AND 
+                            la.calif IN ('Sobresaliente', 'Notable', 'Aprobado', 'Suspenso', 'No presentado') AND
+                            ma.titulacion = :titulacion
+                        GROUP BY
+                            la.id, la.asignatura
+                    ),
+                    CalificacionesFinales AS (
+                        SELECT
+                            c.id,
+                            c.asignatura,
+                            CASE c.max_calif_value
+                                WHEN 5 THEN 'Sobresaliente'
+                                WHEN 4 THEN 'Notable'
+                                WHEN 3 THEN 'Aprobado'
+                                WHEN 2 THEN 'Suspenso'
+                                WHEN 1 THEN 'No presentado'
+                                ELSE 'Desconocido' END AS calif
+                        FROM CalificacionesMaximas c
+                    )
 
-                          SELECT
-                              c.asignatura,
-                              c.calif,
-                              COUNT(*) AS count_grades
-                          FROM 
-                              CalificacionesMaximas c
-                          WHERE 
-                              c.rk = 1
-                          GROUP BY 
-                              c.asignatura, c.calif; 
+                    SELECT
+                        c.asignatura,
+                        c.calif,
+                        COUNT(*) AS count_grades
+                    FROM 
+                        CalificacionesFinales c
+                    GROUP BY 
+                        c.asignatura, c.calif;
                     """,
                     # Consulta para obtener la calificación media de los alumnos y la calificación del alumno.
                     "nota_media_general_mi_nota": """

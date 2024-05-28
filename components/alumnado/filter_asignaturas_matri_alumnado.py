@@ -1,5 +1,5 @@
 from dash import html, dcc
-from callbacks.alumnado.callback_filter_asignaturas_matri_alumnado import update_filter_asignaturas_matri_alumnado
+from callbacks.alumnado.filters.callback_filter_asignaturas_matri_alumnado import update_filter_asignaturas_matri_alumnado
 
 def filter_asignaturas_matri_alumnado():
    return html.Div([

@@ -1,5 +1,5 @@
 from dash import html, dcc
-from callbacks.gestor.callback_filter_titulaciones_gestor import update_filter_titulaciones_gestor
+from callbacks.gestor.filters.callback_filter_titulaciones_gestor import update_filter_titulaciones_gestor
 
 def filter_titulaciones_gestor():
     return html.Div([

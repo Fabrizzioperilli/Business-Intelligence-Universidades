@@ -1,5 +1,5 @@
 from dash import html, dcc
-from callbacks.gestor.callback_filter_all_curso_academico_gestor import update_filter_all_curso_academico_gestor
+from callbacks.gestor.filters.callback_filter_all_curso_academico_gestor import update_filter_all_curso_academico_gestor
 
 
 def filter_all_curso_academico_gestor():

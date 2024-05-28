@@ -2,12 +2,13 @@ from dash import callback, Input, Output
 import plotly.graph_objs as go
 from data.queries import alumnos_repetidores_nuevos
 from utils.utils import list_to_tuple
+import pandas as pd
 
 @callback(
     Output('graph-alumnos-repetidores-nuevos', 'figure'),
-    [Input('asignaturas-docente', 'value')],
-    [Input('curso-academico-docente', 'value')],
-    [Input('selected-docente-store', 'data')]
+    Input('asignaturas-docente', 'value'),
+    Input('curso-academico-docente', 'value'),
+    Input('selected-docente-store', 'data')
 )
 def update_graph_docente(asignaturas, curso_academico, docente_id):
 
@@ -33,27 +34,24 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
     data = alumnos_repetidores_nuevos(docente_id, curso_academico, asignaturas)
     
     if not data:
-        print('No data found')
         return fig
-
-    cursos_academicos = [row[0] for row in data]
-    alumnos_repetidores = [row[1] for row in data]
-    alumnos_nuevo_ingreso = [row[2] for row in data]
+    
+    df = pd.DataFrame(data, columns=['Curso Académico', 'Alumnos Repetidores', 'Alumnos Nuevo Ingreso'])
 
     fig.add_trace(go.Bar(
-        x=cursos_academicos,
-        y=alumnos_repetidores,
+        x=df['Curso Académico'],
+        y=df['Alumnos Repetidores'],
         name='Alumnos repetidores',
         marker_color='red',
-        opacity=0.8
+        opacity=0.7
     ))
     
     fig.add_trace(go.Bar(
-        x=cursos_academicos,
-        y=alumnos_nuevo_ingreso,
+        x=df['Curso Académico'],
+        y=df['Alumnos Nuevo Ingreso'],
         name='Alumnos de primera matrícula',
         marker_color='green',
-        opacity=0.8
+        opacity=0.7
     ))
     
     return fig

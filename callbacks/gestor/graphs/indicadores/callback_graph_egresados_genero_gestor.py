@@ -2,6 +2,7 @@ from dash import Input, Output, callback
 import plotly.graph_objects as go
 from utils.utils import list_to_tuple
 from data.queries import alumnos_egresados_genero_titulacion, universidades_gestor
+import pandas as pd
 
 
 @callback(
@@ -16,7 +17,7 @@ def update_graph_gestor(gestor_id, curso_academico, titulaciones):
     
     fig.update_layout(
         barmode='stack',
-        title={'text': 'Alumnos egresados por curso académico, titulación y género', 'x': 0.5},
+        title={'text': 'Alumnos egresados por género y titulación', 'x': 0.5},
         xaxis=dict(title='Titulaciones'),
         yaxis=dict(title='Nº de alumnos egresados'),
         showlegend=True,
@@ -40,36 +41,40 @@ def update_graph_gestor(gestor_id, curso_academico, titulaciones):
     if not data:
         return fig
     
-    # Parsear los datos
-    tit_dict = {}
-    for row in data:
-        titulacion = row[0]
-        genero = row[1]
-        cantidad = row[2]
-        
-        if titulacion not in tit_dict:
-            tit_dict[titulacion] = {'Masculino': 0, 'Femenino': 0}
-        
-        tit_dict[titulacion][genero] += cantidad
+     
+    # Convertir data a DataFrame
+    df = pd.DataFrame(data, columns=['Titulacion', 'Género', 'Cantidad'])
+    
+    # Asegurarse de que las columnas sean consistentes
+    def map_genero(genero):
+        if 'masculin' in genero.lower():
+            return 'Hombres'
+        elif 'fem' in genero.lower():
+            return 'Mujeres'
+        return genero
 
-    titulaciones = list(tit_dict.keys())
-    hombres = [tit_dict[tit]['Masculino'] for tit in titulaciones]
-    mujeres = [tit_dict[tit]['Femenino'] for tit in titulaciones]
+    df['Género'] = df['Género'].map(map_genero)
+    
+    # Pivotear el DataFrame para obtener las cantidades por género en columnas separadas
+    df_pivot = df.pivot_table(index='Titulacion', columns='Género', values='Cantidad', aggfunc='sum').fillna(0)
+    
+    # Asegurarse de que las columnas existen antes de graficar
+    if 'Hombres' in df_pivot.columns:
+        fig.add_trace(go.Bar(
+            x=df_pivot.index,
+            y=df_pivot['Hombres'],
+            name='Hombres',
+            marker_color='blue',
+            opacity=0.7
+        ))
 
-    fig.add_trace(go.Bar(
-        x=titulaciones,
-        y=hombres,
-        name='Hombres',
-        marker_color='blue',
-        opacity=0.8
-    ))
-
-    fig.add_trace(go.Bar(
-        x=titulaciones,
-        y=mujeres,
-        name='Mujeres',
-        marker_color='red',
-        opacity=0.8
-    ))
+    if 'Mujeres' in df_pivot.columns:
+        fig.add_trace(go.Bar(
+            x=df_pivot.index,
+            y=df_pivot['Mujeres'],
+            name='Mujeres',
+            marker_color='red',
+            opacity=0.7
+        ))
 
     return fig

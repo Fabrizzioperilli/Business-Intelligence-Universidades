@@ -1,5 +1,6 @@
 from dash import callback, Input, Output
 import plotly.graph_objs as go
+import pandas as pd
 from data.queries import alumnos_genero_docente
 from utils.utils import list_to_tuple
 
@@ -15,7 +16,7 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
     
     fig.update_layout(
         barmode='stack',
-        title={'text': 'Número de alumnos matriculados por género y curso académico', 'x': 0.5},
+        title={'text': 'Evolución alumnos matriculados por género y curso académico', 'x': 0.5},
         xaxis={'title': 'Curso académico'},
         yaxis={'title': 'Nº Alumnos matriculados'},
         legend_title_text='Género'
@@ -31,33 +32,26 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
     
     data = alumnos_genero_docente(docente_id, asignaturas, curso_academico)
     
-    
     if not data:
         return fig
 
-    # Procesar los datos para el gráfico
-    cursos = list(set(row[0] for row in data))
-    cursos.sort()
-    sexos = ['Mujeres', 'Hombres']
+    df = pd.DataFrame(data, columns=['Curso Académico', 'Género', 'Cantidad'])
     
-    # Inicializar datos procesados
-    datos_procesados = {curso: {sexo: 0 for sexo in sexos} for curso in cursos}
+    df_pivot = df.pivot(index='Curso Académico', columns='Género', values='Cantidad').fillna(0)
     
-    for row in data:
-        curso = row[0]
-        sexo = 'Mujeres' if row[1] == 'Femenino' else 'Hombres'
-        datos_procesados[curso][sexo] = row[2]
+    colores = {
+        'Femenino': 'red', 
+        'Masculino': 'blue'
+    }
     
-    
-    colores = {'Mujeres': 'red', 'Hombres': 'blue'}
-    
-    for sexo in sexos:
+    for genero in df_pivot.columns:
         fig.add_trace(go.Bar(
-            x=cursos,
-            y=[datos_procesados[curso][sexo] for curso in cursos],
-            name=sexo,
-            marker_color=colores[sexo],
-            opacity=0.8
+            x=df_pivot.index,
+            y=df_pivot[genero],
+            name='Mujeres' if genero == 'Femenino' else 'Hombres',
+            marker_color=colores[genero],
+            opacity=0.7
         ))
     
     return fig
+

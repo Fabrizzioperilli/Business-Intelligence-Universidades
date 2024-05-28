@@ -2,6 +2,7 @@ from dash import callback, Input, Output
 from data.queries import nota_media_general_mi_nota
 import plotly.graph_objs as go
 from utils.utils import list_to_tuple
+import pandas as pd
 
 @callback(
     Output('nota-media-general-mi-nota', 'figure'),
@@ -10,13 +11,12 @@ from utils.utils import list_to_tuple
     Input('selected-alumnado-store', 'data'),
     Input('titulacion-alumnado', 'value')
 )
-
 def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, titulacion):
 
     fig = go.Figure()
 
     fig.update_layout(
-            title={'text':'Nota media general y mi nota por asignaturas y curso académico', 'x':0.5},
+            title={'text':'Nota media general y mi nota por asignaturas', 'x':0.5},
             xaxis={'title': 'Asignatura', 'tickangle': 45},
             yaxis={'title': 'Nota'},
             barmode='group',
@@ -40,28 +40,23 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, 
     if not data:
         return fig
 
-    all_subjects = [row[0] for row in data]
-    avg_grades = [row[1] for row in data]
-    student_grades = [row[2] for row in data]
+     # Convertir la lista de datos en un DataFrame
+    df = pd.DataFrame(data, columns=['Asignatura', 'NotaMediaGeneral', 'MiNota'])
 
-    
     fig.add_trace(go.Bar(
-            x=all_subjects,
-            y=student_grades,
-            name='Mi nota',
-            marker_color='blue',
-            opacity=0.8,
-        ))
-    
+        x=df['Asignatura'],
+        y=df['MiNota'],
+        name='Mi nota',
+        marker_color='blue',
+        opacity=0.7,
+    ))
+
     fig.add_trace(go.Bar(
-            x=all_subjects,
-            y=avg_grades,
-            name='Nota media general',
-            marker_color='grey',
-            opacity=0.8
-        ))
+        x=df['Asignatura'],
+        y=df['NotaMediaGeneral'],
+        name='Nota media general',
+        marker_color='grey',
+        opacity=0.7
+    ))
 
     return fig
-        
-        
-

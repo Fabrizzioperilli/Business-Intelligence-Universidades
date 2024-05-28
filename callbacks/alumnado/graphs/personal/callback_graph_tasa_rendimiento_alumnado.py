@@ -1,5 +1,6 @@
 from dash import Input, Output, callback
 import plotly.graph_objs as go
+import pandas as pd
 from data.queries import asignaturas_matriculadas_y_superadas
 from utils.utils import list_to_tuple
 
@@ -8,7 +9,6 @@ from utils.utils import list_to_tuple
     Input('selected-alumnado-store', 'data'), 
     Input('curso-academico', 'value'),
     Input('titulacion-alumnado','value')
-
 )
 def update_graph_alumnado(alumno_id, curso_academico, titulacion):
 
@@ -35,12 +35,15 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
     if not data:
         return fig
 
-    academic_years = [row[0] for row in data]
-    success_rates = [(row[2] / row[1]) * 100 for row in data]
+    # Convertir data en un DataFrame
+    df = pd.DataFrame(data, columns=['Curso_academico', 'Matriculadas', 'Superadas'])
+
+    # Calcular la tasa de rendimiento
+    df['Tasa_rendimiento'] = (df['Superadas'] / df['Matriculadas']) * 100
 
     fig.add_trace(go.Bar(
-        x=success_rates,
-        y=academic_years,
+        x=df['Tasa_rendimiento'],
+        y=df['Curso_academico'],
         orientation='h',
         marker_color='blue',
         opacity=0.7,

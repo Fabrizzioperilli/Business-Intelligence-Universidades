@@ -2,7 +2,7 @@ from dash import callback, Output, Input
 import plotly.graph_objs as go
 from data.queries import calif_all_cualitativa_asignaturas
 from utils.utils import list_to_tuple
-
+import pandas as pd
 
 @callback(
     Output('calificaiones-cuali-all-asig-docente', 'figure'),
@@ -43,6 +43,7 @@ def update_graph_all_calif_cualitativa_docente(titulacion, curso_academico, asig
 
     if not data:
         return fig
+    df = pd.DataFrame(data, columns=['Titulacion', 'Asignatura', 'Calificación', 'N_Alumnos'])
     
     colors = {
         'Sobresaliente': 'blue',
@@ -52,20 +53,15 @@ def update_graph_all_calif_cualitativa_docente(titulacion, curso_academico, asig
         'No presentado': 'gray'
     }
 
-    
-    for calif in colors.keys():
-        filtered_data = [d for d in data if d[2] == calif]
-        if filtered_data:
-            x = [d[1] for d in filtered_data] 
-            y = [d[3] for d in filtered_data]
-            fig.add_trace(
-                go.Bar(
-                    x=x,
-                    y=y,
-                    name=calif,
-                    marker_color=colors[calif],
-                    opacity=0.8
-                )
-            )
+    for calif, color in colors.items():
+        df_filtered = df[df['Calificación'] == calif]
+        if not df_filtered.empty:
+            fig.add_trace(go.Bar(
+                x=df_filtered['Asignatura'],
+                y=df_filtered['N_Alumnos'],
+                name=calif,
+                marker_color=color,
+                opacity=0.7
+            ))
 
     return fig

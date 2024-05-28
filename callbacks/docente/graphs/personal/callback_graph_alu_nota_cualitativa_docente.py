@@ -2,6 +2,7 @@ from dash import callback, Input, Output
 import plotly.graph_objs as go
 from data.queries import alumnos_nota_cualitativa_docente
 from utils.utils import list_to_tuple
+import pandas as pd
 
 @callback(
     Output('graph-alumnos-nota-cualitativa', 'figure'),
@@ -34,30 +35,26 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
     if not data:
         return fig
     
-    cursos = sorted(list(set([x[0] for x in data])))
-    calificaciones = ['No presentado', 'Suspendido', 'Aprobado', 'Notable', 'Sobresaliente']
+    df = pd.DataFrame(data, columns=['Curso Académico', 'Calificación', 'Nº Alumnos'])
     
-    datos_procesados = {curso: {calif: 0 for calif in calificaciones} for curso in cursos}
-
+    # Pivotear el DataFrame para obtener las cantidades por calificación en columnas separadas
+    df_pivot = df.pivot(index='Curso Académico', columns='Calificación', values='Nº Alumnos').fillna(0)
+    
     colors = {
         'No presentado': 'gray',
-        'Suspendido': 'red',
+        'Suspenso': 'red',
         'Aprobado': 'orange',
         'Notable': 'green',
         'Sobresaliente': 'blue'
     }
-
-    for row in data:
-        curso_aca, calif, num_alumnos = row
-        datos_procesados[curso_aca][calif] = num_alumnos
-
-    for calif in calificaciones:
+    
+    for calif in df_pivot.columns:
         fig.add_trace(go.Bar(
-            x=cursos,
-            y=[datos_procesados[curso][calif] for curso in cursos],
+            x=df_pivot.index,
+            y=df_pivot[calif],
             name=calif,
             marker=dict(color=colors[calif]),
-            opacity=0.8
+            opacity=0.7
         ))
     
     return fig

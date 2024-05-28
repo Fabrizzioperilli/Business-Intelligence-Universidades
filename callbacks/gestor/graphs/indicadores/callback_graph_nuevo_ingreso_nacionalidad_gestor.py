@@ -1,6 +1,7 @@
 from dash import Input, Output, callback
 import plotly.graph_objs as go
 from utils.utils import list_to_tuple
+import pandas as pd
 from data.queries import alumnos_nuevo_ingreso_nacionalidad_titulacion, universidades_gestor
 
 @callback(
@@ -15,7 +16,7 @@ def update_graph_gestor(gestor_id, curso_academico, titulaciones):
     
     fig.update_layout(
         barmode='stack',
-        title={'text':'Alumnos de nuevo ingreso por curso académico y nacionalidad','x':0.5},
+        title={'text':'Alumnos de nuevo ingreso por nacionalidad y titulación','x':0.5},
         xaxis_title='Titulaciones',
         yaxis_title='Nº de alumnos de nuevo ingreso',
         showlegend=True,
@@ -38,20 +39,17 @@ def update_graph_gestor(gestor_id, curso_academico, titulaciones):
 
     if not data:
         return fig
-
-    titulacion_labels = list(set([d[0] for d in data]))
-    nacionalidades = list(set([d[1] for d in data]))
     
+    # Convertir data a DataFrame
+    df = pd.DataFrame(data, columns=['Titulacion', 'Nacionalidad', 'Cantidad'])
     
-    for nacionalidad in nacionalidades:
-        y_values = []
-        for titulacion in titulacion_labels:
-            y_value = sum(d[2] for d in data if d[0] == titulacion and d[1] == nacionalidad)
-            y_values.append(y_value)
-        
+    # Pivotear el DataFrame para obtener las cantidades por nacionalidad en columnas separadas
+    df_pivot = df.pivot_table(index='Titulacion', columns='Nacionalidad', values='Cantidad', aggfunc='sum').fillna(0)
+    
+    for nacionalidad in df_pivot.columns:
         fig.add_trace(go.Bar(
-            x=titulacion_labels,
-            y=y_values,
+            x=df_pivot.index,
+            y=df_pivot[nacionalidad],
             name=nacionalidad
         ))
 

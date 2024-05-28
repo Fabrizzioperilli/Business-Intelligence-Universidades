@@ -2,6 +2,7 @@ from dash import callback, Input, Output
 import plotly.graph_objs as go
 from data.queries import alumnos_nota_media_docente
 from utils.utils import list_to_tuple
+import pandas as pd
 
 @callback(
     Output('graph-alumnos-nota-media', 'figure'),
@@ -14,10 +15,10 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
     fig = go.Figure()
     
     fig.update_layout(
-        title={'text': 'Nota media por asignatura y curso académico', 'x': 0.5},
+        title={'text': 'Evolución nota media por asignatura y curso académico', 'x': 0.5},
         xaxis_title='Curso académico',
         yaxis_title='Nota media',
-        xaxis=dict(type='category')  # Ensures the x-axis uses categorical data
+        xaxis=dict(type='category')
     )
     
     if not asignaturas or not curso_academico or not docente_id:
@@ -34,16 +35,14 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
     if not data:
         return fig
     
-    curso_academico = [x[0] for x in data]
-    asignatura = [x[1] for x in data]
-    media_calif = [x[2] for x in data]
-
+    df = pd.DataFrame(data, columns=['Curso Académico', 'Asignatura', 'Nota Media'])
+    
     fig.add_trace(go.Bar(
-        x=curso_academico,
-        y=media_calif,
+        x=df['Curso Académico'],
+        y=df['Nota Media'],
         name='Nota media',
         marker=dict(color='blue'),
-        opacity=0.8
+        opacity=0.7
     ))
 
     return fig

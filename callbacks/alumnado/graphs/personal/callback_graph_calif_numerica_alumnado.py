@@ -1,5 +1,6 @@
 from dash import Input, Output, callback
 import plotly.graph_objs as go
+import pandas as pd
 from data.queries import calif_numerica_asignatura
 from utils.utils import list_to_tuple, random_color
 
@@ -24,7 +25,7 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
             y=1,
             traceorder='normal',
             font=dict(
-                size=10,  # Ajusta el tamaño de la fuente para que sea más pequeño
+                size=10,
             ),
             title='Asignaturas'
         )
@@ -44,16 +45,17 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
     if not data:
         return fig
 
-    subjects = []
-    grades = []
-    for row in data:
-        subject, grade = row
-        subjects.append(subject)
-        grades.append(grade)
+    # Convertir data en un DataFrame
+    df = pd.DataFrame(data, columns=['Asignatura', 'Calificacion'])
+    colors = random_color(len(df))
 
-    colors = random_color(len(subjects))
-    
-    for subject, grade, color in zip(subjects, grades, colors):
-        fig.add_trace(go.Bar(x=[subject], y=[grade], name=subject, marker_color=color, opacity=0.8))
+    for index, row in df.iterrows():
+        fig.add_trace(go.Bar(
+            x=[row['Asignatura']], 
+            y=[row['Calificacion']], 
+            name=row['Asignatura'], 
+            marker_color=colors[index], 
+            opacity=0.7
+        ))
 
     return fig

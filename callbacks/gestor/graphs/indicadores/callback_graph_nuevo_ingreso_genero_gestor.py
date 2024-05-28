@@ -2,6 +2,7 @@ from dash import Input, Output, callback
 import plotly.graph_objs as go
 from utils.utils import list_to_tuple
 from data.queries import alumnos_nuevo_ingreso_genero_titulacion, universidades_gestor
+import pandas as pd
 
 @callback(
     Output('nuevo-ingreso-genero-gestor', 'figure'),
@@ -39,41 +40,38 @@ def update_graph_gestor(gestor_id, curso_academico, titulaciones):
     if not data:
         return fig
     
-    # Parsear los datos
-    titulaciones_dict = {titulacion: {'Hombres': 0, 'Mujeres': 0} for titulacion in titulaciones}
+    df = pd.DataFrame(data, columns=['Curso Académico', 'Titulacion', 'Género', 'Cantidad'])
+    
+    # Asegurarse de que las columnas sean consistentes
+    def map_genero(genero):
+        if 'masculin' in genero.lower():
+            return 'Hombres'
+        elif 'fem' in genero.lower():
+            return 'Mujeres'
+        return genero
 
-    for row in data:
-        tit = row[1]
-        genero = row[2].lower()
-        cantidad = row[3]
+    df['Género'] = df['Género'].map(map_genero)
+    
+    # Pivotear el DataFrame para obtener las cantidades por género en columnas separadas
+    df_pivot = df.pivot_table(index='Titulacion', columns='Género', values='Cantidad', aggfunc='sum').fillna(0)
+    
+    # Asegurarse de que las columnas existen antes de graficar
+    if 'Hombres' in df_pivot.columns:
+        fig.add_trace(go.Bar(
+            x=df_pivot.index,
+            y=df_pivot['Hombres'],
+            name='Hombres',
+            marker_color='blue',
+            opacity=0.7
+        ))
 
-        if 'masculin' in genero:
-            titulaciones_dict[tit]['Hombres'] += cantidad
-        elif 'fem' in genero:
-            titulaciones_dict[tit]['Mujeres'] += cantidad
-        else:
-            continue  # ignorar otros géneros/no especificado
-
-    titulaciones_list = list(titulaciones_dict.keys())
-    hombres = [titulaciones_dict[tit]['Hombres'] for tit in titulaciones_list]
-    mujeres = [titulaciones_dict[tit]['Mujeres'] for tit in titulaciones_list]
-
-    fig.add_trace(go.Bar(
-        x=titulaciones_list,
-        y=hombres,
-        name='Hombres',
-        marker_color='blue',
-        opacity=0.8
-    ))
-
-    fig.add_trace(go.Bar(
-        x=titulaciones_list,
-        y=mujeres,
-        name='Mujeres',
-        marker_color='red',
-        opacity=0.8
-    ))
+    if 'Mujeres' in df_pivot.columns:
+        fig.add_trace(go.Bar(
+            x=df_pivot.index,
+            y=df_pivot['Mujeres'],
+            name='Mujeres',
+            marker_color='red',
+            opacity=0.7
+        ))
 
     return fig
-
-

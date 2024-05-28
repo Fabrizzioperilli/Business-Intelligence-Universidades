@@ -1,5 +1,5 @@
 from dash import html, dcc
-from callbacks.docente.callback_filter_curso_academico_docente import update_filter_curso_academico_docente
+from callbacks.docente.filters.callback_filter_curso_academico_docente import update_filter_curso_academico_docente
 
 def filter_curso_academico_docente():
     return html.Div([

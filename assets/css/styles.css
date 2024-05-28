@@ -98,6 +98,7 @@ body {
   z-index: 1001;
   font-size: 17px;
   margin-top: -10px;
+  margin-bottom: 20px;
   font-weight: bold;
 }
 
@@ -133,6 +134,7 @@ body {
   position: absolute;
   transition: transform 0.3s;
   transform-origin: top;
+  z-index: 3000;
 }
 
 #sidebar-toggle:hover {
@@ -328,3 +330,7 @@ body {
   border-radius: 5px;
 }
 
+#slider-curso-academico-gestor {
+  width: 80%;
+  margin: 0 auto;
+}

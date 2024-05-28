@@ -1,8 +1,7 @@
 from dash import callback, Input, Output
-from data.queries import calif_cualitativa_comparativa
-from data.queries import calif_cualitativa_alumno_asignaturas
-
+from data.queries import calif_cualitativa_comparativa, calif_cualitativa_alumno_asignaturas
 import plotly.graph_objs as go
+import pandas as pd
 from utils.utils import list_to_tuple
 
 @callback(
@@ -17,10 +16,10 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, 
     fig = go.Figure()
 
     fig.update_layout(
-        title={'text': 'Alumnos matriculados por asignatura y calificación por curso académico', 'x': 0.5},
+        title={'text': 'Calificaciones cualitativas general por curso académico', 'x': 0.5},
         barmode='stack',
         xaxis={'title': 'Asignatura', 'tickangle': 45},
-        yaxis={'title': 'Número de Alumnos Matriculados'},
+        yaxis={'title': 'Nº Alumnos Matriculados'},
         showlegend=True,
         legend={'title': 'Calificación'},
         height=600,
@@ -42,35 +41,33 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, 
     if not general_data:
         return fig
 
+    general_df = pd.DataFrame(general_data, columns=['Asignatura', 'Calificacion', 'Numero'])
+    student_df = pd.DataFrame(student_data, columns=['Asignatura', 'Calificacion', 'Numero'])
+
     categories = ['Suspenso', 'No presentado', 'Aprobado', 'Notable', 'Sobresaliente']
-    student_grades = {row[0]: row[1] for row in student_data}
-    all_subjects = sorted(set(row[0] for row in general_data))
-    grade_counts = {subject: {category: 0 for category in categories} for subject in all_subjects}
+    color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'orange', 'Suspenso': 'red', 'No presentado': 'gray'}
 
-    for row in general_data:
-        subject, calif, grade_count = row
-        if calif in grade_counts[subject]:
-            grade_counts[subject][calif] += grade_count
-
-    
-    color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'orange' , 'Suspenso': 'red', 'No presentado': 'gray'}
+    general_pivot = general_df.pivot_table(index='Asignatura', columns='Calificacion', values='Numero', fill_value=0)
+    general_pivot = general_pivot.reindex(columns=categories, fill_value=0)
 
     for category in categories:
-        x = []
-        y = []
-        for subject in all_subjects:
-            x.append(subject)
-            y.append(grade_counts[subject][category] - (1 if category == student_grades.get(subject) else 0))
-        fig.add_trace(go.Bar(x=x, y=y, name=category, marker=dict(color=color_mapping[category]), opacity=0.7))
+        fig.add_trace(go.Bar(
+            x=general_pivot.index,
+            y=general_pivot[category],
+            name=category,
+            marker=dict(color=color_mapping[category]),
+            opacity=0.7
+        ))
 
+    student_counts = student_df['Calificacion'].value_counts()
     for category in categories:
-        x = []
-        y = []
-        for subject in all_subjects:
-            if category == student_grades.get(subject):
-                x.append(subject)
-                y.append(1)
-        if y:
-            fig.add_trace(go.Bar(x=x, y=y, name=category + " (Yo)", marker=dict(color=color_mapping[category], line=dict(color='black', width=2)), opacity=0.9))
+        y = [1 if (subject in student_df['Asignatura'].values) and (student_df[student_df['Asignatura'] == subject]['Calificacion'].values[0] == category) else 0 for subject in general_pivot.index]
+        fig.add_trace(go.Bar(
+            x=general_pivot.index,
+            y=y,
+            name=category + " (Yo)",
+            marker=dict(color=color_mapping[category], line=dict(color='black', width=2)),
+            opacity=1
+        ))
 
     return fig

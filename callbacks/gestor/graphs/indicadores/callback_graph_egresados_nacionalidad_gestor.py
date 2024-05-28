@@ -1,6 +1,7 @@
 from dash import Input, Output, callback
 import plotly.graph_objs as go
 from utils.utils import list_to_tuple
+import pandas as pd
 from data.queries import alumnos_egresados_nacionalidad_titulacion, universidades_gestor
 
 
@@ -16,7 +17,7 @@ def update_graph_gestor(gestor_id, curso_academico, titulaciones):
 
     fig.update_layout(
         barmode='stack',
-        title={'text': 'Alumnos egresados por curso académico y nacionalidad', 'x': 0.5},
+        title={'text': 'Alumnos egresados por nacionalidad y titulación', 'x': 0.5},
         xaxis=dict(title='Titulaciones'),
         yaxis=dict(title='Nº de alumnos egresados'),
         showlegend=True,
@@ -39,36 +40,17 @@ def update_graph_gestor(gestor_id, curso_academico, titulaciones):
 
     if not data:
         return fig
-
-    # Parsear los datos
-    tit_dict = {}
-    nacionalidades = set()
-    for row in data:
-        titulacion = row[0]
-        nacionalidad = row[1]
-        cantidad = row[2]
-        
-        if titulacion not in tit_dict:
-            tit_dict[titulacion] = {}
-        
-        if nacionalidad not in tit_dict[titulacion]:
-            tit_dict[titulacion][nacionalidad] = 0
-
-        tit_dict[titulacion][nacionalidad] += cantidad
-        nacionalidades.add(nacionalidad)
-
-    titulaciones = list(tit_dict.keys())
-    nacionalidades = list(nacionalidades)
-
-   
-
-    for nacionalidad in nacionalidades:
-        cantidades = [tit_dict[tit].get(nacionalidad, 0) for tit in titulaciones]
+    
+    df = pd.DataFrame(data, columns=['Titulacion', 'Nacionalidad', 'Cantidad'])
+    
+    # Pivotear el DataFrame para obtener las cantidades por nacionalidad en columnas separadas
+    df_pivot = df.pivot_table(index='Titulacion', columns='Nacionalidad', values='Cantidad', aggfunc='sum').fillna(0)
+    
+    for nacionalidad in df_pivot.columns:
         fig.add_trace(go.Bar(
-            x=titulaciones,
-            y=cantidades,
-            name=nacionalidad,
+            x=df_pivot.index,
+            y=df_pivot[nacionalidad],
+            name=nacionalidad
         ))
-
 
     return fig

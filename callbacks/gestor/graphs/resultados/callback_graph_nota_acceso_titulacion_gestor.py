@@ -1,5 +1,6 @@
 from dash import Input, Output,callback
 import plotly.graph_objs as go
+import pandas as pd
 from data.queries import nota_media_acceso_titulacion, universidades_gestor
 
 @callback(
@@ -30,24 +31,17 @@ def update_grpht_gestor(gestor_id):
     if not data:
       return fig
     
-    titulation_data = {}
-    for row in data:
-        year, titulation, score = row
-        if titulation not in titulation_data:
-            titulation_data[titulation] = {'years': [], 'scores': []}
-        titulation_data[titulation]['years'].append(year)
-        titulation_data[titulation]['scores'].append(score)
+    # Convertir data en un DataFrame
+    df = pd.DataFrame(data, columns=['year', 'titulation', 'score'])
     
     # Añadir trazos al gráfico para cada titulación
-    for titulation, values in titulation_data.items():
+    for titulation, group in df.groupby('titulation'):
         fig.add_trace(go.Scatter(
-            x=values['years'],
-            y=values['scores'],
+            x=group['year'],
+            y=group['score'],
             mode='lines+markers',
             name=titulation
         ))
-
-    return fig
 
     return fig
 
