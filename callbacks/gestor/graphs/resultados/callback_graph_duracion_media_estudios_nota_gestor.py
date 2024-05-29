@@ -23,7 +23,7 @@ def update_graph_gestor(gestor_id, curso_academico):
         yaxis=dict(range=[0, 10], gridcolor='lightgrey')
     )
     
-    data, _ = get_data(gestor_id, curso_academico)
+    data = get_data(gestor_id, curso_academico)
 
     if data is None:
         return fig
@@ -83,7 +83,7 @@ def toggle_modal(n1, is_open):
 )
 def update_table(n1, gestor_id, curso_academico):
     if n1:
-        data, _ = get_data(gestor_id, curso_academico)
+        data = get_data(gestor_id, curso_academico)
         df = pd.DataFrame(data)
         return dbc.Table.from_dataframe(df.head(30), striped=True, bordered=True, hover=True)
     return ""
@@ -98,7 +98,7 @@ def update_table(n1, gestor_id, curso_academico):
 )
 def generate_csv(n1, gestor_id, curso_academico):
     if n1:
-        data, _ = get_data(gestor_id, curso_academico)
+        data = get_data(gestor_id, curso_academico)
         df = pd.DataFrame(data)
         csv_string = df.to_csv(index=False, encoding='utf-8')
         csv_string = "data:text/csv;charset=utf-8," + csv_string
@@ -127,4 +127,4 @@ def get_data(gestor_id, curso_academico):
     if not data:
         return None, None
     
-    return data, data_universidad[0][0]
+    return data

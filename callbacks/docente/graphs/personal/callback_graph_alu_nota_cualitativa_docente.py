@@ -41,11 +41,11 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
     df_pivot = df.pivot(index='Curso Académico', columns='Calificación', values='Nº Alumnos').fillna(0)
     
     colors = {
-        'No presentado': 'gray',
-        'Suspenso': 'red',
-        'Aprobado': 'orange',
+        'Sobresaliente': 'blue',
         'Notable': 'green',
-        'Sobresaliente': 'blue'
+        'Aprobado': 'orange',
+        'Suspenso': 'red',
+        'No presentado': 'gray',
     }
     
     for calif in df_pivot.columns:

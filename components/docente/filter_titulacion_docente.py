@@ -13,5 +13,6 @@ def filter_titulacion_docente():
           clearable=False,
           optionHeight=50,
           maxHeight=300,
-        )
+        ),
+        dcc.Store(id='selected-titulacion-docente-store', storage_type='local')
     ])

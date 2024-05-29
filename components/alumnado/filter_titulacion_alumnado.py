@@ -12,9 +12,7 @@ def filter_titulacion_alumnado():
           searchable=False,
           clearable=False,
           optionHeight=50,
-          maxHeight=300,
-          persistence=True,
-          persistence_type='local',  # 'local' para persistencia a largo plazo
-          persisted_props=['value']
-        )
+          maxHeight=300
+        ),
+        dcc.Store(id='selected-titulacion-alumnado-store', storage_type='local')
     ])

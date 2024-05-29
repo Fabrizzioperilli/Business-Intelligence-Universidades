@@ -328,3 +328,13 @@ indice,asignatura,calif_numerica,calif,cod_asig,cod_plan,conv,curso_aca,id,plan,
 336,Enfermería en Quirófano,7.3,Notable,5689741EQI,SALUD-Enfermería,Enero,2019/2020,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
 337,Prácticas Externas,9.2,Sobresaliente,5689741PRE,SALUD-Enfermería,Enero,2020/2021,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
 338,Trabajo Fin de Grado,8.0,Notable,5689741TFG,SALUD-Enfermería,Enero,2020/2021,KKK00000,Plan 2018,Universidad de la Laguna,ULL015
+339,Física 1,3.5,Suspenso,7894561FIS,ING-Electrónica,Enero,2018/2019,PPP22222,Plan 2018,Universidad de la Laguna,ULL015
+340,Expresión Gráfica,6.5,Aprobado,7894561EXP,ING-Electrónica,Enero,2018/2019,PPP22222,Plan 2018,Universidad de la Laguna,ULL015
+341,Informática,6.5,Aprobado,7894561INF,ING-Electrónica,Enero,2018/2019,PPP22222,Plan 2018,Universidad de la Laguna,ULL015
+342,Fundamentos Matemáticos,2.2,Suspenso,7894561FMA,ING-Electrónica,Enero,2018/2019,PPP22222,Plan 2018,Universidad de la Laguna,ULL015
+343,Física 2,3.2,Suspenso,7894561FIS,ING-Electrónica,Enero,2018/2019,PPP22222,Plan 2018,Universidad de la Laguna,ULL015
+344,Física 2,5.2,Aprobado,7894561FIS,ING-Electrónica,Julio,2018/2019,PPP22222,Plan 2018,Universidad de la Laguna,ULL015
+345,Métodos Estadísticos,8.5,Notable,7894561MES,ING-Electrónica,Enero,2018/2019,PPP22222,Plan 2018,Universidad de la Laguna,ULL015
+346,Cálculo,4.1,Suspenso,7894561CAL,ING-Electrónica,Enero,2018/2019,PPP22222,Plan 2018,Universidad de la Laguna,ULL015
+347,Fundamentos Químicos en la Ingeniería,5.5,Aprobado,7894561FQU,ING-Electrónica,Enero,2018/2019,PPP22222,Plan 2018,Universidad de la Laguna,ULL015
+348,Organización y Gestión Empresarial,4.5,Suspenso,7894561OGE,ING-Electrónica,Enero,2018/2019,PPP22222,Plan 2018,Universidad de la Laguna,ULL015
