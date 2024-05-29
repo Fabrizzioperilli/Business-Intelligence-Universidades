@@ -13,8 +13,6 @@ def filter_curso_academico_docente():
             options=[],
             value=None,    
             maxHeight=300,
-            persistence=True,
-            persistence_type='session',
         ),
         html.Button('Seleccionar todo', id='select-all-cursos-academicos-docente', className='button-select-all-filter',n_clicks=0),
     ])

@@ -118,7 +118,7 @@ body {
   background: white;
   overflow-y: auto;
   max-height: 900px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .collapse.show .sidebar {

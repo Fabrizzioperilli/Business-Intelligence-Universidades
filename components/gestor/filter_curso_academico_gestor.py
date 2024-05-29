@@ -12,7 +12,5 @@ def filter_curso_academico_gestor():
             options=[],
             value=None,    
             maxHeight=200,
-            persistence=True,
-            persistence_type='session',
         )
     ])

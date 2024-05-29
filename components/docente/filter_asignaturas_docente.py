@@ -14,7 +14,5 @@ def filter_asignaturas_docente():
             options=[],
             maxHeight=300,
             optionHeight=50,
-            persistence=True,
-            persistence_type='local',
         )
     ])

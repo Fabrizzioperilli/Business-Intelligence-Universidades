@@ -37,4 +37,6 @@ def update_filter_asignaturas_matri_alumnado(alumno_id, curso_academico, titulac
         return [], None
     
     opciones_dropdown = [{'label': asignatura[0], 'value': asignatura[0]} for asignatura in data]
-    return opciones_dropdown, opciones_dropdown[0]['value'] if opciones_dropdown else None
+    value = [option['value'] for option in opciones_dropdown] if opciones_dropdown else []
+    
+    return opciones_dropdown, value

@@ -9,12 +9,11 @@ def filter_all_curso_academico_gestor():
             id="curso-all-academico-gestor",
             searchable=True,
             multi=True,
-            clearable=False,
+            clearable=True,
             options=[],
             value=None,    
             maxHeight=200,
-            persistence=True,
-            persistence_type='session',
         ),
         html.Button('Seleccionar todo', id='select-all-curso-academico-button', className='button-select-all-filter', n_clicks=0),
+        dcc.Store(id='curso-all-academico-gestor-store', storage_type='local')
     ])

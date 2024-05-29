@@ -28,6 +28,6 @@ def update_filter_asignaturas_docente(titulacion, curso_academico, n_clicks, exi
         return [], None
 
     opciones_dropdown = [{'label': asignatura[0], 'value': asignatura[0]} for asignatura in data]
-    value = opciones_dropdown[0]['value'] if opciones_dropdown else None
+    value = [option['value'] for option in opciones_dropdown] if opciones_dropdown else []
 
     return opciones_dropdown, value

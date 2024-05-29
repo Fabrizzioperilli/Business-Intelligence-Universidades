@@ -32,6 +32,6 @@ def update_filter_all_curso_academico_gestor(gestor_id, n_clicks, existing_optio
         return [], None
     
     opciones_dropdown = [{'label': curso[0], 'value': curso[0]} for curso in data]
-    value = opciones_dropdown[0]['value'] if opciones_dropdown else None
+    value = [option['value'] for option in opciones_dropdown] if opciones_dropdown else []
 
     return opciones_dropdown, value

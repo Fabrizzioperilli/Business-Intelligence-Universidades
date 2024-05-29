@@ -13,8 +13,6 @@ def filter_titulaciones_gestor():
             options=[],
             value=None,    
             maxHeight=200,
-            persistence=True,
-            persistence_type='session',
         ),
         html.Button('Seleccionar todo', id='select-all-titulaciones-gestor', className='button-select-all-filter', n_clicks=0)
     ])
