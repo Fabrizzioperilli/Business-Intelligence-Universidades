@@ -1,13 +1,13 @@
 from dash import html, callback, Output, Input, State
 from components.common.sidebar import sidebar
-from components.alumnado.graphs_personal_alumnado import graphs_personal_alumnado
-from components.alumnado.graphs_general_alumnado import graphs_general_alumnado
+from components.alumnado.graphs.graphs_personal_alumnado import graphs_personal_alumnado
+from components.alumnado.graphs.graphs_general_alumnado import graphs_general_alumnado
 from components.alumnado.select_alumnado import select_alumnado
 from components.alumnado.resumen_alumnado import resumen_alumnado
 from components.common.filters import filters
-from components.alumnado.filter_curso_academico_alumnado import filter_curso_academico_alumnado
-from components.alumnado.filter_asignaturas_matri_alumnado import filter_asignaturas_matri_alumnado
-from components.alumnado.filter_titulacion_alumnado import filter_titulacion_alumnado
+from components.alumnado.filters.filter_curso_academico_alumnado import filter_curso_academico_alumnado
+from components.alumnado.filters.filter_asignaturas_matri_alumnado import filter_asignaturas_matri_alumnado
+from components.alumnado.filters.filter_titulacion_alumnado import filter_titulacion_alumnado
 from components.alumnado.recomendador_alumnado import recomendador_alumnado
 
 
