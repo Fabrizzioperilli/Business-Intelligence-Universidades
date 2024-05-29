@@ -210,6 +210,7 @@ queries = {
                         CalificacionesFinales c
                     GROUP BY 
                         c.asignatura, c.calif;
+
                     """,
                     # Consulta para obtener la calificación media de los alumnos y la calificación del alumno.
                     "nota_media_general_mi_nota": """
@@ -546,7 +547,7 @@ queries = {
                         FROM egresados e
                         JOIN matricula m ON e.id = m.id AND e.cod_plan = m.cod_plan AND e.cod_universidad = m.cod_universidad
                         JOIN matriculas_por_estudiante mpe ON mpe.id = m.id AND mpe.titulacion = m.titulacion
-                        WHERE e.cod_universidad = 'ULL015'
+                        WHERE e.cod_universidad = :cod_universidad AND e.curso_aca = :curso_academico
                         GROUP BY e.curso_aca, m.titulacion, m.rama
                     )
                     SELECT
