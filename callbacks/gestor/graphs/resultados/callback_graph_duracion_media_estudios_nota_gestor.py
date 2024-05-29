@@ -65,9 +65,9 @@ def update_graph_gestor(gestor_id, curso_academico):
 
 # Función para saber si se ha pulsado el botón de ver datos
 @callback(
-    Output('modal-1', 'is_open'),
-    Input('btn-ver-datos-1', 'n_clicks'),
-    State('modal-1', 'is_open')
+    Output('modal-duracion-media', 'is_open'),
+    Input('btn-ver-datos-duracion-media', 'n_clicks'),
+    State('modal-duracion-media', 'is_open')
 )
 def toggle_modal(n1, is_open):
     if n1:
@@ -76,8 +76,8 @@ def toggle_modal(n1, is_open):
 
 #Función para actualizar la tabla
 @callback(
-    Output('table-container-1', 'children'),
-    Input('btn-ver-datos-1', 'n_clicks'),
+    Output('table-container-duracion-media', 'children'),
+    Input('btn-ver-datos-duracion-media', 'n_clicks'),
     State('selected-gestor-store', 'data'),
     State('slider-curso-academico-gestor', 'value')
 )
@@ -85,14 +85,14 @@ def update_table(n1, gestor_id, curso_academico):
     if n1:
         data = get_data(gestor_id, curso_academico)
         df = pd.DataFrame(data)
-        return dbc.Table.from_dataframe(df.head(30), striped=True, bordered=True, hover=True)
+        return dbc.Table.from_dataframe(df.head(10), striped=True, bordered=True, hover=True)
     return ""
 
 
 # Función para descargar el csv
 @callback(
-    Output('btn-descargar-csv-1', 'href'),
-    Input('btn-ver-datos-1', 'n_clicks'),
+    Output('btn-descargar-csv-duracion-media', 'href'),
+    Input('btn-ver-datos-duracion-media', 'n_clicks'),
     State('selected-gestor-store', 'data'),
     State('slider-curso-academico-gestor', 'value')
 )

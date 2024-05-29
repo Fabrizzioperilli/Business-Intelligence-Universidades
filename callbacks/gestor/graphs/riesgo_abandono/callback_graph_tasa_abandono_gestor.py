@@ -1,7 +1,8 @@
-from dash import callback, Output, Input, State
+from dash import callback, Output, Input, State, html
 import plotly.graph_objs as go
 from data.queries import tasa_abandono_titulacion_gestor, universidades_gestor
 import pandas as pd
+import dash_bootstrap_components as dbc
 from utils.utils import list_to_tuple
 
 @callback(
@@ -21,26 +22,7 @@ def update_graph_gestor(curso_academico, gestor_id):
         legend={'title': 'Titulaciones', 'orientation': 'h', 'y': -0.5}
     )
 
-    if not gestor_id or not curso_academico:
-        return fig
-
-    # Obtener datos de la universidad según el gestor_id
-    data_universidad = universidades_gestor(gestor_id)
-
-    if not data_universidad:
-        return fig
-    
-    try:
-        curso_academico = list_to_tuple(curso_academico)
-    except Exception as e:
-        print("Error:", e)
-        return fig
-
-    data = tasa_abandono_titulacion_gestor(data_universidad[0][0], curso_academico)
-
-    if not data:
-        return fig
-
+    data = get_data(gestor_id, curso_academico)
     df = pd.DataFrame(data, columns=['curso_aca', 'titulacion', 'numero_matriculados', 'numero_abandonos'])
     
     df['tasa_abandono'] = (df['numero_abandonos'] / df['numero_matriculados']) * 100
@@ -56,4 +38,66 @@ def update_graph_gestor(curso_academico, gestor_id):
 
     return fig
     
+@callback(
+    Output('modal-tasa-abandono', 'is_open'),
+    Input('btn-ver-datos-tasa-abandono', 'n_clicks'),
+    State('modal-tasa-abandono', 'is_open')
+)
+def toggle_modal(n1, is_open):
+    if n1:
+        return not is_open
+    return is_open
+
+@callback(
+    Output('table-container-tasa-abandono', 'children'),
+    Input('btn-ver-datos-tasa-abandono', 'n_clicks'),
+    State('selected-gestor-store', 'data'),
+    Input('curso-all-academico-gestor', 'value')
+)
+def update_table(btn, gestor_id, curso_academico):
+    if not btn:
+        return []
+    data = get_data(gestor_id, curso_academico)
+    df = pd.DataFrame(data, columns=['curso_aca', 'titulacion', 'numero_matriculados', 'numero_abandonos'])
+    df['tasa_abandono'] = (df['numero_abandonos'] / df['numero_matriculados']) * 100
+    return dbc.Table.from_dataframe(df.head(10), striped=True, bordered=True, hover=True, responsive=True)
+
+
+@callback(
+    Output('btn-descargar-tasa-abandono', 'href'),
+    Input('btn-ver-datos-tasa-abandono', 'n_clicks'),
+    State('selected-gestor-store', 'data'),
+    Input('curso-all-academico-gestor', 'value')
+)
+def generate_csv(n1, gestor_id, curso_academico):
+    if not n1:
+        return ""
+    data = get_data(gestor_id, curso_academico)
+    df = pd.DataFrame(data, columns=['curso_aca', 'titulacion', 'numero_matriculados', 'numero_abandonos'])
+    df['tasa_abandono'] = (df['numero_abandonos'] / df['numero_matriculados']) * 100
+    csv_string = df.to_csv(index=False, encoding='utf-8')
+    csv_string = "data:text/csv;charset=utf-8," + csv_string
+    return csv_string
+
+
+def get_data(gestor_id, curso_academico):
+    if not gestor_id or not curso_academico:
+        return []
     
+    data_universidad = universidades_gestor(gestor_id)
+    if not data_universidad:
+        return []
+    try:
+        curso_academico = list_to_tuple(curso_academico)
+    except Exception as e:
+        print("Error:", e)
+        return []
+
+    data = tasa_abandono_titulacion_gestor(data_universidad[0][0], curso_academico)
+
+    if not data:
+        return []
+
+    return data
+
+
