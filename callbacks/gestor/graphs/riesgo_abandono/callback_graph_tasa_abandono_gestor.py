@@ -22,15 +22,17 @@ def update_graph_gestor(curso_academico, gestor_id):
         legend={'title': 'Titulaciones', 'orientation': 'h', 'y': -0.5}
     )
 
-    data = get_data(gestor_id, curso_academico)
-    df = pd.DataFrame(data, columns=['curso_aca', 'titulacion', 'numero_matriculados', 'numero_abandonos'])
+    df = get_data(gestor_id, curso_academico)
+
+    if df.empty:
+        return fig
     
     df['tasa_abandono'] = (df['numero_abandonos'] / df['numero_matriculados']) * 100
 
     for titulacion in df['titulacion'].unique():
         df_titulacion = df[df['titulacion'] == titulacion]
         fig.add_trace(go.Scatter(
-            x=df_titulacion['curso_aca'],
+            x=df_titulacion['curso_academico'],
             y=df_titulacion['tasa_abandono'],
             mode='lines+markers',
             name=titulacion
@@ -43,8 +45,8 @@ def update_graph_gestor(curso_academico, gestor_id):
     Input('btn-ver-datos-tasa-abandono', 'n_clicks'),
     State('modal-tasa-abandono', 'is_open')
 )
-def toggle_modal(n1, is_open):
-    if n1:
+def toggle_modal(btn, is_open):
+    if btn:
         return not is_open
     return is_open
 
@@ -56,9 +58,13 @@ def toggle_modal(n1, is_open):
 )
 def update_table(btn, gestor_id, curso_academico):
     if not btn:
-        return []
-    data = get_data(gestor_id, curso_academico)
-    df = pd.DataFrame(data, columns=['curso_aca', 'titulacion', 'numero_matriculados', 'numero_abandonos'])
+        return ""
+    
+    df = get_data(gestor_id, curso_academico)
+
+    if df.empty:
+        return dbc.Alert("No hay datos disponibles", color="info")
+
     df['tasa_abandono'] = (df['numero_abandonos'] / df['numero_matriculados']) * 100
     return dbc.Table.from_dataframe(df.head(10), striped=True, bordered=True, hover=True, responsive=True)
 
@@ -69,11 +75,14 @@ def update_table(btn, gestor_id, curso_academico):
     State('selected-gestor-store', 'data'),
     Input('curso-all-academico-gestor', 'value')
 )
-def generate_csv(n1, gestor_id, curso_academico):
-    if not n1:
+def generate_csv(btn, gestor_id, curso_academico):
+    if not btn:
         return ""
-    data = get_data(gestor_id, curso_academico)
-    df = pd.DataFrame(data, columns=['curso_aca', 'titulacion', 'numero_matriculados', 'numero_abandonos'])
+    df = get_data(gestor_id, curso_academico)
+
+    if df.empty:
+        return ""
+
     df['tasa_abandono'] = (df['numero_abandonos'] / df['numero_matriculados']) * 100
     csv_string = df.to_csv(index=False, encoding='utf-8')
     csv_string = "data:text/csv;charset=utf-8," + csv_string
@@ -81,23 +90,25 @@ def generate_csv(n1, gestor_id, curso_academico):
 
 
 def get_data(gestor_id, curso_academico):
+    empty = pd.DataFrame()
+
     if not gestor_id or not curso_academico:
-        return []
+        return empty
     
     data_universidad = universidades_gestor(gestor_id)
     if not data_universidad:
-        return []
+        return empty
     try:
         curso_academico = list_to_tuple(curso_academico)
     except Exception as e:
         print("Error:", e)
-        return []
+        return empty
 
     data = tasa_abandono_titulacion_gestor(data_universidad[0][0], curso_academico)
 
     if not data:
-        return []
+        return empty
 
-    return data
+    return pd.DataFrame(data, columns=['curso_academico', 'titulacion', 'numero_matriculados', 'numero_abandonos'])
 
 

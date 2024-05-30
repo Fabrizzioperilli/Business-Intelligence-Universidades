@@ -28,7 +28,7 @@ def update_graph_gestor(curso_academico, gestor_id):
     for titulacion in df['titulacion'].unique():
         df_titulacion = df[df['titulacion'] == titulacion]
         fig.add_trace(go.Scatter(
-            x=df_titulacion['curso_aca'],
+            x=df_titulacion['curso_academico'],
             y=df_titulacion['tasa_graduacion'],
             mode='lines+markers',
             name=titulacion
@@ -50,18 +50,17 @@ def toggle_modal(btn, is_open):
 @callback(
     Output('table-container-tasa-graduacion', 'children'),
     Input('btn-ver-datos-tasa-graduacion', 'n_clicks'),
-    State('modal-tasa-graduacion', 'is_open'),
     State('curso-all-academico-gestor', 'value'),
     State('selected-gestor-store', 'data')
 )
-def update_table(n, is_open, curso_academico, gestor_id):
-    if not n:
-        return None
+def update_table(btn, curso_academico, gestor_id):
+    if not btn:
+        return ""
     
     df = get_data(gestor_id, curso_academico)
 
-    if df is None:
-        return None
+    if df.empty:
+        return dbc.Alert("No hay datos disponibles", color="info")
 
     return dbc.Table.from_dataframe(df.head(10), striped=True, bordered=True, hover=True, responsive=True)
 
@@ -87,26 +86,28 @@ def generate_csv(n, curso_academico, gestor_id):
 
 
 def get_data(gestor_id, curso_academico):
+    empty = pd.DataFrame()
+
     if not gestor_id or not curso_academico:
-        return None
+        return empty
     
     try:
         curso_academico = list_to_tuple(curso_academico)
     except Exception as e:
         print("Error:", e)
-        return None
+        return empty
     
     data_universidad = universidades_gestor(gestor_id)
 
     if not data_universidad:
-        return None
+        return empty
     
     data = tasa_graduacion_titulacion_gestor(data_universidad[0][0], curso_academico)
 
     if not data:
-        return None
+        return empty
     
-    df = pd.DataFrame(data, columns=['numero_matriculados', 'numero_egresados', 'curso_aca', 'titulacion'])
+    df = pd.DataFrame(data, columns=['numero_matriculados', 'numero_egresados', 'curso_academico', 'titulacion'])
     df['tasa_graduacion'] = (df['numero_egresados'] / df['numero_matriculados']) * 100
 
     return df

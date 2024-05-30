@@ -23,12 +23,7 @@ def update_graph_gestor(gestor_id, curso_academico):
         yaxis=dict(range=[0, 10], gridcolor='lightgrey')
     )
     
-    data = get_data(gestor_id, curso_academico)
-
-    if data is None:
-        return fig
-
-    df = pd.DataFrame(data, columns=['nota_media', 'titulacion', 'rama', 'curso', 'duracion_media'])
+    df = get_data(gestor_id, curso_academico)
 
     if df.empty:
         return fig
@@ -69,8 +64,8 @@ def update_graph_gestor(gestor_id, curso_academico):
     Input('btn-ver-datos-duracion-media', 'n_clicks'),
     State('modal-duracion-media', 'is_open')
 )
-def toggle_modal(n1, is_open):
-    if n1:
+def toggle_modal(btn, is_open):
+    if btn:
         return not is_open
     return is_open
 
@@ -81,12 +76,15 @@ def toggle_modal(n1, is_open):
     State('selected-gestor-store', 'data'),
     State('slider-curso-academico-gestor', 'value')
 )
-def update_table(n1, gestor_id, curso_academico):
-    if n1:
-        data = get_data(gestor_id, curso_academico)
-        df = pd.DataFrame(data)
-        return dbc.Table.from_dataframe(df.head(10), striped=True, bordered=True, hover=True)
-    return ""
+def update_table(btn, gestor_id, curso_academico):
+    if not btn:
+        return ""
+    
+    df = get_data(gestor_id, curso_academico)
+    if df.empty:
+        return dbc.Alert("No hay datos disponibles", color='info')
+    
+    return dbc.Table.from_dataframe(df.head(10), striped=True, bordered=True, hover=True)
 
 
 # Función para descargar el csv
@@ -96,35 +94,41 @@ def update_table(n1, gestor_id, curso_academico):
     State('selected-gestor-store', 'data'),
     State('slider-curso-academico-gestor', 'value')
 )
-def generate_csv(n1, gestor_id, curso_academico):
-    if n1:
-        data = get_data(gestor_id, curso_academico)
-        df = pd.DataFrame(data)
-        csv_string = df.to_csv(index=False, encoding='utf-8')
-        csv_string = "data:text/csv;charset=utf-8," + csv_string
-        return csv_string
-    return ""
+def generate_csv(btn, gestor_id, curso_academico):
+    if not btn:
+        return ""
+    
+    df = get_data(gestor_id, curso_academico)
+
+    if df.empty:
+        return ""
+
+    csv_string = df.to_csv(index=False, encoding='utf-8')
+    csv_string = "data:text/csv;charset=utf-8," + csv_string
+    return csv_string
 
 
 # Función para obtener los datos
 def get_data(gestor_id, curso_academico):
-    if not gestor_id:
-        return None, None
+    empty = pd.DataFrame()
+    
+    if not gestor_id or not curso_academico:
+        return empty
     
     data_universidad = universidades_gestor(gestor_id)
     
     if not data_universidad:
-        return None, None
+        return empty
     
     curso_academico_label = {i+1: fecha[0] for i, fecha in enumerate(cursos_academicos_egresados(data_universidad[0][0]))}
     curso_academico = curso_academico_label[curso_academico]
 
     if not curso_academico:
-        return None, None
+        return empty
     
     data = duracion_media_estudios_nota_gestor(data_universidad[0][0], curso_academico)
 
     if not data:
-        return None, None
+        return empty
     
-    return data
+    return pd.DataFrame(data, columns=['nota_media', 'titulacion', 'rama', 'curso_academico', 'duracion_media'])
