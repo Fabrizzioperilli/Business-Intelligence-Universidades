@@ -14,6 +14,7 @@ app = dash.Dash(
     external_stylesheets=[
         'assets/css/styles.css',
         'https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-rounded/css/uicons-thin-rounded.css',
+        "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css",
         dbc.themes.BOOTSTRAP
     ], 
     suppress_callback_exceptions=True

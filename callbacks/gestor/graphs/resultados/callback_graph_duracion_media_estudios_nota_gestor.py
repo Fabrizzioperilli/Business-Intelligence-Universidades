@@ -1,4 +1,4 @@
-from dash import callback, Input, Output, State
+from dash import callback, Input, Output, State, dcc
 import plotly.graph_objs as go
 import dash_bootstrap_components as dbc
 import pandas as pd
@@ -55,7 +55,6 @@ def update_graph_gestor(gestor_id, curso_academico):
             text=text,
             hovertemplate='%{text}<extra></extra>'
         ))
-
     return fig
 
 # Función para saber si se ha pulsado el botón de ver datos
