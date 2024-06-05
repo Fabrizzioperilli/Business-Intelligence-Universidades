@@ -10,7 +10,11 @@ def graphs_resultados_gestor():
             dcc.Graph(
                 id='duración-estudios-nota-media-gestor',
                 figure={},
-            )
+            ),
+            create_modal('modal-duracion-estudios', 
+                         'table-container-duracion-estudios', 
+                         'btn-descargar-csv-duracion-estudios', 
+                         'btn-ver-datos-duracion-estudios')
         ], className='graph-item-resultados-gestor'),
         html.Div([
             dcc.Graph(

@@ -1,7 +1,8 @@
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from dash import Input, Output, callback
+import dash_bootstrap_components as dbc
+from dash import Input, Output, callback, State
 from data.queries import duracion_media_estudios_nota_gestor, universidades_gestor
 
 @callback(
@@ -40,6 +41,51 @@ def update_graph_gestor(gestor_id):
     fig.layout.updatemenus[0].buttons[0].args[1]['frame']['duration'] = 1000
 
     return fig
+
+@callback(
+    Output('modal-duracion-estudios', 'is_open'),
+    Input('btn-ver-datos-duracion-estudios', 'n_clicks'),
+    State('modal-duracion-estudios', 'is_open')
+)
+def toggle_modal(btn, is_open):
+    if btn:
+        return not is_open
+    return is_open
+
+@callback(
+    Output('table-container-duracion-estudios', 'children'),
+    Input('btn-ver-datos-duracion-estudios', 'n_clicks'),
+    State('selected-gestor-store', 'data')
+)
+def update_table(btn, gestor_id):
+    if not btn:
+        return ""
+    
+    df = get_data(gestor_id)
+
+    if df.empty:
+        return dbc.Alert("No hay datos disponibles", color="info")
+    
+    return dbc.Table.from_dataframe(df.head(20), striped=True, bordered=True, hover=True)
+
+
+@callback(
+    Output('btn-descargar-csv-duracion-estudios', 'href'),
+    Input('btn-descargar-csv-duracion-estudios', 'n_clicks'),
+    State('selected-gestor-store', 'data')
+)
+def generate_csv(btn, gestor_id):
+    if not btn:
+        return ""
+    
+    df = get_data(gestor_id)
+    
+    if df.empty:
+        return ""
+    
+    csv_string = df.to_csv(index=False, encoding='utf-8')
+    csv_string = "data:text/csv;charset=utf-8," + csv_string
+    return csv_string
 
 
 def get_data(gestor_id):
