@@ -289,10 +289,9 @@ def nota_media_acceso_titulacion(cod_universidad):
     return check_data(query, params)
     
 
-def duracion_media_estudios_nota_gestor(cod_universidad, curso_academico):
+def duracion_media_estudios_nota_gestor(cod_universidad):
     query = queries['gestor']['graphs']['resultados']['duracion_media_estudios_nota_gestor']
-    params = {'cod_universidad': cod_universidad,
-              'curso_academico': curso_academico}
+    params = {'cod_universidad': cod_universidad}
 
     return check_data(query, params)
 

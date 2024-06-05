@@ -18,16 +18,6 @@ def graphs_indicadores_gestor():
     ], className='graph-item-indicadores-gestor'),
     html.Div([
       dcc.Graph(
-          id='egresados-genero-gestor',
-          figure={}
-      ),
-      create_modal('modal-egresados-genero', 
-                  'table-container-egresados-genero', 
-                  'btn-descargar-egresados-genero', 
-                  'btn-ver-datos-egresados-genero')
-    ], className='graph-item-indicadores-gestor'),
-    html.Div([
-      dcc.Graph(
           id='nuevo_ingreso_nacionalidad-gestor',
           figure={},
       ),
@@ -35,6 +25,16 @@ def graphs_indicadores_gestor():
                   'table-container-nuevo-ingreso-nacionalidad', 
                   'btn-descargar-nuevo-ingreso-nacionalidad', 
                   'btn-ver-datos-nuevo-ingreso-nacionalidad'),
+    ], className='graph-item-indicadores-gestor'),
+    html.Div([
+      dcc.Graph(
+          id='egresados-genero-gestor',
+          figure={}
+      ),
+      create_modal('modal-egresados-genero', 
+                  'table-container-egresados-genero', 
+                  'btn-descargar-egresados-genero', 
+                  'btn-ver-datos-egresados-genero')
     ], className='graph-item-indicadores-gestor'),
     html.Div([
       dcc.Graph(

@@ -573,11 +573,12 @@ queries = {
                             m.titulacion,
                             m.rama,
                             AVG(e.nota_media) AS nota_media_curso_aca,
-                            ROUND(AVG(mpe.numero_matriculas)) AS duracion_media_estudios
+                            ROUND(AVG(mpe.numero_matriculas)) AS duracion_media_estudios,
+                            COUNT(DISTINCT e.id) AS numero_alumnos
                         FROM egresados e
                         JOIN matricula m ON e.id = m.id AND e.cod_plan = m.cod_plan AND e.cod_universidad = m.cod_universidad
                         JOIN matriculas_por_estudiante mpe ON mpe.id = m.id AND mpe.titulacion = m.titulacion
-                        WHERE e.cod_universidad = :cod_universidad AND e.curso_aca = :curso_academico
+                        WHERE e.cod_universidad = :cod_universidad
                         GROUP BY e.curso_aca, m.titulacion, m.rama
                     )
                     SELECT
@@ -585,9 +586,11 @@ queries = {
                         titulacion,
                         rama,
                         curso_aca,
-                        duracion_media_estudios
+                        duracion_media_estudios,
+                        numero_alumnos
                     FROM media_notas_y_duracion
                     ORDER BY curso_aca;
+
                     """
           },
           "riesgo_abandono": {
