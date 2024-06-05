@@ -209,6 +209,14 @@ def calif_all_cualitativa_asignaturas(titulacion, curso_academico, asignaturas):
               
     return check_data(query, params)
 
+def calif_media_asignaturas(titulacion, curso_academico, asignaturas):
+    query = queries['docente']['graphs']['general']['calif_media_asignaturas']
+    params = {'titulacion': titulacion,
+               'curso_academico': curso_academico, 
+               'asignaturas': asignaturas}
+              
+    return check_data(query, params)
+
 def gestores_all():
     query = queries['gestor']['common']['gestores_all']
     return check_data(query, {})

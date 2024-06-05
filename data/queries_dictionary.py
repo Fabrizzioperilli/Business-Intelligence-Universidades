@@ -412,7 +412,37 @@ queries = {
                                   li.asignatura IN :asignaturas
                             GROUP BY li.curso_aca, li.asignatura, li.calif
                             ORDER BY li.asignatura;
-                            """
+                            """,
+                    "calif_media_asignaturas": """
+                            SELECT 
+                            subquery.asignatura, 
+                            AVG(subquery.calif_numerica) AS media_calif
+                            FROM (
+                                SELECT 
+                                    l.asignatura, 
+                                    l.id,
+                                    l.curso_aca,
+                                    l.calif_numerica
+                                FROM 
+                                    lineas_actas l
+                                JOIN 
+                                    matricula m ON l.id = m.id AND l.cod_plan = m.cod_plan
+                                WHERE 
+                                    l.asignatura IN :asignaturas AND 
+                                    l.curso_aca = :curso_academico AND 
+                                    m.titulacion = :titulacion
+                                GROUP BY 
+                                    l.asignatura, 
+                                    l.id,
+                                    l.curso_aca,
+                                    l.calif_numerica
+                                ) subquery
+                                GROUP BY 
+                                subquery.asignatura
+                                ORDER BY 
+                                subquery.asignatura;
+                                """
+
           }
       },
   },

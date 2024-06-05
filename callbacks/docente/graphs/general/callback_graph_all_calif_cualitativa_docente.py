@@ -10,16 +10,15 @@ import pandas as pd
     Input('all-cursos-academicos-docente', 'value'),
     Input('all-asignaturas-titulacion-docente', 'value'),
 )
-def update_graph_all_calif_cualitativa_docente(titulacion, curso_academico, asignatura):
+def update_graph_docente(titulacion, curso_academico, asignatura):
 
     fig = go.Figure()
     
     fig.update_layout(
         barmode='stack',
-        title={'text':'Alumnos matriculados por asignatura y relación con la calificación por curso académico', 'x': 0.5},
+        title={'text':'Calificaciones cualitativas por titulación, asignaturas y curso académico ', 'x': 0.5},
         xaxis_title='Asignaturas',
         yaxis_title='Nº Alumnos matriculados',
-        height=700,
         legend=dict(
             x=1,
             y=1,
