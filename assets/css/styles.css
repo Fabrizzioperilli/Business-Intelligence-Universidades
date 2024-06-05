@@ -157,7 +157,8 @@ body {
 .graphs-container-general-alumnado,
 .graphs-container-resultados-gestor,
 .graphs-container-general-docente,
-.graphs-container-riesgo-abandono-gestor {
+.graphs-container-riesgo-abandono-gestor,
+.graphs-container-indicadores-gestor {
   grid-area: main; 
   display: grid;
   width: 100%;
@@ -170,8 +171,7 @@ body {
   margin-bottom: 20px;
 }
 
-.graphs-container-personal-docente,
-.graphs-container-indicadores-gestor {
+.graphs-container-personal-docente {
   grid-area: main; /* Usa el área principal */
   display: grid;
   grid-template-columns: repeat(2, 1fr); 

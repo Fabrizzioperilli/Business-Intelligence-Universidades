@@ -1,0 +1,448 @@
+indice,conv,curso_aca,especialidad,id,nota_bach,nota_def,nota_prue,universidad,cod_universidad
+1,Junio,2017/2018,Tecnología,FPM12345,7.5,7.5,7.5,Universidad de la Laguna,ULL015
+2,Junio,2018/2019,Tecnología,FRA98765,8.5,6.5,6.3,Universidad de la Laguna,ULL015
+3,Junio,2017/2018,Tecnología,VMM14584,8.5,7.5,9.5,Universidad de la Laguna,ULL015
+4,Junio,2017/2018,Tecnología,CVM56789,8.5,6.5,6.3,Universidad de la Laguna,ULL015
+5,Junio,2017/2018,Tecnología,EJM11111,8.5,7.5,9.5,Universidad de la Laguna,ULL015
+6,Junio,2017/2018,Ciencias,KKK00000,8.5,6.5,6.3,Universidad de la Laguna,ULL015
+7,Junio,2018/2019,Tecnología,PPP22222,7.5,6.5,8.5,Universidad de la Laguna,ULL015
+8,Julio,2019/2020,Ciencias Sociales,BvDyW#####,9.83,8.61,6.89,Universidad de la Laguna,ULL015
+9,Julio,2018/2019,Tecnología,qMvQU#####,9.49,5.22,6.49,Universidad de la Laguna,ULL015
+10,Julio,2019/2020,Tecnología,ZImuf#####,5.13,6.16,7.18,Universidad de la Laguna,ULL015
+11,Junio,2018/2019,Tecnología,UAtDN#####,9.34,7.59,5.3,Universidad de la Laguna,ULL015
+12,Junio,2020/2021,Ciencias Sociales,dZdlN#####,5.61,5.03,8.31,Universidad de la Laguna,ULL015
+13,Julio,2018/2019,Tecnología,nhqrk#####,6.64,8.93,8.87,Universidad de la Laguna,ULL015
+14,Septiembre,2019/2020,Ciencias Sociales,kuHwb#####,8.93,8.05,7.44,Universidad de la Laguna,ULL015
+15,Julio,2020/2021,Ciencias Sociales,EnLiV#####,8.54,6.38,8.16,Universidad de la Laguna,ULL015
+16,Junio,2022/2023,Tecnología,WgvcI#####,9.79,9.78,8.21,Universidad de la Laguna,ULL015
+17,Julio,2022/2023,Ciencias Sociales,AmoBo#####,6.82,9.04,5.11,Universidad de la Laguna,ULL015
+18,Junio,2020/2021,Ciencias Sociales,rVHho#####,9.98,6.9,8.68,Universidad de la Laguna,ULL015
+19,Septiembre,2021/2022,Ciencias Sociales,zZBZw#####,7.21,6.88,7.59,Universidad de la Laguna,ULL015
+20,Junio,2018/2019,Tecnología,VisXm#####,5.28,9.37,9.56,Universidad de la Laguna,ULL015
+21,Septiembre,2017/2018,Ciencias Sociales,SoFNG#####,8.64,7.02,5.67,Universidad de la Laguna,ULL015
+22,Julio,2018/2019,Ciencias Sociales,mgCpD#####,6.18,7.33,5.15,Universidad de la Laguna,ULL015
+23,Junio,2017/2018,Artes,SFVMT#####,5.89,9.02,8.56,Universidad de la Laguna,ULL015
+24,Julio,2019/2020,Artes,uGtrV#####,7.07,9.4,9.88,Universidad de la Laguna,ULL015
+25,Septiembre,2019/2020,Ciencias Sociales,rxdKq#####,8.22,7.95,6.62,Universidad de la Laguna,ULL015
+26,Junio,2020/2021,Artes,iwXTY#####,5.02,6.78,9.82,Universidad de la Laguna,ULL015
+27,Junio,2020/2021,Artes,LRbld#####,6.6,5.47,9.41,Universidad de la Laguna,ULL015
+28,Julio,2018/2019,Ciencias Sociales,zeJPg#####,6.08,8.36,9.89,Universidad de la Laguna,ULL015
+29,Julio,2021/2022,Ciencias Sociales,yEDJo#####,6.85,8.73,8.08,Universidad de la Laguna,ULL015
+30,Septiembre,2017/2018,Tecnología,GOvOD#####,9.76,9.51,6.81,Universidad de la Laguna,ULL015
+31,Septiembre,2019/2020,Artes,bcDFL#####,9.57,8.16,9.3,Universidad de la Laguna,ULL015
+32,Septiembre,2022/2023,Ciencias Sociales,xmOSk#####,8.69,8.25,8.78,Universidad de la Laguna,ULL015
+33,Junio,2021/2022,Tecnología,QITfH#####,9.57,7.25,7.76,Universidad de la Laguna,ULL015
+34,Julio,2017/2018,Artes,SiySb#####,8.63,5.06,8.9,Universidad de la Laguna,ULL015
+35,Septiembre,2017/2018,Artes,iiNNi#####,7.39,7.98,6.7,Universidad de la Laguna,ULL015
+36,Septiembre,2020/2021,Ciencias Sociales,upsSH#####,9.9,7.73,10.0,Universidad de la Laguna,ULL015
+37,Junio,2017/2018,Tecnología,pcnXz#####,5.46,8.2,9.87,Universidad de la Laguna,ULL015
+38,Junio,2019/2020,Artes,DDuuE#####,5.04,7.38,8.3,Universidad de la Laguna,ULL015
+39,Julio,2019/2020,Artes,nVbGm#####,7.89,9.97,8.16,Universidad de la Laguna,ULL015
+40,Julio,2019/2020,Ciencias Sociales,klQsW#####,5.08,9.71,7.27,Universidad de la Laguna,ULL015
+41,Julio,2020/2021,Artes,kVrxy#####,7.86,6.56,6.06,Universidad de la Laguna,ULL015
+42,Septiembre,2020/2021,Ciencias Sociales,UCMTH#####,7.28,9.79,9.58,Universidad de la Laguna,ULL015
+43,Septiembre,2019/2020,Tecnología,ixKUh#####,9.4,7.55,8.26,Universidad de la Laguna,ULL015
+44,Junio,2022/2023,Ciencias Sociales,yPamx#####,5.95,8.08,9.78,Universidad de la Laguna,ULL015
+45,Septiembre,2021/2022,Tecnología,cZWXA#####,6.49,9.31,7.96,Universidad de la Laguna,ULL015
+46,Julio,2021/2022,Ciencias Sociales,iKtUd#####,7.73,6.91,6.54,Universidad de la Laguna,ULL015
+47,Julio,2017/2018,Ciencias Sociales,RujdF#####,5.57,6.84,8.15,Universidad de la Laguna,ULL015
+48,Junio,2021/2022,Tecnología,kNyVy#####,6.86,8.06,5.5,Universidad de la Laguna,ULL015
+49,Septiembre,2021/2022,Ciencias Sociales,CkybF#####,9.43,6.03,8.15,Universidad de la Laguna,ULL015
+50,Septiembre,2022/2023,Artes,VlLYv#####,7.85,9.66,9.72,Universidad de la Laguna,ULL015
+51,Julio,2020/2021,Tecnología,chvrl#####,5.82,6.58,9.43,Universidad de la Laguna,ULL015
+52,Julio,2022/2023,Ciencias Sociales,vxgDo#####,5.78,6.96,7.68,Universidad de la Laguna,ULL015
+53,Septiembre,2021/2022,Artes,WMmvh#####,9.67,5.81,8.16,Universidad de la Laguna,ULL015
+54,Julio,2017/2018,Ciencias Sociales,DDLdX#####,6.52,9.83,5.92,Universidad de la Laguna,ULL015
+55,Julio,2022/2023,Tecnología,QZgME#####,8.68,8.16,7.51,Universidad de la Laguna,ULL015
+56,Septiembre,2021/2022,Tecnología,scqKh#####,8.79,9.13,9.58,Universidad de la Laguna,ULL015
+57,Julio,2022/2023,Tecnología,kGsXK#####,9.29,6.93,8.05,Universidad de la Laguna,ULL015
+58,Junio,2018/2019,Ciencias Sociales,mkbqy#####,7.76,6.58,9.13,Universidad de la Laguna,ULL015
+59,Junio,2022/2023,Ciencias Sociales,kuvaS#####,6.42,6.04,6.49,Universidad de la Laguna,ULL015
+60,Julio,2022/2023,Tecnología,KVAXu#####,6.48,7.86,6.95,Universidad de la Laguna,ULL015
+61,Julio,2018/2019,Artes,lrKXw#####,7.21,8.01,5.15,Universidad de la Laguna,ULL015
+62,Septiembre,2021/2022,Tecnología,nijSa#####,5.18,6.13,8.42,Universidad de la Laguna,ULL015
+63,Septiembre,2020/2021,Tecnología,JpmYM#####,7.35,8.91,8.21,Universidad de la Laguna,ULL015
+64,Septiembre,2022/2023,Artes,NvhIE#####,9.08,8.38,5.21,Universidad de la Laguna,ULL015
+65,Junio,2017/2018,Tecnología,aHyil#####,7.86,9.91,6.59,Universidad de la Laguna,ULL015
+66,Junio,2022/2023,Tecnología,rLrGw#####,9.38,9.15,8.88,Universidad de la Laguna,ULL015
+67,Junio,2022/2023,Artes,dMFcp#####,8.77,7.04,6.38,Universidad de la Laguna,ULL015
+68,Junio,2022/2023,Ciencias Sociales,eCifP#####,7.44,6.46,9.14,Universidad de la Laguna,ULL015
+69,Julio,2018/2019,Tecnología,soPps#####,5.92,8.76,9.41,Universidad de la Laguna,ULL015
+70,Julio,2021/2022,Ciencias Sociales,QczVv#####,9.27,7.81,8.21,Universidad de la Laguna,ULL015
+71,Septiembre,2017/2018,Tecnología,kVJAd#####,7.26,8.81,6.52,Universidad de la Laguna,ULL015
+72,Junio,2017/2018,Tecnología,tJbgH#####,7.69,6.0,5.9,Universidad de la Laguna,ULL015
+73,Junio,2021/2022,Ciencias Sociales,VyjwN#####,5.14,8.85,8.58,Universidad de la Laguna,ULL015
+74,Septiembre,2019/2020,Tecnología,BiXvL#####,5.38,6.52,5.12,Universidad de la Laguna,ULL015
+75,Junio,2017/2018,Ciencias Sociales,TRuJM#####,9.17,7.37,7.95,Universidad de la Laguna,ULL015
+76,Junio,2018/2019,Artes,EHPEe#####,9.64,8.2,6.21,Universidad de la Laguna,ULL015
+77,Septiembre,2019/2020,Tecnología,tJIEK#####,5.64,9.68,7.52,Universidad de la Laguna,ULL015
+78,Julio,2020/2021,Ciencias Sociales,Yoytt#####,7.37,8.74,9.73,Universidad de la Laguna,ULL015
+79,Junio,2020/2021,Artes,XwaZG#####,9.92,5.79,5.97,Universidad de la Laguna,ULL015
+80,Junio,2018/2019,Ciencias Sociales,bUgac#####,6.24,6.44,9.45,Universidad de la Laguna,ULL015
+81,Julio,2020/2021,Ciencias Sociales,urBpQ#####,7.9,8.77,7.56,Universidad de la Laguna,ULL015
+82,Septiembre,2018/2019,Artes,IHdUI#####,9.13,5.55,7.95,Universidad de la Laguna,ULL015
+83,Julio,2020/2021,Artes,sGmsu#####,6.9,5.02,5.22,Universidad de la Laguna,ULL015
+84,Julio,2018/2019,Artes,daoJb#####,5.41,5.16,9.29,Universidad de la Laguna,ULL015
+85,Junio,2017/2018,Artes,oVKzi#####,7.49,7.68,9.49,Universidad de la Laguna,ULL015
+86,Junio,2019/2020,Ciencias Sociales,xDOXg#####,9.56,5.77,7.03,Universidad de la Laguna,ULL015
+87,Junio,2017/2018,Artes,WGdOQ#####,8.36,5.16,6.29,Universidad de la Laguna,ULL015
+88,Septiembre,2017/2018,Ciencias Sociales,Uoarj#####,5.13,8.13,8.06,Universidad de la Laguna,ULL015
+89,Septiembre,2017/2018,Ciencias Sociales,aHjjc#####,6.08,5.66,7.17,Universidad de la Laguna,ULL015
+90,Junio,2020/2021,Tecnología,IXhcD#####,5.98,5.89,5.55,Universidad de la Laguna,ULL015
+91,Septiembre,2017/2018,Tecnología,LFpJD#####,8.73,7.22,6.71,Universidad de la Laguna,ULL015
+92,Junio,2019/2020,Tecnología,tZztB#####,5.3,7.91,7.13,Universidad de la Laguna,ULL015
+93,Julio,2021/2022,Artes,fiPRH#####,7.87,9.08,8.88,Universidad de la Laguna,ULL015
+94,Septiembre,2020/2021,Tecnología,EIldE#####,9.89,5.27,6.69,Universidad de la Laguna,ULL015
+95,Junio,2022/2023,Artes,Rkbph#####,8.93,6.02,8.46,Universidad de la Laguna,ULL015
+96,Septiembre,2020/2021,Ciencias Sociales,GFOaD#####,8.65,5.19,6.88,Universidad de la Laguna,ULL015
+97,Julio,2022/2023,Tecnología,XAmvh#####,6.27,8.6,9.62,Universidad de la Laguna,ULL015
+98,Julio,2021/2022,Artes,bUSQU#####,9.0,9.34,9.36,Universidad de la Laguna,ULL015
+99,Julio,2020/2021,Artes,MPUWz#####,8.23,9.53,8.46,Universidad de la Laguna,ULL015
+100,Junio,2020/2021,Ciencias Sociales,IDHHS#####,9.24,6.34,6.73,Universidad de la Laguna,ULL015
+101,Junio,2021/2022,Artes,UVywz#####,8.43,9.59,6.44,Universidad de la Laguna,ULL015
+102,Junio,2017/2018,Tecnología,CxMfV#####,6.7,8.54,8.83,Universidad de la Laguna,ULL015
+103,Junio,2019/2020,Ciencias Sociales,twRiO#####,8.82,5.93,5.81,Universidad de la Laguna,ULL015
+104,Julio,2019/2020,Artes,dCjlJ#####,9.4,6.11,5.13,Universidad de la Laguna,ULL015
+105,Junio,2018/2019,Tecnología,zKsqL#####,9.99,8.73,7.33,Universidad de la Laguna,ULL015
+106,Junio,2018/2019,Artes,zafpw#####,9.94,7.68,5.89,Universidad de la Laguna,ULL015
+107,Junio,2018/2019,Tecnología,OOqNb#####,5.57,7.15,7.29,Universidad de la Laguna,ULL015
+108,Junio,2022/2023,Ciencias Sociales,nlPgG#####,8.28,6.55,9.16,Universidad de la Laguna,ULL015
+109,Junio,2020/2021,Tecnología,JWqTO#####,5.5,5.89,5.72,Universidad de la Laguna,ULL015
+110,Septiembre,2017/2018,Artes,GsIVZ#####,9.45,8.74,6.27,Universidad de la Laguna,ULL015
+111,Julio,2018/2019,Tecnología,aCyqU#####,8.36,5.92,9.46,Universidad de la Laguna,ULL015
+112,Julio,2020/2021,Tecnología,AkAzT#####,9.2,7.2,7.19,Universidad de la Laguna,ULL015
+113,Junio,2020/2021,Artes,wChZB#####,6.18,8.85,8.33,Universidad de la Laguna,ULL015
+114,Junio,2019/2020,Ciencias Sociales,VpLgG#####,8.28,8.06,9.42,Universidad de la Laguna,ULL015
+115,Julio,2017/2018,Artes,tFxCD#####,9.03,6.11,6.3,Universidad de la Laguna,ULL015
+116,Julio,2018/2019,Artes,FXxXy#####,8.37,5.15,8.62,Universidad de la Laguna,ULL015
+117,Julio,2020/2021,Artes,dESkZ#####,9.44,7.18,8.54,Universidad de la Laguna,ULL015
+118,Junio,2022/2023,Artes,hpvRX#####,6.7,7.44,9.09,Universidad de la Laguna,ULL015
+119,Septiembre,2020/2021,Tecnología,HZIqm#####,6.69,5.67,8.9,Universidad de la Laguna,ULL015
+120,Junio,2018/2019,Ciencias Sociales,Nxxds#####,6.67,6.21,5.97,Universidad de la Laguna,ULL015
+121,Junio,2019/2020,Tecnología,ScBGD#####,9.85,9.44,9.13,Universidad de la Laguna,ULL015
+122,Septiembre,2019/2020,Artes,wzkQe#####,6.38,5.31,8.85,Universidad de la Laguna,ULL015
+123,Julio,2018/2019,Artes,AWFTT#####,8.38,9.19,6.8,Universidad de la Laguna,ULL015
+124,Septiembre,2022/2023,Artes,zDYop#####,7.46,6.91,6.44,Universidad de la Laguna,ULL015
+125,Septiembre,2021/2022,Tecnología,gsFia#####,5.3,8.4,7.04,Universidad de la Laguna,ULL015
+126,Julio,2022/2023,Artes,kFEBs#####,6.59,5.56,8.98,Universidad de la Laguna,ULL015
+127,Junio,2019/2020,Tecnología,CCkhV#####,7.34,8.77,5.66,Universidad de la Laguna,ULL015
+128,Julio,2021/2022,Tecnología,KaMIw#####,8.73,6.85,7.42,Universidad de la Laguna,ULL015
+129,Julio,2017/2018,Ciencias Sociales,RhUjD#####,8.17,8.69,6.54,Universidad de la Laguna,ULL015
+130,Septiembre,2017/2018,Artes,HgWXf#####,5.14,5.88,8.11,Universidad de la Laguna,ULL015
+131,Septiembre,2020/2021,Tecnología,CsjGj#####,9.0,7.66,5.19,Universidad de la Laguna,ULL015
+132,Julio,2017/2018,Ciencias Sociales,kICTf#####,7.93,5.53,6.49,Universidad de la Laguna,ULL015
+133,Julio,2022/2023,Ciencias Sociales,IssmW#####,9.12,7.34,7.11,Universidad de la Laguna,ULL015
+134,Septiembre,2018/2019,Tecnología,pChkY#####,7.93,9.52,6.96,Universidad de la Laguna,ULL015
+135,Junio,2022/2023,Artes,rWXdH#####,5.19,6.49,9.18,Universidad de la Laguna,ULL015
+136,Septiembre,2021/2022,Ciencias Sociales,XmHNF#####,9.55,8.61,8.65,Universidad de la Laguna,ULL015
+137,Julio,2022/2023,Tecnología,NtoWQ#####,7.92,8.48,5.51,Universidad de la Laguna,ULL015
+138,Septiembre,2020/2021,Ciencias Sociales,LIWPC#####,5.65,8.79,5.77,Universidad de la Laguna,ULL015
+139,Julio,2021/2022,Artes,cRbFY#####,9.8,7.97,5.29,Universidad de la Laguna,ULL015
+140,Junio,2018/2019,Tecnología,zLkVX#####,9.75,9.8,5.45,Universidad de la Laguna,ULL015
+141,Junio,2022/2023,Artes,NfhMf#####,8.69,9.69,9.35,Universidad de la Laguna,ULL015
+142,Julio,2020/2021,Tecnología,TyqLg#####,7.92,7.06,6.84,Universidad de la Laguna,ULL015
+143,Junio,2022/2023,Ciencias Sociales,SnMqp#####,6.48,7.84,5.47,Universidad de la Laguna,ULL015
+144,Julio,2019/2020,Artes,YGExa#####,7.07,7.13,6.42,Universidad de la Laguna,ULL015
+145,Junio,2018/2019,Artes,lykPG#####,7.77,9.81,5.2,Universidad de la Laguna,ULL015
+146,Septiembre,2022/2023,Artes,LLDIw#####,6.41,8.93,7.58,Universidad de la Laguna,ULL015
+147,Junio,2017/2018,Tecnología,itqLk#####,8.9,5.79,7.92,Universidad de la Laguna,ULL015
+148,Junio,2022/2023,Tecnología,pTovQ#####,6.79,5.07,5.66,Universidad de la Laguna,ULL015
+149,Septiembre,2020/2021,Tecnología,PBgQs#####,6.96,5.76,5.89,Universidad de la Laguna,ULL015
+150,Septiembre,2019/2020,Ciencias Sociales,cjJYf#####,9.3,6.5,8.55,Universidad de la Laguna,ULL015
+151,Junio,2018/2019,Ciencias Sociales,RWQXL#####,6.12,6.46,7.8,Universidad de la Laguna,ULL015
+152,Septiembre,2021/2022,Ciencias Sociales,HyOkE#####,9.73,5.61,8.53,Universidad de la Laguna,ULL015
+153,Junio,2019/2020,Artes,arLAv#####,9.06,9.38,7.31,Universidad de la Laguna,ULL015
+154,Septiembre,2020/2021,Tecnología,XFakz#####,6.51,8.33,7.43,Universidad de la Laguna,ULL015
+155,Junio,2020/2021,Tecnología,AgXqj#####,8.68,9.37,6.43,Universidad de la Laguna,ULL015
+156,Septiembre,2021/2022,Tecnología,LmWhp#####,7.36,9.54,9.65,Universidad de la Laguna,ULL015
+157,Junio,2021/2022,Ciencias Sociales,VWIYh#####,9.45,9.45,6.15,Universidad de la Laguna,ULL015
+158,Julio,2019/2020,Artes,EXrRS#####,5.79,8.39,9.97,Universidad de la Laguna,ULL015
+159,Junio,2018/2019,Ciencias Sociales,zQXhZ#####,9.85,7.58,5.01,Universidad de la Laguna,ULL015
+160,Septiembre,2021/2022,Artes,yugZY#####,9.06,8.5,9.0,Universidad de la Laguna,ULL015
+161,Septiembre,2021/2022,Tecnología,FUCZw#####,7.04,6.19,7.48,Universidad de la Laguna,ULL015
+162,Julio,2021/2022,Artes,sylUo#####,9.48,9.86,6.29,Universidad de la Laguna,ULL015
+163,Junio,2018/2019,Ciencias Sociales,pnBVC#####,7.45,8.8,5.39,Universidad de la Laguna,ULL015
+164,Julio,2018/2019,Artes,myVPp#####,7.18,5.76,7.0,Universidad de la Laguna,ULL015
+165,Julio,2017/2018,Ciencias Sociales,tUNTz#####,8.87,9.54,6.26,Universidad de la Laguna,ULL015
+166,Junio,2022/2023,Tecnología,LSVop#####,8.29,6.69,9.95,Universidad de la Laguna,ULL015
+167,Septiembre,2020/2021,Artes,iTdXK#####,8.48,7.78,5.07,Universidad de la Laguna,ULL015
+168,Julio,2022/2023,Ciencias Sociales,giHGv#####,9.37,7.12,9.46,Universidad de la Laguna,ULL015
+169,Septiembre,2017/2018,Artes,mhidY#####,5.19,7.0,8.79,Universidad de la Laguna,ULL015
+170,Junio,2022/2023,Ciencias Sociales,LHWdY#####,8.74,8.93,5.29,Universidad de la Laguna,ULL015
+171,Junio,2019/2020,Artes,alOAH#####,6.3,5.81,8.24,Universidad de la Laguna,ULL015
+172,Julio,2022/2023,Tecnología,MwvjD#####,6.12,7.92,9.03,Universidad de la Laguna,ULL015
+173,Junio,2021/2022,Artes,qvwSE#####,9.86,8.62,5.43,Universidad de la Laguna,ULL015
+174,Julio,2022/2023,Artes,ESIfx#####,6.21,5.22,5.68,Universidad de la Laguna,ULL015
+175,Septiembre,2022/2023,Tecnología,VrxJg#####,8.05,6.46,6.68,Universidad de la Laguna,ULL015
+176,Julio,2017/2018,Tecnología,LSpTs#####,7.66,7.43,9.24,Universidad de la Laguna,ULL015
+177,Julio,2020/2021,Artes,lgVTl#####,8.96,5.62,7.45,Universidad de la Laguna,ULL015
+178,Junio,2017/2018,Tecnología,dTGig#####,6.15,7.29,9.15,Universidad de la Laguna,ULL015
+179,Julio,2022/2023,Artes,iWDmP#####,9.82,9.7,8.89,Universidad de la Laguna,ULL015
+180,Septiembre,2021/2022,Ciencias Sociales,aXNJx#####,6.54,7.13,8.54,Universidad de la Laguna,ULL015
+181,Septiembre,2017/2018,Tecnología,nbbFu#####,7.24,5.65,8.87,Universidad de la Laguna,ULL015
+182,Julio,2017/2018,Artes,OZCZS#####,6.55,6.45,6.66,Universidad de la Laguna,ULL015
+183,Septiembre,2021/2022,Tecnología,eFLzU#####,7.38,6.74,5.5,Universidad de la Laguna,ULL015
+184,Julio,2020/2021,Tecnología,qUKCr#####,7.92,8.5,7.74,Universidad de la Laguna,ULL015
+185,Julio,2020/2021,Tecnología,kEjft#####,6.71,7.71,6.12,Universidad de la Laguna,ULL015
+186,Septiembre,2019/2020,Artes,EXxTq#####,5.42,6.82,6.88,Universidad de la Laguna,ULL015
+187,Junio,2020/2021,Ciencias Sociales,EZwUN#####,6.57,5.49,6.48,Universidad de la Laguna,ULL015
+188,Septiembre,2018/2019,Ciencias Sociales,SYgzH#####,5.01,7.5,5.65,Universidad de la Laguna,ULL015
+189,Julio,2022/2023,Artes,ABgib#####,5.5,7.6,6.54,Universidad de la Laguna,ULL015
+190,Junio,2017/2018,Ciencias Sociales,xHcGC#####,8.84,8.77,8.61,Universidad de la Laguna,ULL015
+191,Septiembre,2020/2021,Artes,gdYcM#####,6.47,7.76,9.58,Universidad de la Laguna,ULL015
+192,Junio,2017/2018,Artes,mbcju#####,9.69,8.06,5.44,Universidad de la Laguna,ULL015
+193,Junio,2019/2020,Artes,QOXqN#####,5.58,7.79,9.17,Universidad de la Laguna,ULL015
+194,Junio,2022/2023,Tecnología,lDWhG#####,8.24,5.73,7.13,Universidad de la Laguna,ULL015
+195,Julio,2022/2023,Artes,RPWqS#####,5.6,6.36,8.0,Universidad de la Laguna,ULL015
+196,Septiembre,2018/2019,Tecnología,nGHhW#####,8.09,7.94,8.42,Universidad de la Laguna,ULL015
+197,Septiembre,2021/2022,Ciencias Sociales,NlVrS#####,7.47,6.41,8.02,Universidad de la Laguna,ULL015
+198,Julio,2017/2018,Artes,eoFmi#####,9.17,9.66,5.04,Universidad de la Laguna,ULL015
+199,Septiembre,2018/2019,Ciencias Sociales,jBacK#####,6.57,6.91,6.84,Universidad de la Laguna,ULL015
+200,Septiembre,2019/2020,Ciencias Sociales,vUsEo#####,6.29,9.29,6.58,Universidad de la Laguna,ULL015
+201,Junio,2021/2022,Ciencias Sociales,hHFDu#####,8.28,5.84,8.72,Universidad de la Laguna,ULL015
+202,Septiembre,2019/2020,Tecnología,Hsisu#####,5.81,7.95,7.95,Universidad de la Laguna,ULL015
+203,Julio,2019/2020,Ciencias Sociales,CFVAz#####,9.2,8.41,5.84,Universidad de la Laguna,ULL015
+204,Septiembre,2017/2018,Ciencias Sociales,zsLQf#####,5.42,6.18,9.83,Universidad de la Laguna,ULL015
+205,Junio,2018/2019,Artes,PHLTo#####,6.04,8.57,5.53,Universidad de la Laguna,ULL015
+206,Junio,2018/2019,Artes,TTPdT#####,5.83,7.23,5.15,Universidad de la Laguna,ULL015
+207,Julio,2021/2022,Artes,ijCkl#####,9.31,7.27,9.31,Universidad de la Laguna,ULL015
+208,Septiembre,2019/2020,Ciencias Sociales,mMpUC#####,8.0,9.33,8.75,Universidad de la Laguna,ULL015
+209,Septiembre,2017/2018,Ciencias Sociales,FpcjL#####,6.87,9.99,5.18,Universidad de la Laguna,ULL015
+210,Julio,2017/2018,Tecnología,BJIRc#####,6.96,9.17,7.52,Universidad de la Laguna,ULL015
+211,Septiembre,2020/2021,Tecnología,oeqaQ#####,9.81,6.2,7.2,Universidad de la Laguna,ULL015
+212,Junio,2017/2018,Ciencias Sociales,tcwjZ#####,8.21,8.69,5.81,Universidad de la Laguna,ULL015
+213,Julio,2021/2022,Ciencias Sociales,CwQpG#####,5.59,9.3,9.0,Universidad de la Laguna,ULL015
+214,Junio,2017/2018,Artes,fAVnV#####,5.65,6.38,7.58,Universidad de la Laguna,ULL015
+215,Septiembre,2020/2021,Tecnología,hYhTO#####,9.79,6.97,8.89,Universidad de la Laguna,ULL015
+216,Septiembre,2021/2022,Ciencias Sociales,BuEbU#####,8.17,9.79,6.02,Universidad de la Laguna,ULL015
+217,Julio,2018/2019,Ciencias Sociales,IUVeb#####,7.45,6.8,7.05,Universidad de la Laguna,ULL015
+218,Junio,2018/2019,Ciencias Sociales,Gjmjx#####,9.57,8.72,5.86,Universidad de la Laguna,ULL015
+219,Septiembre,2017/2018,Ciencias Sociales,pGmlb#####,6.48,9.61,6.29,Universidad de la Laguna,ULL015
+220,Septiembre,2019/2020,Ciencias Sociales,LcSPR#####,7.23,8.38,5.73,Universidad de la Laguna,ULL015
+221,Septiembre,2019/2020,Ciencias Sociales,zGgtJ#####,7.15,8.87,6.41,Universidad de la Laguna,ULL015
+222,Junio,2020/2021,Artes,JXIhO#####,9.16,7.6,7.08,Universidad de la Laguna,ULL015
+223,Junio,2019/2020,Artes,kXsmS#####,9.05,5.31,7.79,Universidad de la Laguna,ULL015
+224,Julio,2021/2022,Tecnología,wYzJA#####,5.44,8.87,5.53,Universidad de la Laguna,ULL015
+225,Septiembre,2019/2020,Ciencias Sociales,trsUz#####,6.24,7.84,5.09,Universidad de la Laguna,ULL015
+226,Julio,2022/2023,Artes,wYYLf#####,5.24,7.52,9.56,Universidad de la Laguna,ULL015
+227,Septiembre,2019/2020,Artes,nUwYH#####,8.49,9.94,5.7,Universidad de la Laguna,ULL015
+228,Junio,2022/2023,Tecnología,uwhIO#####,7.57,7.73,6.91,Universidad de la Laguna,ULL015
+229,Junio,2019/2020,Artes,BGatz#####,8.95,7.31,7.38,Universidad de la Laguna,ULL015
+230,Septiembre,2020/2021,Artes,ByhOj#####,7.65,8.74,6.58,Universidad de la Laguna,ULL015
+231,Septiembre,2022/2023,Ciencias Sociales,lHDMa#####,9.89,5.97,8.6,Universidad de la Laguna,ULL015
+232,Junio,2019/2020,Artes,xAKFd#####,8.98,6.91,7.29,Universidad de la Laguna,ULL015
+233,Junio,2020/2021,Tecnología,YSdmF#####,5.61,6.43,6.79,Universidad de la Laguna,ULL015
+234,Julio,2021/2022,Ciencias Sociales,xaJTj#####,5.49,9.49,9.7,Universidad de la Laguna,ULL015
+235,Junio,2020/2021,Artes,viTZl#####,7.03,7.34,6.03,Universidad de la Laguna,ULL015
+236,Julio,2021/2022,Ciencias Sociales,qYUgC#####,8.42,9.43,6.26,Universidad de la Laguna,ULL015
+237,Julio,2018/2019,Artes,zEZDg#####,8.57,5.57,8.82,Universidad de la Laguna,ULL015
+238,Junio,2017/2018,Ciencias Sociales,VBWgh#####,8.45,9.02,7.04,Universidad de la Laguna,ULL015
+239,Septiembre,2018/2019,Ciencias Sociales,vgEiU#####,6.03,7.03,9.76,Universidad de la Laguna,ULL015
+240,Julio,2020/2021,Ciencias Sociales,xXGZU#####,9.5,7.89,6.78,Universidad de la Laguna,ULL015
+241,Julio,2017/2018,Tecnología,rOBZt#####,7.9,7.13,9.64,Universidad de la Laguna,ULL015
+242,Julio,2017/2018,Tecnología,ZYhhA#####,6.14,5.37,9.12,Universidad de la Laguna,ULL015
+243,Julio,2019/2020,Artes,QQYrr#####,9.38,6.3,5.49,Universidad de la Laguna,ULL015
+244,Junio,2018/2019,Tecnología,mjine#####,9.4,7.76,8.66,Universidad de la Laguna,ULL015
+245,Julio,2019/2020,Artes,oIrTK#####,6.86,6.71,8.88,Universidad de la Laguna,ULL015
+246,Septiembre,2019/2020,Artes,uGGZj#####,8.03,6.28,9.14,Universidad de la Laguna,ULL015
+247,Julio,2017/2018,Tecnología,lxMtC#####,8.74,5.17,9.8,Universidad de la Laguna,ULL015
+248,Junio,2018/2019,Artes,YqOuF#####,5.54,7.94,8.77,Universidad de la Laguna,ULL015
+249,Junio,2020/2021,Ciencias Sociales,InjQs#####,9.89,5.85,7.15,Universidad de la Laguna,ULL015
+250,Julio,2020/2021,Tecnología,ENaRX#####,8.09,9.78,6.77,Universidad de la Laguna,ULL015
+251,Julio,2020/2021,Tecnología,BvSlY#####,9.76,5.77,9.57,Universidad de la Laguna,ULL015
+252,Septiembre,2017/2018,Ciencias Sociales,zZkOe#####,5.91,5.44,6.08,Universidad de la Laguna,ULL015
+253,Septiembre,2017/2018,Artes,ePVqI#####,5.28,8.8,7.98,Universidad de la Laguna,ULL015
+254,Junio,2020/2021,Tecnología,rPGDH#####,8.39,9.15,8.64,Universidad de la Laguna,ULL015
+255,Septiembre,2017/2018,Tecnología,bVTdA#####,9.92,9.56,6.79,Universidad de la Laguna,ULL015
+256,Junio,2019/2020,Artes,lRbIo#####,8.59,7.78,5.06,Universidad de la Laguna,ULL015
+257,Julio,2019/2020,Artes,TRmRn#####,6.44,9.87,5.82,Universidad de la Laguna,ULL015
+258,Septiembre,2020/2021,Ciencias Sociales,ofuWZ#####,7.46,5.92,9.49,Universidad de la Laguna,ULL015
+259,Septiembre,2019/2020,Ciencias Sociales,aLWbP#####,5.55,7.65,8.51,Universidad de la Laguna,ULL015
+260,Septiembre,2021/2022,Ciencias Sociales,bIYZY#####,7.91,7.93,9.06,Universidad de la Laguna,ULL015
+261,Julio,2018/2019,Ciencias Sociales,oOHTv#####,6.76,8.38,8.06,Universidad de la Laguna,ULL015
+262,Julio,2019/2020,Artes,jdgBH#####,9.8,6.1,7.62,Universidad de la Laguna,ULL015
+263,Junio,2021/2022,Tecnología,QIChg#####,6.25,8.58,9.18,Universidad de la Laguna,ULL015
+264,Septiembre,2021/2022,Ciencias Sociales,Tgmzd#####,5.07,7.51,6.3,Universidad de la Laguna,ULL015
+265,Julio,2019/2020,Ciencias Sociales,jgBWZ#####,9.95,7.85,5.68,Universidad de la Laguna,ULL015
+266,Septiembre,2022/2023,Tecnología,aByNg#####,8.43,5.34,5.24,Universidad de la Laguna,ULL015
+267,Junio,2017/2018,Artes,aSlhX#####,8.59,7.03,6.44,Universidad de la Laguna,ULL015
+268,Septiembre,2017/2018,Ciencias Sociales,ZAodn#####,9.07,6.75,9.91,Universidad de la Laguna,ULL015
+269,Septiembre,2021/2022,Artes,cteZY#####,9.27,9.92,5.43,Universidad de la Laguna,ULL015
+270,Junio,2019/2020,Ciencias Sociales,kEXcc#####,7.83,9.95,9.63,Universidad de la Laguna,ULL015
+271,Septiembre,2019/2020,Ciencias Sociales,DglKl#####,5.88,9.09,8.13,Universidad de la Laguna,ULL015
+272,Julio,2019/2020,Tecnología,FMVwj#####,5.43,6.23,9.87,Universidad de la Laguna,ULL015
+273,Julio,2021/2022,Artes,zwUJo#####,6.66,8.55,7.21,Universidad de la Laguna,ULL015
+274,Septiembre,2022/2023,Ciencias Sociales,kLmLI#####,7.92,6.36,9.94,Universidad de la Laguna,ULL015
+275,Julio,2022/2023,Ciencias Sociales,sBkWs#####,5.97,6.24,5.96,Universidad de la Laguna,ULL015
+276,Junio,2018/2019,Tecnología,IaClN#####,8.38,5.34,6.64,Universidad de la Laguna,ULL015
+277,Julio,2022/2023,Ciencias Sociales,iiKBo#####,9.78,5.42,6.86,Universidad de la Laguna,ULL015
+278,Julio,2021/2022,Artes,rZeIC#####,6.14,6.67,7.11,Universidad de la Laguna,ULL015
+279,Julio,2022/2023,Tecnología,GvaWB#####,9.91,5.17,8.2,Universidad de la Laguna,ULL015
+280,Septiembre,2021/2022,Artes,TlUca#####,5.97,5.06,5.29,Universidad de la Laguna,ULL015
+281,Junio,2021/2022,Artes,cMpaC#####,8.02,6.98,7.16,Universidad de la Laguna,ULL015
+282,Septiembre,2018/2019,Tecnología,crxVH#####,9.87,9.69,9.05,Universidad de la Laguna,ULL015
+283,Septiembre,2020/2021,Artes,aWOli#####,7.76,8.09,8.83,Universidad de la Laguna,ULL015
+284,Junio,2017/2018,Artes,VdvoU#####,7.22,6.23,8.18,Universidad de la Laguna,ULL015
+285,Julio,2021/2022,Tecnología,InXNL#####,5.13,9.36,8.56,Universidad de la Laguna,ULL015
+286,Septiembre,2019/2020,Tecnología,teMFW#####,7.62,8.71,7.19,Universidad de la Laguna,ULL015
+287,Septiembre,2019/2020,Ciencias Sociales,TddkT#####,8.19,7.39,5.23,Universidad de la Laguna,ULL015
+288,Julio,2017/2018,Tecnología,WTtPt#####,5.26,9.1,8.35,Universidad de la Laguna,ULL015
+289,Septiembre,2019/2020,Ciencias Sociales,Tdkdd#####,5.04,6.36,8.87,Universidad de la Laguna,ULL015
+290,Septiembre,2021/2022,Ciencias Sociales,HHnHu#####,9.89,6.33,9.92,Universidad de la Laguna,ULL015
+291,Junio,2020/2021,Ciencias Sociales,hbqIn#####,8.41,8.54,6.88,Universidad de la Laguna,ULL015
+292,Septiembre,2022/2023,Artes,WAMZG#####,5.15,9.33,7.26,Universidad de la Laguna,ULL015
+293,Septiembre,2020/2021,Artes,fwOjo#####,8.39,9.02,7.63,Universidad de la Laguna,ULL015
+294,Junio,2019/2020,Tecnología,kxsqY#####,6.37,7.52,7.94,Universidad de la Laguna,ULL015
+295,Septiembre,2022/2023,Tecnología,UxKnn#####,5.02,9.79,5.07,Universidad de la Laguna,ULL015
+296,Julio,2022/2023,Ciencias Sociales,ZuPUX#####,7.08,8.3,9.22,Universidad de la Laguna,ULL015
+297,Junio,2020/2021,Artes,iROyz#####,7.29,9.9,6.33,Universidad de la Laguna,ULL015
+298,Junio,2017/2018,Tecnología,QWBkj#####,7.18,9.62,8.46,Universidad de la Laguna,ULL015
+299,Junio,2019/2020,Ciencias Sociales,gNFfm#####,7.41,6.01,8.56,Universidad de la Laguna,ULL015
+300,Junio,2021/2022,Tecnología,QlEiD#####,8.14,7.75,9.54,Universidad de la Laguna,ULL015
+301,Septiembre,2017/2018,Tecnología,PrRcn#####,6.39,8.54,9.83,Universidad de la Laguna,ULL015
+302,Junio,2018/2019,Tecnología,LrKiX#####,6.22,7.06,8.36,Universidad de la Laguna,ULL015
+303,Septiembre,2017/2018,Tecnología,zZXEf#####,8.1,9.84,8.82,Universidad de la Laguna,ULL015
+304,Julio,2019/2020,Artes,ErWPU#####,8.39,6.11,9.09,Universidad de la Laguna,ULL015
+305,Septiembre,2021/2022,Artes,Wflzm#####,6.16,5.92,5.12,Universidad de la Laguna,ULL015
+306,Septiembre,2018/2019,Artes,ZhivN#####,9.54,5.0,8.46,Universidad de la Laguna,ULL015
+307,Septiembre,2020/2021,Artes,KlFaQ#####,7.89,7.15,9.22,Universidad de la Laguna,ULL015
+308,Junio,2018/2019,Ciencias Sociales,vGxkn#####,7.18,6.72,7.98,Universidad de la Laguna,ULL015
+309,Septiembre,2020/2021,Artes,OumFW#####,9.58,5.33,6.51,Universidad de la Laguna,ULL015
+310,Septiembre,2019/2020,Artes,zvDhC#####,6.46,6.45,7.3,Universidad de la Laguna,ULL015
+311,Septiembre,2021/2022,Artes,iEUaP#####,7.07,7.66,5.91,Universidad de la Laguna,ULL015
+312,Junio,2021/2022,Artes,TaUJS#####,5.51,9.74,8.35,Universidad de la Laguna,ULL015
+313,Junio,2019/2020,Artes,QzVJu#####,9.08,5.54,7.74,Universidad de la Laguna,ULL015
+314,Junio,2019/2020,Tecnología,szjvL#####,8.21,7.17,6.81,Universidad de la Laguna,ULL015
+315,Septiembre,2022/2023,Artes,KGXDb#####,8.52,7.66,9.7,Universidad de la Laguna,ULL015
+316,Julio,2017/2018,Ciencias Sociales,ABdIO#####,8.23,5.6,8.52,Universidad de la Laguna,ULL015
+317,Septiembre,2018/2019,Artes,kbkdM#####,5.14,8.03,6.5,Universidad de la Laguna,ULL015
+318,Julio,2022/2023,Ciencias Sociales,cNjEj#####,5.28,6.64,7.6,Universidad de la Laguna,ULL015
+319,Junio,2022/2023,Tecnología,QTWQB#####,6.52,6.18,6.08,Universidad de la Laguna,ULL015
+320,Septiembre,2019/2020,Artes,eHlBL#####,8.92,7.46,9.21,Universidad de la Laguna,ULL015
+321,Julio,2021/2022,Tecnología,xvSar#####,8.23,8.59,5.09,Universidad de la Laguna,ULL015
+322,Septiembre,2022/2023,Artes,YREnr#####,7.72,5.56,8.96,Universidad de la Laguna,ULL015
+323,Septiembre,2018/2019,Tecnología,pAoCt#####,6.82,7.11,7.35,Universidad de la Laguna,ULL015
+324,Junio,2017/2018,Artes,xvYWP#####,5.55,5.23,5.54,Universidad de la Laguna,ULL015
+325,Julio,2021/2022,Ciencias Sociales,ORToA#####,8.73,9.18,7.05,Universidad de la Laguna,ULL015
+326,Septiembre,2017/2018,Tecnología,IsZVG#####,7.69,9.35,5.81,Universidad de la Laguna,ULL015
+327,Septiembre,2019/2020,Tecnología,YgRld#####,7.73,7.86,7.06,Universidad de la Laguna,ULL015
+328,Junio,2019/2020,Artes,qhCXI#####,6.3,5.06,7.15,Universidad de la Laguna,ULL015
+329,Junio,2018/2019,Ciencias Sociales,dnnbn#####,5.79,6.49,9.6,Universidad de la Laguna,ULL015
+330,Junio,2018/2019,Ciencias Sociales,mZshR#####,5.48,6.97,5.26,Universidad de la Laguna,ULL015
+331,Septiembre,2018/2019,Artes,IVHBl#####,5.21,5.2,7.55,Universidad de la Laguna,ULL015
+332,Septiembre,2017/2018,Artes,PFFcR#####,5.71,5.99,8.8,Universidad de la Laguna,ULL015
+333,Julio,2021/2022,Tecnología,IjzsO#####,6.72,6.68,9.33,Universidad de la Laguna,ULL015
+334,Septiembre,2019/2020,Ciencias Sociales,jwaUM#####,5.85,5.44,5.19,Universidad de la Laguna,ULL015
+335,Junio,2018/2019,Tecnología,MLhhG#####,8.07,6.0,6.92,Universidad de la Laguna,ULL015
+336,Junio,2018/2019,Ciencias Sociales,CpqiM#####,7.83,6.43,9.8,Universidad de la Laguna,ULL015
+337,Junio,2022/2023,Ciencias Sociales,nbQFG#####,8.99,5.39,5.24,Universidad de la Laguna,ULL015
+338,Junio,2019/2020,Tecnología,MkbFh#####,7.66,6.58,9.5,Universidad de la Laguna,ULL015
+339,Septiembre,2019/2020,Ciencias Sociales,UhnYS#####,9.79,6.56,9.95,Universidad de la Laguna,ULL015
+340,Septiembre,2022/2023,Artes,zLZTd#####,8.92,5.22,8.54,Universidad de la Laguna,ULL015
+341,Septiembre,2017/2018,Ciencias Sociales,pKGyk#####,7.91,9.65,7.9,Universidad de la Laguna,ULL015
+342,Junio,2018/2019,Artes,LQrFj#####,8.25,9.95,6.23,Universidad de la Laguna,ULL015
+343,Septiembre,2020/2021,Artes,mzVlY#####,6.82,8.46,8.7,Universidad de la Laguna,ULL015
+344,Junio,2022/2023,Tecnología,JWuey#####,8.0,9.91,6.49,Universidad de la Laguna,ULL015
+345,Septiembre,2017/2018,Artes,oLwtq#####,7.98,6.2,5.98,Universidad de la Laguna,ULL015
+346,Julio,2018/2019,Ciencias Sociales,zpugf#####,6.36,8.13,9.74,Universidad de la Laguna,ULL015
+347,Septiembre,2019/2020,Artes,eDfbk#####,6.07,9.12,6.31,Universidad de la Laguna,ULL015
+348,Julio,2020/2021,Ciencias Sociales,vJYZO#####,8.87,5.44,9.65,Universidad de la Laguna,ULL015
+349,Junio,2019/2020,Artes,BJLtf#####,9.25,9.37,6.96,Universidad de la Laguna,ULL015
+350,Julio,2021/2022,Artes,pPeNK#####,6.01,8.37,7.07,Universidad de la Laguna,ULL015
+351,Junio,2018/2019,Artes,mJflR#####,5.83,5.18,6.74,Universidad de la Laguna,ULL015
+352,Julio,2022/2023,Artes,KmKav#####,8.66,5.22,6.6,Universidad de la Laguna,ULL015
+353,Julio,2021/2022,Ciencias Sociales,cyaxx#####,9.96,5.93,8.3,Universidad de la Laguna,ULL015
+354,Junio,2019/2020,Tecnología,pWmwx#####,9.66,5.75,5.42,Universidad de la Laguna,ULL015
+355,Septiembre,2017/2018,Artes,peohA#####,9.14,5.11,5.0,Universidad de la Laguna,ULL015
+356,Septiembre,2021/2022,Artes,KNnhQ#####,6.44,8.34,7.92,Universidad de la Laguna,ULL015
+357,Septiembre,2021/2022,Tecnología,nwhsL#####,6.83,9.99,7.91,Universidad de la Laguna,ULL015
+358,Junio,2022/2023,Tecnología,amUlb#####,7.04,6.31,9.56,Universidad de la Laguna,ULL015
+359,Julio,2021/2022,Ciencias Sociales,jiwuX#####,9.88,8.23,7.65,Universidad de la Laguna,ULL015
+360,Junio,2019/2020,Artes,NEnyc#####,9.95,9.32,7.3,Universidad de la Laguna,ULL015
+361,Julio,2021/2022,Tecnología,FNEyy#####,5.85,5.96,9.5,Universidad de la Laguna,ULL015
+362,Septiembre,2017/2018,Tecnología,sFcAR#####,8.3,8.28,7.34,Universidad de la Laguna,ULL015
+363,Septiembre,2021/2022,Artes,HDhYT#####,5.17,7.53,5.78,Universidad de la Laguna,ULL015
+364,Julio,2019/2020,Tecnología,mMEQl#####,8.15,5.41,5.3,Universidad de la Laguna,ULL015
+365,Septiembre,2017/2018,Tecnología,URnOd#####,9.08,9.06,8.24,Universidad de la Laguna,ULL015
+366,Julio,2018/2019,Tecnología,WXUWd#####,8.23,9.26,6.42,Universidad de la Laguna,ULL015
+367,Septiembre,2020/2021,Ciencias Sociales,mTPqn#####,8.98,7.2,6.78,Universidad de la Laguna,ULL015
+368,Julio,2022/2023,Ciencias Sociales,HGKMX#####,9.47,7.72,6.12,Universidad de la Laguna,ULL015
+369,Junio,2019/2020,Artes,bfYLe#####,8.8,9.53,9.53,Universidad de la Laguna,ULL015
+370,Junio,2021/2022,Ciencias Sociales,Pogfl#####,9.21,6.88,6.52,Universidad de la Laguna,ULL015
+371,Junio,2017/2018,Tecnología,YkLFS#####,6.71,7.85,7.72,Universidad de la Laguna,ULL015
+372,Julio,2022/2023,Artes,OKecD#####,7.6,7.14,5.35,Universidad de la Laguna,ULL015
+373,Septiembre,2018/2019,Tecnología,PdIwa#####,5.91,7.57,9.0,Universidad de la Laguna,ULL015
+374,Julio,2022/2023,Ciencias Sociales,IOprH#####,6.98,9.91,9.57,Universidad de la Laguna,ULL015
+375,Septiembre,2018/2019,Artes,LDRQH#####,5.41,8.75,5.78,Universidad de la Laguna,ULL015
+376,Julio,2020/2021,Artes,TfmLL#####,5.32,6.86,7.81,Universidad de la Laguna,ULL015
+377,Julio,2018/2019,Ciencias Sociales,enzkG#####,9.93,9.19,9.65,Universidad de la Laguna,ULL015
+378,Junio,2018/2019,Artes,JCMkf#####,7.66,7.11,6.2,Universidad de la Laguna,ULL015
+379,Junio,2017/2018,Tecnología,gaPuY#####,5.12,6.03,6.03,Universidad de la Laguna,ULL015
+380,Julio,2019/2020,Ciencias Sociales,BycRR#####,5.5,8.14,6.96,Universidad de la Laguna,ULL015
+381,Junio,2017/2018,Tecnología,UFLXo#####,6.7,8.46,7.94,Universidad de la Laguna,ULL015
+382,Junio,2020/2021,Tecnología,hxbAI#####,5.89,7.15,6.47,Universidad de la Laguna,ULL015
+383,Septiembre,2018/2019,Artes,EKEix#####,8.46,9.71,5.16,Universidad de la Laguna,ULL015
+384,Junio,2022/2023,Ciencias Sociales,HSCdO#####,8.27,7.95,8.53,Universidad de la Laguna,ULL015
+385,Julio,2017/2018,Ciencias Sociales,XQFvv#####,5.64,7.7,7.42,Universidad de la Laguna,ULL015
+386,Julio,2022/2023,Artes,LYulm#####,9.11,5.53,9.74,Universidad de la Laguna,ULL015
+387,Junio,2018/2019,Artes,nbQTP#####,7.23,6.41,6.24,Universidad de la Laguna,ULL015
+388,Junio,2018/2019,Ciencias Sociales,oirwo#####,5.83,6.43,5.9,Universidad de la Laguna,ULL015
+389,Junio,2019/2020,Artes,yycPL#####,5.7,9.02,9.93,Universidad de la Laguna,ULL015
+390,Septiembre,2020/2021,Ciencias Sociales,bBrgX#####,7.7,7.16,6.43,Universidad de la Laguna,ULL015
+391,Julio,2022/2023,Ciencias Sociales,nwOjw#####,8.88,8.63,7.45,Universidad de la Laguna,ULL015
+392,Julio,2019/2020,Artes,LRhKB#####,5.29,8.58,6.58,Universidad de la Laguna,ULL015
+393,Julio,2020/2021,Artes,lUyuo#####,9.58,6.73,5.3,Universidad de la Laguna,ULL015
+394,Junio,2017/2018,Tecnología,SLdRJ#####,8.6,9.68,9.16,Universidad de la Laguna,ULL015
+395,Junio,2020/2021,Tecnología,fFvHt#####,7.34,5.13,7.55,Universidad de la Laguna,ULL015
+396,Junio,2022/2023,Ciencias Sociales,LrfAY#####,9.27,5.13,6.16,Universidad de la Laguna,ULL015
+397,Septiembre,2018/2019,Tecnología,YmdVV#####,5.59,8.49,9.7,Universidad de la Laguna,ULL015
+398,Septiembre,2022/2023,Tecnología,aFSEG#####,8.7,8.02,6.61,Universidad de la Laguna,ULL015
+399,Junio,2021/2022,Tecnología,TYbIl#####,5.28,9.6,8.21,Universidad de la Laguna,ULL015
+400,Junio,2018/2019,Tecnología,GdiAD#####,5.47,7.89,8.85,Universidad de la Laguna,ULL015
+401,Septiembre,2018/2019,Tecnología,TFZCN#####,5.83,8.46,6.19,Universidad de la Laguna,ULL015
+402,Septiembre,2019/2020,Artes,rDdsK#####,6.55,5.38,6.99,Universidad de la Laguna,ULL015
+403,Septiembre,2019/2020,Ciencias Sociales,ERDRK#####,5.99,9.08,9.73,Universidad de la Laguna,ULL015
+404,Septiembre,2020/2021,Artes,Klacn#####,7.24,5.09,9.69,Universidad de la Laguna,ULL015
+405,Julio,2022/2023,Ciencias Sociales,tjZkI#####,8.21,7.83,6.99,Universidad de la Laguna,ULL015
+406,Julio,2018/2019,Artes,NNsmU#####,7.04,6.49,8.7,Universidad de la Laguna,ULL015
+407,Julio,2020/2021,Artes,oEPDO#####,5.18,8.46,7.75,Universidad de la Laguna,ULL015
+408,Septiembre,2019/2020,Tecnología,AtJyU#####,7.68,9.91,8.31,Universidad de la Laguna,ULL015
+409,Julio,2018/2019,Tecnología,yOICV#####,9.45,9.51,7.61,Universidad de la Laguna,ULL015
+410,Junio,2018/2019,Tecnología,oUEJF#####,6.35,7.36,5.67,Universidad de la Laguna,ULL015
+411,Septiembre,2017/2018,Artes,qNptg#####,5.67,8.36,6.57,Universidad de la Laguna,ULL015
+412,Julio,2021/2022,Ciencias Sociales,HUxZt#####,5.53,8.83,6.56,Universidad de la Laguna,ULL015
+413,Junio,2017/2018,Tecnología,oKpZQ#####,8.5,9.85,6.13,Universidad de la Laguna,ULL015
+414,Junio,2021/2022,Ciencias Sociales,OMYvY#####,9.13,9.33,5.98,Universidad de la Laguna,ULL015
+415,Junio,2020/2021,Artes,vgzmd#####,5.11,7.35,8.85,Universidad de la Laguna,ULL015
+416,Julio,2019/2020,Tecnología,QbYSP#####,8.3,6.14,8.19,Universidad de la Laguna,ULL015
+417,Septiembre,2022/2023,Ciencias Sociales,yckfk#####,6.01,8.81,6.2,Universidad de la Laguna,ULL015
+418,Julio,2020/2021,Artes,nzTWU#####,7.9,9.03,8.59,Universidad de la Laguna,ULL015
+419,Junio,2018/2019,Tecnología,okgUX#####,9.37,5.59,8.77,Universidad de la Laguna,ULL015
+420,Septiembre,2022/2023,Tecnología,cdSJJ#####,9.58,9.92,5.89,Universidad de la Laguna,ULL015
+421,Septiembre,2022/2023,Ciencias Sociales,AIgPj#####,6.0,9.98,8.78,Universidad de la Laguna,ULL015
+422,Julio,2018/2019,Ciencias Sociales,yMzEZ#####,8.94,6.96,9.45,Universidad de la Laguna,ULL015
+423,Septiembre,2017/2018,Artes,qFIaL#####,7.11,8.27,9.15,Universidad de la Laguna,ULL015
+424,Septiembre,2017/2018,Ciencias Sociales,sUJOF#####,6.27,5.58,8.56,Universidad de la Laguna,ULL015
+425,Septiembre,2018/2019,Artes,euHoh#####,5.98,8.49,5.21,Universidad de la Laguna,ULL015
+426,Junio,2017/2018,Artes,OTknp#####,6.67,8.88,8.01,Universidad de la Laguna,ULL015
+427,Septiembre,2021/2022,Tecnología,SAZtG#####,5.08,8.0,6.14,Universidad de la Laguna,ULL015
+428,Junio,2019/2020,Ciencias Sociales,WsWHW#####,8.87,5.92,9.84,Universidad de la Laguna,ULL015
+429,Julio,2017/2018,Artes,iuKzi#####,8.18,5.51,6.92,Universidad de la Laguna,ULL015
+430,Julio,2019/2020,Artes,RDTaH#####,8.77,9.62,9.08,Universidad de la Laguna,ULL015
+431,Septiembre,2021/2022,Artes,lsjmM#####,7.5,6.25,8.72,Universidad de la Laguna,ULL015
+432,Septiembre,2022/2023,Ciencias Sociales,tEXda#####,5.48,8.39,6.19,Universidad de la Laguna,ULL015
+433,Junio,2020/2021,Artes,mShbw#####,8.71,8.54,9.36,Universidad de la Laguna,ULL015
+434,Junio,2022/2023,Artes,aZsIK#####,8.31,7.98,7.04,Universidad de la Laguna,ULL015
+435,Junio,2022/2023,Artes,BtHEr#####,5.8,5.35,8.1,Universidad de la Laguna,ULL015
+436,Julio,2021/2022,Ciencias Sociales,pBLUS#####,7.32,5.19,6.64,Universidad de la Laguna,ULL015
+437,Julio,2020/2021,Ciencias Sociales,cirrK#####,8.0,8.91,8.5,Universidad de la Laguna,ULL015
+438,Septiembre,2017/2018,Tecnología,oUdPj#####,5.03,7.07,6.59,Universidad de la Laguna,ULL015
+439,Septiembre,2017/2018,Artes,ZUhbt#####,8.47,6.64,8.95,Universidad de la Laguna,ULL015
+440,Septiembre,2017/2018,Ciencias Sociales,sQLCC#####,6.52,5.66,5.48,Universidad de la Laguna,ULL015
+441,Septiembre,2021/2022,Tecnología,WKFVU#####,5.77,9.02,6.97,Universidad de la Laguna,ULL015
+442,Junio,2020/2021,Ciencias Sociales,EOKwE#####,8.47,8.47,8.85,Universidad de la Laguna,ULL015
+443,Junio,2020/2021,Artes,mmkUe#####,8.31,5.69,9.43,Universidad de la Laguna,ULL015
+444,Septiembre,2021/2022,Artes,SVDIK#####,5.72,9.53,6.38,Universidad de la Laguna,ULL015
+445,Septiembre,2020/2021,Ciencias Sociales,SrhsF#####,7.84,9.29,9.29,Universidad de la Laguna,ULL015
+446,Septiembre,2017/2018,Artes,jxuYV#####,7.19,5.77,5.89,Universidad de la Laguna,ULL015
+447,Septiembre,2017/2018,Tecnología,eDkCZ#####,5.57,9.29,6.64,Universidad de la Laguna,ULL015
