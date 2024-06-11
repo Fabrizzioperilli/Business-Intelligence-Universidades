@@ -7,9 +7,13 @@ from components.common.modal_data import create_modal
 def graphs_resultados_gestor():
     return html.Div([
         html.Div([
-            dcc.Graph(
-                id='duración-estudios-nota-media-gestor',
-                figure={},
+            dcc.Loading(
+                children=[
+                    dcc.Graph(
+                        id='duración-estudios-nota-media-gestor',
+                        figure={},
+                    ),
+                ]
             ),
             create_modal('modal-duracion-estudios', 
                          'table-container-duracion-estudios', 
@@ -17,9 +21,13 @@ def graphs_resultados_gestor():
                          'btn-ver-datos-duracion-estudios')
         ], className='graph-item-resultados-gestor'),
         html.Div([
-            dcc.Graph(
-                id='nota-acceso-titulacion',
-                figure={}
+            dcc.Loading(
+                children=[
+                    dcc.Graph(
+                        id='nota-acceso-titulacion',
+                        figure={}
+                    ),
+                ]
             ),
             create_modal('modal-nota-acceso', 
                          'table-container-nota-acceso', 

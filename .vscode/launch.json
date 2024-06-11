@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Python: Dash",
+          "type": "python",
+          "request": "launch",
+          "program": "${workspaceFolder}/app.py",  // Reemplaza con la ruta de tu archivo principal
+          "console": "integratedTerminal",
+          "env": {
+              "FLASK_ENV": "development"
+          },
+          "args": [
+              // Argumentos adicionales si los necesitas
+          ]
+      }
+  ]
+}

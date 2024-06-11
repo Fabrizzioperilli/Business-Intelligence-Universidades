@@ -1,3 +1,6 @@
 {
-  "docwriter.progress.trackFunctions": false
+  "python.terminal.activateEnvironment": true,
+  "terminal.integrated.env.windows": {
+      "PYTHONPATH": "${workspaceFolder}/venv/Lib/"
+  }
 }

@@ -7,23 +7,42 @@ from callbacks.docente.graphs.personal.callback_graph_alu_nota_cualitativa_docen
 def graphs_personal_docente():
   return html.Div([
     html.Div([
-      dcc.Graph(
-          id='graph-alumnos-repetidores-nuevos',
-          figure={},
-    )], className='graph-item-personal-docente'),
+      dcc.Loading(
+          children=[
+              dcc.Graph(
+                  id='graph-alumnos-repetidores-nuevos',
+                  figure={},
+              )
+          ]
+      )
+    ], className='graph-item-personal-docente'),
     html.Div([
-      dcc.Graph(
-          id='graph-alumnos-matri-genero',
-          figure={}
-    )], className='graph-item-personal-docente'),
+      dcc.Loading(
+          children=[
+              dcc.Graph(
+                  id='graph-alumnos-matri-genero',
+                  figure={}
+              )
+          ]
+      )
+    ], className='graph-item-personal-docente'),
     html.Div([
-      dcc.Graph(
-          id='graph-alumnos-nota-media',
-          figure={},
-    )], className='graph-item-personal-docente'),
+      dcc.Loading(
+          children=[
+              dcc.Graph(
+                  id='graph-alumnos-nota-media',
+                  figure={}
+              )
+          ]
+      )
+    ], className='graph-item-personal-docente'),
     html.Div([
-      dcc.Graph(
-          id='graph-alumnos-nota-cualitativa',
-          figure={}
+      dcc.Loading(
+          children=[
+            dcc.Graph(
+                id='graph-alumnos-nota-cualitativa',
+                figure={}
+            )
+          ]
     )], className='graph-item-personal-docente')
   ], className='graphs-container-personal-docente')

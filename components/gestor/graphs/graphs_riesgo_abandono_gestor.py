@@ -5,29 +5,34 @@ from components.common.modal_data import create_modal
 
 def graphs_riesgo_abandono_gestor():
   return html.Div([
+      html.Div([
+            dcc.Loading(
+                children=[
+                    dcc.Graph(
+                        id='tasa-abandono-gestor',
+                        figure={},
+                    )
+                ]
+            ),
+            create_modal(
+                'modal-tasa-abandono', 
+                'table-container-tasa-abandono', 
+                'btn-descargar-tasa-abandono', 
+                'btn-ver-datos-tasa-abandono'
+            ),
+        ], className='graph-item-riesgo-abandono-gestor'),
     html.Div([
-      dcc.Graph(
-          id='tasa-abandono-gestor',
-          figure={},
-      ),
-      create_modal('modal-tasa-abandono', 
-                   'table-container-tasa-abandono', 
-                   'btn-descargar-tasa-abandono', 
-                   'btn-ver-datos-tasa-abandono'),
-    ], className='graph-item-riesgo-abandono-gestor'),
-    html.Div([
-      dcc.Graph(
-          id='tasa-graduacion-gestor',
-          figure={}
+      dcc.Loading(
+          children=[
+              dcc.Graph(
+                  id='tasa-graduacion-gestor',
+                  figure={}
+              ),
+          ]
       ),
       create_modal('modal-tasa-graduacion', 
                   'table-container-tasa-graduacion', 
                   'btn-descargar-tasa-graduacion', 
                   'btn-ver-datos-tasa-graduacion'),
     ], className='graph-item-riesgo-abandono-gestor'),
-    html.Div([
-      dcc.Graph(
-          id='',
-          figure={}
-    )], className='graph-item-riesgo-abandono-gestor'),
   ], className='graphs-container-riesgo-abandono-gestor')

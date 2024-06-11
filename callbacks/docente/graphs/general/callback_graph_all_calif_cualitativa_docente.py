@@ -17,8 +17,8 @@ def update_graph_docente(titulacion, curso_academico, asignatura):
     fig.update_layout(
         barmode='stack',
         title={'text':'Calificaciones cualitativas por titulación, asignaturas y curso académico ', 'x': 0.5},
-        xaxis_title='Asignaturas',
-        yaxis_title='Nº Alumnos matriculados',
+        xaxis={'title': 'Asignaturas', 'tickangle': 45},
+        yaxis= {'title': 'Nº Alumnos matriculados'},
         legend=dict(
             x=1,
             y=1,

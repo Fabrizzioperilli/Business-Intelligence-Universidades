@@ -4,7 +4,8 @@ queries = {
       "common": {
           # Consulta para obtener los alumnos.
           "alumnos_all": """
-                SELECT id FROM alumnos;
+                SELECT id FROM alumnos
+                LIMIT 20;
                 """,
           # Consulta para obtener los datos que se muestran en el resumen de un alumno.
           "resumen_alumno": """
@@ -166,51 +167,50 @@ queries = {
                           """,
                   # Consulta para obtener la calificación cualitativa del alumno.
                   "calif_cualitativa_alumno_asignaturas": """
-                       WITH CalificacionesMaximas AS (
+                      WITH CalificacionesMaximas AS (
+                            SELECT
+                                la.id,
+                                la.asignatura,
+                                MAX(
+                                    CASE 
+                                        WHEN la.calif = 'Sobresaliente' THEN 5
+                                        WHEN la.calif = 'Notable' THEN 4
+                                        WHEN la.calif = 'Aprobado' THEN 3
+                                        WHEN la.calif = 'Suspenso' THEN 2
+                                        WHEN la.calif = 'No presentado' THEN 1
+                                        ELSE 0 
+                                    END
+                                ) AS max_calif_value
+                            FROM 
+                                public.lineas_actas la
+                            JOIN 
+                                public.matricula ma ON la.id = ma.id AND la.cod_plan = ma.cod_plan
+                            WHERE 
+                                la.curso_aca IN :curso_academico AND 
+                                la.asignatura IN :asignaturas_matriculadas AND 
+                                la.id = :alumno_id AND 
+                                la.calif IN ('Sobresaliente', 'Notable', 'Aprobado', 'Suspenso', 'No presentado') AND
+                                ma.titulacion = :titulacion
+                            GROUP BY
+                                la.id, la.asignatura
+                        )
                         SELECT
-                            la.id,
-                            la.asignatura,
-                            MAX(CASE 
-                                WHEN la.calif = 'Sobresaliente' THEN 5
-                                WHEN la.calif = 'Notable' THEN 4
-                                WHEN la.calif = 'Aprobado' THEN 3
-                                WHEN la.calif = 'Suspenso' THEN 2
-                                WHEN la.calif = 'No presentado' THEN 1
-                                ELSE 0 END) AS max_calif_value
-                        FROM lineas_actas la
-                        JOIN matricula ma ON la.id = ma.id AND la.cod_plan = ma.cod_plan
-                        WHERE 
-                            la.curso_aca IN :curso_academico AND 
-                            la.asignatura IN :asignaturas_matriculadas AND 
-                            la.id = :alumno_id AND 
-                            la.calif IN ('Sobresaliente', 'Notable', 'Aprobado', 'Suspenso', 'No presentado') AND
-                            ma.titulacion = :titulacion
-                        GROUP BY
-                            la.id, la.asignatura
-                    ),
-                    CalificacionesFinales AS (
-                        SELECT
-                            c.id,
-                            c.asignatura,
-                            CASE c.max_calif_value
+                            cm.asignatura,
+                            CASE cm.max_calif_value
                                 WHEN 5 THEN 'Sobresaliente'
                                 WHEN 4 THEN 'Notable'
                                 WHEN 3 THEN 'Aprobado'
                                 WHEN 2 THEN 'Suspenso'
                                 WHEN 1 THEN 'No presentado'
-                                ELSE 'Desconocido' END AS calif
-                        FROM CalificacionesMaximas c
-                    )
-
-                    SELECT
-                        c.asignatura,
-                        c.calif,
-                        COUNT(*) AS count_grades
-                    FROM 
-                        CalificacionesFinales c
-                    GROUP BY 
-                        c.asignatura, c.calif;
-
+                                ELSE 'Desconocido' 
+                            END AS calif,
+                            COUNT(*) AS count_grades
+                        FROM 
+                            CalificacionesMaximas cm
+                        GROUP BY 
+                            cm.asignatura, cm.max_calif_value
+                        ORDER BY 
+                            cm.asignatura;
                     """,
                     # Consulta para obtener la calificación media de los alumnos y la calificación del alumno.
                     "nota_media_general_mi_nota": """
@@ -249,7 +249,8 @@ queries = {
       "common": {
           # Consulta para obtener los docentes.
           "docentes_all": """
-                SELECT DISTINCT id_docente FROM docentes;
+                SELECT DISTINCT id_docente FROM docentes
+                LIMIT 20;
                 """,
           #Consulta para obtener los datos que se muestran en el resumen del docente 
           "resumen_docente": """
@@ -299,32 +300,33 @@ queries = {
           "personal": {
               # Consulta para obtener el número de alumnos repetidores y de nuevo ingreso en una asignatura.
               "alumnos_repetidores_nuevos": """
-                        WITH Asignatura AS (
-                        SELECT DISTINCT am.id AS student_id, am.curso_aca
-                        FROM public.asignaturas_matriculadas am
-                        JOIN public.docentes d ON am.cod_asignatura = d.cod_asignatura
-                        WHERE d.id_docente = :docente_id
-                        AND am.asignatura = :asignaturas
-                        AND am.curso_aca IN :curso_academico
-                        ),
-                        repetidores AS (
-                            SELECT DISTINCT am.id AS student_id, MIN(am.curso_aca) AS primer_curso_aca
+                        WITH repetidores AS (
+                            SELECT 
+                                am.id AS student_id, 
+                                MIN(am.curso_aca) AS primer_curso_aca
                             FROM public.asignaturas_matriculadas am
                             WHERE am.asignatura = :asignaturas
                             GROUP BY am.id
-                            HAVING COUNT(am.curso_aca) > 1
+                            HAVING COUNT(DISTINCT am.curso_aca) > 1
                         ),
                         alumnos_categoria AS (
                             SELECT 
                                 am.id,
                                 am.curso_aca,
                                 CASE 
-                                    WHEN am.id IN (SELECT student_id FROM repetidores WHERE repetidores.primer_curso_aca <> am.curso_aca) THEN 'repetidor'
+                                    WHEN r.student_id IS NOT NULL AND r.primer_curso_aca <> am.curso_aca THEN 'repetidor'
                                     ELSE 'nuevo_ingreso'
                                 END AS categoria
                             FROM public.asignaturas_matriculadas am
+                            LEFT JOIN repetidores r ON am.id = r.student_id
                             WHERE am.asignatura = :asignaturas
                             AND am.curso_aca IN :curso_academico
+                            AND EXISTS (
+                                SELECT 1 
+                                FROM public.docentes d 
+                                WHERE d.cod_asignatura = am.cod_asignatura 
+                                AND d.id_docente = :docente_id
+                            )
                         )
                         SELECT
                             am.curso_aca AS curso_academico,
@@ -333,6 +335,7 @@ queries = {
                         FROM alumnos_categoria am
                         GROUP BY am.curso_aca
                         ORDER BY am.curso_aca;
+
                         """,
                   #Consulta para el número de alumnos por género en una asignatura.
                   "alumnos_genero_docente": """
@@ -401,15 +404,17 @@ queries = {
                   #Consulta para obtener el número de calificaciones cualitativas 
                   # de los alumnos por asignatura y curso académico.
                   "calif_all_cualitativa_asignaturas": """
-                            SELECT DISTINCT li.curso_aca, 
-                                  li.asignatura,  
-                                  li.calif, 
-                                  COUNT(DISTINCT li.id) AS n_alumnos
+                            SELECT
+                                li.curso_aca, 
+                                li.asignatura,  
+                                li.calif, 
+                                COUNT(DISTINCT li.id) AS n_alumnos
                             FROM lineas_actas li
-                            JOIN docentes ON li.cod_plan = docentes.cod_plan
-                            WHERE docentes.titulacion = :titulacion AND 
-                                  li.curso_aca = :curso_academico AND 
-                                  li.asignatura IN :asignaturas
+                            JOIN docentes ON li.cod_plan = docentes.cod_plan AND li.cod_asig = docentes.cod_asignatura
+                            WHERE 
+                                docentes.titulacion = :titulacion AND 
+                                li.curso_aca = :curso_academico AND 
+                                li.asignatura IN :asignaturas
                             GROUP BY li.curso_aca, li.asignatura, li.calif
                             ORDER BY li.asignatura;
                             """,
@@ -450,7 +455,8 @@ queries = {
       "common": {
             #Consulta para obtener los gestores.
             "gestores_all": """
-                SELECT DISTINCT gestor_id FROM gestores;
+                SELECT DISTINCT gestor_id FROM gestores
+                LIMIT 20;
                 """,
             #Consulta para obtener los datos que se muestran en el resumen del gestor.
             "resumen_gestor": """
@@ -597,35 +603,36 @@ queries = {
                     #Consulta para obtener la tasa de abandono de una titulación.
                     "tasa_abandono_titulacion_gestor": """
                         WITH ultima_matricula AS (
+                                SELECT 
+                                    m.id,
+                                    m.curso_aca,
+                                    m.titulacion,
+                                    t.abandona,
+                                    ROW_NUMBER() OVER (PARTITION BY m.id ORDER BY m.curso_aca DESC) AS row_num
+                                FROM 
+                                    public.matricula m
+                                JOIN 
+                                    public.alumnos t ON m.id = t.id
+                            )
+
                             SELECT 
-                                m.id,
                                 m.curso_aca,
                                 m.titulacion,
-                                t.abandona,
-                                ROW_NUMBER() OVER (PARTITION BY m.id ORDER BY m.curso_aca DESC) AS row_num
+                                COUNT(DISTINCT m.id) AS numero_matriculados,
+                                COUNT(DISTINCT CASE WHEN le.abandona = 'si' AND le.row_num = 1 THEN le.id END) AS numero_abandono
                             FROM 
                                 public.matricula m
-                            JOIN 
-                                public.alumnos t
-                            ON 
-                                m.id = t.id
-                        )
+                            LEFT JOIN ultima_matricula le ON m.id = le.id AND m.curso_aca = le.curso_aca
+                            WHERE 
+                                m.cod_universidad = :cod_universidad 
+                                AND m.curso_aca IN :curso_academico
+                            GROUP BY 
+                                m.curso_aca,
+                                m.titulacion
+                            ORDER BY 
+                                m.curso_aca,
+                                m.titulacion;
 
-                        SELECT 
-                            m.curso_aca,
-                            m.titulacion,
-                            COUNT(DISTINCT m.id) AS numero_matriculados,
-                            COUNT(DISTINCT CASE WHEN le.abandona = 'si' AND le.row_num = 1 THEN le.id END) AS numero_abandono
-                        FROM 
-                            public.matricula m
-                        LEFT JOIN  ultima_matricula le ON m.id = le.id AND m.curso_aca = le.curso_aca
-                        WHERE m.cod_universidad = :cod_universidad AND m.curso_aca IN :curso_academico
-                        GROUP BY 
-                            m.curso_aca,
-                            m.titulacion
-                        ORDER BY 
-                            m.curso_aca,
-                            m.titulacion;
                     """,
                     #Consulta para obtener la tasa de graduación de una titulación.
                     "tasa_graduacion_titulacion_gestor": """
