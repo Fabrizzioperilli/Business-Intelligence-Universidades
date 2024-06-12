@@ -1,7 +1,7 @@
 from dash import callback, Input, Output
 import plotly.graph_objs as go
 import pandas as pd
-from data.queries import asignaturas_superadas_media_abandono
+from data.queries import asignaturas_superadas_media_abandono, universidad_alumno
 from utils.utils import list_to_tuple
 
 @callback(
@@ -33,8 +33,13 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, 
     except Exception as e:
         print('Error:', e)
         return fig
+    
+    data_universidad = universidad_alumno(alumno_id)
 
-    data = asignaturas_superadas_media_abandono(curso_academico, asignaturas_matriculadas, titulacion)
+    if not data_universidad:
+        return fig
+
+    data = asignaturas_superadas_media_abandono(curso_academico, asignaturas_matriculadas, titulacion, data_universidad[0][0])
 
     if not data:
         return fig

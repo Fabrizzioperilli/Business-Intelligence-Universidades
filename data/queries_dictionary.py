@@ -21,6 +21,11 @@ queries = {
                 WHERE li.id = :alumno_id
                 AND li.calif_numerica >= 5
                 AND m.titulacion = :titulacion;
+                """,
+            "universidad_alumno": """
+                SELECT cod_universidad
+                FROM matricula
+                WHERE id = :alumno_id;
                 """
       },
       "filters": {
@@ -127,6 +132,7 @@ queries = {
                                 la.curso_aca IN :curso_academico
                                 AND la.asignatura IN :asignaturas_matriculadas
                                 AND ma.titulacion = :titulacion
+                                AND ma.cod_universidad = :cod_universidad
                             GROUP BY la.id, la.asignatura
                           ) la
                       JOIN public.alumnos a ON a.id = la.id 
@@ -155,7 +161,8 @@ queries = {
                                   la.curso_aca IN :curso_academico AND 
                                   la.asignatura IN :asignaturas_matriculadas AND 
                                   la.calif IN ('Sobresaliente', 'Notable', 'Aprobado', 'Suspenso', 'No presentado') AND
-                                  ma.titulacion = :titulacion
+                                  ma.titulacion = :titulacion AND
+                                  ma.cod_universidad = :cod_universidad
                                 )
                           SELECT
                               c.asignatura,
@@ -231,7 +238,8 @@ queries = {
                             WHERE 
                                 l.asignatura IN :asignaturas_matriculadas AND 
                                 l.curso_aca IN :curso_academico AND 
-                                m.titulacion = :titulacion
+                                m.titulacion = :titulacion AND
+                                m.cod_universidad = :cod_universidad
                             GROUP BY 
                                 l.asignatura, 
                                 l.id,

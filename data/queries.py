@@ -88,19 +88,21 @@ def asignaturas_matriculadas_y_superadas(alumno_id, curso_academico, titulacion)
 
     return check_data(query, params)
         
-def asignaturas_superadas_media_abandono(curso_academico, asignaturas_matriculadas, titulacion):
+def asignaturas_superadas_media_abandono(curso_academico, asignaturas_matriculadas, titulacion, cod_universidad):
     query = queries['alumnado']['graphs']['general']['asignaturas_superadas_media_abandono']
     params = {'curso_academico': curso_academico, 
               'asignaturas_matriculadas': asignaturas_matriculadas, 
-              'titulacion': titulacion}
-
+              'titulacion': titulacion,
+              'cod_universidad': cod_universidad}
+    
     return check_data(query, params)
 
-def calif_cualitativa_comparativa(curso_academico, asignaturas_matriculadas, titulacion):
+def calif_cualitativa_comparativa(curso_academico, asignaturas_matriculadas, titulacion, cod_universidad):
     query = queries['alumnado']['graphs']['general']['calif_cualitativa_comparativa']
     params = {'curso_academico': curso_academico, 
               'asignaturas_matriculadas': asignaturas_matriculadas,
-              'titulacion': titulacion}
+              'titulacion': titulacion,
+              'cod_universidad': cod_universidad}
 
     return check_data(query, params)
 
@@ -113,12 +115,13 @@ def calif_cualitativa_alumno_asignaturas(alumno_id, curso_academico, asignaturas
     
     return check_data(query, params)
 
-def nota_media_general_mi_nota(curso_academico, asignaturas_matriculadas, alumno_id, titulacion):
+def nota_media_general_mi_nota(curso_academico, asignaturas_matriculadas, alumno_id, titulacion, cod_universidad):
     query = queries['alumnado']['graphs']['general']['nota_media_general_mi_nota']
     params = {'curso_academico': curso_academico, 
               'asignaturas_matriculadas': asignaturas_matriculadas, 
               'alumno_id': alumno_id,
-              'titulacion': titulacion}
+              'titulacion': titulacion,
+              'cod_universidad': cod_universidad}
 
     return check_data(query, params)
 
@@ -311,5 +314,12 @@ def tasa_abandono_titulacion_gestor(cod_universidad, curso_academico):
 def tasa_graduacion_titulacion_gestor(cod_universidad, curso_academico):
     query = queries['gestor']['graphs']['riesgo_abandono']['tasa_graduacion_titulacion_gestor']
     params = {'cod_universidad': cod_universidad, 'curso_academico': curso_academico}
+
+    return check_data(query, params)
+
+
+def universidad_alumno(alumno_id):
+    query = queries['alumnado']['common']['universidad_alumno']
+    params = {'alumno_id': alumno_id}
 
     return check_data(query, params)

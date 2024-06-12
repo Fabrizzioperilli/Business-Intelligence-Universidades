@@ -1,5 +1,5 @@
 from dash import callback, Input, Output
-from data.queries import calif_cualitativa_comparativa, calif_cualitativa_alumno_asignaturas
+from data.queries import calif_cualitativa_comparativa, calif_cualitativa_alumno_asignaturas, universidad_alumno
 import plotly.graph_objs as go
 import pandas as pd
 from utils.utils import list_to_tuple
@@ -34,8 +34,13 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, 
     except Exception as e:
         print("Error:", e)
         return fig
+    
+    data_universidad = universidad_alumno(alumno_id)
 
-    general_data = calif_cualitativa_comparativa(curso_academico, asignaturas_matriculadas, titulacion)
+    if not data_universidad:
+        return fig
+
+    general_data = calif_cualitativa_comparativa(curso_academico, asignaturas_matriculadas, titulacion, data_universidad[0][0])
     student_data = calif_cualitativa_alumno_asignaturas(alumno_id, curso_academico, asignaturas_matriculadas, titulacion)
 
     if not general_data:

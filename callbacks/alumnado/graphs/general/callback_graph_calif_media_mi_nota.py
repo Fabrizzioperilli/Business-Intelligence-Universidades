@@ -1,5 +1,5 @@
 from dash import callback, Input, Output
-from data.queries import nota_media_general_mi_nota
+from data.queries import nota_media_general_mi_nota, universidad_alumno
 import plotly.graph_objs as go
 from utils.utils import list_to_tuple
 import pandas as pd
@@ -34,8 +34,12 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, 
         print("Error:", e)
         return fig
 
+    data_universidad = universidad_alumno(alumno_id)
 
-    data = nota_media_general_mi_nota(curso_academico, asignaturas_matriculadas, alumno_id, titulacion)
+    if not data_universidad:
+        return fig
+
+    data = nota_media_general_mi_nota(curso_academico, asignaturas_matriculadas, alumno_id, titulacion, data_universidad[0][0])
 
     if not data:
         return fig
