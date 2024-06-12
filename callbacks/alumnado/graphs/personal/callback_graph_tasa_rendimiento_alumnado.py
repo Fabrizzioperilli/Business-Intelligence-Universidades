@@ -21,7 +21,7 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
         showlegend=False,
     )
 
-    if not alumno_id or not curso_academico or not titulacion:
+    if not (alumno_id and curso_academico and titulacion):
         return fig
     
     try:
@@ -35,10 +35,7 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
     if not data:
         return fig
 
-    # Convertir data en un DataFrame
     df = pd.DataFrame(data, columns=['Curso_academico', 'Matriculadas', 'Superadas'])
-
-    # Calcular la tasa de rendimiento
     df['Tasa_rendimiento'] = (df['Superadas'] / df['Matriculadas']) * 100
 
     fig.add_trace(go.Bar(
