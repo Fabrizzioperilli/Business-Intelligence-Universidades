@@ -15,7 +15,7 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
     fig = go.Figure()
 
     fig.update_layout(
-        title={'text': 'Calificación cualitativa de las asignaturas matriculadas', 'x': 0.5},
+        title={'text': 'Calificaciones cualitativas', 'x': 0.5},
         barmode='stack',
         xaxis={'title': 'Curso académico'},
         yaxis={'title': 'Nº Asignaturas matriculadas'},
@@ -23,7 +23,7 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
         legend={'title': 'Calificación'},
     )
 
-    if not alumno_id or not curso_academico or not titulacion:
+    if not (alumno_id and curso_academico and titulacion):
         return fig
 
     try:

@@ -23,7 +23,8 @@ def graphs_personal_alumnado():
                 children=[
                     dcc.Graph(
                         id='graph-bar-evolucion-asignaturas-matriculadas',
-                        figure={}
+                        figure={},
+                        config={'displayModeBar': False}
                     )
                 ]
             )
