@@ -12,6 +12,7 @@ def graphs_personal_alumnado():
                     dcc.Graph(
                         id='graph-evolucion-progreso-academico',
                         figure={},
+                        config={'displayModeBar': False}
                     )
                 ]
             )

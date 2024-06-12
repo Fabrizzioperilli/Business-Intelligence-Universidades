@@ -24,6 +24,7 @@ def update_graph_gestor(gestor_id):
         size='numero_alumnos', 
         hover_name='titulacion', 
         animation_frame='curso_academico',
+        animation_group='rama',
         category_orders={'rama': sorted(data['rama'].unique())}  # Agrupar colores por ramas
     )
     fig.update_layout(
@@ -37,6 +38,10 @@ def update_graph_gestor(gestor_id):
         marker=dict(line=dict(width=1, color='DarkSlateGrey')),
         textposition='top center'  # Ajuste de la posición del texto
     )
+
+    # Ajustar el rango de los ejes para que las burbujas no se corten
+    fig.update_xaxes(range=[data['nota_media'].min() - 1, data['nota_media'].max() + 1])
+    fig.update_yaxes(range=[data['duracion_media'].min() - 1, data['duracion_media'].max() + 1])
     
     fig.layout.updatemenus[0].buttons[0].args[1]['frame']['duration'] = 1000
 

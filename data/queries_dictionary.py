@@ -5,7 +5,8 @@ queries = {
           # Consulta para obtener los alumnos.
           "alumnos_all": """
                 SELECT id FROM alumnos
-                LIMIT 20;
+                ORDER BY id DESC
+                LIMIT 50;
                 """,
           # Consulta para obtener los datos que se muestran en el resumen de un alumno.
           "resumen_alumno": """
@@ -117,28 +118,42 @@ queries = {
           "general": {
                 # Esta consulta devuelve el id de los alumnos, nota media, abandono y total de asignaturas superadas.
                 "asignaturas_superadas_media_abandono": """
-                      SELECT a.id, a.abandona, 
-                      AVG(CASE WHEN la.max_calif >= 5 THEN la.max_calif ELSE NULL END) AS NotaMedia, 
-                      COUNT(DISTINCT CASE WHEN la.max_calif >= 5 THEN la.asignatura ELSE NULL END) AS "Total asignaturas superadas"
-                      FROM 
-                          (
-                            SELECT 
-                                la.id, 
-                                la.asignatura,
-                                MAX(la.calif_numerica) AS max_calif
-                            FROM  public.lineas_actas la
-                            JOIN  public.matricula ma ON la.id = ma.id AND la.cod_plan = ma.cod_plan
-                            WHERE 
-                                la.curso_aca IN :curso_academico
-                                AND la.asignatura IN :asignaturas_matriculadas
-                                AND ma.titulacion = :titulacion
-                                AND ma.cod_universidad = :cod_universidad
-                            GROUP BY la.id, la.asignatura
-                          ) la
-                      JOIN public.alumnos a ON a.id = la.id 
-                      GROUP BY a.id, a.abandona
-                      ORDER BY a.id;
-                """,
+                        SELECT 
+                            a.id, 
+                            a.abandona, 
+                            AVG(NULLIF(la.max_calif, 0)) AS NotaMedia, 
+                            COUNT(la.asignatura) AS "Total asignaturas superadas"
+                        FROM 
+                            (
+                                SELECT 
+                                    la.id, 
+                                    la.asignatura,
+                                    MAX(la.calif_numerica) AS max_calif
+                                FROM 
+                                    public.lineas_actas la
+                                JOIN 
+                                    public.matricula ma 
+                                ON 
+                                    la.id = ma.id AND la.cod_plan = ma.cod_plan
+                                WHERE 
+                                    la.curso_aca IN :curso_academico
+                                    AND la.asignatura IN :asignaturas_matriculadas
+                                    AND ma.titulacion = :titulacion
+                                    AND ma.cod_universidad = :cod_universidad
+                                GROUP BY 
+                                    la.id, la.asignatura
+                            ) la
+                        JOIN 
+                            public.alumnos a 
+                        ON 
+                            a.id = la.id 
+                        WHERE 
+                            la.max_calif >= 5
+                        GROUP BY 
+                            a.id, a.abandona
+                        ORDER BY 
+                            a.id;
+                        """,
                 # Consulta para obtener la calificación cualitativa de los alumnos para compararlo con los datos generales.
                 "calif_cualitativa_comparativa": """
                       WITH CalificacionesMaximas AS (

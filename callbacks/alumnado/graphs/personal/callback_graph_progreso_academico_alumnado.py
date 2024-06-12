@@ -18,7 +18,7 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
     fig.update_layout(
         title={'text':'Evolución del progreso académico', 'x':0.5},
         xaxis={'title': 'Curso académico'},
-        yaxis={'title': 'Nº Asignaturas de superadas (Acumulativo)'},
+        yaxis={'title': 'Nº Asignaturas de superadas'},
         showlegend=False,
     )
 
@@ -37,7 +37,6 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
         return fig
     
     data = pd.DataFrame(data)
-
     academic_years = data['curso_academico']
     subjects_passed = data['n_asig_superadas']
 
@@ -47,10 +46,12 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
         cumulative_total += count
         cumulative_passed.append(cumulative_total)
 
-    fig.add_trace(go.Bar(
-        x=academic_years, 
-        y=cumulative_passed, 
-        marker_color='blue', 
-        opacity=0.7))
+    fig.add_trace(
+        go.Bar(
+            x=academic_years, 
+            y=cumulative_passed, 
+            marker_color='blue', 
+            opacity=0.7)
+        )
 
     return fig
