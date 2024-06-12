@@ -36,6 +36,7 @@ def graphs_personal_alumnado():
                     dcc.Graph(
                         id='graph-bar-calificaciones-por-asignatura',
                         figure={},
+                        config={'displayModeBar': False}
                     )
                 ]
             )

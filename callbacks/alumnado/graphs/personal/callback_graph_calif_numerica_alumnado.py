@@ -15,7 +15,7 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
     fig = go.Figure()
 
     fig.update_layout(
-        title={'text': 'Calificación cuantitativa de las asignaturas matriculadas del alumno', 'x': 0.5},
+        title={'text': 'Calificaciones cuantitativas', 'x': 0.5},
         xaxis={'title': 'Asignatura', 'tickangle': 45},
         yaxis={'title': 'Calificación'},
         height=600,
@@ -31,7 +31,7 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
         )
     )
 
-    if not alumno_id or not curso_academico or not titulacion:
+    if not (alumno_id and curso_academico and titulacion):
         return fig
 
     try:
@@ -45,7 +45,6 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
     if not data:
         return fig
 
-    # Convertir data en un DataFrame
     df = pd.DataFrame(data, columns=['Asignatura', 'Calificacion'])
     colors = random_color(len(df))
 
