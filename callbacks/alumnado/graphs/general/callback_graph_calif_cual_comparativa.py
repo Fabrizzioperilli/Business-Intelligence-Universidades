@@ -19,7 +19,7 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, 
         title={'text': 'Calificaciones cualitativas general por curso académico', 'x': 0.5},
         barmode='stack',
         xaxis={'title': 'Asignatura', 'tickangle': 45},
-        yaxis={'title': 'Nº Alumnos Matriculados'},
+        yaxis={'title': 'Nº Alumnos matriculados'},
         showlegend=True,
         legend={'title': 'Calificación'},
         height=600,
@@ -50,29 +50,44 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, 
     student_df = pd.DataFrame(student_data, columns=['Asignatura', 'Calificacion', 'Numero'])
 
     categories = ['Suspenso', 'No presentado', 'Aprobado', 'Notable', 'Sobresaliente']
-    color_mapping = {'Sobresaliente': 'blue', 'Notable': 'green', 'Aprobado': 'orange', 'Suspenso': 'red', 'No presentado': 'gray'}
+    
+    color_mapping = {
+        'Sobresaliente': 'blue', 
+        'Notable': 'green', 
+        'Aprobado': 'orange', 
+        'Suspenso': 'red', 
+        'No presentado': 'gray'
+        }
 
     general_pivot = general_df.pivot_table(index='Asignatura', columns='Calificacion', values='Numero', fill_value=0)
     general_pivot = general_pivot.reindex(columns=categories, fill_value=0)
 
     for category in categories:
-        fig.add_trace(go.Bar(
-            x=general_pivot.index,
-            y=general_pivot[category],
-            name=category,
-            marker=dict(color=color_mapping[category]),
-            opacity=0.7
-        ))
+        fig.add_trace(
+            go.Bar(
+                x=general_pivot.index,
+                y=general_pivot[category],
+                name=category,
+                marker=dict(color=color_mapping[category]),
+                opacity=0.7
+            )
+        )
 
-    student_counts = student_df['Calificacion'].value_counts()
     for category in categories:
-        y = [1 if (subject in student_df['Asignatura'].values) and (student_df[student_df['Asignatura'] == subject]['Calificacion'].values[0] == category) else 0 for subject in general_pivot.index]
-        fig.add_trace(go.Bar(
-            x=general_pivot.index,
-            y=y,
-            name=category + " (Yo)",
-            marker=dict(color=color_mapping[category], line=dict(color='black', width=2)),
-            opacity=1
-        ))
+        y = [
+            1 if (
+                (subject in student_df['Asignatura'].values) and 
+                (student_df[student_df['Asignatura'] == subject]['Calificacion'].values[0] == category)
+            ) else 0 for subject in general_pivot.index
+        ]
+        fig.add_trace(
+            go.Bar(
+                x=general_pivot.index,
+                y=y,
+                name=f"{category} (Yo)",
+                marker=dict(color=color_mapping[category], line=dict(color='black', width=2)),
+                opacity=1
+            )
+        )
 
     return fig

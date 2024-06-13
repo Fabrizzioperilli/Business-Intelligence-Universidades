@@ -15,7 +15,7 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, 
     fig = go.Figure()
 
     fig.update_layout(
-        title={'text': 'Relación nota media y número de asignaturas superadas por cada alumno', 'x': 0.5},
+        title={'text': 'Relación nota media y número de asignaturas superadas por alumno', 'x': 0.5},
         xaxis_title='Nota Media',
         yaxis_title='Nº Asignaturas superadas',
         legend_title='Estado del alumno',
