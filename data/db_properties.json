@@ -1,7 +1,0 @@
-{
-  "dbname": "db_universities",
-  "user": "postgres",
-  "password": "root",
-  "host": "localhost",
-  "port": "5432"
-}
