@@ -15,7 +15,7 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, 
     fig = go.Figure()
 
     fig.update_layout(
-        title={'text': 'Relación nota media y número de asignaturas superadas por curso académico', 'x': 0.5},
+        title={'text': 'Relación nota media y número de asignaturas superadas por cada alumno', 'x': 0.5},
         xaxis_title='Nota Media',
         yaxis_title='Nº Asignaturas superadas',
         legend_title='Estado del alumno',
@@ -24,7 +24,7 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, 
         yaxis=dict(range=[0, 40])
     )
 
-    if not curso_academico or not alumno_id or not asignaturas_matriculadas or not titulacion: 
+    if not (curso_academico and alumno_id and asignaturas_matriculadas and titulacion):
         return fig
 
     try:
@@ -44,25 +44,17 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, 
     if not data:
         return fig
 
-    # Convertir data en un DataFrame
     df = pd.DataFrame(data, columns=['Alumno_id', 'Abandono', 'Nota_Media', 'Asignaturas_Superadas'])
 
-    df['Abandono'] = df['Abandono'].str.strip().str.lower().replace({'si': 'Abandono', 'no': 'No Abandono'})
+    df['Abandono'] = df['Abandono'].str.strip().str.lower().replace({'si': 'Abandona', 'no': 'No abandona'})
     df['Personal'] = df['Alumno_id'].apply(lambda x: ' (Yo)' if x == alumno_id else '')
     df['Key'] = df['Abandono'] + df['Personal']
 
     colors = {
-        'Abandono': 'red',
-        'No Abandono': 'blue',
-        'Abandono (Yo)': 'yellow',
-        'No Abandono (Yo)': 'yellow'
-    }
-
-    markers = {
-        'Abandono': 'circle',
-        'No Abandono': 'circle',
-        'Abandono (Yo)': 'square',
-        'No Abandono (Yo)': 'square'
+        'Abandona': 'red',
+        'No abandona': 'blue',
+        'Abandona (Yo)': 'yellow',
+        'No abandona (Yo)': 'yellow'
     }
 
     for key, group in df.groupby('Key'):
@@ -75,8 +67,7 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, 
                 marker=dict(
                     size=12,
                     line=dict(width=2 if ' (Yo)' in key else 1),
-                    color=colors[key],
-                    symbol=markers[key]
+                    color=colors[key]
                 ),
                 opacity=1.0 if ' (Yo)' in key else 0.8
             )
