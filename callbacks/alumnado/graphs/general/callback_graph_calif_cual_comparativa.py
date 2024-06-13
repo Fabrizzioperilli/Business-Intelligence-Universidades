@@ -25,7 +25,7 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, 
         height=600,
     )
 
-    if not curso_academico or not asignaturas_matriculadas or not alumno_id or not titulacion:
+    if not (curso_academico and asignaturas_matriculadas and alumno_id and titulacion):
         return fig
 
     try:
