@@ -270,18 +270,22 @@ def generate_docentes(n, universidades, cod_asignaturas):
 
 # Función para generar datos sintéticos para la tabla 'ebau_prueba'
 def generate_ebau_prueba(n, alumnos_ids, universidades):
+    assert n == len(alumnos_ids), "El número de registros debe ser igual al número de alumnos"
+
+    # Generar datos para cada campo
     data = {
         'indice': range(1, n + 1),
         'conv': [fake.bothify(text='C##') for _ in range(n)],
         'curso_aca': np.random.choice(cursos_academicos, n),
         'especialidad': [fake.word() for _ in range(n)],
-        'id': np.random.choice(alumnos_ids, n),
+        'id': alumnos_ids,
         'nota_bach': np.round(np.random.uniform(5, 10, n), 2),
         'nota_def': np.round(np.random.uniform(5, 10, n), 2),
         'nota_prue': np.round(np.random.uniform(5, 10, n), 2),
         'universidad': np.random.choice(list(universidades.keys()), n),
     }
     data['cod_universidad'] = [universidades[uni] for uni in data['universidad']]
+    
     return pd.DataFrame(data)
 
 # Función para generar datos sintéticos para la tabla 'egresados'
@@ -317,12 +321,11 @@ def generate_gestores(n, universidades):
     data['cod_universidad'] = [universidades[uni] for uni in data['universidad']]
     return pd.DataFrame(data)
 
-# Número de registros a generar para cada tabla
-num_alumnos = 10000
-num_docentes = 500
+
+num_alumnos = 150000
+num_docentes = 2000
 num_gestores = 50
 
-# Generar datos
 alumnos_df = generate_alumnos(num_alumnos)
 matricula_df = generate_matricula(alumnos_df)
 asignaturas_matriculadas_df = generate_asignaturas_matriculadas(matricula_df, cod_asignaturas_dict)
