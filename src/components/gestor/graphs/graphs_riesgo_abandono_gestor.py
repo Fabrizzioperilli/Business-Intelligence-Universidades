@@ -1,4 +1,4 @@
-from dash import html, dcc
+from dash import html
 from callbacks.gestor.graphs.riesgo_abandono.callback_graph_tasa_abandono_gestor import update_graph_gestor
 from callbacks.gestor.graphs.riesgo_abandono.callback_graph_tasa_graduacion_gestor import update_graph_gestor
 from components.common.create_graph_with_table import create_graph_with_table

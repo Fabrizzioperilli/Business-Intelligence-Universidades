@@ -1,5 +1,4 @@
-from dash import html, dcc
-import dash_bootstrap_components as dbc
+from dash import html
 from callbacks.gestor.graphs.resultados.callback_graph_nota_acceso_titulacion_gestor import update_grpht_gestor
 from callbacks.gestor.graphs.resultados.callback_graph_duracion_media_estudios_nota_gestor import update_graph_gestor
 from components.common.create_graph_with_table import create_graph_with_table

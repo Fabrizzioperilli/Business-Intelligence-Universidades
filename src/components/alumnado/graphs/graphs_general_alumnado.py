@@ -1,4 +1,4 @@
-from dash import html, dcc
+from dash import html
 from callbacks.alumnado.graphs.general.callback_graph_calif_cual_comparativa import update_graph_alumnado
 from callbacks.alumnado.graphs.general.callback_graph_calif_media_mi_nota import update_graph_alumnado
 from callbacks.alumnado.graphs.general.callback_graph_asig_superadas_media import update_graph_alumnado

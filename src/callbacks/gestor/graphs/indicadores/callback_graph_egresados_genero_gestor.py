@@ -1,10 +1,9 @@
 from dash import Input, Output, State, callback
 import plotly.graph_objects as go
 import dash_bootstrap_components as dbc
+import pandas as pd
 from utils.utils import list_to_tuple
 from data.queries import alumnos_egresados_genero_titulacion, universidades_gestor
-import pandas as pd
-
 
 @callback(
     Output('egresados-genero-gestor', 'figure'),
@@ -13,16 +12,15 @@ import pandas as pd
     Input('titulaciones-gestor', 'value')
 )
 def update_graph_gestor(gestor_id, curso_academico, titulaciones):
-
     fig = go.Figure()
     
     fig.update_layout(
         barmode='stack',
         title={'text': 'Alumnos egresados por género y titulación', 'x': 0.5},
         xaxis=dict(title='Titulaciones'),
-        yaxis=dict(title='Nº de alumnos egresados'),
+        yaxis=dict(title='Nº Alumnos'),
         showlegend=True,
-        legend=dict(title='Género')
+        legend={'title': 'Género'}
     )
 
     df = get_data(gestor_id, curso_academico, titulaciones)
@@ -38,10 +36,10 @@ def update_graph_gestor(gestor_id, curso_academico, titulaciones):
             return 'Mujeres'
         return genero
 
-    df['Género'] = df['Género'].map(map_genero)
+    df['genero'] = df['genero'].map(map_genero)
     
     # Pivotear el DataFrame para obtener las cantidades por género en columnas separadas
-    df_pivot = df.pivot_table(index='Titulacion', columns='Género', values='Cantidad', aggfunc='sum').fillna(0)
+    df_pivot = df.pivot_table(index='titulacion', columns='genero', values='cantidad', aggfunc='sum').fillna(0)
     
     # Asegurarse de que las columnas existen antes de graficar
     if 'Hombres' in df_pivot.columns:
@@ -91,7 +89,7 @@ def update_table(btn, gestor_id, curso_academico, titulaciones):
     if df.empty:
         return dbc.Alert("No hay datos disponibles", color='info')
     
-    return dbc.Table.from_dataframe(df.head(10), striped=True, bordered=True, hover=True)
+    return dbc.Table.from_dataframe(df.head(50), striped=True, bordered=True, hover=True)
     
 
 @callback(
@@ -135,5 +133,5 @@ def get_data(gestor_id, curso_academico, titulaciones):
     if not data:
         return empty
     
-    return pd.DataFrame(data, columns=['Titulacion', 'Género', 'Cantidad'])
+    return pd.DataFrame(data, columns=['titulacion', 'genero', 'cantidad'])
     
