@@ -3,6 +3,7 @@ import dash_bootstrap_components as dbc
 from callbacks.gestor.graphs.resultados.callback_graph_nota_acceso_titulacion_gestor import update_grpht_gestor
 from callbacks.gestor.graphs.resultados.callback_graph_duracion_media_estudios_nota_gestor import update_graph_gestor
 from components.common.create_graph_with_table import create_graph_with_table
+from utils.utils import config_mode_bar_buttons_gestor
 
 
 def graphs_resultados_gestor():
@@ -23,25 +24,11 @@ def graphs_resultados_gestor():
         }
     ]
 
-    config = {
-        'displayModeBar': True,
-        'displaylogo': False,
-        'scrollZoom': True,
-        'modeBarButtonsToRemove': ['zoom2d', 'lasso2d', 'resetScale2d'],
-        'modeBarButtonsToAdd': [
-            'drawline',
-            'drawcircle',
-            'drawrect',
-            'eraseshape',
-            'toggleSpikelines',
-        ]
-    }
-
     graph_elements = [
         create_graph_with_table(
             graph_info['graph_id'],
             'graph-item-resultados-gestor',
-            config,
+            config_mode_bar_buttons_gestor,
             {
                 'modal_id': graph_info['modal_id'],
                 'table_container_id': graph_info['table_container_id'],
