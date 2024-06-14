@@ -1,4 +1,4 @@
-from dash import html, dcc
+from dash import html
 
 def filters(filters):
     return html.Div([

@@ -5,13 +5,13 @@ from layouts.gestor_layout import gestor_layout
 
 @callback(
     Output('page-content', 'children'),
-    [Input('store-role', 'data')]
+    Input('store-role', 'data')
 )
 def update_layout(role):
     if role == 'Alumno':
-        layout = alumno_layout()
+        return alumno_layout()
     elif role == 'Docente':
-        layout = docente_layout()
+        return docente_layout()
     elif role == 'Gestor':
-        layout = gestor_layout()
-    return layout
+        return gestor_layout()
+    return ""

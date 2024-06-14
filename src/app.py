@@ -1,4 +1,4 @@
-from dash import dash, html, dcc
+from dash import dash, html
 import components.common.header as header
 import components.common.footer as footer
 from layouts.alumno_layout import alumno_layout
@@ -19,12 +19,12 @@ app = dash.Dash(
     suppress_callback_exceptions=True
 )
 
-app.title = 'Dashboard académico Ull'
+app.title = 'Dashboard académico'
 app._favicon = 'src/assets/images/favicon.ico'
 server = app.server
 
 app.layout = html.Div([
-    header.Header(store_id='store-role'),
+    header.Header('store-role'),
     html.Div(id='page-content'),
     footer.Footer(),
 ])
