@@ -1,7 +1,6 @@
 from dash import Input, Output, State, callback, callback_context
-from data.db_connector import db
-from utils.utils import list_to_tuple
 from data.queries import asignaturas_matriculadas
+from utils.utils import list_to_tuple
 
 @callback(
     Output('asignaturas-matriculadas', 'options'),

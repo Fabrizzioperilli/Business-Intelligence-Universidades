@@ -8,8 +8,8 @@ def select_alumnado():
                 options=[],
                 value=None,
                 id='alumnado-dropdown',
-                clearable=False
+                clearable=False,
+                placeholder="Seleccione un alumno"
             )
         ], className='select-alumnado'),
     ]) 
-

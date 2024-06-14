@@ -1,8 +1,5 @@
 from dash import html, callback, Output, Input
-from data.db_connector import db
-from callbacks.alumnado.callback_select_alumnado import store_selected_alumnado
-from utils.utils import calculate_average_grade
-from data.queries import resumen_alumno
+from data.queries import nota_media_alumno_titulacion, universidad_alumno
 
 @callback(
     Output('resumen-alumnado', 'children'),
@@ -10,29 +7,24 @@ from data.queries import resumen_alumno
     Input('titulacion-alumnado', 'value')
 )
 def update_resumen_alumnado(alumno_id, titulacion):
-    if not alumno_id:
+    if not (alumno_id and titulacion):
         return not_data()
-
-    data = resumen_alumno(alumno_id, titulacion)
     
-    #Comprobamos si hay datos
-    if data:
-        universidad = data[0][0]
-        titulacion = data[0][1]
-        id = data[0][2]
-    else:
-        return not_data()
+    universidad = universidad_alumno(alumno_id)
 
+    if not universidad:
+        return not_data()
+    
     return html.Div([
         html.H2("Resumen"),
         html.P("Universidad:", className="resumen-label"),
-        html.P(universidad),
+        html.P(universidad[0][1]),
         html.P("Titulación:", className="resumen-label"),
         html.P(titulacion),
         html.P("Alumno:", className="resumen-label"),
-        html.P(id),
+        html.P(alumno_id),
         html.P("Nota Media:", className="resumen-label"),
-        html.P(calculate_average_grade(alumno_id, titulacion)),
+        html.P(nota_media_alumno_titulacion(alumno_id, titulacion)),
         html.Hr(),
     ])
 
@@ -40,8 +32,13 @@ def update_resumen_alumnado(alumno_id, titulacion):
 def not_data():
     return html.Div([
             html.H2("Resumen"),
-            html.P("Universidad: No disponible"), 
-            html.P("Titulación: No disponible"),
-            html.P("Docente: No disponible"),
+            html.P("Universidad", className="resumen-label"),
+            html.P("No disponible"), 
+            html.P("Titulación", className="resumen-label"),
+            html.P("No disponible"),
+            html.P("Alumno", className="resumen-label"),
+            html.P("No disponible"),
+            html.P("Nota Media", className="resumen-label"),
+            html.P("No disponible"),
             html.Hr(),
         ])

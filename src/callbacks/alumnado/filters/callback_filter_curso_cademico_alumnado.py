@@ -1,4 +1,4 @@
-from dash import Input, Output, callback, State, callback_context
+from dash import Input, Output,State, callback, callback_context
 from callbacks.alumnado.callback_select_alumnado import store_selected_alumnado
 from data.queries import curso_academico_alumnado
 
@@ -31,6 +31,4 @@ def update_filter_curso_academico_alumnado(alumno_id, titulacion, n_clicks, exis
     value = [option['value'] for option in opciones_dropdown]
 
     return opciones_dropdown, value
-
-
     

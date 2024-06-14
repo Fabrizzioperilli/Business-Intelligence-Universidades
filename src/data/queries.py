@@ -43,7 +43,12 @@ def nota_media_alumno_titulacion(alumno_id, titulacion):
     query = queries['alumnado']['common']['nota_media_alumno_titulacion']
     params = {'alumno_id': alumno_id, 'titulacion': titulacion}
     
-    return check_data(query, params)
+    data = check_data(query, params)
+
+    if not data:
+        return "No disponible"
+    
+    return round(data[0][0], 2)
 
 @cache_query
 def curso_academico_alumnado(alumno_id, titulacion):

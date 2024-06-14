@@ -1,5 +1,4 @@
 from dash import Input, Output, State, callback
-from data.db_connector import db
 from data.queries import titulacion_alumnado
 
 @callback(

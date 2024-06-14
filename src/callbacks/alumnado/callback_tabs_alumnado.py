@@ -51,3 +51,4 @@ def render_content(tab, selected_alumnado):
         return html.Div([
             recomendador_alumnado()
         ])
+    

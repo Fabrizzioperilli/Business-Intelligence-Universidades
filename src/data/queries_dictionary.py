@@ -24,7 +24,7 @@ queries = {
                 AND m.titulacion = :titulacion;
                 """,
             "universidad_alumno": """
-                SELECT cod_universidad
+                SELECT cod_universidad, universidad
                 FROM matricula
                 WHERE id = :alumno_id;
                 """

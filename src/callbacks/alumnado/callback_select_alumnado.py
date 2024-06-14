@@ -1,4 +1,4 @@
-from dash import Input, Output, callback,State
+from dash import Input, Output, State, callback
 from data.queries import alumnos_all
 
 @callback(
@@ -6,15 +6,17 @@ from data.queries import alumnos_all
     Output('alumnado-dropdown', 'options'),
     Output('selected-alumnado-store', 'data'),
     Input('alumnado-dropdown', 'value'),
-    State('selected-alumnado-store', 'data'),
-    State('alumnado-dropdown', 'options')
+    State('selected-alumnado-store', 'data')
 )
-def store_selected_alumnado(selected_value, stored_value, dropdown_options):
+def store_selected_alumnado(selected_value, stored_value):
     data = alumnos_all()
+
+    if not data:
+        return None, [], None
+    
     opciones_dropdown = [{'label': alumno[0], 'value': alumno[0]} for alumno in data]
     
-    if selected_value is None and stored_value is not None:
-        if stored_value in [option['value'] for option in opciones_dropdown]:
-            return stored_value, opciones_dropdown, stored_value
+    if selected_value is None and stored_value in [op['value'] for op in opciones_dropdown]:
+        return stored_value, opciones_dropdown, stored_value
 
     return selected_value, opciones_dropdown, selected_value
