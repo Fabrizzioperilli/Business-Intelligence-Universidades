@@ -1,8 +1,4 @@
-from dash import Input, Output, callback
-from data.db_connector import db
-from data.queries import titulacion_alumnado
-
-from dash import Input, Output, callback, State
+from dash import Input, Output, State, callback
 from data.db_connector import db
 from data.queries import titulacion_alumnado
 
@@ -25,8 +21,8 @@ def update_filter_titulacion_alumnado(alumno_id, selected_value, stored_titulaci
     
     opciones_dropdown = [{'label': asignatura[0], 'value': asignatura[0]} for asignatura in data]
     
-    if selected_value is None and stored_titulacion:
-        if stored_titulacion in [op['value'] for op in opciones_dropdown]:
-            return opciones_dropdown, stored_titulacion, stored_titulacion
+    # Si no hay valor seleccionado pero hay un valor almacenado, lo usamos si está en las opciones
+    if selected_value is None and stored_titulacion in [op['value'] for op in opciones_dropdown]:
+        return opciones_dropdown, stored_titulacion, stored_titulacion
     
     return opciones_dropdown, selected_value, selected_value

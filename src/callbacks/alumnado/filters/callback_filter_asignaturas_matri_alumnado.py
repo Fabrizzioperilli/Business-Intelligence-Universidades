@@ -14,18 +14,15 @@ from data.queries import asignaturas_matriculadas
 )
 def update_filter_asignaturas_matri_alumnado(alumno_id, curso_academico, titulacion, n_clicks, existing_options):
     ctx = callback_context
+    trigger_id = ctx.triggered[0]['prop_id'].split('.')[0] if ctx.triggered else None
 
-    if not ctx.triggered:
-        return [], None
-    else:
-        button_id = ctx.triggered[0]['prop_id'].split('.')[0]
-
-    if button_id == 'select-all-button' and n_clicks > 0:
+    # Evento de selección de todas las asignaturas matriculadas
+    if trigger_id == 'select-all-button' and n_clicks > 0:
         return existing_options, [option['value'] for option in existing_options]
 
-    if not alumno_id or not curso_academico or not titulacion:
+    if not (alumno_id and curso_academico and titulacion):
         return [], None
-    
+
     try:
         curso_academico = list_to_tuple(curso_academico)
     except Exception as e:
@@ -35,8 +32,8 @@ def update_filter_asignaturas_matri_alumnado(alumno_id, curso_academico, titulac
     
     if not data:
         return [], None
-    
+
     opciones_dropdown = [{'label': asignatura[0], 'value': asignatura[0]} for asignatura in data]
-    value = [option['value'] for option in opciones_dropdown] if opciones_dropdown else []
-    
+    value = [option['value'] for option in opciones_dropdown]
+
     return opciones_dropdown, value

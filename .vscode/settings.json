@@ -2,5 +2,7 @@
   "python.terminal.activateEnvironment": true,
   "terminal.integrated.env.windows": {
       "PYTHONPATH": "${workspaceFolder}/venv/Lib/"
-  }
+  },
+  "docwriter.style": "Auto-detect",
+  "docwriter.language": "Spanish"
 }

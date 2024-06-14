@@ -12,7 +12,8 @@ def filter_curso_academico_alumnado():
             clearable=True,
             options=[],
             value=None,    
-            maxHeight=300
+            maxHeight=300,
+            placeholder="Seleccione una opción"
         ),
         html.Button('Seleccionar todo', id='select-all-cursos-academicos', className='button-select-all-filter', n_clicks=0)
     ])

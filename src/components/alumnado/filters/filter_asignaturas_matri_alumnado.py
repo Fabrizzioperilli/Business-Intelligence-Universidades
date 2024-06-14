@@ -14,6 +14,7 @@ def filter_asignaturas_matri_alumnado():
             options=[],
             maxHeight=300,
             optionHeight=50,
+            placeholder="Seleccione una opción"
         ),
         html.Button('Seleccionar todo', id='select-all-button', className='button-select-all-filter', n_clicks=0),
     ])

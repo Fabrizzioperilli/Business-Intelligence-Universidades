@@ -8,26 +8,27 @@ from data.queries import curso_academico_alumnado
     Input('selected-alumnado-store', 'data'),
     Input('titulacion-alumnado', 'value'),
     Input('select-all-cursos-academicos', 'n_clicks'),
-    State('curso-academico', 'options'),
-    State('select-all-cursos-academicos', 'n_clicks_timestamp')  # Añadido para revisar cuándo fue clickeado
+    State('curso-academico', 'options')
 )
-def update_filter_curso_academico_alumnado(alumno_id, titulacion, n_clicks, existing_options, last_clicked):
+def update_filter_curso_academico_alumnado(alumno_id, titulacion, n_clicks, existing_options):
     ctx = callback_context
-    trigger_id = ctx.triggered[0]['prop_id'].split('.')[0]
+    trigger_id = ctx.triggered[0]['prop_id'].split('.')[0] if ctx.triggered else None
 
-    #Evento de selección de todos los cursos académicos
-    if trigger_id == 'select-all-cursos-academicos':
-        if existing_options:
-            return existing_options, [option['value'] for option in existing_options]
-        else:
-            return [], []
+    # Evento de selección de todos los cursos académicos
+    if trigger_id == 'select-all-cursos-academicos' and n_clicks > 0:
+        return existing_options, [option['value'] for option in existing_options]
 
-    if not alumno_id or not titulacion:
-        return [], []
-    
-    result = curso_academico_alumnado(alumno_id, titulacion)        
-    opciones_dropdown = [{'label': curso[0], 'value': curso[0]} for curso in result]
-    value = [option['value'] for option in opciones_dropdown] if opciones_dropdown else []
+    if not (alumno_id and titulacion):
+        return [], None
+
+    # Obtener los cursos académicos desde la base de datos
+    data = curso_academico_alumnado(alumno_id, titulacion)
+
+    if not data:
+        return [], None
+
+    opciones_dropdown = [{'label': curso[0], 'value': curso[0]} for curso in data]
+    value = [option['value'] for option in opciones_dropdown]
 
     return opciones_dropdown, value
 
