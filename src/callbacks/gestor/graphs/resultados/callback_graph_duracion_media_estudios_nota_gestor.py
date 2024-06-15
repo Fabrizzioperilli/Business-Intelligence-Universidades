@@ -1,8 +1,8 @@
-import pandas as pd
+from dash import Input, Output, State, callback
 import plotly.express as px
 import plotly.graph_objects as go
 import dash_bootstrap_components as dbc
-from dash import Input, Output, callback, State
+import pandas as pd
 from data.queries import duracion_media_estudios_nota_gestor, universidades_gestor
 
 @callback(
@@ -10,11 +10,15 @@ from data.queries import duracion_media_estudios_nota_gestor, universidades_gest
     Input('selected-gestor-store', 'data')
 )
 def update_graph_gestor(gestor_id):
+    fig = go.Figure()
+
+    if not gestor_id:
+        return fig
 
     data = get_data(gestor_id)
 
     if data.empty:
-        return go.Figure()
+        return fig
      
     fig = px.scatter(
         data, 
@@ -27,13 +31,14 @@ def update_graph_gestor(gestor_id):
         animation_group='rama',
         category_orders={'rama': sorted(data['rama'].unique())}  # Agrupar colores por ramas
     )
+
     fig.update_layout(
         title={'text': 'Duración media de los estudios con respecto a la nota media', 'x': 0.5},
         xaxis_title='Nota media',
         yaxis_title='Duración media de los estudios',
-        showlegend=True,
-        legend={'title': 'Rama'}
+        legend={'title': 'Rama de conocimiento'},
     )
+
     fig.update_traces(
         marker=dict(line=dict(width=1, color='DarkSlateGrey')),
         textposition='top center'  # Ajuste de la posición del texto
@@ -71,7 +76,7 @@ def update_table(btn, gestor_id):
     if df.empty:
         return dbc.Alert("No hay datos disponibles", color="info")
     
-    return dbc.Table.from_dataframe(df.head(20), striped=True, bordered=True, hover=True)
+    return dbc.Table.from_dataframe(df.head(50), striped=True, bordered=True, hover=True)
 
 
 @callback(

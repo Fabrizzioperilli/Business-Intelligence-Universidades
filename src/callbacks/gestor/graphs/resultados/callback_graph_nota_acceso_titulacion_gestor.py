@@ -1,4 +1,4 @@
-from dash import callback, Input, Output, State, dcc
+from dash import Input, Output, State, callback
 import plotly.graph_objs as go
 import pandas as pd
 import dash_bootstrap_components as dbc
@@ -12,11 +12,10 @@ def update_grpht_gestor(gestor_id):
     fig = go.Figure()
     
     fig.update_layout(
-        title={'text': 'Evolución de nota de acceso por cada titulación', 'x': 0.5},
+        title={'text': 'Evolución nota de acceso por titulación', 'x': 0.5},
         xaxis_title='Curso académico',
         yaxis_title='Nota media de acceso',
-        showlegend=True,
-        legend={'title':'Titulaciones', 'orientation':'h', 'y': -0.5}
+        legend={'title':'Titulaciones'}
     )
     
     df = get_data(gestor_id)
@@ -25,12 +24,14 @@ def update_grpht_gestor(gestor_id):
         return fig
         
     for titulation, group in df.groupby('titulacion'):
-        fig.add_trace(go.Scatter(
-            x=group['curso_academico'],
-            y=group['nota'],
-            mode='lines+markers',
-            name=titulation
-        ))
+        fig.add_trace(
+            go.Scatter(
+                x=group['curso_academico'],
+                y=group['nota'],
+                mode='lines+markers',
+                name=titulation
+            )
+        )
 
     return fig
 
@@ -59,7 +60,7 @@ def update_table(btn, gestor_id):
     if df.empty:
         return dbc.Alert("No hay datos disponibles", color="info")
     
-    return dbc.Table.from_dataframe(df.head(10), striped=True, bordered=True, hover=True)
+    return dbc.Table.from_dataframe(df.head(50), striped=True, bordered=True, hover=True)
 
 
 @callback(

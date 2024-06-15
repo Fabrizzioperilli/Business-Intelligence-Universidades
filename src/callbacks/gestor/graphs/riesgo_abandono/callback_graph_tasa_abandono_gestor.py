@@ -1,8 +1,8 @@
-from dash import callback, Output, Input, State, html
+from dash import Output, Input, State, callback
 import plotly.graph_objs as go
-from data.queries import tasa_abandono_titulacion_gestor, universidades_gestor
 import pandas as pd
 import dash_bootstrap_components as dbc
+from data.queries import tasa_abandono_titulacion_gestor, universidades_gestor
 from utils.utils import list_to_tuple
 
 @callback(
@@ -13,7 +13,6 @@ from utils.utils import list_to_tuple
 def update_graph_gestor(curso_academico, gestor_id):
     fig = go.Figure()
 
-    # Configuración del layout de la gráfica
     fig.update_layout(
         title={'text': 'Tasa de abandono por titulación ', 'x': 0.5},
         xaxis_title='Curso académico',
@@ -66,7 +65,7 @@ def update_table(btn, gestor_id, curso_academico):
         return dbc.Alert("No hay datos disponibles", color="info")
 
     df['tasa_abandono'] = (df['numero_abandonos'] / df['numero_matriculados']) * 100
-    return dbc.Table.from_dataframe(df.head(10), striped=True, bordered=True, hover=True, responsive=True)
+    return dbc.Table.from_dataframe(df.head(50), striped=True, bordered=True, hover=True, responsive=True)
 
 
 @callback(

@@ -1,9 +1,9 @@
 from dash import Input, Output, State, callback
 import plotly.graph_objs as go
 import dash_bootstrap_components as dbc
+import pandas as pd
 from utils.utils import list_to_tuple
 from data.queries import tasa_graduacion_titulacion_gestor, universidades_gestor
-import pandas as pd
 
 @callback(
     Output('tasa-graduacion-gestor', 'figure'),
@@ -24,15 +24,19 @@ def update_graph_gestor(curso_academico, gestor_id):
 
     # Obtener los datos
     df = get_data(gestor_id, curso_academico)
-
-    for titulacion in df['titulacion'].unique():
-        df_titulacion = df[df['titulacion'] == titulacion]
-        fig.add_trace(go.Scatter(
-            x=df_titulacion['curso_academico'],
-            y=df_titulacion['tasa_graduacion'],
-            mode='lines+markers',
-            name=titulacion
-        ))
+    
+    if df.empty:
+        return fig
+    
+    for titulacion, group in df.groupby('titulacion'):
+        fig.add_trace(
+            go.Scatter(
+                x=group['curso_academico'],
+                y=group['tasa_graduacion'],
+                mode='lines+markers',
+                name=titulacion
+            )
+        )
     
     return fig
     
@@ -62,7 +66,7 @@ def update_table(btn, curso_academico, gestor_id):
     if df.empty:
         return dbc.Alert("No hay datos disponibles", color="info")
 
-    return dbc.Table.from_dataframe(df.head(10), striped=True, bordered=True, hover=True, responsive=True)
+    return dbc.Table.from_dataframe(df.head(50), striped=True, bordered=True, hover=True, responsive=True)
 
 @callback(
     Output('btn-descargar-tasa-graduacion', 'href'),
