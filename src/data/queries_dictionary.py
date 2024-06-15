@@ -8,12 +8,6 @@ queries = {
                 ORDER BY id DESC
                 LIMIT 50;
                 """,
-          # Consulta para obtener los datos que se muestran en el resumen de un alumno.
-          "resumen_alumno": """
-                SELECT DISTINCT universidad, titulacion, id 
-                FROM matricula 
-                WHERE id = :alumno_id AND titulacion = :titulacion;
-                """,
           # Consulta para calcular la media de las calificaciones de un alumno en una titulación específica.
           "nota_media_alumno_titulacion": """
                 SELECT AVG(li.calif_numerica) AS media_calif
@@ -275,12 +269,12 @@ queries = {
                 SELECT DISTINCT id_docente FROM docentes
                 LIMIT 20;
                 """,
-          #Consulta para obtener los datos que se muestran en el resumen del docente 
-          "resumen_docente": """
-                SELECT DISTINCT universidad, titulacion, id_docente 
-                FROM docentes 
-                WHERE id_docente = :id_docente AND titulacion = :titulacion;
-                """
+          #Consulta para obtener la universidad de un docente.
+            "universidades_docente": """
+                SELECT DISTINCT cod_universidad, universidad
+                FROM docentes
+                WHERE id_docente = :id_docente;
+                """,
       },
       "filters": {
           # Consulta para obtener las asignaturas de un docente según la titulación.

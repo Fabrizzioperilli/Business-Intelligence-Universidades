@@ -366,3 +366,10 @@ def universidad_alumno(alumno_id):
     params = {'alumno_id': alumno_id}
 
     return check_data(query, params)
+
+@cache_query
+def universidades_docente(id_docente):
+    query = queries['docente']['common']['universidades_docente']
+    params = {'id_docente': id_docente}
+
+    return check_data(query, params)
