@@ -481,12 +481,6 @@ queries = {
                 SELECT DISTINCT gestor_id FROM gestores
                 LIMIT 20;
                 """,
-            #Consulta para obtener los datos que se muestran en el resumen del gestor.
-            "resumen_gestor": """
-                SELECT DISTINCT universidad, gestor_id
-                FROM gestores
-                WHERE gestor_id = :gestor_id;
-                """,
             #Consulta para obtener el número de alumnos matriculados en una universidad.
             "numero_alumnos_matriculados_universidad": """
                 SELECT COUNT(alumnos.id) AS n_alumnos_universidad
@@ -495,7 +489,7 @@ queries = {
                 """,
             #Consulta que muestra la universidad de un gestor.
             "universidades_gestor": """
-                SELECT DISTINCT cod_universidad
+                SELECT DISTINCT cod_universidad, universidad
                 FROM gestores 
                 WHERE gestor_id = :gestor_id;
                 """,

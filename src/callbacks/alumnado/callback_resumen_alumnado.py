@@ -32,13 +32,13 @@ def update_resumen_alumnado(alumno_id, titulacion):
 def not_data():
     return html.Div([
             html.H2("Resumen"),
-            html.P("Universidad", className="resumen-label"),
+            html.P("Universidad:", className="resumen-label"),
             html.P("No disponible"), 
-            html.P("Titulación", className="resumen-label"),
+            html.P("Titulación:", className="resumen-label"),
             html.P("No disponible"),
-            html.P("Alumno", className="resumen-label"),
+            html.P("Alumno:", className="resumen-label"),
             html.P("No disponible"),
-            html.P("Nota Media", className="resumen-label"),
+            html.P("Nota Media:", className="resumen-label"),
             html.P("No disponible"),
             html.Hr(),
         ])
