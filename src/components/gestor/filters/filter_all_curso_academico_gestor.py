@@ -13,6 +13,7 @@ def filter_all_curso_academico_gestor():
             options=[],
             value=None,    
             maxHeight=200,
+            placeholder="Seleccione una opción"
         ),
         html.Button('Seleccionar todo', id='select-all-curso-academico-button', className='button-select-all-filter', n_clicks=0),
         dcc.Store(id='curso-all-academico-gestor-store', storage_type='local')

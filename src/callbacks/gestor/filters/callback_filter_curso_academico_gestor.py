@@ -1,4 +1,4 @@
-from dash import Input, Output, State, callback
+from dash import Input, Output, callback
 from data.queries import universidades_gestor, curso_academico_universidad
 
 @callback(
@@ -11,6 +11,7 @@ def update_filter_curso_academico_gestor(gestor_id):
         return [], None
     
     cod_universidad = universidades_gestor(gestor_id)
+    
     if not cod_universidad:
         return [], None
     

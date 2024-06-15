@@ -11,6 +11,7 @@ def filter_curso_academico_gestor():
             clearable=False,
             options=[],
             value=None,    
-            maxHeight=200,
+            maxHeight=300,
+            placeholder="Selecciona una opción"
         )
     ])

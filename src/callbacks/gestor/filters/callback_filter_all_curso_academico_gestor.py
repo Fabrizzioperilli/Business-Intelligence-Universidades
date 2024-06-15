@@ -6,23 +6,20 @@ from data.queries import universidades_gestor, curso_academico_universidad
     Output('curso-all-academico-gestor', 'value'),
     Input('selected-gestor-store', 'data'),
     Input('select-all-curso-academico-button', 'n_clicks'),
-    State('curso-all-academico-gestor', 'options'),
-    State('select-all-curso-academico-button', 'n_clicks_timestamp'),
+    State('curso-all-academico-gestor', 'options')
 )
-def update_filter_all_curso_academico_gestor(gestor_id, n_clicks, existing_options, last_clicked):
+def update_filter_all_curso_academico_gestor(gestor_id, n_clicks, existing_options):
     ctx = callback_context
-    trigger_id = ctx.triggered[0]['prop_id'].split('.')[0]
+    trigger_id = ctx.triggered[0]['prop_id'].split('.')[0] if ctx.triggered else None
 
-    if trigger_id == 'select-all-curso-academico-button':
-        if existing_options:
+    if trigger_id == 'select-all-curso-academico-button' and n_clicks > 0:
             return existing_options, [option['value'] for option in existing_options]
-        else:
-            return [], []
         
     if not gestor_id:
         return [], None
     
     cod_universidad = universidades_gestor(gestor_id)
+
     if not cod_universidad:
         return [], None
     
