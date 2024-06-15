@@ -8,7 +8,8 @@ def select_gestor():
                   options=[],
                   value=None,
                   id='gestor-dropdown',
-                  clearable=False
+                  clearable=False,
+                  placeholder="Seleccione un gestor"
               )
           ], className='select-gestor'),
       ])
