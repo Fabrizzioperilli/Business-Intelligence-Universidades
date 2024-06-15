@@ -11,15 +11,12 @@ from data.queries import asignaturas_actas_titulacion
 )
 def update_filter_asignaturas_docente(titulacion, curso_academico, n_clicks, existing_options):
     ctx = callback_context
-    trigger_id = ctx.triggered[0]['prop_id'].split('.')[0]
+    trigger_id = ctx.triggered[0]['prop_id'].split('.')[0] if ctx.triggered else None
 
-    if trigger_id == 'select-all-asignaturas-titulacion-docente':
-        if existing_options and isinstance(existing_options, list):
-            return existing_options, [option['value'] for option in existing_options]
-        else:
-            return [], []
+    if trigger_id == 'select-all-asignaturas-titulacion-docente' and n_clicks > 0:
+        return existing_options, [option['value'] for option in existing_options]
 
-    if not titulacion or not curso_academico:
+    if not (titulacion and curso_academico):
         return [], None
 
     data = asignaturas_actas_titulacion(titulacion, curso_academico)

@@ -438,8 +438,9 @@ queries = {
                                 docentes.titulacion = :titulacion AND 
                                 li.curso_aca = :curso_academico AND 
                                 li.asignatura IN :asignaturas
-                            GROUP BY li.curso_aca, li.asignatura, li.calif
-                            ORDER BY li.asignatura;
+                            GROUP BY li.asignatura, li.curso_aca, li.calif
+                            ORDER BY li.asignatura, li.curso_aca, li.calif;
+
                             """,
                     "calif_media_asignaturas": """
                             SELECT 

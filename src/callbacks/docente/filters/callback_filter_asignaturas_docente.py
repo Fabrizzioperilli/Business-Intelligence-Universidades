@@ -9,7 +9,7 @@ from data.queries import asignaturas_docente
 )
 def update_filter_asignaturas_docente(docente_id, titulacion):
    
-    if not docente_id or not titulacion:
+    if not (docente_id and titulacion):
         return [], None
      
     data = asignaturas_docente(docente_id, titulacion)

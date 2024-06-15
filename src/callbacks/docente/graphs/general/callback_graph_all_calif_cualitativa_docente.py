@@ -1,8 +1,8 @@
-from dash import callback, Output, Input
+from dash import Output, Input, callback
 import plotly.graph_objs as go
+import pandas as pd
 from data.queries import calif_all_cualitativa_asignaturas
 from utils.utils import list_to_tuple
-import pandas as pd
 
 @callback(
     Output('calificaiones-cuali-all-asig-docente', 'figure'),
@@ -11,12 +11,11 @@ import pandas as pd
     Input('all-asignaturas-titulacion-docente', 'value'),
 )
 def update_graph_docente(titulacion, curso_academico, asignatura):
-
     fig = go.Figure()
     
     fig.update_layout(
         barmode='stack',
-        title={'text':'Calificaciones cualitativas por titulación, asignaturas y curso académico ', 'x': 0.5},
+        title={'text':'Calificaciones cualitativas de la titulación', 'x': 0.5},
         xaxis={'title': 'Asignaturas', 'tickangle': 45},
         yaxis= {'title': 'Nº Alumnos matriculados'},
         legend=dict(
@@ -30,21 +29,22 @@ def update_graph_docente(titulacion, curso_academico, asignatura):
         )
     )
 
-    if not curso_academico or not asignatura:
+    if not (curso_academico and asignatura):
         return fig
     
     try:
         asignatura = list_to_tuple(asignatura)
     except Exception as e:
         return fig
-    
+
     data = calif_all_cualitativa_asignaturas(titulacion, curso_academico, asignatura)
 
     if not data:
         return fig
-    df = pd.DataFrame(data, columns=['Titulacion', 'Asignatura', 'Calificación', 'N_Alumnos'])
     
-    colors = {
+    df = pd.DataFrame(data, columns=['titulacion', 'asignatura', 'calificación', 'n_alumnos'])
+    
+    colors_mapping = {
         'Sobresaliente': 'blue',
         'Notable': 'green',
         'Aprobado': 'orange',
@@ -52,15 +52,15 @@ def update_graph_docente(titulacion, curso_academico, asignatura):
         'No presentado': 'gray'
     }
 
-    for calif, color in colors.items():
-        df_filtered = df[df['Calificación'] == calif]
-        if not df_filtered.empty:
-            fig.add_trace(go.Bar(
-                x=df_filtered['Asignatura'],
-                y=df_filtered['N_Alumnos'],
-                name=calif,
-                marker_color=color,
-                opacity=0.7
-            ))
+    for calif, color in colors_mapping.items():
+        df_calif = df[df['calificación'] == calif]
+        fig.add_trace(go.Bar(
+            x=df_calif['asignatura'],
+            y=df_calif['n_alumnos'],
+            name=calif,
+            marker_color=color,
+            opacity=0.7))
+         
+    fig.update_xaxes(categoryorder='array', categoryarray=asignatura)    
 
     return fig

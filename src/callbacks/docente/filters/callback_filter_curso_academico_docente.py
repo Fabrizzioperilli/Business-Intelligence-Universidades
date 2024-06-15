@@ -8,25 +8,24 @@ from callbacks.docente.callback_select_docente import store_selected_docente
     Input('selected-docente-store', 'data'),
     Input('asignaturas-docente', 'value'),
     Input('select-all-cursos-academicos-docente', 'n_clicks'),
-    State('curso-academico-docente', 'options'),
-    State('select-all-cursos-academicos-docente', 'n_clicks_timestamp')  # Añadido para revisar cuándo fue clickeado
+    State('curso-academico-docente', 'options')
 )
-def update_filter_curso_academico_docente(docente_id, asignatura, n_clicks, existing_options, last_clicked):
+def update_filter_curso_academico_docente(docente_id, asignatura, n_clicks, existing_options):
     ctx = callback_context
-    trigger_id = ctx.triggered[0]['prop_id'].split('.')[0]
+    trigger_id = ctx.triggered[0]['prop_id'].split('.')[0] if ctx.triggered else None
 
-    if trigger_id == 'select-all-cursos-academicos':
-        if existing_options:
+    if trigger_id == 'select-all-cursos-academicos' and n_clicks > 0:
             return existing_options, [option['value'] for option in existing_options]
-        else:
-            return [], []
 
-    if not docente_id or not asignatura:
-        return [], []
+    if not (docente_id and asignatura):
+        return [], None
     
     data = curso_academico_docente(docente_id, asignatura)
 
+    if not data:
+        return [], None
+
     opciones_dropdown = [{'label': curso[0], 'value': curso[0]} for curso in data]
-    value = [option['value'] for option in opciones_dropdown] if opciones_dropdown else []
+    value = [option['value'] for option in opciones_dropdown]
     
     return opciones_dropdown, value

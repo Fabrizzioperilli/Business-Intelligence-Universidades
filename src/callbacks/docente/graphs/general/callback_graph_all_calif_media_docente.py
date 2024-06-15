@@ -1,8 +1,8 @@
 from dash import callback, Output, Input
 import plotly.graph_objs as go
+import pandas as pd
 from data.queries import calif_media_asignaturas
 from utils.utils import list_to_tuple
-import pandas as pd
 
 @callback(
     Output('calificaiones-media-all-asig-docente', 'figure'),
@@ -11,16 +11,15 @@ import pandas as pd
     Input('all-asignaturas-titulacion-docente', 'value'),
 )
 def update_graph_docente(titulacion, curso_academico, asignatura):
-
     fig = go.Figure()
 
     fig.update_layout(
-        title={'text':'Nota media por titulación, asignaturas y curso académico', 'x': 0.5},
+        title={'text':'Nota media por asignatura de la titulación', 'x': 0.5},
         xaxis_title='Asignaturas',
         yaxis_title='Nota media'
     )
 
-    if not curso_academico or not asignatura:
+    if not (curso_academico and asignatura):
         return fig
 
     try:
