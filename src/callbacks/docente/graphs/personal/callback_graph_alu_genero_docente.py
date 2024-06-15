@@ -6,17 +6,16 @@ from utils.utils import list_to_tuple
 
 @callback(
     Output('graph-alumnos-matri-genero', 'figure'),
-    [Input('asignaturas-docente', 'value')],
-    [Input('curso-academico-docente', 'value')],
-    [Input('selected-docente-store', 'data')]
+    Input('asignaturas-docente', 'value'),
+    Input('curso-academico-docente', 'value'),
+    Input('selected-docente-store', 'data')
 )
 def update_graph_docente(asignaturas, curso_academico, docente_id):
-
     fig = go.Figure()
     
     fig.update_layout(
         barmode='stack',
-        title={'text': 'Evolución alumnos matriculados por género y curso académico', 'x': 0.5},
+        title={'text': 'Evolución alumnos matriculados por género', 'x': 0.5},
         xaxis={'title': 'Curso académico'},
         yaxis={'title': 'Nº Alumnos matriculados'},
         legend_title_text='Género'
@@ -35,9 +34,9 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
     if not data:
         return fig
 
-    df = pd.DataFrame(data, columns=['Curso Académico', 'Género', 'Cantidad'])
+    df = pd.DataFrame(data, columns=['curso_academico', 'genero', 'cantidad'])
     
-    df_pivot = df.pivot(index='Curso Académico', columns='Género', values='Cantidad').fillna(0)
+    df_pivot = df.pivot(index='curso_academico', columns='genero', values='cantidad').fillna(0)
     
     colores = {
         'Femenino': 'red', 

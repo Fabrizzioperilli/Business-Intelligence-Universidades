@@ -1,28 +1,27 @@
 from dash import callback, Input, Output
 import plotly.graph_objs as go
+import pandas as pd
 from data.queries import alumnos_nota_cualitativa_docente
 from utils.utils import list_to_tuple
-import pandas as pd
 
 @callback(
     Output('graph-alumnos-nota-cualitativa', 'figure'),
-    [Input('asignaturas-docente', 'value')],
-    [Input('curso-academico-docente', 'value')],
-    [Input('selected-docente-store', 'data')]
+    Input('asignaturas-docente', 'value'),
+    Input('curso-academico-docente', 'value'),
+    Input('selected-docente-store', 'data')
 )
 def update_graph_docente(asignaturas, curso_academico, docente_id):
-
     fig = go.Figure()
-    
+
     fig.update_layout(
         barmode='stack',
-        title={'text': 'Evolución calificaciones por curso académico', 'x': 0.5},
+        title={'text': 'Evolución calificaciones cualitativas', 'x': 0.5},
         xaxis={'title': 'Curso académico'},
         yaxis={'title': 'Nº Alumnos matriculados'},
         legend_title_text='Calificación'
     )
 
-    if not asignaturas or not curso_academico or not docente_id:
+    if not (asignaturas and curso_academico and docente_id):
         return fig
     
     try:
@@ -35,10 +34,17 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
     if not data:
         return fig
     
-    df = pd.DataFrame(data, columns=['Curso Académico', 'Calificación', 'Nº Alumnos'])
+    df = pd.DataFrame(data, columns=['curso_academico', 'calificacion', 'n_alumnos'])
     
     # Pivotear el DataFrame para obtener las cantidades por calificación en columnas separadas
-    df_pivot = df.pivot(index='Curso Académico', columns='Calificación', values='Nº Alumnos').fillna(0)
+    df_pivot = df.pivot(index='curso_academico', columns='calificacion', values='n_alumnos').fillna(0)
+    catagories = ['No presentado', 'Suspenso', 'Aprobado', 'Notable', 'Sobresaliente']
+    
+    for calif in catagories:
+        if calif not in df_pivot:
+            df_pivot[calif] = 0
+    
+    df_pivot = df_pivot[catagories]
     
     colors = {
         'Sobresaliente': 'blue',
@@ -48,7 +54,7 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
         'No presentado': 'gray',
     }
     
-    for calif in df_pivot.columns:
+    for calif in catagories:
         fig.add_trace(go.Bar(
             x=df_pivot.index,
             y=df_pivot[calif],
