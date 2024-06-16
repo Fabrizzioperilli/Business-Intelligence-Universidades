@@ -8,6 +8,15 @@ from layouts.gestor_layout import gestor_layout
     Input('store-role', 'data')
 )
 def update_layout(role):
+    """
+    Actualiza el layout de la aplicación según el rol del usuario.
+
+    Args:
+    role (str): Rol del usuario
+
+    Returns:
+    str: Layout correspondiente al rol del usuario
+    """
     if role == 'Alumno':
         return alumno_layout()
     elif role == 'Docente':

@@ -12,6 +12,22 @@ from util import list_to_tuple
     State('asignaturas-matriculadas', 'options')
 )
 def update_filter_asignaturas_matri_alumnado(alumno_id, curso_academico, titulacion, n_clicks, existing_options):
+    """
+    Actualiza las opciones del dropdown de asignaturas matriculadas por el alumno y
+    gestiona el evento del botón "Seleccionar todo".
+
+    Args:
+    alumno_id (str): Identificador del alumno.
+    curso_academico (list): Lista con los cursos académicos
+    titulacion (str): Titulación seleccionada
+    n_clicks (int): Número de clicks en el botón "Seleccionar todo"
+    existing_options (list): Opciones actuales del dropdown
+
+    Returns:
+    list: Opciones del dropdown
+    list: Valor seleccionado
+    """
+
     ctx = callback_context
     trigger_id = ctx.triggered[0]['prop_id'].split('.')[0] if ctx.triggered else None
 

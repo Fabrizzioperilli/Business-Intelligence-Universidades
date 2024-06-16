@@ -3,6 +3,12 @@ from callbacks.alumnado.filters.callback_filter_curso_cademico_alumnado import u
 
 
 def filter_curso_academico_alumnado():
+    """
+    Crea un componente con un dropdown que contiene los cursos académicos.
+    
+    Returns:
+    html.Div: Componente con un dropdown y un botón para seleccionar todos los cursos académicos
+    """
     return html.Div(
         [
             html.Br(),

@@ -5,6 +5,9 @@ from callbacks.alumnado.utils.callback_tabs_alumnado import render_content
 def tabs_alumnado():
     """
     Contiene las pestañas de la vista del alumnado.
+
+    Returns:
+    html.Div: Pestañas del alumnado
     """
     return html.Div(
         [

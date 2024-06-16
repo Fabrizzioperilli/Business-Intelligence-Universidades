@@ -3,6 +3,9 @@ from dash import html
 def recomendador_alumnado():
     """
     Esta función retorna el contenido de la pestaña "Recomendador" del perfil "Alumnado".
+
+    Returns:
+    html.Div: Layout de la pestaña "Recomendador" del perfil "Alumnado"
     """
 
     return html.Div([

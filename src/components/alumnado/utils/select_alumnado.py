@@ -5,6 +5,9 @@ from callbacks.alumnado.utils.callback_select_alumnado import store_selected_alu
 def select_alumnado():
     """
     Crea el desplegable para seleccionar un alumno.
+
+    Returns:
+    html.Div: Desplegable para seleccionar un alumno
     """
     return html.Div(
         [

@@ -9,6 +9,9 @@ from components.common.create_graph import create_graph
 def graphs_personal_alumnado():
     """
     Retorna los gráficos de la pestaña "Expediente académico Personal" del perfil "Alumnado"
+
+    Returns:
+    html.Div: Gráficos
     """
     graph_ids = [
         "graph-evolucion-progreso-academico",

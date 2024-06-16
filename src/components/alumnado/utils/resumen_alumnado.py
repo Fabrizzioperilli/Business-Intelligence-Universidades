@@ -5,5 +5,8 @@ from callbacks.alumnado.utils.callback_resumen_alumnado import update_resumen_al
 def resumen_alumnado():
     """
     Crea el layout del resumen del alumnado.
+
+    Returns:
+    html.Div: Layout del resumen del alumnado
     """
     return html.Div([], id="resumen-alumnado")

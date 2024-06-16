@@ -3,6 +3,12 @@ from callbacks.alumnado.filters.callback_filter_titulacion_alumnado import updat
 
 
 def filter_titulacion_alumnado():
+    """
+    Crea un componente con un dropdown que contiene las titulaciones del perfil "Alumno".
+
+    Returns:
+    html.Div: Componente con un dropdown y almacenamiento de la titulación seleccionada
+    """
     return html.Div(
         [
             html.Label("Titulación"),

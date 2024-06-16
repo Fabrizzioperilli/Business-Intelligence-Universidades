@@ -5,8 +5,12 @@ import random
 def list_to_tuple(value):
     """
     Función para convertir una lista en una tupla
-    :param value: Lista a convertir
-    :return: Tupla
+    
+    Args:
+        value: Lista o str a convertir en tupla
+
+    Returns:
+        Tupla con el valor de entrada
     """
     if isinstance(value, str):
         return (value,)
@@ -23,8 +27,12 @@ def list_to_tuple(value):
 def random_color(size):
     """
     Función para generar colores aleatorios en formato hexadecimal
-    :param size: Número de colores a generar
-    :return: Lista de colores en formato hexadecimal
+    
+    Args:
+        size: Cantidad de colores a generar
+
+    Returns:
+        Lista de colores en formato hexadecimal
     """
     return ["#%06X" % random.randint(0, 0xFFFFFF) for _ in range(size)]
 

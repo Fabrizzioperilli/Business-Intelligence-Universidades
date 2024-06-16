@@ -8,6 +8,9 @@ from components.common.create_graph import create_graph
 def graphs_general_alumnado():
     """
     Retona los gráficos de la pestaña "Rendimento Académico general" del perfil "Alumnado"
+
+    Returns:
+    html.Div: Gráficos
     """
     graph_ids = [
         "asignaturas-superadas-general-mi-nota",

@@ -10,6 +10,19 @@ from data.queries import titulacion_alumnado
     State('selected-titulacion-alumnado-store', 'data')
 )
 def update_filter_titulacion_alumnado(alumno_id, selected_value, stored_titulacion):
+    """
+    Actualiza las opciones del dropdown de titulaciones del perfil "Alumno".
+
+    Args:
+    alumno_id (str): Identificador del alumno.
+    selected_value (str): Valor seleccionado en el dropdown
+    stored_titulacion (str): Titulación almacenada
+
+    Returns:
+    list: Opciones del dropdown
+    str: Valor seleccionado
+
+    """
     if not alumno_id:
         return [], None, None
     
