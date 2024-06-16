@@ -1,6 +1,6 @@
 from dash import Input, Output, callback, State, callback_context
 from data.queries import curso_academico_docente
-from callbacks.docente.callback_select_docente import store_selected_docente
+from callbacks.docente.utils.callback_select_docente import store_selected_docente
 
 @callback(
     Output('curso-academico-docente', 'options'),

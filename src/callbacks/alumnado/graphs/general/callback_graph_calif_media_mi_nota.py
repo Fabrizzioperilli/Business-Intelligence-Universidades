@@ -1,7 +1,7 @@
 from dash import callback, Input, Output
 from data.queries import nota_media_general_mi_nota, universidad_alumno
 import plotly.graph_objs as go
-from utils.utils import list_to_tuple
+from util import list_to_tuple
 import pandas as pd
 
 @callback(

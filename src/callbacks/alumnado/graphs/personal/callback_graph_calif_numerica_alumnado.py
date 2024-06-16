@@ -2,7 +2,7 @@ from dash import Input, Output, callback
 import plotly.graph_objs as go
 import pandas as pd
 from data.queries import calif_numerica_asignatura
-from utils.utils import list_to_tuple, random_color
+from util import list_to_tuple, random_color
 
 @callback(
     Output('graph-bar-calificaciones-por-asignatura', 'figure'),

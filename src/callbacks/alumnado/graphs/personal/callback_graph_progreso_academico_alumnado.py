@@ -1,7 +1,7 @@
 from dash import Input, Output, callback
 import plotly.graph_objs as go
 from data.queries import asignaturas_superadas
-from utils.utils import list_to_tuple
+from util import list_to_tuple
 import pandas as pd
 
 

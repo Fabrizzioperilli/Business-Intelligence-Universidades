@@ -2,7 +2,7 @@ from dash import Input, Output, State, callback
 import plotly.graph_objs as go
 import dash_bootstrap_components as dbc
 import pandas as pd
-from utils.utils import list_to_tuple
+from util import list_to_tuple
 from data.queries import tasa_graduacion_titulacion_gestor, universidades_gestor
 
 @callback(

@@ -1,5 +1,5 @@
-from dash import html, callback, Output, Input
-import components.gestor.tabs_gestor as tabs_gestor
+from dash import html
+import components.gestor.utils.tabs_gestor as tabs_gestor
 
 def gestor_layout():
     return html.Div([

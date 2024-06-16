@@ -2,7 +2,7 @@ from dash import Input, Output, callback
 import plotly.graph_objs as go
 import pandas as pd
 from data.queries import asignaturas_matriculadas_y_superadas
-from utils.utils import list_to_tuple
+from util import list_to_tuple
 
 @callback(
     Output('graph-bar-tasa-rendimiento', 'figure'),

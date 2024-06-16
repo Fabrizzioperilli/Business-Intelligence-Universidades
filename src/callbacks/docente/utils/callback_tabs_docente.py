@@ -1,7 +1,7 @@
 from dash import html, callback, Input, Output,State
-from components.docente.select_docente import select_docente
+from components.docente.utils.select_docente import select_docente
 from components.common.sidebar import sidebar
-from components.docente.resumen_docente import resumen_docente
+from components.docente.utils.resumen_docente import resumen_docente
 from components.docente.filters.filter_curso_academico_docente import filter_curso_academico_docente
 from components.docente.filters.filter_asignaturas_docente import filter_asignaturas_docente
 from components.docente.filters.filter_titulacion_docente import filter_titulacion_docente
@@ -10,7 +10,7 @@ from components.docente.filters.filter_all_asignaturas_titulacion_docente import
 from components.docente.graphs.graphs_personal_docente import graphs_personal_docente
 from components.docente.graphs.graphs_general_docente import graphs_general_docente
 from components.common.filters import filters
-from components.docente.recomendador_docente import recomendador_docente
+from components.docente.utils.recomendador_docente import recomendador_docente
 
 
 @callback(

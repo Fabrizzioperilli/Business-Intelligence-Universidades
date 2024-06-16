@@ -1,5 +1,5 @@
 from dash import html, dcc
-from callbacks.docente.callback_select_docente import store_selected_docente
+from callbacks.docente.utils.callback_select_docente import store_selected_docente
 
 def select_docente():
     return html.Div([
@@ -8,7 +8,8 @@ def select_docente():
                 options=[],
                 value=None,
                 id='docente-dropdown',
-                clearable=False
+                clearable=False,
+                placeholder='Selecciona un docente'
             )
         ], className='select-docente'),
     ]) 

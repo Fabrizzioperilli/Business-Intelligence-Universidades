@@ -1,5 +1,5 @@
 from dash import html, dcc
-from callbacks.gestor.callback_select_gestor import store_selected_gestor
+from callbacks.gestor.utils.callback_select_gestor import store_selected_gestor
 
 def select_gestor():
       return html.Div([

@@ -2,7 +2,7 @@ from dash import html
 from callbacks.gestor.graphs.riesgo_abandono.callback_graph_tasa_abandono_gestor import update_graph_gestor
 from callbacks.gestor.graphs.riesgo_abandono.callback_graph_tasa_graduacion_gestor import update_graph_gestor
 from components.common.create_graph_with_table import create_graph_with_table
-from utils.utils import config_mode_bar_buttons_gestor
+from util import config_mode_bar_buttons_gestor
 
 def graphs_riesgo_abandono_gestor():
     graphs_info = [

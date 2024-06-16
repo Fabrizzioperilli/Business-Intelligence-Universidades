@@ -1,6 +1,5 @@
 from dash import html, callback, Output, Input
 from data.queries import universidades_docente
-from callbacks.docente.callback_select_docente import store_selected_docente
 
 @callback(
     Output('resumen-docente', 'children'),

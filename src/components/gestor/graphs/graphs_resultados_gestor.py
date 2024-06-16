@@ -2,7 +2,7 @@ from dash import html
 from callbacks.gestor.graphs.resultados.callback_graph_nota_acceso_titulacion_gestor import update_grpht_gestor
 from callbacks.gestor.graphs.resultados.callback_graph_duracion_media_estudios_nota_gestor import update_graph_gestor
 from components.common.create_graph_with_table import create_graph_with_table
-from utils.utils import config_mode_bar_buttons_gestor
+from util import config_mode_bar_buttons_gestor
 
 
 def graphs_resultados_gestor():

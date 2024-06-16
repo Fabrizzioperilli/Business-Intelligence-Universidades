@@ -1,5 +1,5 @@
 from dash import html, dcc
-from callbacks.gestor.callback_tabs_gestor import render_content
+from callbacks.gestor.utils.callback_tabs_gestor import render_content
 
 def tabs_gestor():
     return html.Div([

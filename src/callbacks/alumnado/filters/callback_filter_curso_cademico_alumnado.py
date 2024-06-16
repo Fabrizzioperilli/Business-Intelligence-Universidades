@@ -1,5 +1,5 @@
 from dash import Input, Output,State, callback, callback_context
-from callbacks.alumnado.callback_select_alumnado import store_selected_alumnado
+from callbacks.alumnado.utils.callback_select_alumnado import store_selected_alumnado
 from data.queries import curso_academico_alumnado
 
 @callback(

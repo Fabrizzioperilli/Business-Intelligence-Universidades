@@ -2,7 +2,7 @@ from dash import callback, Input, Output
 from data.queries import calif_cualitativa_comparativa, calif_cualitativa_alumno_asignaturas, universidad_alumno
 import plotly.graph_objs as go
 import pandas as pd
-from utils.utils import list_to_tuple
+from util import list_to_tuple
 
 @callback(
     Output('nota-cualitativa-general-mi-nota', 'figure'),

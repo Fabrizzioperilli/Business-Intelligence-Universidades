@@ -4,7 +4,7 @@ from callbacks.gestor.graphs.indicadores.callback_graph_egresados_genero_gestor 
 from callbacks.gestor.graphs.indicadores.callback_graph_nuevo_ingreso_nacionalidad_gestor import update_graph_gestor
 from callbacks.gestor.graphs.indicadores.callback_graph_egresados_nacionalidad_gestor import update_graph_gestor
 from components.common.create_graph_with_table import create_graph_with_table
-from utils.utils import config_mode_bar_buttons_gestor
+from util import config_mode_bar_buttons_gestor
 
 def graphs_indicadores_gestor():
     graphs_info = [

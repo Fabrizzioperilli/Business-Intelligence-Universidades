@@ -3,7 +3,7 @@ import plotly.graph_objs as go
 import pandas as pd
 import dash_bootstrap_components as dbc
 from data.queries import tasa_abandono_titulacion_gestor, universidades_gestor
-from utils.utils import list_to_tuple
+from util import list_to_tuple
 
 @callback(
     Output('tasa-abandono-gestor', 'figure'),

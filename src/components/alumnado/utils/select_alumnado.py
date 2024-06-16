@@ -1,5 +1,5 @@
 from dash import html, dcc
-from callbacks.alumnado.callback_select_alumnado import store_selected_alumnado
+from callbacks.alumnado.utils.callback_select_alumnado import store_selected_alumnado
 
 def select_alumnado():
     return html.Div([

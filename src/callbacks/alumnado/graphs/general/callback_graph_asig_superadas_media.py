@@ -2,7 +2,7 @@ from dash import callback, Input, Output
 import plotly.graph_objs as go
 import pandas as pd
 from data.queries import asignaturas_superadas_media_abandono, universidad_alumno
-from utils.utils import list_to_tuple
+from util import list_to_tuple
 
 @callback(
     Output('asignaturas-superadas-general-mi-nota', 'figure'),
