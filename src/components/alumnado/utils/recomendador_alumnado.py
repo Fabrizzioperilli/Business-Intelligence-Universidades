@@ -1,6 +1,10 @@
 from dash import html
 
 def recomendador_alumnado():
+    """
+    Esta función retorna el contenido de la pestaña "Recomendador" del perfil "Alumnado".
+    """
+
     return html.Div([
         html.H1("Deserción universitaria: ¿Cuáles son las razones y cómo prevenirla?", className='titulo-recomendador-alumnado'),
         html.Img(src='assets/images/abandono_academico.jpg', className='imagen-recomendador-alumnado'),

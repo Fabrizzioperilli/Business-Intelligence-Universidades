@@ -1,15 +1,15 @@
 # Este diccionario contiene las consultas SQL utilizadas en el proyecto
 queries = {
-  "alumnado": {
-      "common": {
-          # Consulta para obtener los alumnos.
-          "alumnos_all": """
+    "alumnado": {
+        "common": {
+            # Consulta para obtener los alumnos.
+            "alumnos_all": """
                 SELECT id FROM alumnos
                 ORDER BY id DESC
                 LIMIT 50;
                 """,
-          # Consulta para calcular la media de las calificaciones de un alumno en una titulación específica.
-          "nota_media_alumno_titulacion": """
+            # Consulta para calcular la media de las calificaciones de un alumno en una titulación específica.
+            "nota_media_alumno_titulacion": """
                 SELECT AVG(li.calif_numerica) AS media_calif
                 FROM public.lineas_actas li
                 JOIN public.matricula m ON m.id = li.id AND m.cod_plan = li.cod_plan
@@ -21,33 +21,33 @@ queries = {
                 SELECT cod_universidad, universidad
                 FROM matricula
                 WHERE id = :alumno_id;
-                """
-      },
-      "filters": {
-          # Consulta para obtener los cursos académicos en los que un alumno está matriculado en una titulación específica.
-          "curso_academico_alumnado": """
+                """,
+        },
+        "filters": {
+            # Consulta para obtener los cursos académicos en los que un alumno está matriculado en una titulación específica.
+            "curso_academico_alumnado": """
                 SELECT curso_aca
                 FROM matricula 
                 WHERE id = :alumno_id AND titulacion = :titulacion;
                 """,
-          # Consulta para obtener las asignaturas matriculadas por un alumno en un curso académico y titulación específicos.
-          "asinaturas_matriculadas": """
+            # Consulta para obtener las asignaturas matriculadas por un alumno en un curso académico y titulación específicos.
+            "asinaturas_matriculadas": """
                 SELECT DISTINCT AM.asignatura 
                 FROM asignaturas_matriculadas AM
                 JOIN matricula MA ON AM.id = MA.id AND AM.cod_plan = MA.cod_plan
                 WHERE AM.id = :alumno_id AND AM.curso_aca IN :curso_academico AND MA.titulacion = :titulacion;
                 """,
-          # Consulta para obtener las titulaciones de un alumno.
-          "titulacion_alumnado": """
+            # Consulta para obtener las titulaciones de un alumno.
+            "titulacion_alumnado": """
                 SELECT DISTINCT titulacion 
                 FROM matricula 
                 WHERE id = :alumno_id;
-                """
-      },
-      "graphs": {
-          "personal": {
-              # Consulta para obtener las asignaturas superadas por un alumno en un curso académico y titulación específicos.
-              "curso_academico_asignaturas_superadas": """
+                """,
+        },
+        "graphs": {
+            "personal": {
+                # Consulta para obtener las asignaturas superadas por un alumno en un curso académico y titulación específicos.
+                "curso_academico_asignaturas_superadas": """
                     SELECT li.curso_aca AS curso_academico, COUNT(DISTINCT li.asignatura) AS n_asig_superadas
                     FROM lineas_actas li
                     JOIN matricula ma ON li.id = ma.id AND li.cod_plan = ma.cod_plan
@@ -56,8 +56,8 @@ queries = {
                     GROUP BY li.curso_aca
                     ORDER BY li.curso_aca;
                     """,
-              # Consulta para obtener la calificación cualitativa más alta por curso académico y asignatura de un alumno.
-              "calif_cualitativa_asginatura": """
+                # Consulta para obtener la calificación cualitativa más alta por curso académico y asignatura de un alumno.
+                "calif_cualitativa_asginatura": """
                       WITH RankedGrades AS (
                         SELECT li.curso_aca, li.calif, 
                             ROW_NUMBER() OVER (PARTITION BY li.curso_aca, li.asignatura ORDER BY 
@@ -107,9 +107,9 @@ queries = {
                         AND MA.titulacion = :titulacion
                       GROUP BY
                         AM.curso_aca;
-                      """
-          },
-          "general": {
+                      """,
+            },
+            "general": {
                 # Esta consulta devuelve el id de los alumnos, nota media, abandono y total de asignaturas superadas.
                 "asignaturas_superadas_media_abandono": """
                         SELECT 
@@ -181,8 +181,8 @@ queries = {
                           WHERE c.rk = 1
                           GROUP BY c.asignatura, c.calif;
                           """,
-                  # Consulta para obtener la calificación cualitativa del alumno.
-                  "calif_cualitativa_alumno_asignaturas": """
+                # Consulta para obtener la calificación cualitativa del alumno.
+                "calif_cualitativa_alumno_asignaturas": """
                       WITH CalificacionesMaximas AS (
                             SELECT
                                 la.id,
@@ -228,8 +228,8 @@ queries = {
                         ORDER BY 
                             cm.asignatura;
                     """,
-                    # Consulta para obtener la calificación media de los alumnos y la calificación del alumno.
-                    "nota_media_general_mi_nota": """
+                # Consulta para obtener la calificación media de los alumnos y la calificación del alumno.
+                "nota_media_general_mi_nota": """
                           SELECT 
                             subquery.asignatura, 
                             AVG(subquery.max_calif_numerica) AS media_calif,
@@ -258,45 +258,45 @@ queries = {
                             subquery.asignatura
                         ORDER BY 
                             subquery.asignatura;
-                         """
-          }
-      },
-  },
-  "docente": {
-      "common": {
-          # Consulta para obtener los docentes.
-          "docentes_all": """
+                         """,
+            },
+        },
+    },
+    "docente": {
+        "common": {
+            # Consulta para obtener los docentes.
+            "docentes_all": """
                 SELECT DISTINCT id_docente FROM docentes
                 LIMIT 20;
                 """,
-          #Consulta para obtener la universidad de un docente.
+            # Consulta para obtener la universidad de un docente.
             "universidades_docente": """
                 SELECT DISTINCT cod_universidad, universidad
                 FROM docentes
                 WHERE id_docente = :id_docente;
                 """,
-      },
-      "filters": {
-          # Consulta para obtener las asignaturas de un docente según la titulación.
-          "asignaturas_docente": """
+        },
+        "filters": {
+            # Consulta para obtener las asignaturas de un docente según la titulación.
+            "asignaturas_docente": """
                 SELECT DISTINCT asignatura 
                 FROM docentes 
                 WHERE id_docente = :id_docente AND titulacion = :titulacion;
                 """,
-          # Consulta para obtener los cursos académicos de un docente según la asignatura.
-          "curso_academico_docente": """
+            # Consulta para obtener los cursos académicos de un docente según la asignatura.
+            "curso_academico_docente": """
                 SELECT curso_aca 
                 FROM docentes 
                 WHERE id_docente = :id_docente AND asignatura = :asignatura;
                 """,
-          # Consulta para obtener la titulación de un docente.
-          "titulacion_docente": """
+            # Consulta para obtener la titulación de un docente.
+            "titulacion_docente": """
                 SELECT DISTINCT titulacion 
                 FROM docentes 
                 WHERE id_docente = :id_docente;
                 """,
-          #Consulta para obtener todos los cursos acádemicos de las actas según la titulación
-          "curso_academico_actas_titulacion": """
+            # Consulta para obtener todos los cursos acádemicos de las actas según la titulación
+            "curso_academico_actas_titulacion": """
                 SELECT DISTINCT li.curso_aca
                 FROM lineas_actas li
                 JOIN docentes ON li.cod_plan = docentes.cod_plan AND
@@ -305,8 +305,8 @@ queries = {
                 WHERE docentes.titulacion = :titulacion
                 ORDER BY curso_aca;
                 """,
-          #Consulta para obtener todas las asignaturas por curso académico y titulación
-          "asignaturas_actas_titulacion": """
+            # Consulta para obtener todas las asignaturas por curso académico y titulación
+            "asignaturas_actas_titulacion": """
                 SELECT DISTINCT li.asignatura
                 FROM lineas_actas li
                 JOIN docentes ON li.cod_plan = docentes.cod_plan
@@ -315,12 +315,12 @@ queries = {
                 li.cod_asig = docentes.cod_asignatura
                 ORDER BY li.asignatura;
 
-          """
-      },
-      "graphs": {
-          "personal": {
-              # Consulta para obtener el número de alumnos repetidores y de nuevo ingreso en una asignatura.
-              "alumnos_repetidores_nuevos": """
+          """,
+        },
+        "graphs": {
+            "personal": {
+                # Consulta para obtener el número de alumnos repetidores y de nuevo ingreso en una asignatura.
+                "alumnos_repetidores_nuevos": """
                         WITH repetidores AS (
                             SELECT 
                                 am.id AS student_id, 
@@ -358,8 +358,8 @@ queries = {
                         ORDER BY am.curso_aca;
 
                         """,
-                  #Consulta para el número de alumnos por género en una asignatura.
-                  "alumnos_genero_docente": """
+                # Consulta para el número de alumnos por género en una asignatura.
+                "alumnos_genero_docente": """
                             WITH docente_asignaturas AS (
                             SELECT cod_asignatura
                             FROM public.docentes
@@ -384,8 +384,8 @@ queries = {
                             GROUP BY am.curso_aca, m.sexo
                             ORDER BY am.curso_aca, m.sexo;
                     """,
-                    #Consulta para obtener la nota media de los alumnos por asignatura y curso académico.
-                    "alumnos_nota_media_docente": """
+                # Consulta para obtener la nota media de los alumnos por asignatura y curso académico.
+                "alumnos_nota_media_docente": """
                             SELECT
                                 l.curso_aca,  
                                 l.asignatura, 
@@ -402,8 +402,8 @@ queries = {
                                 l.curso_aca,
                                 l.asignatura;
                                 """,
-                    #Consulta para obtener la nota cualitativa de los alumnos por asignatura y curso académico.
-                      "alumnos_nota_cualitativa_docente": """
+                # Consulta para obtener la nota cualitativa de los alumnos por asignatura y curso académico.
+                "alumnos_nota_cualitativa_docente": """
                             SELECT DISTINCT
                                 l.curso_aca,  
                                 l.calif, 
@@ -419,12 +419,12 @@ queries = {
                             ORDER BY 
                                 l.curso_aca,
                                 l.calif;
-                            """
-          },
-          "general": {
-                  #Consulta para obtener el número de calificaciones cualitativas 
-                  # de los alumnos por asignatura y curso académico.
-                  "calif_all_cualitativa_asignaturas": """
+                            """,
+            },
+            "general": {
+                # Consulta para obtener el número de calificaciones cualitativas
+                # de los alumnos por asignatura y curso académico.
+                "calif_all_cualitativa_asignaturas": """
                             SELECT
                                 li.curso_aca, 
                                 li.asignatura,  
@@ -440,7 +440,7 @@ queries = {
                             ORDER BY li.asignatura, li.curso_aca, li.calif;
 
                             """,
-                    "calif_media_asignaturas": """
+                "calif_media_asignaturas": """
                             SELECT 
                             subquery.asignatura, 
                             AVG(subquery.calif_numerica) AS media_calif
@@ -468,25 +468,24 @@ queries = {
                                 subquery.asignatura
                                 ORDER BY 
                                 subquery.asignatura;
-                                """
-
-          }
-      },
-  },
-  "gestor": {
-      "common": {
-            #Consulta para obtener los gestores.
+                                """,
+            },
+        },
+    },
+    "gestor": {
+        "common": {
+            # Consulta para obtener los gestores.
             "gestores_all": """
                 SELECT DISTINCT gestor_id FROM gestores
                 LIMIT 20;
                 """,
-            #Consulta para obtener el número de alumnos matriculados en una universidad.
+            # Consulta para obtener el número de alumnos matriculados en una universidad.
             "numero_alumnos_matriculados_universidad": """
                 SELECT COUNT(alumnos.id) AS n_alumnos_universidad
                 FROM alumnos
                 WHERE universidad = :universidad AND abandona = 'no';
                 """,
-            #Consulta que muestra la universidad de un gestor.
+            # Consulta que muestra la universidad de un gestor.
             "universidades_gestor": """
                 SELECT DISTINCT cod_universidad, universidad
                 FROM gestores 
@@ -496,27 +495,26 @@ queries = {
                 SELECT DISTINCT curso_aca
                 FROM egresados
                 WHERE cod_universidad = :cod_universidad
-            """
-            
-      },
-      "filters": {
-            #Consulta para obtener los cursos académicos de una universidad.
+            """,
+        },
+        "filters": {
+            # Consulta para obtener los cursos académicos de una universidad.
             "curso_academico_universidad": """
                 SELECT DISTINCT curso_aca
                 FROM matricula
                 WHERE cod_universidad = :cod_universidad
                 ORDER BY curso_aca;
                 """,
-            #Consulta para obtener las titulaciones de una universidad.
+            # Consulta para obtener las titulaciones de una universidad.
             "titulaciones_universidad_gestor": """
                 SELECT DISTINCT titulacion
                 FROM matricula
                 WHERE cod_universidad = :cod_universidad AND curso_aca = :curso_academico;
-                """
-      },
-      "graphs": {
-          "indicadores": {
-                #Consulta para obtener el número de alumnos de nuevo ingreso por género y titulación.
+                """,
+        },
+        "graphs": {
+            "indicadores": {
+                # Consulta para obtener el número de alumnos de nuevo ingreso por género y titulación.
                 "alumnos_nuevo_ingreso_genero_titulacion": """
                     SELECT curso_aca, titulacion, sexo, COUNT(*) as num_alumnos
                     FROM matricula
@@ -527,7 +525,7 @@ queries = {
                     GROUP BY curso_aca, titulacion, sexo
                     ORDER BY titulacion;
                     """,
-                #Consulta para obter el número de alumnos egresados por genero y titulación.
+                # Consulta para obter el número de alumnos egresados por genero y titulación.
                 "alumnos_egresados_genero_titulacion": """
                     SELECT 
                         m.titulacion AS Titulacion,
@@ -542,7 +540,7 @@ queries = {
                     GROUP BY m.titulacion, m.sexo
                     ORDER BY m.titulacion, m.sexo;
                 """,
-                #Consulta para obtener el número de alumnos de nuevo ingreso por nacionalidad y titulación.
+                # Consulta para obtener el número de alumnos de nuevo ingreso por nacionalidad y titulación.
                 "alumnos_nuevo_ingreso_nacionalidad_titulacion": """
                     SELECT titulacion, nacionalidad, COUNT(*) as num_alumnos
                     FROM matricula
@@ -552,7 +550,7 @@ queries = {
                     AND cod_universidad = :cod_universidad
                     GROUP BY titulacion, nacionalidad
                 """,
-                #Consulta para obtener el número de alumnos egresados por nacionalidad y titulación.
+                # Consulta para obtener el número de alumnos egresados por nacionalidad y titulación.
                 "alumnos_egresados_nacionalidad_titulacion": """
                     SELECT 
                         m.titulacion AS Titulacion,
@@ -566,10 +564,10 @@ queries = {
                             m.titulacion IN :titulaciones
                     GROUP BY m.titulacion, m.nacionalidad
                     ORDER BY m.titulacion, m.nacionalidad;
-                """
-          },
-          "resultados": {
-                #Consulta para obtener la nota media de acceso de cada titulación.
+                """,
+            },
+            "resultados": {
+                # Consulta para obtener la nota media de acceso de cada titulación.
                 "nota_media_acceso_titulacion": """
                     SELECT ma.curso_aca, ma.titulacion,
                         AVG(eb.nota_prue) AS nota_ebau_media
@@ -579,7 +577,7 @@ queries = {
                     GROUP BY ma.curso_aca, ma.titulacion
                     ORDER BY ma.curso_aca, ma.titulacion;
                 """,
-                #Consulta para obtener la duración media de los estudios con respecto a la nota media, por titulación y curso académico.
+                # Consulta para obtener la duración media de los estudios con respecto a la nota media, por titulación y curso académico.
                 "duracion_media_estudios_nota_gestor": """
                     WITH matriculas_por_estudiante AS (
                         SELECT
@@ -613,11 +611,11 @@ queries = {
                     FROM media_notas_y_duracion
                     ORDER BY curso_aca;
 
-                    """
-          },
-          "riesgo_abandono": {
-                    #Consulta para obtener la tasa de abandono de una titulación.
-                    "tasa_abandono_titulacion_gestor": """
+                    """,
+            },
+            "riesgo_abandono": {
+                # Consulta para obtener la tasa de abandono de una titulación.
+                "tasa_abandono_titulacion_gestor": """
                         WITH ultima_matricula AS (
                                 SELECT 
                                     m.id,
@@ -650,8 +648,8 @@ queries = {
                                 m.titulacion;
 
                     """,
-                    #Consulta para obtener la tasa de graduación de una titulación.
-                    "tasa_graduacion_titulacion_gestor": """
+                # Consulta para obtener la tasa de graduación de una titulación.
+                "tasa_graduacion_titulacion_gestor": """
                         SELECT 
                             COUNT(DISTINCT matricula.id) AS numero_matriculados,
                             COALESCE(COUNT( DISTINCT egresados.id), 0) AS numero_egresados,
@@ -671,8 +669,8 @@ queries = {
                         ORDER BY 
                             titulacion, 
                             curso_aca;                    
-                        """
-          }
+                        """,
+            },
+        },
     },
-  }
 }

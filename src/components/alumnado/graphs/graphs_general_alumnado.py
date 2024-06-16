@@ -4,17 +4,21 @@ from callbacks.alumnado.graphs.general.callback_graph_calif_media_mi_nota import
 from callbacks.alumnado.graphs.general.callback_graph_asig_superadas_media import update_graph_alumnado
 from components.common.create_graph import create_graph
 
+
 def graphs_general_alumnado():
+    """
+    Retona los gráficos de la pestaña "Rendimento Académico general" del perfil "Alumnado"
+    """
     graph_ids = [
-        'asignaturas-superadas-general-mi-nota',
-        'nota-cualitativa-general-mi-nota',
-        'nota-media-general-mi-nota'
+        "asignaturas-superadas-general-mi-nota",
+        "nota-cualitativa-general-mi-nota",
+        "nota-media-general-mi-nota",
     ]
-    
-    config={'displayModeBar': False}
-    item_class = 'graph-item-general-alumnado'
+
+    config = {"displayModeBar": False}
+    item_class = "graph-item-general-alumnado"
 
     return html.Div(
         [create_graph(graph_id, item_class, config) for graph_id in graph_ids],
-        className='graphs-container-general-alumnado'
+        className="graphs-container-general-alumnado",
     )
