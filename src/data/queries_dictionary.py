@@ -299,7 +299,9 @@ queries = {
           "curso_academico_actas_titulacion": """
                 SELECT DISTINCT li.curso_aca
                 FROM lineas_actas li
-                JOIN docentes ON li.cod_plan = docentes.cod_plan
+                JOIN docentes ON li.cod_plan = docentes.cod_plan AND
+                li.cod_asig = docentes.cod_asignatura AND
+                li.curso_aca = docentes.curso_aca
                 WHERE docentes.titulacion = :titulacion
                 ORDER BY curso_aca;
                 """,
@@ -308,7 +310,9 @@ queries = {
                 SELECT DISTINCT li.asignatura
                 FROM lineas_actas li
                 JOIN docentes ON li.cod_plan = docentes.cod_plan
-                WHERE docentes.titulacion = :titulacion AND li.curso_aca = :curso_academico
+                WHERE docentes.titulacion = :titulacion AND 
+                li.curso_aca = :curso_academico AND
+                li.cod_asig = docentes.cod_asignatura
                 ORDER BY li.asignatura;
 
           """

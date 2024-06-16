@@ -11,12 +11,12 @@ from data.queries import titulacion_docente
 )
 def update_filter_titulacion_docente(docente_id, selected_value, stored_titulacion):
     if not docente_id:
-        return [], None
+        return [], None, None
     
     data = titulacion_docente(docente_id)
     
     if not data:
-        return [], None
+        return [], None, None
     
     opciones_dropdown = [{'label': asignatura[0], 'value': asignatura[0]} for asignatura in data]
 
