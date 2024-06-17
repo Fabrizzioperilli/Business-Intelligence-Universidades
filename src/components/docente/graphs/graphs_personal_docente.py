@@ -6,18 +6,24 @@ from callbacks.docente.graphs.personal.callback_graph_alu_nota_cualitativa_docen
 from components.common.create_graph import create_graph
 from util import config_mode_bar_buttons_gestor
 
+
 def graphs_personal_docente():
+    """
+    Retorna los gráficos de la pestaña "Rendimiento académico personal" 
+    del perfil "Docente"
+    """
     graphs_ids = [
-        'graph-alumnos-repetidores-nuevos',
-        'graph-alumnos-matri-genero',
-        'graph-alumnos-nota-media',
-        'graph-alumnos-nota-cualitativa'
+        "graph-alumnos-repetidores-nuevos",
+        "graph-alumnos-matri-genero",
+        "graph-alumnos-nota-media",
+        "graph-alumnos-nota-cualitativa",
     ]
 
-    item_class = 'graph-item-personal-docente'
+    item_class = "graph-item-personal-docente"
     config = config_mode_bar_buttons_gestor
 
     return html.Div(
         [create_graph(graph_id, item_class, config) for graph_id in graphs_ids],
-        className='graphs-container-personal-docente'
+        className="graphs-container-personal-docente",
     )
+

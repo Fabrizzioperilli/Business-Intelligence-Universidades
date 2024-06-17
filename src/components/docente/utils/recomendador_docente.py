@@ -1,6 +1,13 @@
 from dash import html
 
 def recomendador_docente():
+    """
+    Retorna el componente del recomendador para docentes.
+
+    Returns:
+    html.Div: Componente del recomendador para docentes
+    """
+    
     return html.Div([
         html.H1("Deserción universitaria: ¿Cómo pueden ayudar los docentes a prevenirla?", className='titulo-recomendador-docente'),
         html.Img(src='assets/images/docente_clase.jpg', className='imagen-recomendador-docente'),
