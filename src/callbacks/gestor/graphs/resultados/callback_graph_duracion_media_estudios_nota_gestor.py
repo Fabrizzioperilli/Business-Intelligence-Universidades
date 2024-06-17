@@ -67,7 +67,8 @@ def update_graph_gestor(gestor_id):
         range=[data["duracion_media"].min() - 1, data["duracion_media"].max() + 1]
     )
 
-    fig.layout.updatemenus[0].buttons[0].args[1]["frame"]["duration"] = 1000
+    if len(data["curso_academico"].unique()) > 1:
+        fig.layout.updatemenus[0].buttons[0].args[1]["frame"]["duration"] = 1000
 
     return fig
 
