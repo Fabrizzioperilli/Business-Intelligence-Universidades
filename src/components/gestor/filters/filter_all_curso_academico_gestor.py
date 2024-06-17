@@ -3,18 +3,33 @@ from callbacks.gestor.filters.callback_filter_all_curso_academico_gestor import 
 
 
 def filter_all_curso_academico_gestor():
-    return html.Div([
-        html.Label("Curso académico"),
-        dcc.Dropdown(
-            id="curso-all-academico-gestor",
-            searchable=True,
-            multi=True,
-            clearable=True,
-            options=[],
-            value=None,    
-            maxHeight=200,
-            placeholder="Seleccione una opción"
-        ),
-        html.Button('Seleccionar todo', id='select-all-curso-academico-button', className='button-select-all-filter', n_clicks=0),
-        dcc.Store(id='curso-all-academico-gestor-store', storage_type='local')
-    ])
+    """
+    Crea el filtro que muestra todos los cursos académicos disponibles
+    para el perfil "Gestor" de la pestaña "Riesgo académico".
+
+    Returns:
+    html.Div: Componente con el filtro de curso académico
+    """
+
+    return html.Div(
+        [
+            html.Label("Curso académico"),
+            dcc.Dropdown(
+                id="curso-all-academico-gestor",
+                searchable=True,
+                multi=True,
+                clearable=True,
+                options=[],
+                value=None,
+                maxHeight=200,
+                placeholder="Seleccione una opción",
+            ),
+            html.Button(
+                "Seleccionar todo",
+                id="select-all-curso-academico-button",
+                className="button-select-all-filter",
+                n_clicks=0,
+            ),
+            dcc.Store(id="curso-all-academico-gestor-store", storage_type="local"),
+        ]
+    )

@@ -1,6 +1,13 @@
 from dash import html
 
 def recomendador_gestor():
+    """
+    Crea un contenedor con información y recomendaciones sobre la deserción universitaria
+    para los gestores de la sección "Recomendaciones" de la pestaña "Gestor".
+
+    Returns:
+    html.Div: Contenedor con información y recomendaciones sobre la deserción universitaria
+    """
     return html.Div([
         html.H1("Deserción universitaria", className='titulo-recomendador-gestor'),
         html.Img(src='assets/images/abandono-gestores.jpg', className='imagen-recomendador-gestor'),
