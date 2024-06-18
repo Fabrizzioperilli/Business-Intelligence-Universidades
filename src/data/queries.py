@@ -480,3 +480,15 @@ def universidades_docente(id_docente):
     params = {"id_docente": id_docente}
 
     return check_data(query, params)
+
+@cache_query
+def data_for_model():
+    query = queries["alumnado"]["common"]["data_for_model"]
+    return check_data(query, {})
+
+@cache_query
+def resumen_alumno(alumno_id, titulacion):
+    query = queries["alumnado"]["common"]["resumen_alumno"]
+    params = {"alumno_id": alumno_id, "titulacion": titulacion}
+
+    return check_data(query, params)

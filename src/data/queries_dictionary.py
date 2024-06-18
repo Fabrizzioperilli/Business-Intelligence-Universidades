@@ -5,10 +5,16 @@ queries = {
             # Consulta para obtener los alumnos.
             "alumnos_all": """
                 SELECT id FROM alumnos
-                ORDER BY id DESC
+                ORDER BY id
                 LIMIT 50;
                 """,
-            # Consulta para calcular la media de las calificaciones de un alumno en una titulación específica.
+            "resumen_alumno": """
+                SELECT DISTINCT alu.id, ma.universidad, titulacion, abandona
+                FROM alumnos alu
+                JOIN matricula ma ON ma.id = alu.id
+                WHERE alu.id = :alumno_id AND ma.titulacion = :titulacion;
+                """,           
+             # Consulta para calcular la media de las calificaciones de un alumno en una titulación específica.
             "nota_media_alumno_titulacion": """
                 SELECT AVG(li.calif_numerica) AS media_calif
                 FROM public.lineas_actas li
@@ -22,6 +28,42 @@ queries = {
                 FROM matricula
                 WHERE id = :alumno_id;
                 """,
+            "data_for_model": """
+
+                WITH average_grades AS (
+                    SELECT 
+                        ma.id, 
+                        ma.titulacion,
+                        AVG(la.calif_numerica) AS nota_media
+                    FROM 
+                        public.lineas_actas la
+                    JOIN 
+                        matricula ma ON la.id = ma.id AND ma.cod_plan = la.cod_plan
+                    WHERE 
+                        la.calif_numerica >= 5
+                    GROUP BY 
+                        ma.id, ma.titulacion
+                )
+                SELECT DISTINCT 
+                    alu.id, 
+                    alu.anio_nac, 
+                    ma.nacionalidad, 
+                    ma.sexo, 
+                    ma.titulacion, 
+                    ebau.nota_def AS nota_def_ebau,
+                    alu.abandona,
+                    ag.nota_media
+                FROM 
+                    alumnos alu
+                JOIN 
+                    matricula ma ON alu.id = ma.id
+                JOIN 
+                    ebau_prueba ebau ON ebau.id = ma.id
+                LEFT JOIN 
+                    average_grades ag ON ma.id = ag.id AND ma.titulacion = ag.titulacion
+                ORDER BY 
+                    alu.id;
+                """
         },
         "filters": {
             # Consulta para obtener los cursos académicos en los que un alumno está matriculado en una titulación específica.
