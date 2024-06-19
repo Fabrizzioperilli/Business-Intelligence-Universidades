@@ -1,0 +1,286 @@
+indice,id_docente,cod_universidad,universidad,titulacion,cod_plan,cod_asignatura,asignatura,curso_aca
+1,D86004,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST88991,Historia Política,2023/2024
+2,D86004,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,PATO20899,Patología Clínica,2022/2023
+3,D86004,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE54486,Derecho Informático,2020/2021
+4,D86004,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE55998,Derecho Procesal,2018/2019
+5,D86004,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,CIEN39949,Ciencias de la Computación,2020/2021
+6,D44996,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST93839,Historia de la Tecnología,2017/2018
+7,D44996,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,ALGO09632,Algoritmos,2018/2019
+8,D44996,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE79110,Derecho Laboral,2017/2018
+9,D18438,UDM01,Universidad de Madrid,Medicina,PLAN367gw,REUM42635,Reumatología,2022/2023
+10,D18438,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST87397,Historia de África,2022/2023
+11,D18438,UDM01,Universidad de Madrid,Historia,PLAN180hL,MÉTO40401,Métodos de Investigación Histórica,2022/2023
+12,D18438,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST17100,Historia Moderna,2022/2023
+13,D18438,UDM01,Universidad de Madrid,Medicina,PLAN367gw,CIRU18600,Cirugía,2019/2020
+14,D22213,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,SIST26218,Sistemas Distribuidos,2019/2020
+15,D22213,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE01666,Derecho Electoral,2019/2020
+16,D22213,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE72485,Derecho Financiero,2023/2024
+17,D22213,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST29692,Historiografía,2017/2018
+18,D53675,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST43463,Historia Militar,2019/2020
+19,D01826,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,CÓMP39313,Cómputo de Alto Rendimiento,2022/2023
+20,D01826,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST91046,Historia Urbana,2018/2019
+21,D01826,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE92858,Derecho Canónico,2023/2024
+22,D01826,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,SEGU15966,Seguridad Informática,2018/2019
+23,D79769,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST42344,Historia Social,2018/2019
+24,D79769,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST05856,Historia Cultural,2021/2022
+25,D79769,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,DESA90469,Desarrollo de Aplicaciones,2017/2018
+26,D79769,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE45506,Derecho Marítimo,2023/2024
+27,D79769,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE69671,Derecho de la Seguridad Social,2020/2021
+28,D61995,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST09838,Historia de las Religiones,2018/2019
+29,D06083,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST29692,Historiografía,2019/2020
+30,D06083,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,VISI16176,Visión por Computador,2019/2020
+31,D06083,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE69671,Derecho de la Seguridad Social,2017/2018
+32,D06083,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE24284,Derecho Constitucional,2017/2018
+33,D35422,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE54486,Derecho Informático,2020/2021
+34,D41562,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE97274,Derecho Minero,2023/2024
+35,D35644,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST13660,Historia de la Educación,2018/2019
+36,D35644,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,PROG85737,Programación,2017/2018
+37,D35644,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,RADI12683,Radiología,2022/2023
+38,D35644,UDB02,Universidad de Barcelona,Historia,PLAN180hL,MÉTO40401,Métodos de Investigación Histórica,2020/2021
+39,D22751,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,CÁLC33686,Cálculo Numérico,2020/2021
+40,D22751,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE43926,Derecho Comparado,2019/2020
+41,D22751,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST17100,Historia Moderna,2020/2021
+42,D00277,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,COMP45384,Computación Paralela,2021/2022
+43,D00277,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST93839,Historia de la Tecnología,2020/2021
+44,D00277,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,PARA06142,Parasitología,2021/2022
+45,D89417,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,GENÓ56320,Genómica,2017/2018
+46,D89417,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE50557,Derecho Administrativo,2021/2022
+47,D67696,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE73014,Derecho Civil,2017/2018
+48,D67696,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,DESA90469,Desarrollo de Aplicaciones,2017/2018
+49,D67696,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,NEUR25989,Neurocirugía,2018/2019
+50,D67696,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,INMU61237,Inmunología,2018/2019
+51,D67696,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST02041,Historia de América,2019/2020
+52,D88298,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,INTE66110,Inteligencia Artificial,2023/2024
+53,D23836,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE45506,Derecho Marítimo,2023/2024
+54,D31623,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,VISI16176,Visión por Computador,2017/2018
+55,D31623,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE72485,Derecho Financiero,2018/2019
+56,D31623,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,TEOR65533,Teoría de la Computación,2018/2019
+57,D31623,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,BIOI09112,Bioinformática,2023/2024
+58,D31623,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,INFE87908,Infectología,2018/2019
+59,D87193,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,INGE34976,Ingeniería del Software,2020/2021
+60,D87193,ULL03,Universidad de La Laguna,Historia,PLAN180hL,MÉTO40401,Métodos de Investigación Histórica,2018/2019
+61,D87193,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,PROG85737,Programación,2019/2020
+62,D95845,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST13658,Historia Ambiental,2023/2024
+63,D95845,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,MEDI11041,Medicina Interna,2022/2023
+64,D95845,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE10691,Derecho Internacional Público,2020/2021
+65,D36551,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,CUID01205,Cuidados Intensivos,2017/2018
+66,D90750,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE54579,Derecho Internacional,2021/2022
+67,D90750,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE94868,Derecho Registral,2019/2020
+68,D90750,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE39666,Derecho de Familia,2023/2024
+69,D90750,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST13658,Historia Ambiental,2017/2018
+70,D16017,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,MEDI38601,Medicina Familiar,2019/2020
+71,D16017,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,GINE76260,Ginecología,2023/2024
+72,D16017,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,RADI12683,Radiología,2022/2023
+73,D16017,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,INMU61237,Inmunología,2019/2020
+74,D16017,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,REUM42635,Reumatología,2018/2019
+75,D87144,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE02152,Derecho del Consumo,2018/2019
+76,D87144,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,SIST84095,Sistemas Embebidos,2021/2022
+77,D87144,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,BIG 21431,Big Data,2019/2020
+78,D71004,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,GRÁF79072,Gráficos por Computadora,2017/2018
+79,D71004,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST05856,Historia Cultural,2023/2024
+80,D57781,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,ANES83124,Anestesiología,2019/2020
+81,D57781,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,INTE60423,Internet de las Cosas,2019/2020
+82,D57781,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,GENÉ20150,Genética,2017/2018
+83,D57781,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE33046,Derecho de la Salud,2019/2020
+84,D77352,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,EPID78279,Epidemiología,2021/2022
+85,D77352,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,INTE60423,Internet de las Cosas,2020/2021
+86,D80710,UDB02,Universidad de Barcelona,Historia,PLAN180hL,TEOR55203,Teoría de la Historia,2022/2023
+87,D80710,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,REAL25285,Realidad Virtual,2021/2022
+88,D80710,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST69157,Historia Medieval,2018/2019
+89,D80710,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,REDE77430,Redes,2017/2018
+90,D91346,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,CIEN39949,Ciencias de la Computación,2021/2022
+91,D91346,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST75502,Historia de la Mujer,2019/2020
+92,D91346,ULL03,Universidad de La Laguna,Historia,PLAN180hL,TEOR55203,Teoría de la Historia,2017/2018
+93,D91346,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,RADI12683,Radiología,2019/2020
+94,D99263,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,GERI46101,Geriatría,2017/2018
+95,D99263,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST75502,Historia de la Mujer,2017/2018
+96,D98173,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,CUID01205,Cuidados Intensivos,2020/2021
+97,D98173,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,CARD73502,Cardiología,2022/2023
+98,D98173,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE02152,Derecho del Consumo,2021/2022
+99,D30057,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,PROG85737,Programación,2021/2022
+100,D30057,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST93031,Historia de Asia,2017/2018
+101,D30057,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST05856,Historia Cultural,2017/2018
+102,D04835,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,ANAT34827,Anatomía,2017/2018
+103,D04835,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE36832,Derecho del Deporte,2019/2020
+104,D04835,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE41177,Derecho de la Unión Europea,2019/2020
+105,D92379,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,INGE34976,Ingeniería del Software,2022/2023
+106,D92379,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,FISI71321,Fisiología,2022/2023
+107,D92379,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE72485,Derecho Financiero,2020/2021
+108,D02399,UDM01,Universidad de Madrid,Medicina,PLAN367gw,REUM42635,Reumatología,2021/2022
+109,D02399,UDM01,Universidad de Madrid,Medicina,PLAN367gw,CUID01205,Cuidados Intensivos,2022/2023
+110,D57509,UDM01,Universidad de Madrid,Medicina,PLAN367gw,ANAT34827,Anatomía,2021/2022
+111,D57509,UDM01,Universidad de Madrid,Medicina,PLAN367gw,MEDI11041,Medicina Interna,2019/2020
+112,D57509,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE69475,Derecho Tributario,2022/2023
+113,D57509,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST69157,Historia Medieval,2018/2019
+114,D97542,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST86622,Historia Económica,2020/2021
+115,D97542,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,REAL50978,Realidad Aumentada,2022/2023
+116,D97542,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,SIST84095,Sistemas Embebidos,2021/2022
+117,D97542,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST42344,Historia Social,2020/2021
+118,D60627,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST23697,Historia de la Salud,2021/2022
+119,D60627,UDM01,Universidad de Madrid,Medicina,PLAN367gw,FARM38672,Farmacología,2022/2023
+120,D60627,UDM01,Universidad de Madrid,Medicina,PLAN367gw,GENÉ20150,Genética,2022/2023
+121,D60627,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE33046,Derecho de la Salud,2017/2018
+122,D60627,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE54579,Derecho Internacional,2020/2021
+123,D73367,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,ESTR05601,Estructuras de Datos,2017/2018
+124,D73367,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST43463,Historia Militar,2020/2021
+125,D73367,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,NEUM92764,Neumología,2017/2018
+126,D60097,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE10691,Derecho Internacional Público,2021/2022
+127,D60972,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST90918,Historia de las Ideas,2023/2024
+128,D60972,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,INGE34976,Ingeniería del Software,2017/2018
+129,D60972,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,ESTR05601,Estructuras de Datos,2017/2018
+130,D33463,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,INTE66110,Inteligencia Artificial,2017/2018
+131,D33463,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,DERM33280,Dermatología,2021/2022
+132,D33463,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE86372,Derecho Mercantil,2017/2018
+133,D33463,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,BASE70111,Bases de Datos Avanzadas,2018/2019
+134,D33463,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,MEDI58830,Medicina Deportiva,2020/2021
+135,D04879,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,REDE77430,Redes,2022/2023
+136,D04879,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,TECN33313,Tecnologías de la Información,2021/2022
+137,D04879,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,REAL50978,Realidad Aumentada,2021/2022
+138,D04879,UDM01,Universidad de Madrid,Medicina,PLAN367gw,NUTR42605,Nutriología,2021/2022
+139,D04879,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE73014,Derecho Civil,2020/2021
+140,D71239,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE73632,Derecho de la Propiedad Intelectual,2022/2023
+141,D29515,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,BIG 21431,Big Data,2021/2022
+142,D29515,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,BIOI09112,Bioinformática,2022/2023
+143,D29515,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE02152,Derecho del Consumo,2017/2018
+144,D29515,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE36832,Derecho del Deporte,2023/2024
+145,D29515,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,VISI16176,Visión por Computador,2023/2024
+146,D95350,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST09838,Historia de las Religiones,2022/2023
+147,D95350,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,CARD73502,Cardiología,2019/2020
+148,D95350,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST75502,Historia de la Mujer,2020/2021
+149,D95350,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE13688,Derecho de la Energía,2018/2019
+150,D95350,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,MEDI38601,Medicina Familiar,2019/2020
+151,D00478,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,INGE34976,Ingeniería del Software,2019/2020
+152,D00478,UDM01,Universidad de Madrid,Medicina,PLAN367gw,ANES83124,Anestesiología,2019/2020
+153,D77014,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,MEDI58830,Medicina Deportiva,2017/2018
+154,D77014,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,REAL25285,Realidad Virtual,2017/2018
+155,D65959,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,INGE34976,Ingeniería del Software,2019/2020
+156,D65959,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE73014,Derecho Civil,2022/2023
+157,D65959,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,PROG85737,Programación,2020/2021
+158,D65959,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,ESTR05601,Estructuras de Datos,2021/2022
+159,D01788,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE55998,Derecho Procesal,2021/2022
+160,D65254,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,TEOR65533,Teoría de la Computación,2023/2024
+161,D65254,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST05856,Historia Cultural,2018/2019
+162,D10217,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,BIOI09112,Bioinformática,2022/2023
+163,D10217,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST17100,Historia Moderna,2023/2024
+164,D10217,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST99323,Historia de Europa,2017/2018
+165,D19011,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,BIG 21431,Big Data,2019/2020
+166,D19011,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE17807,Derecho Agrario,2023/2024
+167,D19011,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE37173,Derecho Urbanístico,2018/2019
+168,D20595,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST00822,Historia de Oceanía,2023/2024
+169,D20595,UDM01,Universidad de Madrid,Medicina,PLAN367gw,GENÓ56320,Genómica,2020/2021
+170,D20595,UDM01,Universidad de Madrid,Medicina,PLAN367gw,INFE87908,Infectología,2017/2018
+171,D20595,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,INTE60423,Internet de las Cosas,2019/2020
+172,D20595,UDM01,Universidad de Madrid,Medicina,PLAN367gw,INMU61237,Inmunología,2020/2021
+173,D88102,UDM01,Universidad de Madrid,Historia,PLAN180hL,MÉTO40401,Métodos de Investigación Histórica,2022/2023
+174,D88102,UDM01,Universidad de Madrid,Medicina,PLAN367gw,PEDI83694,Pediatría,2023/2024
+175,D88102,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,INTE66110,Inteligencia Artificial,2020/2021
+176,D13990,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,OTOR43688,Otorrinolaringología,2017/2018
+177,D13990,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,COMP64725,Computación en la Nube,2022/2023
+178,D95686,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,OTOR43688,Otorrinolaringología,2020/2021
+179,D95686,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,SOFT46344,Software,2017/2018
+180,D95686,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,CUID01205,Cuidados Intensivos,2018/2019
+181,D95686,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE72485,Derecho Financiero,2019/2020
+182,D75104,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE41524,Derecho Internacional Privado,2020/2021
+183,D75104,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST07279,Historia del Arte,2023/2024
+184,D75104,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,PSIQ45423,Psiquiatría,2018/2019
+185,D91252,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE94868,Derecho Registral,2021/2022
+186,D32833,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE54486,Derecho Informático,2021/2022
+187,D24887,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,ARQU35689,Arquitectura de Computadoras,2019/2020
+188,D24887,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST42344,Historia Social,2018/2019
+189,D24887,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST09838,Historia de las Religiones,2020/2021
+190,D03088,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST18831,Historia de la Ciencia,2017/2018
+191,D95967,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,PSIQ45423,Psiquiatría,2019/2020
+192,D95967,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,MEDI78387,Medicina Preventiva,2017/2018
+193,D95967,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE69671,Derecho de la Seguridad Social,2019/2020
+194,D95967,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST60172,Historia Oral,2022/2023
+195,D30724,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,MEDI70044,Medicina Nuclear,2020/2021
+196,D30724,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,RADI12683,Radiología,2022/2023
+197,D08185,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,PEDI83694,Pediatría,2021/2022
+198,D34971,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST13658,Historia Ambiental,2019/2020
+199,D85839,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE41524,Derecho Internacional Privado,2021/2022
+200,D85839,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,INTE60423,Internet de las Cosas,2021/2022
+201,D85839,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,CUID01205,Cuidados Intensivos,2020/2021
+202,D85839,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE39666,Derecho de Familia,2018/2019
+203,D15594,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST29692,Historiografía,2023/2024
+204,D15594,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,ANAT34827,Anatomía,2020/2021
+205,D15594,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,BASE70111,Bases de Datos Avanzadas,2017/2018
+206,D05069,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST62905,Historia Antigua,2017/2018
+207,D05069,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,ALGO09632,Algoritmos,2020/2021
+208,D05069,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE07690,Derecho Bancario,2022/2023
+209,D05069,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,ANAL28978,Analítica de Datos,2019/2020
+210,D05955,UDM01,Universidad de Madrid,Medicina,PLAN367gw,CUID01205,Cuidados Intensivos,2022/2023
+211,D36048,UDM01,Universidad de Madrid,Medicina,PLAN367gw,GENÉ20150,Genética,2017/2018
+212,D23147,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST75722,Historia Contemporánea,2020/2021
+213,D23147,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST29692,Historiografía,2021/2022
+214,D23147,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,ANAT34827,Anatomía,2021/2022
+215,D93775,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,DESA15599,Desarrollo de Videojuegos,2017/2018
+216,D93775,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,SIST84095,Sistemas Embebidos,2022/2023
+217,D03138,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,COMP88976,Computación Cuántica,2023/2024
+218,D03138,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE54486,Derecho Informático,2019/2020
+219,D03138,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST90918,Historia de las Ideas,2023/2024
+220,D68686,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE44125,Derecho Romano,2022/2023
+221,D68686,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE33046,Derecho de la Salud,2022/2023
+222,D21981,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST05856,Historia Cultural,2018/2019
+223,D21981,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST60172,Historia Oral,2022/2023
+224,D29185,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,FARM38672,Farmacología,2020/2021
+225,D29185,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,DESA80743,Desarrollo Web,2021/2022
+226,D29185,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,TECN33313,Tecnologías de la Información,2020/2021
+227,D74374,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE69475,Derecho Tributario,2018/2019
+228,D74374,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE94868,Derecho Registral,2020/2021
+229,D74374,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST93839,Historia de la Tecnología,2017/2018
+230,D01363,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,BASE70111,Bases de Datos Avanzadas,2020/2021
+231,D01363,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,PATO20899,Patología Clínica,2017/2018
+232,D44541,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,INFE87908,Infectología,2022/2023
+233,D44541,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE07690,Derecho Bancario,2022/2023
+234,D44541,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,SIST07888,Sistemas Operativos,2021/2022
+235,D58331,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,ROBÓ91704,Robótica,2022/2023
+236,D58331,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST09838,Historia de las Religiones,2017/2018
+237,D51184,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST75502,Historia de la Mujer,2023/2024
+238,D51184,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE72485,Derecho Financiero,2018/2019
+239,D24331,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,INMU61237,Inmunología,2019/2020
+240,D24331,UDB02,Universidad de Barcelona,Ingeniería Informática,PLAN983cq,BIOI09112,Bioinformática,2018/2019
+241,D10144,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,GRÁF79072,Gráficos por Computadora,2021/2022
+242,D27916,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE41177,Derecho de la Unión Europea,2019/2020
+243,D27916,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,GRÁF79072,Gráficos por Computadora,2021/2022
+244,D89816,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,BASE56570,Bases de Datos,2017/2018
+245,D89816,UDM01,Universidad de Madrid,Medicina,PLAN367gw,GINE76260,Ginecología,2022/2023
+246,D89816,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,REDE77430,Redes,2018/2019
+247,D77302,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,ARQU35689,Arquitectura de Computadoras,2018/2019
+248,D48483,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE31879,Derecho Militar,2020/2021
+249,D48483,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,APRE62307,Aprendizaje Automático,2019/2020
+250,D48483,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST87397,Historia de África,2019/2020
+251,D14347,UDM01,Universidad de Madrid,Medicina,PLAN367gw,GENÓ56320,Genómica,2020/2021
+252,D14347,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,CÁLC33686,Cálculo Numérico,2023/2024
+253,D14347,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,COMP45384,Computación Paralela,2021/2022
+254,D14347,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE41177,Derecho de la Unión Europea,2017/2018
+255,D06867,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,PROG85737,Programación,2023/2024
+256,D06867,UDM01,Universidad de Madrid,Medicina,PLAN367gw,GINE76260,Ginecología,2023/2024
+257,D06867,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE54579,Derecho Internacional,2018/2019
+258,D06867,UDM01,Universidad de Madrid,Medicina,PLAN367gw,CIRU18600,Cirugía,2022/2023
+259,D30628,UDM01,Universidad de Madrid,Medicina,PLAN367gw,MEDI70044,Medicina Nuclear,2020/2021
+260,D84639,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE31879,Derecho Militar,2019/2020
+261,D84639,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,TEOR65533,Teoría de la Computación,2021/2022
+262,D84639,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST43463,Historia Militar,2020/2021
+263,D84639,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,COMP88976,Computación Cuántica,2017/2018
+264,D95002,UDM01,Universidad de Madrid,Medicina,PLAN367gw,MEDI58830,Medicina Deportiva,2020/2021
+265,D95002,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,CIBE49063,Ciberseguridad,2019/2020
+266,D76575,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,UROL53253,Urología,2020/2021
+267,D76575,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,ESTR05601,Estructuras de Datos,2019/2020
+268,D76575,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,SIST26218,Sistemas Distribuidos,2020/2021
+269,D76575,ULL03,Universidad de La Laguna,Historia,PLAN180hL,HIST05856,Historia Cultural,2019/2020
+270,D28741,UDM01,Universidad de Madrid,Derecho,PLAN485Fi,DERE10691,Derecho Internacional Público,2019/2020
+271,D28741,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST90918,Historia de las Ideas,2017/2018
+272,D28741,UDM01,Universidad de Madrid,Medicina,PLAN367gw,ENDO02982,Endocrinología,2020/2021
+273,D28741,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST07279,Historia del Arte,2023/2024
+274,D28741,UDM01,Universidad de Madrid,Historia,PLAN180hL,MÉTO40401,Métodos de Investigación Histórica,2017/2018
+275,D57928,ULL03,Universidad de La Laguna,Medicina,PLAN367gw,PARA06142,Parasitología,2020/2021
+276,D57928,ULL03,Universidad de La Laguna,Derecho,PLAN485Fi,DERE36832,Derecho del Deporte,2022/2023
+277,D57928,ULL03,Universidad de La Laguna,Ingeniería Informática,PLAN983cq,INTE66110,Inteligencia Artificial,2022/2023
+278,D90728,UDM01,Universidad de Madrid,Medicina,PLAN367gw,CIRU18600,Cirugía,2018/2019
+279,D60281,UDM01,Universidad de Madrid,Ingeniería Informática,PLAN983cq,CIEN39949,Ciencias de la Computación,2020/2021
+280,D60281,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST13658,Historia Ambiental,2017/2018
+281,D60281,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST69157,Historia Medieval,2023/2024
+282,D60281,UDM01,Universidad de Madrid,Historia,PLAN180hL,HIST88991,Historia Política,2023/2024
+283,D34254,UDB02,Universidad de Barcelona,Historia,PLAN180hL,HIST91046,Historia Urbana,2019/2020
+284,D34254,UDB02,Universidad de Barcelona,Derecho,PLAN485Fi,DERE36832,Derecho del Deporte,2020/2021
+285,D34254,UDB02,Universidad de Barcelona,Medicina,PLAN367gw,MEDI70044,Medicina Nuclear,2023/2024
