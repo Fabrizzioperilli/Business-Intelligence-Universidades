@@ -89,7 +89,7 @@ def load_data_for_model():
 
 def load_model():
     
-    model_file = "src/voting_classifier_model_improved.pkl"
+    model_file = "src/trained_model.pkl"
     voting_clf = joblib.load(model_file)
     data = load_data_for_model()
 

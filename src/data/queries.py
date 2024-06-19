@@ -1,4 +1,5 @@
 from data.db_connector import db
+import pandas as pd
 from data.queries_dictionary import queries
 from functools import lru_cache
 
@@ -484,7 +485,26 @@ def universidades_docente(id_docente):
 @cache_query
 def data_for_model():
     query = queries["alumnado"]["common"]["data_for_model"]
-    return check_data(query, {})
+    data = check_data(query, {})
+    
+    if not data:
+        return []
+    
+    df = pd.DataFrame(data)
+    
+    # Ajustar los tipos de datos de las columnas
+    df = df.astype({
+        'id': str,
+        'anio_nac': int,
+        'nacionalidad': str,
+        'sexo': str,
+        'titulacion': str,
+        'nota_def_ebau': float,
+        'nota_media': float,
+        'abandona': str
+    })
+    
+    return df
 
 @cache_query
 def resumen_alumno(alumno_id, titulacion):
