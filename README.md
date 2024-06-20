@@ -65,11 +65,11 @@ Esto levantará un servidor local en Flask en la dirección `http://127.0.0.1:80
 
 > [!NOTE]
 > Se puede añadir más datos al sistema ejecutando el script `src/generate_synthetic_data.py`, este genera datos aleatorios en el direcotiro data/csv, una vez creado se pueden importar a la base de datos con el script `src/import_data.py` usando el sigueinte comando:
-
-```bash
-psql -U postgres -d db_universities -f import_data.sql
-```
-Luego se tiene que entrenar el modelo de aprendizaje con los nuevos datos, para ello se ejecuta el script `src/model.py` y se genera el modelo entrado en el directorio `model/`, luego ya se ejecutar la aplicación completa.
+> ```bash
+> psql -U postgres -d db_universities -f import_data.sql
+> ```
+> Luego se tiene que entrenar el modelo de aprendizaje con los nuevos datos, para ello se ejecuta el script `src/model.py` y se genera el 
+> modelo entrado en el directorio `model/`, luego ya se ejecutar la aplicación completa.
 
 
 ## Documentación
