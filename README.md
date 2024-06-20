@@ -21,13 +21,13 @@ Con respecto al desarrollo de la herramienta, se ha utilizado el lenguaje de pro
 Para utilizar la herramienta, es necesario tener instalado Python en su versión 3.6 o superior. Además, es necesario instalar un entorno virtual para instalar las dependencias del proyecto. Para ello, ejecute los siguientes comandos:
 
 ```bash
-pip install virtualenv
+pip install python3-venv
 ```
 
-Luego, cree un entorno virtual con el siguiente comando:
+Luego, cree un entorno virtual con el siguiente comando en el direcotrio raíz del proyecto:
 
 ```bash
-virtualenv venv
+python3 -m venv venv
 ```
 
 Active el entorno virtual con el siguiente comando:
@@ -43,10 +43,10 @@ pip install -r requirements.txt
 ```
 Es necesario tener instalado PostgreSQL en su sistema para poder utilizar la base de datos. Puede descargar PostgreSQL desde el siguiente enlace: https://www.postgresql.org/download/
 
-Una vez instalado PostgreSQL, cree una base de datos con el nombre "dc_universities" y cargamos el backup de la base de datos con el siguiente comando:
+Una vez instalado PostgreSQL usaremos el usuario ``postgres`` y constreña ``root``, cree una base de datos con el nombre ``db_universities`` y cargamos el backup de la base de datos con el siguiente comando:
   
   ```bash
-  createdb db_universities
+  CREATE DATABASE  db_universities;
   ```
 
   ```bash
@@ -54,7 +54,7 @@ Una vez instalado PostgreSQL, cree una base de datos con el nombre "dc_universit
   ```
 
 ## Uso
-Para levantar la aplicación, ejecute el siguiente comando:
+Una vez cargados los datos de la base de datos ejecutamos la aplicación, ejecute el siguiente comando:
 
 ```bash
 python src/app.py
