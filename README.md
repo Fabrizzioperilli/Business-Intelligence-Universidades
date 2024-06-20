@@ -60,7 +60,7 @@ Para levantar la aplicación, ejecute el siguiente comando:
 python src/app.py
 ```
 
-Esto levantará un servidor local en Flask en la dirección http://127.0.0.1:8050/. Abra su navegador y acceda a la dirección para visualizar la herramienta.
+Esto levantará un servidor local en Flask en la dirección `http://127.0.0.1:8050/`. Abra su navegador y acceda a la dirección para visualizar la herramienta.
 
 
 > [!NOTE]
@@ -71,6 +71,15 @@ psql -U postgres -d db_universities -f import_data.sql
 ```
 Luego se tiene que entrenar el modelo de aprendizaje con los nuevos datos, para ello se ejecuta el script `src/model.py` y se genera el modelo entrado en el directorio `model/`, luego ya se ejecutar la aplicación completa.
 
+
+## Documentación
+
+La documentación del proyecto se encuentra en la carpeta `doc/`. Si se quiere actualizar la documentación, ejecute el siguiente comando:
+
+```bash
+doxygen Doxyfile
+```
+Se crearán los archivos HTML en la carpeta `doc/html/` y la documentación en LaTeX en la carpeta `doc/latex/`.
 
 ## Autor
 
