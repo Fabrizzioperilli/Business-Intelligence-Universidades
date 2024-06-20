@@ -4,8 +4,8 @@
 1. [Descripción](#Descripción)
 2. [Instalación](#Instalación)
 3. [Uso](#Uso)
-4. [Autor](#Autor)
-5. [Licencia](#Licencia)
+4. [Documentación](#Documentación)
+5. [Autor](#Autor)
 
 
 ## Descripción
@@ -86,7 +86,6 @@ Se crearán los archivos HTML en la carpeta `doc/html/` y la documentación en L
 Fabrizzio Daniell Perilli Martín 
 alu0101138589@ull.edu.es
 
-## Licencia
 
 
 
