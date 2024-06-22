@@ -1,3 +1,15 @@
+#
+# @file callback_filter_curso_academico_docente.py
+# @brief Este fichero contiene el callback para actualizar las opciones
+#        del dropdown con los cursos académicos del docente seleccionado y
+#        gestionar el evento del botón que selecciona todos los cursos académicos.
+# @version 1.0
+# @date 15/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, callback, State, callback_context
 from data.queries import curso_academico_docente
 from callbacks.docente.utils.callback_select_docente import store_selected_docente
@@ -17,15 +29,15 @@ def update_filter_curso_academico_docente(docente_id, asignatura, n_clicks, exis
     gestiona el evento del botón que selecciona todos los cursos académicos.
     
     Args:
-    docente_id (str): ID del docente
-    asignatura (str): Asignatura seleccionada
-    n_clicks (int): Número de clicks en el botón "Seleccionar todo"
-    existing_options (list): Opciones actuales del dropdown
+        docente_id (str): ID del docente
+        asignatura (str): Asignatura seleccionada
+        n_clicks (int): Número de clicks en el botón "Seleccionar todo"
+        existing_options (list): Opciones actuales del dropdown
     
     Returns:
-    list: Opciones del dropdown
-    list: Valor seleccionado
-    
+        list: Opciones del dropdown
+        list: Valor seleccionado
+        
     """
     ctx = callback_context
     trigger_id = ctx.triggered[0]["prop_id"].split(".")[0] if ctx.triggered else None

@@ -1,3 +1,14 @@
+#
+# @file callback_graph_all_calif_cualitativa_docente.py
+# @brief Este fichero contiene el callback para actualizar el gráfico de calificaciones cualitativas
+#        de la titulación seleccionada del perfil "Docente" de la pestaña "Rendimiento académico general".
+# @version 1.0
+# @date 20/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Output, Input, callback
 import plotly.graph_objs as go
 import pandas as pd
@@ -17,12 +28,12 @@ def update_graph_docente(titulacion, curso_academico, asignatura):
     seleccionada del perfil "Docente" de la pestaña "Rendimiento académico general".
 
     Args:
-    titulacion (str): Titulación seleccionada
-    curso_academico (list): Lista con los cursos académicos
-    asignatura (list): Lista con las asignaturas seleccionadas
+        titulacion (str): Titulación seleccionada
+        curso_academico (list): Lista con los cursos académicos
+        asignatura (list): Lista con las asignaturas seleccionadas
 
     Returns:
-    go.Figure: Figura con el gráfico
+        go Figure: Figura con el gráfico
     """
     
     fig = go.Figure()

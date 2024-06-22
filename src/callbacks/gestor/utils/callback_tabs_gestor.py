@@ -1,3 +1,14 @@
+#
+# @file callback_tabs_gestor.py
+# @brief Este fichero contiene el callback para renderizar el 
+#        contenido de las pestañas de la sección "Gestor".
+# @version 1.0
+# @date 17/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, State, html, callback
 from components.common.sidebar import sidebar
 from components.common.filters import filters
@@ -21,11 +32,11 @@ def render_content(tab, selected_gestor):
     Renderiza el contenido de las pestañas de la sección "Gestor".
     
     Args:
-    tab (str): Pestaña seleccionada
-    selected_gestor (dict): Datos del gestor seleccionado
-    
+        tab (str): Pestaña seleccionada
+        selected_gestor (dict): Datos del gestor seleccionado
+        
     Returns:
-    html.Div: Contenido de la pestaña seleccionada
+        html.Div: Contenido de la pestaña seleccionada
     """
     
     if tab == 'indicadores-academicos-tab':

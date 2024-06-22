@@ -1,3 +1,13 @@
+#
+# @file callback_resumen_gestor.py
+# @brief Este fichero contiene el callback para actualizar el resumen del gestor seleccionado.
+# @version 1.0
+# @date 21/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html, Output, Input, callback
 from data.queries import numero_alumnos_matriculados_universidad, universidades_gestor
 
@@ -11,10 +21,10 @@ def update_resumen_gestor(gestor_id):
     Actualiza el resumen del gestor seleccionado.
     
     Args:
-    gestor_id (str): ID del gestor seleccionado
+        gestor_id (str): ID del gestor seleccionado
     
     Returns:
-    html.Div: Resumen del gestor seleccionado
+        html.Div: Resumen del gestor seleccionado
     """
     
     if not gestor_id:

@@ -1,3 +1,13 @@
+#
+# @file callback_user_role.py
+# @brief Este fichero contiene los callbacks para almacenar y actualizar el rol del usuario
+# @version 1.0
+# @date 14/06/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Output, Input, State, callback
 
 
@@ -12,8 +22,8 @@ def initialize_dropdown(ts, stored_role):
     Inicializa el dropdown con el rol almacenado.
     
     Args:
-    ts (float): Timestamp de la última modificación del store
-    stored_role (str): Rol almacenado
+        ts (float): Timestamp de la última modificación del store
+        stored_role (str): Rol almacenado
     """
     return stored_role if ts is not None else "Alumno"
 
@@ -29,11 +39,11 @@ def update_role(new_role, current_role):
     Actualiza el rol almacenado en el store.
     
     Args:
-    new_role (str): Nuevo rol seleccionado
-    current_role (str): Rol actual almacenado
+        new_role (str): Nuevo rol seleccionado
+        current_role (str): Rol actual almacenado
     
     Returns:
-    str: Rol almacenado
+        str: Rol almacenado
     """
     if new_role != current_role:
         return new_role

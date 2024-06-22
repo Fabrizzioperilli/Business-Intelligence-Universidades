@@ -1,3 +1,14 @@
+#
+# @file callback_graph_tasa_rendimiento_alumnado.py
+# @brief Este fichero contiene el callback para actualizar el gráfico de tasa de rendimiento
+#        del perfil "Alumno" de la pestaña "Expediente académico personal".
+# @version 1.0
+# @date 06/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, callback
 import plotly.graph_objs as go
 import pandas as pd
@@ -17,12 +28,12 @@ def update_graph_alumnado(alumno_id, curso_academico, titulacion):
     de la pestaña "Expediente académico personal".
 
     Args:
-    alumno_id (str): Identificador del alumno.
-    curso_academico (list): Lista con los cursos académicos
-    titulacion (str): Titulación seleccionada
+        alumno_id (str): Identificador del alumno.
+        curso_academico (list): Lista con los cursos académicos
+        titulacion (str): Titulación seleccionada
 
     Returns:
-    go.Figure: Figura con el gráfico
+        go.Figure: Figura con el gráfico
 
     """
 

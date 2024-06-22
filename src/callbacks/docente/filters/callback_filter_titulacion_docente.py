@@ -1,3 +1,14 @@
+#
+# @file callback_filter_titulacion_docente.py
+# @brief Este fichero contiene el callback para actualizar las opciones
+#        del dropdown con las titulaciones del docente seleccionado.
+# @version 1.0
+# @date 19/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, State, callback
 from data.queries import titulacion_docente
 
@@ -14,13 +25,13 @@ def update_filter_titulacion_docente(docente_id, selected_value, stored_titulaci
     Actualiza las opciones del dropdown con las titulaciones del docente seleccionado.
     
     Args:
-    docente_id (str): ID del docente
-    selected_value (str): Valor seleccionado
-    stored_titulacion (str): Titulación seleccionada
+        docente_id (str): ID del docente
+        selected_value (str): Valor seleccionado
+        stored_titulacion (str): Titulación seleccionada
     
     Returns:
-    list: Opciones del dropdown
-    str: Valor seleccionado
+        list: Opciones del dropdown
+        str: Valor seleccionado
     
     """
     if not docente_id:

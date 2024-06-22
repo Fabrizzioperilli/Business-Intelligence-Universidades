@@ -1,3 +1,13 @@
+#
+# @file callback_filter_curso_cademico_alumnado.py
+# @brief Este fichero contiene el callback para actualizar el filtro de curso académico del alumnado
+# @version 1.0
+# @date 05/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output,State, callback, callback_context
 from callbacks.alumnado.utils.callback_select_alumnado import store_selected_alumnado
 from data.queries import curso_academico_alumnado
@@ -16,14 +26,14 @@ def update_filter_curso_academico_alumnado(alumno_id, titulacion, n_clicks, exis
     gestiona el evento del botón "Seleccionar todo".
 
     Args:
-    alumno_id (str): Identificador del alumno.
-    titulacion (str): Titulación seleccionada
-    n_clicks (int): Número de clicks en el botón "Seleccionar todo"
-    existing_options (list): Opciones actuales del dropdown
+        alumno_id (str): Identificador del alumno.
+        titulacion (str): Titulación seleccionada
+        n_clicks (int): Número de clicks en el botón "Seleccionar todo"
+        existing_options (list): Opciones actuales del dropdown
 
     Returns:
-    list: Opciones del dropdown
-    list: Valor seleccionado
+        list: Opciones del dropdown
+        list: Valor seleccionado
     """
     
     ctx = callback_context

@@ -1,3 +1,13 @@
+#
+# @file callback_resumen_alumnado.py
+# @brief Este fichero contiene el callback para actualizar el resumen del perfil "Alumno"
+# @version 1.0
+# @date 05/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html, callback, Output, Input
 import pandas as pd
 from data.queries import nota_media_alumno_titulacion, resumen_alumno
@@ -13,11 +23,11 @@ def update_resumen_alumnado(alumno_id, titulacion):
     Actualiza el resumen del perfil "Alumno".
 
     Args:
-    alumno_id (str): Identificador del alumno.
-    titulacion (str): Titulación seleccionada
+        alumno_id (str): Identificador del alumno.
+        titulacion (str): Titulación seleccionada
 
     Returns:
-    list: Componentes con el resumen del perfil "Alumno"
+        list: Componentes con el resumen del perfil "Alumno"
     """
     if not (alumno_id and titulacion):
         return not_data()

@@ -1,3 +1,14 @@
+#
+# @file callback_tabs_alumnado.py
+# @brief Este fichero contiene el callback para renderizar el contenido 
+#        de las pestañas del dashboard del alumnado
+# @version 1.0
+# @date 29/04/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html, callback, Output, Input, State
 from components.common.sidebar import sidebar
 from components.common.filters import filters
@@ -21,11 +32,12 @@ def render_content(tab, selected_alumnado):
     Renderiza el contenido de las pestañas del dashboard del alumnado.
 
     Args:
-    tab (str): Pestaña seleccionada
-    selected_alumnado (str): Alumno seleccionado
+        tab (str): Pestaña seleccionada
+        selected_alumnado (str): Alumno seleccionado
 
     Returns:
-    list: Componentes de la pestaña seleccionada
+        list: Componentes de la pestaña seleccionada
+        
     """
     if tab == 'expediente-personal-tab':
         return html.Div([

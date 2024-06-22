@@ -1,3 +1,13 @@
+#
+# @file callback_filter_titulacion_alumnado.py
+# @brief Este fichero contiene el callback para actualizar las titulaciones del alumnado
+# @version 1.0
+# @date 18/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, State, callback
 from data.queries import titulacion_alumnado
 
@@ -14,14 +24,13 @@ def update_filter_titulacion_alumnado(alumno_id, selected_value, stored_titulaci
     Actualiza las opciones del dropdown de titulaciones del perfil "Alumno".
 
     Args:
-    alumno_id (str): Identificador del alumno.
-    selected_value (str): Valor seleccionado en el dropdown
-    stored_titulacion (str): Titulación almacenada
+        alumno_id (str): Identificador del alumno.
+        selected_value (str): Valor seleccionado en el dropdown
+        stored_titulacion (str): Titulación almacenada
 
     Returns:
-    list: Opciones del dropdown
-    str: Valor seleccionado
-
+        list: Opciones del dropdown
+        str: Valor seleccionado
     """
     if not alumno_id:
         return [], None, None

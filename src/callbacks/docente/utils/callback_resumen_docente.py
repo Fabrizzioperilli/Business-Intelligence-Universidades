@@ -1,3 +1,13 @@
+#
+# @file callback_resumen_docente.py
+# @brief Este fichero contiene el callback para actualizar el resumen del docente
+# @version 1.0
+# @date 14/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html, callback, Output, Input
 from data.queries import universidades_docente
 
@@ -12,11 +22,11 @@ def update_resumen_docente(docente_id, titulacion):
     Actualiza el resumen del docente
     
     Args:
-    docente_id (str): ID del docente
-    titulacion (str): Titulación seleccionada
+        docente_id (str): ID del docente
+        titulacion (str): Titulación seleccionada
     
     Returns:
-    html.Div: Layout del resumen del docente
+        html.Div: Layout del resumen del docente
     """
     if not (docente_id and titulacion):
         return not_data()

@@ -1,3 +1,15 @@
+#
+# @file callback_filter_titulaciones_gestor.py
+# @brief Este fichero contiene el callback para actualizar las opciones 
+#        del filtro de titulaciones en la pestaña "Indicadores académicos" 
+#        del perfil "Gestor".
+# @version 1.0
+# @date 21/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, State, callback, callback_context
 from data.queries import universidades_gestor, titulaciones_universidad_gestor
 
@@ -17,14 +29,14 @@ def update_filter_titulaciones_gestor(docente_id, curso_academico, n_clicks, exi
     la pestaña "Indicadores académicos".
 
     Args:
-    docente_id (str): ID del docente seleccionado
-    curso_academico (str): Curso académico seleccionado
-    n_clicks (int): Número de clicks en el botón "Seleccionar todo"
-    existing_options (list): Opciones actuales del filtro de titulaciones
+        docente_id (str): ID del docente seleccionado
+        curso_academico (str): Curso académico seleccionado
+        n_clicks (int): Número de clicks en el botón "Seleccionar todo"
+        existing_options (list): Opciones actuales del filtro de titulaciones
 
     Returns:
-    list: Opciones del dropdown
-    list: Valores seleccionados
+        list: Opciones del dropdown
+        list: Valores seleccionados
     """
     ctx = callback_context
     trigger_id = ctx.triggered[0]["prop_id"].split(".")[0] if ctx.triggered else None

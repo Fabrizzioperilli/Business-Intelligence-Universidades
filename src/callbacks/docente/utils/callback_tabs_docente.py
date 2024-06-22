@@ -1,3 +1,14 @@
+#
+# @file callback_tabs_docente.py
+# @brief Este fichero contiene el callback para renderizar el contenido 
+#         de las pestañas del dashboard del docente.
+# @version 1.0
+# @date 14/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html, callback, Input, Output,State
 from components.docente.utils.select_docente import select_docente
 from components.common.sidebar import sidebar
@@ -23,12 +34,13 @@ def render_content(tab, selected_docente):
     Renderiza el contenido de las pestañas del dashboard del docente.
     
     Args:
-    tab (str): Pestaña seleccionada
-    selected_docente (str): Docente seleccionado
+        tab (str): Pestaña seleccionada
+        selected_docente (str): Docente seleccionado
     
     Returns:
-    list: Componentes de la pestaña seleccionada
+        ist: Componentes de la pestaña seleccionada
     """
+    
     if tab == 'rendimiento-academico-asignatura-tab':
         return html.Div([
             select_docente(),

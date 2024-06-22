@@ -1,3 +1,14 @@
+#
+# @file callback_filter_all_curso_academico_gestor.py
+# @brief Este fichero contiene el callback para actualizar las opciones
+#        del filtro de todos los cursos académicos del perfil "Gestor" en la pestaña "Riesgo académico".
+# @version 1.0
+# @date 27/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, State, callback, callback_context
 from data.queries import universidades_gestor, curso_academico_universidad
 
@@ -15,13 +26,13 @@ def update_filter_all_curso_academico_gestor(gestor_id, n_clicks, existing_optio
     en la pestaña "Riesgo académico".
 
     Args:
-    gestor_id (str): ID del gestor seleccionado
-    n_clicks (int): Número de clicks en el botón "Seleccionar todo"
-    existing_options (list): Opciones actuales del filtro de curso académico
+        gestor_id (str): ID del gestor seleccionado
+        n_clicks (int): Número de clicks en el botón "Seleccionar todo"
+        existing_options (list): Opciones actuales del filtro de curso académico
 
     Returns:
-    list: Opciones del dropdown
-    list: Valores seleccionados
+        list: Opciones del dropdown
+        list: Valores seleccionados
     """
 
     ctx = callback_context

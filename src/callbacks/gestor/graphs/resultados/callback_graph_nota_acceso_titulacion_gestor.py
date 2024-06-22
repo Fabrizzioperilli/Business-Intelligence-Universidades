@@ -1,3 +1,15 @@
+#
+# @file callback_graph_nota_acceso_titulacion_gestor.py
+# @brief Este fichero contiene el callback para actualizar el gráfico
+#        de evolución de la nota de acceso por titulación
+#        del perfil "Gestor" de la pestaña "Resultados académicos".
+# @version 1.0
+# @date 22/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, State, callback
 import plotly.graph_objs as go
 import dash_bootstrap_components as dbc
@@ -15,10 +27,10 @@ def update_grpht_gestor(gestor_id):
     del perfil "Gestor" de la pestaña "Resultados académicos".
 
     Args:
-    gestor_id (str): ID del gestor seleccionado
+        gestor_id (str): ID del gestor seleccionado
 
     Returns:
-    go.Figure: Figura con el gráfico
+        go.Figure: Figura con el gráfico
 
     """
 

@@ -1,3 +1,15 @@
+#
+# @file callback_filter_curso_academico_gestor.py
+# @brief Este fichero contiene el callback para actualizar las opciones 
+#        del filtro de curso académico del perfil "Gestor" en la 
+#        pestaña "Indicadores académicos".
+# @version 1.0
+# @date 21/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, callback
 from data.queries import universidades_gestor, curso_academico_universidad
 
@@ -13,11 +25,11 @@ def update_filter_curso_academico_gestor(gestor_id):
     en la pestaña "Indicadores académicos".
 
     Args:
-    gestor_id (str): ID del gestor seleccionado
+        gestor_id (str): ID del gestor seleccionado
     
     Returns:
-    list: Opciones del dropdown
-    str: Valor seleccionado
+        list: Opciones del dropdown
+        str: Valor seleccionado
     """
 
     if not gestor_id:

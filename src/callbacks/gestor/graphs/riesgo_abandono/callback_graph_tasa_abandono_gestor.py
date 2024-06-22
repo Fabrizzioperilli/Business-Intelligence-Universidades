@@ -1,3 +1,15 @@
+#
+# @file callback_graph_tasa_abandono_gestor.py
+# @brief Este fichero contiene el callback para actualizar el gráfico
+#        de la tasa de abandono por titulación del perfil "Gestor"
+#        de la pestaña "Riesgo de abandono".
+# @version 1.0
+# @date 26/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Output, Input, State, callback
 import plotly.graph_objs as go
 import dash_bootstrap_components as dbc
@@ -17,11 +29,11 @@ def update_graph_gestor(curso_academico, gestor_id):
     del perfil "Gestor" de la pestaña "Riesgo de abandono".
 
     Args:
-    curso_academico (list): Lista con los cursos académicos
-    gestor_id (str): ID del gestor seleccionado
+        curso_academico (list): Lista con los cursos académicos
+        gestor_id (str): ID del gestor seleccionado
 
     Returns:
-    go.Figure: Figura con el gráfico
+        go.Figure: Figura con el gráfico
     """
     fig = go.Figure()
 

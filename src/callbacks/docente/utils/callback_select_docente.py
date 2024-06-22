@@ -1,3 +1,13 @@
+#
+# @file callback_select_docente.py
+# @brief Este fichero contiene el callback para almacenar el docente seleccionado en el store.
+# @version 1.0
+# @date 14/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, callback, State
 from data.queries import docentes_all
 
@@ -14,13 +24,13 @@ def store_selected_docente(selected_value, stored_value):
     Almacena el docente seleccionado en el store.
 
     Args:
-    selected_value (str): Valor seleccionado
-    stored_value (str): Valor almacenado
+        selected_value (str): Valor seleccionado
+        stored_value (str): Valor almacenado
 
     Returns:
-    str: Valor seleccionado
-    list: Opciones del dropdown
-    str: Valor almacenado
+        str: Valor seleccionado
+        list: Opciones del dropdown
+        str: Valor almacenado
     """
     
     data = docentes_all()

@@ -1,3 +1,15 @@
+#
+# @file callback_graph_calif_media_mi_nota.py
+# @brief Este fichero contiene el callback para actualizar el gráfico 
+#        de relación calificaciones del alumno con nota media general 
+#        del perfil "Alumno" de la pestaña "Rendimiento académico general".
+# @version 1.0
+# @date 08/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import callback, Input, Output
 import pandas as pd
 import plotly.graph_objs as go
@@ -18,13 +30,14 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, 
     del perfil "Alumno" de la pestaña "Rendimiento académico general".
 
     Args:
-    curso_academico (list): Lista con los cursos académicos
-    asignaturas_matriculadas (list): Lista con las asignaturas matriculadas
-    alumno_id (str): Identificador del alumno
-    titulacion (str): Titulación seleccionada
+        curso_academico (list): Lista con los cursos académicos
+        asignaturas_matriculadas (list): Lista con las asignaturas matriculadas
+        alumno_id (str): Identificador del alumno
+        titulacion (str): Titulación seleccionada
 
     Returns:
-    go.Figure: Figura con el gráfico
+        go.Figure: Figura con el gráfico
+        
     """
     fig = go.Figure()
 

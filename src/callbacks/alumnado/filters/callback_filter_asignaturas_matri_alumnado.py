@@ -1,3 +1,13 @@
+#
+# @file callback_filter_asignaturas_matri_alumnado.py
+# @brief Este fichero contiene el callback para actualizar las asignaturas matriculadas por el alumno
+# @version 1.0
+# @date 07/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, State, callback, callback_context
 from data.queries import asignaturas_matriculadas
 from util import list_to_tuple
@@ -17,15 +27,15 @@ def update_filter_asignaturas_matri_alumnado(alumno_id, curso_academico, titulac
     gestiona el evento del botón "Seleccionar todo".
 
     Args:
-    alumno_id (str): Identificador del alumno.
-    curso_academico (list): Lista con los cursos académicos
-    titulacion (str): Titulación seleccionada
-    n_clicks (int): Número de clicks en el botón "Seleccionar todo"
-    existing_options (list): Opciones actuales del dropdown
+        alumno_id (str): Identificador del alumno.
+        curso_academico (list): Lista con los cursos académicos
+        titulacion (str): Titulación seleccionada
+        n_clicks (int): Número de clicks en el botón "Seleccionar todo"
+        existing_options (list): Opciones actuales del dropdown
 
     Returns:
-    list: Opciones del dropdown
-    list: Valor seleccionado
+        list: Opciones del dropdown
+        list: Valor seleccionado
     """
 
     ctx = callback_context

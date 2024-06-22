@@ -1,3 +1,15 @@
+#
+# @file callback_graph_asig_superadas_media.py
+# @brief Este fichero contiene el callback para actualizar el gráfico 
+#       de relación entre la nota media y el número de asignaturas superadas 
+#       por alumno del perfil "Alumno" de la pestaña "Rendimiento académico general".
+# @version 1.0
+# @date 09/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import callback, Input, Output
 import plotly.graph_objs as go
 import pandas as pd
@@ -18,13 +30,13 @@ def update_graph_alumnado(curso_academico, alumno_id, asignaturas_matriculadas, 
     por alumno del perfil "Alumno" de la pestaña "Rendimiento académico general".
 
     Args:
-    curso_academico (list): Lista con los cursos académicos
-    alumno_id (str): Identificador del alumno
-    asignaturas_matriculadas (list): Lista con las asignaturas matriculadas
-    titulacion (str): Titulación seleccionada
+        curso_academico (list): Lista con los cursos académicos
+        alumno_id (str): Identificador del alumno
+        asignaturas_matriculadas (list): Lista con las asignaturas matriculadas
+        titulacion (str): Titulación seleccionada
 
     Returns:
-    go.Figure: Figura con el gráfico
+        go.Figure: Figura con el gráfico
     
     """
     fig = go.Figure()

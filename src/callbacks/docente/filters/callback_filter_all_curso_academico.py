@@ -1,3 +1,14 @@
+#
+# @file callback_filter_all_curso_academico.py
+# @brief Este fichero contiene el callback para actualizar las opciones
+#        del dropdown con todos los cursos académicos de la titulación seleccionada.
+# @version 1.0
+# @date 20/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, callback
 from data.queries import curso_academico_actas_titulacion
 
@@ -12,11 +23,11 @@ def update_filter_all_cursos_academicos_docente(titulacion):
     Actualiza las opciones del dropdown con todos los cursos académicos de la titulación seleccionada.
     
     Args:
-    titulacion (str): Titulación seleccionada
+        titulacion (str): Titulación seleccionada
     
     Returns:
-    list: Opciones del dropdown
-    list: Valor seleccionado
+        list: Opciones del dropdown
+        list: Valor seleccionado
     """
 
     if not titulacion:

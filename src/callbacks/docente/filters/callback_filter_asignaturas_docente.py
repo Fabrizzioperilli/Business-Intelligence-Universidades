@@ -1,3 +1,14 @@
+#
+# @file callback_filter_asignaturas_docente.py
+# @brief Este fichero contiene el callback para actualizar las opciones 
+#        del dropdown con las asignaturas del docente seleccionado.
+# @version 1.0
+# @date 15/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, callback
 from data.queries import asignaturas_docente
 
@@ -13,14 +24,14 @@ def update_filter_asignaturas_docente(docente_id, titulacion):
     Actualiza las opciones del dropdown con las asignaturas del docente seleccionado.
     
     Args:
-    docente_id (str): ID del docente
-    titulacion (str): Titulación seleccionada
+        docente_id (str): ID del docente
+        titulacion (str): Titulación seleccionada
     
     Returns:
-    list: Opciones del dropdown
-    str: Valor seleccionado
-    """
+        list: Opciones del dropdown
+        str: Valor seleccionado
 
+    """
     if not (docente_id and titulacion):
         return [], None
 

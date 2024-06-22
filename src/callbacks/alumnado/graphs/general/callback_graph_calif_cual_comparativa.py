@@ -1,3 +1,15 @@
+#
+# @file callback_graph_calif_cual_comparativa.py
+# @brief Este fichero contiene el callback para actualizar el gráfico de calificaciones 
+#       cualitativas general por curso académico del perfil "Alumno" de la pestaña 
+#       "Rendimiento académico general".
+# @version 1.0
+# @date 07/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import callback, Input, Output
 import plotly.graph_objs as go
 import pandas as pd
@@ -22,13 +34,13 @@ def update_graph_alumnado(curso_academico, asignaturas_matriculadas, alumno_id, 
     del perfil "Alumno" de la pestaña "Rendimiento académico general".
 
     Args:
-    curso_academico (list): Lista con los cursos académicos
-    asignaturas_matriculadas (list): Lista con las asignaturas matriculadas
-    alumno_id (str): Identificador del alumno
-    titulacion (str): Titulación seleccionada
+        curso_academico (list): Lista con los cursos académicos
+        asignaturas_matriculadas (list): Lista con las asignaturas matriculadas
+        alumno_id (str): Identificador del alumno
+        titulacion (str): Titulación seleccionada
 
     Returns:
-    go.Figure: Figura con el gráfico
+        go.Figure: Figura con el gráfico
     """
     fig = go.Figure()
 

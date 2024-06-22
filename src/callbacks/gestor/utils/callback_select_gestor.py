@@ -1,3 +1,13 @@
+#
+# @file callback_select_gestor.py
+# @brief Este fichero contiene el callback para almacenar el gestor seleccionado en un store.
+# @version 1.0
+# @date 21/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, callback, State
 from data.queries import gestores_all
 
@@ -14,13 +24,13 @@ def store_selected_gestor(selected_value, stored_value):
     Almacena el gestor seleccionado en un store.
 
     Args:
-    selected_value (str): Valor seleccionado en el dropdown
-    stored_value (dict): Datos almacenados en el store
+        selected_value (str): Valor seleccionado en el dropdown
+        stored_value (dict): Datos almacenados en el store
 
     Returns:
-    str: Valor seleccionado en el dropdown
-    list: Opciones del dropdown
-    str: Valor almacenado en el store
+        str: Valor seleccionado en el dropdown
+        list: Opciones del dropdown
+        str: Valor almacenado en el store
     """
 
     data = gestores_all()

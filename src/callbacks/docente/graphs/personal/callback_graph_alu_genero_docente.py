@@ -1,3 +1,14 @@
+#
+# @file callback_graph_alu_genero_docente.py
+# @brief Este fichero contiene el callback para actualizar el gráfico de evolución de alumnos matriculados por género
+#        del perfil "Docente" de la pestaña "Rendimiento académico personal".
+# @version 1.0
+# @date 15/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import Input, Output, callback
 import plotly.graph_objs as go
 import pandas as pd
@@ -17,12 +28,12 @@ def update_graph_docente(asignaturas, curso_academico, docente_id):
     del perfil "Docente" de la pestaña "Rendimiento académico personal".
 
     Args:
-    asignaturas (list): Lista con las asignaturas seleccionadas
-    curso_academico (list): Lista con los cursos académicos
-    docente_id (str): Identificador del docente
+        asignaturas (list): Lista con las asignaturas seleccionadas
+        curso_academico (list): Lista con los cursos académicos
+        docente_id (str): Identificador del docente
 
     Returns:
-    go.Figure: Figura con el gráfico
+        go.Figure: Figura con el gráfico
     """
 
     fig = go.Figure()
