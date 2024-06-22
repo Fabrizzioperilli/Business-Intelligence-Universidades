@@ -1,3 +1,13 @@
+#
+# @file graphs_indicadores_gestor.py
+# @brief Este fichero contiene el componente que contiene las pestañas de la sección "Gestor"
+# @version 1.0
+# @date 28/04/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html, dcc
 from callbacks.gestor.utils.callback_tabs_gestor import render_content
 
@@ -8,7 +18,7 @@ def tabs_gestor():
     y tablas con los datos de los alumnos del perfil "Gestor".
 
     Returns:
-    html.Div: Pestañas de la sección "Gestor"
+        html.Div: Pestañas de la sección "Gestor"
     """
     
     return html.Div(

@@ -1,3 +1,14 @@
+#
+# @file graphs_general_docente.py
+# @brief Este fichero contiene el componente que muestra los gráficos del perfil 
+#       "Docente" en la pestaña "Rendimiento académico general"
+# @version 1.0
+# @date 16/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html
 from callbacks.docente.graphs.general.callback_graph_all_calif_cualitativa_docente import update_graph_docente
 from callbacks.docente.graphs.general.callback_graph_all_calif_media_docente import update_graph_docente
@@ -11,7 +22,7 @@ def graphs_general_docente():
     del perfil "Docente"
 
     Returns:
-    html.Div: Gráficos
+        html.Div: Gráficos
     """
 
     graphs_ids = [

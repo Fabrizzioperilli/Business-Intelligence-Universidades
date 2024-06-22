@@ -1,3 +1,14 @@
+#
+# @file generate_synthetic_data.py
+# @brief Este archivo contiene el código para generar datos sintéticos.
+# @details Se generan datos sintéticos para las tablas de la base de datos.
+# @version 1.0
+# @date 12/06/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 import pandas as pd
 import numpy as np
 from faker import Faker
@@ -5,7 +16,6 @@ import random
 from tqdm import tqdm
 import os
 
-# Inicialización de Faker
 fake = Faker('es_ES')
 
 # Diccionario con ramas, titulaciones y palabras clave
@@ -70,8 +80,18 @@ universidades_dict = {
     'Universidad de La Laguna': 'ULL03',
 }
 
-# Generar asignaturas para cada titulación
+
 def generate_asignaturas(educacion, min_asignaturas=38):
+    """
+    Genera un diccionario con asignaturas aleatorias para cada titulación.
+    
+    Args:
+        educacion (dict): Diccionario con ramas, titulaciones y palabras clave.
+        min_asignaturas (int): Número mínimo de asignaturas por titulación.
+        
+    Returns:
+        dict: Diccionario con asignaturas para cada titulación.
+    """
     asignaturas_dict = {}
     for rama, titulaciones in educacion.items():
         for titulacion, palabras in titulaciones.items():
@@ -80,11 +100,20 @@ def generate_asignaturas(educacion, min_asignaturas=38):
             asignaturas_dict[titulacion] = asignaturas
     return asignaturas_dict
 
-# Generar diccionario de asignaturas
 asignaturas_dict = generate_asignaturas(educacion)
 
-# Función para generar códigos únicos de asignaturas
+
+
 def generate_unique_cod_asignaturas(asignaturas_dict):
+    """
+    Genera un diccionario con códigos únicos para cada asignatura.
+
+    Args:
+        asignaturas_dict (dict): Diccionario con asignaturas para cada titulación.
+
+    Returns:
+        dict: Diccionario con códigos únicos para cada asignatura.
+    """
     cod_asignaturas = {}
     for titulacion, asignaturas in asignaturas_dict.items():
         for asignatura in asignaturas:
@@ -92,12 +121,21 @@ def generate_unique_cod_asignaturas(asignaturas_dict):
             cod_asignaturas[asignatura] = cod_asignatura
     return cod_asignaturas
 
-# Generar un diccionario con códigos únicos para cada asignatura
+
 cod_asignaturas_dict = generate_unique_cod_asignaturas(asignaturas_dict)
 cod_plan_dict = {titulacion: fake.bothify(text='PLAN###??') for titulacion in asignaturas_dict.keys()}
 
-# Función para generar datos sintéticos para la tabla 'alumnos'
+
 def generate_alumnos(n):
+    """
+    Genera datos sintéticos para la tabla 'alumnos'.
+
+    Args:
+        n (int): Número de alumnos a generar.
+
+    Returns:
+        pd.DataFrame: DataFrame con los datos de los alumnos.
+    """
     ids = [fake.unique.bothify(text='???#####') for _ in range(n)]
     anios_nac = np.random.randint(1980, 2000, n)
     universidades = random.choices(list(universidades_dict.keys()), k=n)
@@ -112,15 +150,34 @@ def generate_alumnos(n):
     }
     return pd.DataFrame(data)
 
-# Función para generar cursos académicos en formato "YYYY/YYYY"
+
 def generate_curso_aca(start_year, end_year):
+    """
+    Genera una lista de cursos académicos con el formato 'YYYY/YYYY+1'.
+
+    Args:
+        start_year (int): Año de inicio.
+        end_year (int): Año de fin.
+    
+    Returns:
+        list: Lista de cursos académicos.
+    """
     return [f"{year}/{year+1}" for year in range(start_year, end_year)]
 
 # Generar una lista de cursos académicos
 cursos_academicos = generate_curso_aca(2017, 2024)
 
-# Función para generar datos sintéticos para la tabla 'matricula'
+
 def generate_matricula(alumnos_df):
+    """
+    Genera datos sintéticos para la tabla 'matricula'.
+
+    Args:
+        alumnos_df (pd.DataFrame): DataFrame con los datos de los alumnos.
+    
+    Returns:
+        pd.DataFrame: DataFrame con los datos de matrícula.
+    """
     n = len(alumnos_df)
     num_matriculas = np.random.randint(1, 6, n)
     matricula_data = []
@@ -170,8 +227,18 @@ def generate_matricula(alumnos_df):
             })
     return pd.DataFrame(matricula_data)
 
-# Función para generar datos sintéticos para la tabla 'asignaturas_matriculadas'
+
 def generate_asignaturas_matriculadas(matricula_df, cod_asignaturas):
+    """
+    Genera datos sintéticos para la tabla 'asignaturas_matriculadas'.
+
+    Args:
+        matricula_df (pd.DataFrame): DataFrame con los datos de matrícula.
+        cod_asignaturas (dict): Diccionario con códigos únicos para cada asignatura.
+
+    Returns:
+        pd.DataFrame: DataFrame con los datos de asignaturas matriculadas.
+    """
     asignaturas_data = []
     for i, row in tqdm(matricula_df.iterrows(), total=len(matricula_df), desc="asignaturas_matriculadas"):
         num_asignaturas = min(random.randint(1, 20), len(asignaturas_dict[row['titulacion']]))
@@ -193,8 +260,17 @@ def generate_asignaturas_matriculadas(matricula_df, cod_asignaturas):
             })
     return pd.DataFrame(asignaturas_data)
 
-# Función para generar datos sintéticos para la tabla 'lineas_actas'
+
 def generate_lineas_actas(asignaturas_matriculadas_df):
+    """
+    Genera datos sintéticos para la tabla 'lineas_actas'.
+
+    Args:
+        asignaturas_matriculadas_df (pd.DataFrame): DataFrame con los datos de asignaturas matriculadas.
+
+    Returns:
+        pd.DataFrame: DataFrame con los datos de actas.
+    """
     actas_data = []
     for i, row in tqdm(asignaturas_matriculadas_df.iterrows(), total=len(asignaturas_matriculadas_df), desc="líneas_actas"):
         calif_numerica = round(random.uniform(0, 10), 2)
@@ -223,8 +299,20 @@ def generate_lineas_actas(asignaturas_matriculadas_df):
         })
     return pd.DataFrame(actas_data)
 
-# Función para generar datos sintéticos para la tabla 'docentes'
+
 def generate_docentes(n, universidades, cod_asignaturas, asignaturas_dict):
+    """
+    Genera datos sintéticos para la tabla 'docentes'.
+
+    Args:
+        n (int): Número de docentes a generar.
+        universidades (dict): Diccionario con universidades y sus códigos.
+        cod_asignaturas (dict): Diccionario con códigos únicos para cada asignatura.
+        asignaturas_dict (dict): Diccionario con asignaturas para cada titulación.
+
+    Returns:
+        pd.DataFrame: DataFrame con los datos de los docentes.
+    """
     docentes_data = []
 
     for i in tqdm(range(n), desc="docentes"):
@@ -235,7 +323,6 @@ def generate_docentes(n, universidades, cod_asignaturas, asignaturas_dict):
         asignaturas_seleccionadas = random.sample(list(cod_asignaturas.items()), num_asignaturas)
 
         for asignatura, cod_asignatura in asignaturas_seleccionadas:
-            # Encontrar la titulación correspondiente a la asignatura
             titulacion = next(titulacion for titulacion, asignaturas in asignaturas_dict.items() if asignatura in asignaturas)
             cod_plan = cod_plan_dict[titulacion]
             docentes_data.append({
@@ -252,11 +339,20 @@ def generate_docentes(n, universidades, cod_asignaturas, asignaturas_dict):
 
     return pd.DataFrame(docentes_data)
 
-# Función para generar datos sintéticos para la tabla 'ebau_prueba'
-def generate_ebau_prueba(n, alumnos_ids, universidades):
-    assert n == len(alumnos_ids), "El número de registros debe ser igual al número de alumnos"
 
-    # Generar datos para cada campo
+def generate_ebau_prueba(n, alumnos_ids, universidades):
+    """
+    Genera datos sintéticos para la tabla 'ebau_prueba'.
+
+    Args:
+        n (int): Número de registros a generar.
+        alumnos_ids (list): Lista de IDs de alumnos.
+        universidades (dict): Diccionario con universidades y sus códigos.
+
+    Returns:
+        pd.DataFrame: DataFrame con los datos de las pruebas EBAU.
+    """
+    assert n == len(alumnos_ids), "El número de registros debe ser igual al número de alumnos"
     data = {
         'indice': range(1, n + 1),
         'conv': [fake.bothify(text='C##') for _ in range(n)],
@@ -272,8 +368,19 @@ def generate_ebau_prueba(n, alumnos_ids, universidades):
 
     return pd.DataFrame(data)
 
-# Función para generar datos sintéticos para la tabla 'egresados'
+
 def generate_egresados(alumnos_df, matricula_df, lineas_actas_df):
+    """
+    Genera datos sintéticos para la tabla 'egresados'.
+    
+    Args:
+        alumnos_df (pd.DataFrame): DataFrame con los datos de los alumnos.
+        matricula_df (pd.DataFrame): DataFrame con los datos de matrícula.
+        lineas_actas_df (pd.DataFrame): DataFrame con los datos de actas.
+        
+    Returns:
+        pd.DataFrame: DataFrame con los datos de los egresados.
+    """
     aprobados = lineas_actas_df[lineas_actas_df['calif_numerica'] >= 5].groupby('id').size()
     egresados_ids = aprobados[aprobados >= 38].index.tolist()
     alumnos_no_abandona = alumnos_df[alumnos_df['abandona'] == 'no']['id'].tolist()
@@ -296,8 +403,18 @@ def generate_egresados(alumnos_df, matricula_df, lineas_actas_df):
         })
     return pd.DataFrame(egresados_data)
 
-# Función para generar datos sintéticos para la tabla 'gestores'
+
 def generate_gestores(n, universidades):
+    """
+    Genera datos sintéticos para la tabla 'gestores'.
+
+    Args:
+        n (int): Número de gestores a generar.
+        universidades (dict): Diccionario con universidades y sus códigos.
+
+    Returns:
+        pd.DataFrame: DataFrame con los datos de los gestores.
+    """
     data = {
         'gestor_id': range(1, n + 1),
         'universidad': np.random.choice(list(universidades.keys()), n)
@@ -311,7 +428,7 @@ num_alumnos = 5
 num_docentes = 1
 num_gestores = 5
 
-#crea un directorio llamado data/csv si no existe
+#Crea un directorio llamado src/data/csv si no existe
 
 if not os.path.exists('src/data/csv'):
     os.makedirs('src/data/csv')
@@ -325,7 +442,7 @@ ebau_prueba_df = generate_ebau_prueba(num_alumnos, alumnos_df['id'].tolist(), un
 egresados_df = generate_egresados(alumnos_df, matricula_df, lineas_actas_df)
 gestores_df = generate_gestores(num_gestores, universidades_dict)
 
-# Guardar datos en archivos CSV
+# Guarda datos en archivos CSV
 alumnos_df.to_csv('src/data/csv/alumnos.csv', index=False)
 matricula_df.to_csv('src/data/csv/matricula.csv', index=False)
 asignaturas_matriculadas_df.to_csv('src/data/csv/asignaturas_matriculadas.csv', index=False)

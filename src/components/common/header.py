@@ -1,3 +1,13 @@
+#
+# @file header.py
+# @brief Este archivo contiene el componente del header de la aplicación.
+# @version 1.0
+# @date 25/04/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html, dcc
 from callbacks.common.callback_user_role import initialize_dropdown, update_role
 

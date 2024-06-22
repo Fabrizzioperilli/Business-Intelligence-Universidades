@@ -1,4 +1,15 @@
+#
+# @file recomendador_gestor.py
+# @brief Este fichero contiene el componente con información y recomendaciones para el perfil "Gestor"
+# @version 1.0
+# @date 23/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html
+
 
 def recomendador_gestor():
     """
@@ -6,7 +17,7 @@ def recomendador_gestor():
     para los gestores de la sección "Recomendaciones" de la pestaña "Gestor".
 
     Returns:
-    html.Div: Contenedor con información y recomendaciones sobre la deserción universitaria
+        html.Div: Contenedor con información y recomendaciones sobre la deserción universitaria
     """
     return html.Div([
         html.H1("Deserción universitaria", className='titulo-recomendador-gestor'),

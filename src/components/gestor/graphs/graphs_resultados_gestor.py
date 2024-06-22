@@ -1,3 +1,14 @@
+#
+# @file graphs_resultados_gestor.py
+# @brief Este fichero contiene el componente que muestra los gráficos 
+#        de los resultados académicos del perfil "Gestor"
+# @version 1.0
+# @date 22/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html
 from callbacks.gestor.graphs.resultados.callback_graph_nota_acceso_titulacion_gestor import update_grpht_gestor
 from callbacks.gestor.graphs.resultados.callback_graph_duracion_media_estudios_nota_gestor import update_graph_gestor
@@ -11,7 +22,7 @@ def graphs_resultados_gestor():
     "Gestor". Incluye un modal y una tabla para cada gráfico.
 
     Returns:
-    html.Div: Gráficos
+        html.Div: Gráficos
     """
     graphs_info = [
         {

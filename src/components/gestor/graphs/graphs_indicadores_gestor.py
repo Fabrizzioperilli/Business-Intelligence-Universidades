@@ -1,3 +1,14 @@
+#
+# @file graphs_indicadores_gestor.py
+# @brief Este fichero contiene el componente que muestra los gráficos 
+#        de los indicadores del perfil "Gestor"
+# @version 1.0
+# @date 21/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html
 from callbacks.gestor.graphs.indicadores.callback_graph_nuevo_ingreso_genero_gestor import update_graph_gestor
 from callbacks.gestor.graphs.indicadores.callback_graph_egresados_genero_gestor import update_graph_gestor
@@ -13,7 +24,7 @@ def graphs_indicadores_gestor():
     "Gestor".Incluye un modal y una tabla para cada gráfico.
 
     Returns:
-    html.Div: Gráficos
+        html.Div: Gráficos
     """
 
     graphs_info = [

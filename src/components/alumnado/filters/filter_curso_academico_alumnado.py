@@ -1,3 +1,13 @@
+#
+# @file filter_curso_academico_alumnado.py
+# @brief Este archivo contiene componente para filtrar cursos académicos del alumnado.
+# @version 1.0
+# @date 07/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html, dcc
 from callbacks.alumnado.filters.callback_filter_curso_cademico_alumnado import update_filter_curso_academico_alumnado
 
@@ -7,7 +17,7 @@ def filter_curso_academico_alumnado():
     Crea un componente con un dropdown que contiene los cursos académicos.
     
     Returns:
-    html.Div: Componente con un dropdown y un botón para seleccionar todos los cursos académicos
+        html.Div: Componente con un dropdown y un botón para seleccionar todos los cursos académicos
     """
     return html.Div(
         [

@@ -1,21 +1,29 @@
-import pandas as pd
-import numpy as np
+#
+# @file model.py
+# @brief Este archivo contiene el código del modelo de aprendizaje automático.
+# @version 1.0
+# @date 13/06/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from datetime import datetime
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder, PolynomialFeatures
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split, GridSearchCV, StratifiedKFold, cross_val_score
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, VotingClassifier, AdaBoostClassifier
-from sklearn.linear_model import LogisticRegression  # Corrección en la importación
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix, f1_score, roc_auc_score
 from sklearn.pipeline import Pipeline
 import joblib
 from tqdm import tqdm
 from imblearn.over_sampling import SMOTE
 import xgboost as xgb
-from util import load_data_for_model # Corrección en la importación
+from util import load_data_for_model
 
-data = load_data_for_model()  # Corrección en la carga de datos
+data = load_data_for_model()
 
 current_year = datetime.now().year
 data['edad_actual'] = current_year - data['anio_nac']
@@ -50,12 +58,12 @@ X_test = preprocessor.transform(X_test)
 smote = SMOTE(random_state=42)
 X_train, y_train = smote.fit_resample(X_train, y_train)
 
-# Feature engineering: polynomial features
+# Crear interacciones polinómicas
 poly = PolynomialFeatures(degree=2, interaction_only=True, include_bias=False)
 X_train = poly.fit_transform(X_train)
 X_test = poly.transform(X_test)
 
-# Crear pipelines para cada modelo
+# Pipelines para cada modelo
 modelos = {
     'rf': RandomForestClassifier(random_state=42, n_jobs=-1),
     'lr': LogisticRegression(max_iter=1000, random_state=42),
@@ -64,7 +72,6 @@ modelos = {
     'xgb': xgb.XGBClassifier(random_state=42, use_label_encoder=False, eval_metric='logloss')
 }
 
-# Definir el rango de parámetros para la búsqueda
 param_grids = {
     'rf': {
         'n_estimators': [100, 200, 300],
@@ -93,7 +100,7 @@ param_grids = {
     }
 }
 
-# Buscar los mejores hiperparámetros con GridSearchCV
+# Busca los mejores hiperparámetros con GridSearchCV
 best_estimators = {}
 with tqdm(total=len(modelos), desc="Entrenando modelos") as pbar:
     for key, model in modelos.items():
@@ -102,14 +109,13 @@ with tqdm(total=len(modelos), desc="Entrenando modelos") as pbar:
         best_estimators[key] = grid_search.best_estimator_
         pbar.update(1)
 
-# Crear el VotingClassifier con los mejores estimadores
 voting_clf = VotingClassifier(
     estimators=[(key, best_estimators[key]) for key in best_estimators],
     voting='soft',
     n_jobs=-1
 )
 
-# Entrenar el VotingClassifier
+# Entrena el VotingClassifier
 voting_clf.fit(X_train, y_train)
 
 # Guardar el modelo entrenado
@@ -117,7 +123,7 @@ joblib_file = "trained_model.pkl"
 joblib.dump(voting_clf, joblib_file)
 print(f"Modelo guardado en {joblib_file}")
 
-# Evaluar el modelo
+# Métricas del modelo
 y_pred_voting = voting_clf.predict(X_test)
 print(f"Accuracy: {accuracy_score(y_test, y_pred_voting):.2f}")
 print(f"Precision: {precision_score(y_test, y_pred_voting):.2f}")
@@ -126,16 +132,6 @@ print(f"F1 Score: {f1_score(y_test, y_pred_voting):.2f}")
 print(f"ROC AUC: {roc_auc_score(y_test, y_pred_voting):.2f}")
 print("Matriz de Confusión:")
 print(confusion_matrix(y_test, y_pred_voting))
-
-# Crear DataFrame con predicciones y IDs
-predicciones = pd.DataFrame({
-    'id': id_test,
-    'abandona_real': y_test,
-    'abandona_predicho': y_pred_voting
-})
-
-# Mostrar las predicciones junto con los IDs
-print(predicciones)
 
 # Validación cruzada
 cross_val_scores_voting = cross_val_score(voting_clf, poly.transform(preprocessor.transform(X)), y, cv=StratifiedKFold(n_splits=5), scoring='accuracy', n_jobs=-1)

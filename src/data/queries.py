@@ -1,11 +1,29 @@
-from data.db_connector import db
+#
+# @file queries.py
+# @brief Este archivo contiene funciones para ejecutar consultas en la base de datos.
+# @version 1.0
+# @date 19/06/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 import pandas as pd
-from data.queries_dictionary import queries
 from functools import lru_cache
+from data.queries_dictionary import queries
+from data.db_connector import db
 
-
-# Función para comprobar si la query se ha ejecutado correctamente
 def check_data(query, params):
+    """
+    Ejecuta una consulta en la base de datos y maneja los errores.
+
+    Args:
+        query (str): Consulta SQL
+        params (dict): Parámetros de la consulta
+
+    Returns:
+        list: Resultado de la consulta
+    """
     try:
         data = db.execute_query(query, params)
     except Exception as e:
@@ -14,8 +32,16 @@ def check_data(query, params):
     return data
 
 
-# Decorador para cachear las queries y evitar hacer consultas innecesarias
 def cache_query(func):
+    """
+    Decorador para cachear los resultados de las consultas.
+
+    Args:
+        func: Función a decorar
+    
+    Returns:
+        wrapper: Función decorada
+    """
     @lru_cache(maxsize=32)
     def wrapper(*args, **kwargs):
         return func(*args, **kwargs)
@@ -486,7 +512,7 @@ def universidades_docente(id_docente):
 def data_for_model():
     query = queries["alumnado"]["common"]["data_for_model"]
     data = check_data(query, {})
-    
+
     if not data:
         return []
     
@@ -502,8 +528,7 @@ def data_for_model():
         'nota_def_ebau': float,
         'nota_media': float,
         'abandona': str
-    })
-    
+    })    
     return df
 
 @cache_query

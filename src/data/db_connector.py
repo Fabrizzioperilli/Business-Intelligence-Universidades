@@ -1,3 +1,14 @@
+#
+# @file db_connector.py
+# @brief Este archivo contiene la clase DatabaseConnector para conectarse a la base de datos.
+# @details Se define la clase DatabaseConnector con un método para ejecutar consultas en la base de datos.
+# @version 1.0
+# @date 04/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from sqlalchemy import create_engine, text
 from sqlalchemy.pool import QueuePool
 import json
@@ -7,13 +18,14 @@ class DatabaseConnector:
     """
     Clase para conectarse a la base de datos
 
-    :param dbname: Nombre de la base de datos
-    :param user: Usuario de la base de datos
-    :param password: Contraseña del usuario
-    :param host: Host de la base de datos
-    :param port: Puerto de la base de datos
-    :param pool_size: Tamaño del pool de conexiones
-    :param max_overflow: Número máximo de conexiones que pueden ser creadas
+    Attributes:
+        db_url (str): URL de la base de datos
+        engine (Engine): Motor de la base de datos
+
+    Methods:
+        execute_query: Ejecuta una consulta en la base de datos
+        close: Cierra la conexión a la base de datos
+    
     """
     def __init__(
         self, dbname, user, password, host, port, pool_size=5, max_overflow=10
@@ -30,9 +42,12 @@ class DatabaseConnector:
         """
         Ejecuta una consulta en la base de datos
 
-        :param query: Consulta a ejecutar
-        :param params: Parámetros de la consulta
-        :return: Resultado de la consulta
+        Args:
+            query (str): Consulta SQL
+            params (dict): Parámetros de la consulta
+
+        Returns:
+            list: Resultado de la consulta
         """
         with self.engine.connect() as connection:
             result = connection.execute(text(query), params or {})
@@ -41,6 +56,7 @@ class DatabaseConnector:
     def close(self):
         """
         Cierra la conexión a la base de datos
+        
         """
         self.engine.dispose()
 

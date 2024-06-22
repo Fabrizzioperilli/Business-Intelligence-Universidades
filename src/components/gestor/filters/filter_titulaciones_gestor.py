@@ -1,3 +1,14 @@
+#
+# @file filter_titulaciones_gestor.py
+# @brief Este fichero contiene el componente de filtro que contiene 
+#        las titulaciones para el perfil "Gestor"
+# @version 1.0
+# @date 21/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html, dcc
 from callbacks.gestor.filters.callback_filter_titulaciones_gestor import update_filter_titulaciones_gestor
 
@@ -8,7 +19,7 @@ def filter_titulaciones_gestor():
     "Indicadores académicos".
 
     Returns:
-    html.Div: Componente con el filtro de titulaciones
+        html.Div: Componente con el filtro de titulaciones
     """
     return html.Div(
         [

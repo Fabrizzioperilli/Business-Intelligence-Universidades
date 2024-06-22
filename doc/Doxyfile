@@ -91,3 +91,5 @@ DIRECTORY_GRAPH        = YES
 # Configuration options related to the preprocessor
 EXPAND_AS_DEFINED      = 
 SKIP_FUNCTION_MACROS   = YES
+
+OPTIMIZE_OUTPUT_FOR_C  = NO

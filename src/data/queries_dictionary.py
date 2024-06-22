@@ -1,4 +1,14 @@
-# Este diccionario contiene las consultas SQL utilizadas en el proyecto
+#
+# @file queries_dictionary.py
+# @brief Este archivo contiene el diccionario de todas las consultas SQL de la aplicación.
+# @details Se definen las consultas SQL para obtener los datos de la base de datos.
+# @version 1.0
+# @date 19/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 queries = {
     "alumnado": {
         "common": {
@@ -13,8 +23,8 @@ queries = {
                 FROM alumnos alu
                 JOIN matricula ma ON ma.id = alu.id
                 WHERE alu.id = :alumno_id AND ma.titulacion = :titulacion;
-                """,           
-             # Consulta para calcular la media de las calificaciones de un alumno en una titulación específica.
+                """,
+            # Consulta para calcular la media de las calificaciones de un alumno en una titulación específica.
             "nota_media_alumno_titulacion": """
                 SELECT AVG(li.calif_numerica) AS media_calif
                 FROM public.lineas_actas li
@@ -28,8 +38,8 @@ queries = {
                 FROM matricula
                 WHERE id = :alumno_id;
                 """,
+                # Consulta para obtener los datos necesarios para el modelo de aprendizaje automático.
             "data_for_model": """
-
                 WITH average_grades AS (
                     SELECT 
                         ma.id, 
@@ -63,7 +73,7 @@ queries = {
                     average_grades ag ON ma.id = ag.id AND ma.titulacion = ag.titulacion
                 ORDER BY 
                     alu.id;
-                """
+                """,
         },
         "filters": {
             # Consulta para obtener los cursos académicos en los que un alumno está matriculado en una titulación específica.

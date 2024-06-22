@@ -1,11 +1,22 @@
+#
+# @file recomendador_alumnado.py
+# @brief Este archivo contiene el componente para la pestaña "Recomendador" del perfil "Alumnado".
+# @version 1.0
+# @date 19/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html
+
 
 def recomendador_alumnado():
     """
     Esta función retorna el contenido de la pestaña "Recomendador" del perfil "Alumnado".
 
     Returns:
-    html.Div: Layout de la pestaña "Recomendador" del perfil "Alumnado"
+        html.Div: Layout de la pestaña "Recomendador" del perfil "Alumnado"
     """
 
     return html.Div([

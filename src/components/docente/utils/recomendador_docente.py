@@ -1,3 +1,13 @@
+#
+# @file recomendador_docente.py
+# @brief Este fichero contiene el componente del recomendador para docentes.
+# @version 1.0
+# @date 23/05/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html
 
 def recomendador_docente():
@@ -5,7 +15,7 @@ def recomendador_docente():
     Retorna el componente del recomendador para docentes.
 
     Returns:
-    html.Div: Componente del recomendador para docentes
+        html.Div: Componente del recomendador para docentes
     """
     
     return html.Div([

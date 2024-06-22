@@ -1,3 +1,13 @@
+#
+# @file tabs_docente.py
+# @brief Este fichero contiene el componente de las pestañas del perfil "Docente"
+# @version 1.0
+# @date 28/04/2024
+# @license MIT License
+# @author Fabrizzio Daniell Perilli Martín
+# @email alu0101138589@ull.edu.es
+#
+
 from dash import html, dcc
 from callbacks.docente.utils.callback_tabs_docente import render_content
 
@@ -7,7 +17,7 @@ def tabs_docente():
     Crea las pestañas del perfil "Docente"
     
     Returns:
-    html.Div: Pestañas del docente
+        html.Div: Pestañas del docente
     """
     
     return html.Div(
