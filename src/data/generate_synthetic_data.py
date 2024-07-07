@@ -424,9 +424,9 @@ def generate_gestores(n, universidades):
 
 
 print("Generando datos....")
-num_alumnos = 5
-num_docentes = 1
-num_gestores = 5
+num_alumnos = 5000
+num_docentes = 100
+num_gestores = 50
 
 #Crea un directorio llamado src/data/csv si no existe
 
