@@ -156,7 +156,7 @@ voting_clf = VotingClassifier(
 voting_clf.fit(X_train, y_train)
 
 # Guardar el modelo entrenado
-joblib_file = "trained_model.pkl"
+joblib_file = "src/trained_model.pkl"
 joblib.dump(voting_clf, joblib_file)
 print(f"Modelo guardado en {joblib_file}")
 
