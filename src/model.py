@@ -36,7 +36,7 @@ data['abandona'] = data['abandona'].map({'si': 1, 'no': 0})
 
 
 columnas_categoricas = ['nacionalidad', 'sexo', 'titulacion']
-columnas_numericas = ['nota_def_ebau', 'nota_media', 'edad_actual']
+columnas_numericas = ['nota_def_acceso', 'nota_media', 'edad_actual']
 
 # Preprocesamiento
 preprocessor = ColumnTransformer(

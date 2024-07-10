@@ -525,7 +525,7 @@ def data_for_model():
         'nacionalidad': str,
         'sexo': str,
         'titulacion': str,
-        'nota_def_ebau': float,
+        'nota_def_acceso': float,
         'nota_media': float,
         'abandona': str
     })    

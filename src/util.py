@@ -84,7 +84,7 @@ def load_data_for_model():
         'nacionalidad': str,
         'sexo': str,
         'titulacion': str,
-        'nota_def_ebau': float,
+        'nota_def_acceso': float,
         'nota_media': float,
         'abandona': str
     })
@@ -111,7 +111,7 @@ def load_model():
 
     # Definir columnas
     columnas_categoricas = ['nacionalidad', 'sexo', 'titulacion']
-    columnas_numericas = ['nota_def_ebau', 'nota_media', 'edad_actual']
+    columnas_numericas = ['nota_def_acceso', 'nota_media', 'edad_actual']
 
     # Imputación de datos
     num_imputer = SimpleImputer(strategy='mean')

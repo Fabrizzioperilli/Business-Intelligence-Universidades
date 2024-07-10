@@ -60,7 +60,7 @@ queries = {
                     ma.nacionalidad, 
                     ma.sexo, 
                     ma.titulacion, 
-                    ebau.nota_def AS nota_def_ebau,
+                    ebau.nota_def AS nota_def_acceso,
                     alu.abandona,
                     ag.nota_media
                 FROM 
