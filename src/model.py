@@ -27,14 +27,14 @@ from util import load_data_for_model
 
 data = load_data_for_model()
 
-# Crear nueva característica 'edad_actual'
+
 current_year = datetime.now().year
 data['edad_actual'] = current_year - data['anio_nac']
 
 # Codificar variable objetivo
 data['abandona'] = data['abandona'].map({'si': 1, 'no': 0})
 
-# Definir columnas
+
 columnas_categoricas = ['nacionalidad', 'sexo', 'titulacion']
 columnas_numericas = ['nota_def_ebau', 'nota_media', 'edad_actual']
 
@@ -54,7 +54,7 @@ ids = data['id']
 # Dividir los datos en conjuntos de entrenamiento y prueba
 X_train, X_test, y_train, y_test, id_train, id_test = train_test_split(X, y, ids, test_size=0.2, random_state=42, stratify=y)
 
-# Aplicar preprocesamiento y SMOTE en el conjunto de entrenamiento
+
 X_train = preprocessor.fit_transform(X_train)
 X_test = preprocessor.transform(X_test)
 
@@ -140,8 +140,8 @@ with tqdm(total=len(modelos), desc="Entrenando modelos") as pbar:
         
         pbar.update(1)
 
-# Seleccionar los mejores modelos basados en las métricas
-# Vamos a seleccionar los 3 mejores modelos para el ensemble
+
+# Selecciona los mejores modelos para el ensemble
 mejores_modelos = sorted(metrics.items(), key=lambda item: item[1]['f1_score'], reverse=True)[:3]
 mejores_estimadores = [(key, best_estimators[key]) for key, _ in mejores_modelos]
 
@@ -152,7 +152,7 @@ voting_clf = VotingClassifier(
     n_jobs=-1
 )
 
-# Entrenar el VotingClassifier
+
 voting_clf.fit(X_train, y_train)
 
 # Guardar el modelo entrenado
