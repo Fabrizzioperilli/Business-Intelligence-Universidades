@@ -1,4 +1,4 @@
-# Business Intelligence para el sector académico (Universidades)
+# Business Intelligence para el sector académico
 
 ## Tabla de contenidos
 1. [Descripción](#Descripción)
