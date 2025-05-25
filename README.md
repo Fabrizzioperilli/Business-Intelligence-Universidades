@@ -9,7 +9,7 @@
 
 
 ## Descripción
-El presente proyecto representa el Trabajo de Fin de Grado (TFG) para el grado de Ingeniería Informática en la Universidad de La Laguna. 
+El presente proyecto representa el Trabajo de Fin de Grado para el grado de Ingeniería Informática. 
 
 El objetivo principal de este proyecto es la creación de un sistema de Business Intelligence (BI) para analizar y representar datos almacenados por las universidades. 
 
